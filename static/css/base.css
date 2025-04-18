@@ -245,12 +245,12 @@ button {
 /* Header Actions */
 .header-actions {
     position: absolute;
-    right: 20px; /* Position relative to container padding */
+    right: -70px; /* Position relative to container padding */
     top: 50%;
     transform: translateY(-50%); /* Center vertically relative to whole header */
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 35px;
 }
 
 .search-form { display: flex; align-items: center; }
@@ -312,6 +312,104 @@ button {
 .social-sidebar ul { display: flex; flex-direction: column; gap: 30px; }
 .social-sidebar a { font-size: 1.1rem; color: var(--text-color); }
 .social-sidebar a:hover { color: var(--primary-color); opacity: 1; }
+
+/* --- Bootstrap Dropdown Menu Styling --- */
+
+.dropdown-menu {
+    /* Basic structure & appearance */
+    background-color: white; /* Or match your header background if different */
+    border: 1px solid var(--border-color, #dee2e6); /* Use variable or fallback */
+    border-radius: 4px; /* Or adjust to match site style */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 10px 0; /* Vertical padding for the menu container */
+    min-width: 200px; /* Adjust as needed */
+    z-index: 1000; /* Ensure it's above other content */
+    /* Let Bootstrap JS handle display/position */
+}
+
+.dropdown-item {
+    /* Inherit text styles from main nav */
+    font-size: 0.9rem;                 /* Match main-nav a */
+    font-weight: 400;                  /* Match main-nav a */
+    color: var(--text-color, #333);    /* Match main-nav a (add fallback) */
+    text-transform: uppercase;         /* Match main-nav a */
+    letter-spacing: 1.5px;             /* Match main-nav a */
+
+    /* Standard dropdown item behavior */
+    display: block;
+    width: 100%;
+    padding: 8px 20px; /* Adjust padding (Top/Bottom, Left/Right) */
+    clear: both;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    text-decoration: none; /* Remove default underline */
+    transition: background-color 0.2s ease, color 0.2s ease; /* Smooth hover */
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    /* Define hover/focus style - background is common */
+    color: var(--text-heading, #000); /* Optional: Darker text on hover */
+    background-color: #f8f9fa; /* Light grey background, adjust as needed */
+    text-decoration: none; /* Ensure no underline on hover */
+    /* Remove the main-nav ::after underline effect here */
+}
+
+/* Style for dividers if you use them */
+.dropdown-divider {
+    height: 1px;
+    margin: 0.5rem 0;
+    overflow: hidden;
+    background-color: var(--border-color, #e9ecef); /* Match border color */
+}
+
+/* Style for headers if you use them */
+.dropdown-header {
+    display: block;
+    padding: 0.5rem 1.5rem; /* Bootstrap default is 20px LR = 1.25rem, adjust if needed */
+    margin-bottom: 0;
+    font-size: 0.8rem; /* Slightly smaller */
+    font-weight: 700; /* Often bolder */
+    color: #6c757d; /* Muted color */
+    text-transform: uppercase; /* Keep consistent */
+    letter-spacing: 1px; /* Slightly less spacing maybe */
+    white-space: nowrap;
+}
+
+/* Ensure dropdown toggle doesn't keep underline always */
+.main-nav .dropdown-toggle::after {
+     /* Bootstrap adds its own caret via ::after,
+        so we remove the custom underline from the toggles */
+    display: none;
+}
+.main-nav .nav-link.dropdown-toggle {
+     /* Remove padding specifically for the underline if needed */
+     padding-bottom: 0; /* Adjust if this messes up vertical alignment */
+}
+/* OR Specificity if needed: */
+.navbar-nav .nav-item.dropdown > .nav-link.dropdown-toggle {
+    padding-bottom: 0; /* Reset padding needed for underline */
+}
+.navbar-nav .nav-item.dropdown > .nav-link.dropdown-toggle::after {
+    display: inline-block; /* Let Bootstrap's caret show */
+    /* Reset properties from main-nav a::after */
+    content: ""; /* Ensure Bootstrap's content can take over */
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    transition: none;
+    /* Add Bootstrap's caret styles */
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+
+}
+
 
 /* --- Hero Section --- */
 .hero {

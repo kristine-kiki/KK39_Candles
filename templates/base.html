@@ -49,18 +49,14 @@
             </div>
 
             <!-- Navigation Centered Below Logo -->
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#">Shop All</a></li>
-                    <li><a href="#">Candles</a></li>
-                    <li><a href="#">For Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                {% include 'includes/mobile-top-header.html' %}
-                {% include 'includes/main-nav.html' %}
+            <!--nav class="main-nav"-->
+            <nav class="navbar navbar-expand-md navbar-light bg-light main-nav"> {# New line - Added Bootstrap classes #}
+                <div class="container"> {# Wrap the includes in a container if needed by your layout #}
+                    {% include 'includes/mobile-top-header.html' %}
+                    {% include 'includes/main-nav.html' %}
+                </div>
             </nav>
-
+                
             <!-- Header Actions Right Aligned (Simplified based on image) -->
             <div class="header-actions">
                 <form action="#" class="search-form">

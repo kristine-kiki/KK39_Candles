@@ -11,7 +11,7 @@
 
         {# Shop All Dropdown (for Sorting/Filtering) #}
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="shop-all-link" data-bs-toggle="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="shop-all-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Shop All
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="shop-all-link">
@@ -32,26 +32,20 @@
         </li>
 
         {# Candles Dropdown (for Subcategories) #}
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="{% url 'products' %}?category=candles" id="candles-link" data-bs-toggle="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Candles
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="candles-link">
-                <a href="{% url 'products' %}?category=candles" class="dropdown-item">All Candles</a>
-                <div class="dropdown-divider"></div>
-                {# === Example Subcategories - Adjust to your actual data === #}
-                <h6 class="dropdown-header">By Scent Profile:</h6>
-                <a href="{% url 'products' %}?category=candles&scent=floral" class="dropdown-item">Floral</a>
-                <a href="{% url 'products' %}?category=candles&scent=woody" class="dropdown-item">Woody</a>
-                <a href="{% url 'products' %}?category=candles&scent=fresh" class="dropdown-item">Fresh & Clean</a>
-                <a href="{% url 'products' %}?category=candles&scent=sweet" class="dropdown-item">Sweet & Fruity</a>
-                 {# === End Example Subcategories === #}
-            </div>
+        <li class="nav-item dropdown"> 
+            <a class="nav-link dropdown-toggle" href="#" id="candles-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Candles</a> {# Added nav-link class, aria attributes #}
+            <div class="dropdown-menu border-0" aria-labelledby="candles-link"> 
+                {# Ensure dropdown items use <li><a> structure or just <a> with .dropdown-item class #}
+                <a href="#" class="dropdown-item">Scented Candles</a>
+                <a href="#" class="dropdown-item">Pillar Candles</a>
+                <a href="#" class="dropdown-item">Macrame Candles</a>
+                <a href="#" class="dropdown-item">Gift Sets</a>
+                </div>
         </li>
-
+        
         {# For Home Dropdown (for Subcategories) #}
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="{% url 'products' %}?category=for_home" id="for-home-link" data-bs-toggle="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="{% url 'products' %}?category=for_home" id="for-home-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 For Home
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="for-home-link">
@@ -78,3 +72,4 @@
         </li>
     </ul>
 </div>
+
