@@ -1,8 +1,119 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}
+    KK39 Candles - Handmade Organic Candles
+{% endblock title %}
+
 {% block content %}
 
-<h1 class="display-4 text-success">it works!</h1>
+    <!-- Hero Section -->
+    <section class="hero">
+            <div class="hero-content">
+                <h1>HANDMADE LOVE<br>IN YOUR HOME</h1>
+                <p>HANDCRAFTED ORGANIC CANDLES</p>
+                {# Use url tag if you have a 'shop' or 'products' url name #}
+                <a href="#" class="btn btn-hero">Shop Now</a>
+            </div>
+    </section>
 
-{% endblock %}
+    <!-- About Section -->
+    <section id="about" class="about-section section-padding">
+        <div class="container about-container">
+            <div class="about-image">
+                {# Note: /media/ paths assume MEDIA_URL is configured correctly #}
+                <img src="/media/PXL_20250410_184409289.jpg" alt="Natural candle ingredients">
+            </div>
+            <div class="about-text">
+                <h2 class="section-title--left">Our Story</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                {# Use url tag if you have an 'about' url name #}
+                <a href="#" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bestsellers Section -->
+    <section id="shop" class="shop-section section-padding">
+        <div class="container">
+            <h2 class="section-title">Our Bestsellers</h2>
+            <div class="product-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <img src="/media/PXL_20250302_110501964.jpg" alt="Colorful flowers Candle">
+                    <h3>Spring Blossom Candle</h3>
+                    <p class="price">£8.00</p>
+                    {# Link to the specific product page using url tag #}
+                    <a href="#" class="btn btn-tertiary">View Product</a>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <img src="/media/Gold Rim.jpg" alt="Golden handpainted eco candle">
+                    <h3>Golden Rim</h3>
+                    <p class="price">£25.00</p>
+                    <a href="#" class="btn btn-tertiary">View Product</a>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                     <img src="/media/Gift Set.jpg" alt="Magical Gift Set">
+                    <h3>Magical Gift Set</h3>
+                    <p class="price">£45.00</p>
+                    <a href="#" class="btn btn-tertiary">View Product</a>
+                </div>
+                <!-- Product Card 4 -->
+                <div class="product-card">
+                     <img src="/media/Godess1.jpg" alt="Godess Candle">
+                    <h3>Godess Candle</h3>
+                    <p class="price">£12.00</p>
+                    <a href="#" class="btn btn-tertiary">View Product</a>
+                </div>
+            </div>
+             <div class="view-all-link">
+                 {# Link to the main shop/products page #}
+                 <a href="#" class="btn btn-secondary">View All Products</a>
+             </div>
+        </div>
+    </section>
+
+     <!-- Testimonial Section -->
+    <section class="testimonial-section section-padding-narrow">
+        <div class="container">
+            <blockquote>
+                "Absolutely love the natural scents and how clean the candles burn so cleanly!"
+                <cite>- A Happy Customer</cite>
+            </blockquote>
+        </div>
+    </section>
+
+     <!-- Instagram/Gallery Section -->
+    <section id="gallery" class="gallery-section section-padding">
+         <div class="container">
+            <h2 class="section-title">Follow Us @KK39_Candles</h2>
+             <div class="gallery-grid">
+                 {# Replace placeholders with actual images/links or dynamically load from an API/DB #}
+                 <a href="#"><img src="https://via.placeholder.com/300x300/d8c7b6/a0a0a0?text=Insta+1" alt="Instagram Post 1"></a>
+                 <a href="#"><img src="https://via.placeholder.com/300x300/e0d1c8/a0a0a0?text=Insta+2" alt="Instagram Post 2"></a>
+                 <a href="#"><img src="https://via.placeholder.com/300x300/c7d8b6/a0a0a0?text=Insta+3" alt="Instagram Post 3"></a>
+                 <a href="#"><img src="https://via.placeholder.com/300x300/e8e4e1/a0a0a0?text=Insta+4" alt="Instagram Post 4"></a>
+                 <a href="#"><img src="https://via.placeholder.com/300x300/f0ebe5/a0a0a0?text=Insta+5" alt="Instagram Post 5"></a>
+                 <a href="#"><img src="https://via.placeholder.com/300x300/d8c7b6/a0a0a0?text=Insta+6" alt="Instagram Post 6"></a>
+             </div>
+         </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section-padding">
+        <div class="container contact-container">
+             <h2 class="section-title">Get In Touch</h2>
+             <p class="contact-subtitle">Have questions? We'd love to hear from you.</p>
+             <div class="contact-info">
+                 {# Use real details #}
+                 <p><i class="fas fa-map-marker-alt"></i> 123 Craft Lane, Artisan City, AC 12345</p>
+                 <p><i class="fas fa-envelope"></i> <a href="mailto:hello@kk39_candles.com">hello@kk39_candles.com</a></p>
+                 <p><i class="fas fa-phone"></i> <a href="tel:+1234567890">(123) 456-7890</a></p>
+             </div>
+        </div>
+    </section>
+
+{% endblock content %}

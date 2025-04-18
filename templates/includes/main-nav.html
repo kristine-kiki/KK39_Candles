@@ -34,7 +34,9 @@
         {# Candles Dropdown (for Subcategories) #}
         <li class="nav-item dropdown"> 
             <a class="nav-link dropdown-toggle" href="#" id="candles-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Candles</a> {# Added nav-link class, aria attributes #}
-            <div class="dropdown-menu border-0" aria-labelledby="candles-link"> 
+            <div class="dropdown-menu border-0" aria-labelledby="candles-link">
+                <a href="{% url 'products' %}?category=candles" class="dropdown-item">All Candles</a>
+                 <div class="dropdown-divider"></div>
                 {# Ensure dropdown items use <li><a> structure or just <a> with .dropdown-item class #}
                 <a href="#" class="dropdown-item">Scented Candles</a>
                 <a href="#" class="dropdown-item">Pillar Candles</a>
