@@ -4,7 +4,7 @@ from .models import Product
 # Create your views here.
 
 def all_products(request):
-    return render(request, 'products/product_list.html')
+    return render(request, 'products/products.html')
 
 def product_detail(request, product_id):
     """ A view to show individual product details """

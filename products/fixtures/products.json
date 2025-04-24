@@ -1,16 +1,227 @@
 [
-    {
-      "pk": 1,
-      "model": "products.product",
-      "fields": {
-        "sku": "0001",
-        "name": "Godess Hera",
-        "description": "Eco, handmade, soy candle for any occasion",
-        "price": 12.00,
-        "category": 5,
-        "rating": 4.9,
-        "image_url": "",
-        "image": "/media/Godess.jpg"
-      }
+  {
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+      "sku": "0001",
+      "name": "Godess Hera",
+      "description": "Eco, handmade, soy candle for any occasion",
+      "price": 12.00,
+      "category": 4,
+      "rating": 4.9,
+      "image_url": "",
+      "image": "/media/Godess.jpg"
     }
-]    
+  },
+  {
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
+      "sku": "0002",
+      "name": "Simple Love",
+      "description": "Eco, handmade, soy candle for loving moments",
+      "price": 6.00,
+      "category": 1,
+      "rating": 4.9,
+      "image_url": "",
+      "image": "/media/Love1.jpg"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.product",
+    "fields": {
+      "sku": "0003",
+      "name": "Hanging Latern Candle",
+      "description": "Eco, handmade, soy candle ideal for your garden and bathroom",
+      "price": 15.00,
+      "category": 3,
+      "rating": 4.9,
+      "image_url": "",
+      "image": "/media/macrame_candle.jpg"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.product",
+    "fields": {
+      "sku": "0004",
+      "name": "Small Gift Set",
+      "description": "Eco, handmade, soy candle Gift Set for birthdays, Mom`s Day, weddings",
+      "price": 45.00,
+      "category": 2,
+      "rating": 4.9,
+      "image_url": "",
+      "image": "/media/Gift Set.jpg"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.product",
+    "fields": {
+      "sku": "0005",
+      "name": "Golden Bee",
+      "description": "Scented Eco, handmade, soy candle with orange and cinnemon scent",
+      "price": 15.00,
+      "category": 5,
+      "rating": 4.9,
+      "image_url": "",
+      "image": "/media/Gold Bee.jpg"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.product",
+    "fields": {
+      "sku": "0006",
+      "name": "Juicy Summer",
+      "description": "Eco, handmade, soy wax melts with Summer smell in your home",
+      "price": 12.00,
+      "category": 6,
+      "rating": 4.9,
+      "image_url": "",
+      "image": "/media/strawberry_waxmelt.png"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.product",
+    "fields": {
+      "sku": "0007",
+      "name": "Sweet Dreams",
+      "description": "Eco, handmade, vanilla and lavander reed home diffuser for your better sleep",
+      "price": 17.00,
+      "category": 7,
+      "rating": 4.9,
+      "image_url": "",
+      "image": "/media/reed_diffuser.png"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "products.product",
+    "fields": {
+      "sku": "0008",
+      "name": "Divine Coconut Blast",
+      "description": "Eco, handmade, coconut flavoured room spray",
+      "price": 12.00,
+      "category": 8,
+      "rating": 4.9,
+      "image_url": "",
+      "image": "/media/Coconut_roomspray.png"
+    }
+  },
+  {
+    "pk": 9,
+    "model": "products.product",
+    "fields": {
+      "sku": "0009",
+      "name": "Godess Aphrodite",
+      "description": "Eco, handmade, soy candle for your 'Special one'",
+      "price": 12.00,
+      "category": 4,
+      "rating": 4.9,
+      "image_url": "",
+      "image": "/media/Godess1.jpg"
+    }
+  },
+  {
+    "pk": 10,
+    "model": "products.product",
+    "fields": {
+      "sku": "0010",
+      "name": "Simple Truth",
+      "description": "Eco, handmade, soy candle for any moments",
+      "price": 10.00,
+      "category": 1,
+      "rating": 4.9,
+      "image_url": "",
+      "image": "/media/Simple Truth.jpg"
+    }
+  },
+  {
+    "pk": 11,
+    "model": "products.product",
+    "fields": {
+      "sku": "0011",
+      "name": "Persian Star",
+      "description": "Eco, handmade, soy candle ideal for romantic evenings in your bedroom, garden and bathroom",
+      "price": 15.00,
+      "category": 3,
+      "rating": 4.9,
+      "image_url": "",
+      "image": "/media/persian_star_macrame.png"
+    }
+  },
+  {
+    "pk": 12,
+    "model": "products.product",
+    "fields": {
+      "sku": "0012",
+      "name": "Large Gift Set",
+      "description": "Eco, handmade, soy candle Gift Set for birthdays, Mom`s Day, weddings",
+      "price": 75.00,
+      "category": 2,
+      "rating": 4.9,
+      "image_url": "",
+      "image": "/media/giftset_large.jpg"
+    }
+  },
+  {
+    "pk": 13,
+    "model": "products.product",
+    "fields": {
+      "sku": "0013",
+      "name": "Floral Flow",
+      "description": "Scented Eco, handmade, soy candle with Vanilla, Sweet Orange and Eucalyptus scent",
+      "price": 45.00,
+      "category": 5,
+      "rating": 4.9,
+      "image_url": "",
+      "image": "/media/Floral Flow1.jpg"
+    }
+  },
+  {
+    "pk": 14,
+    "model": "products.product",
+    "fields": {
+      "sku": "0014",
+      "name": "Heavenly Cloud",
+      "description": "Eco, handmade, soy wax melts with Lavander smell",
+      "price": 12.00,
+      "category": 6,
+      "rating": 4.9,
+      "image_url": "",
+      "image": "/media/heavenly_cloud-vaxmelt.png"
+    }
+  },
+  {
+    "pk": 15,
+    "model": "products.product",
+    "fields": {
+      "sku": "0015",
+      "name": "Spring Blossom",
+      "description": "Eco, handmade, cherry blossom reed home diffuser.",
+      "price": 17.00,
+      "category": 7,
+      "rating": 4.9,
+      "image_url": "",
+      "image": "/media/spring_bloom_diffuser.jpg"
+    }
+  },
+  {
+    "pk": 16,
+    "model": "products.product",
+    "fields": {
+      "sku": "0016",
+      "name": "Nature in Your home",
+      "description": "Eco, handmade, Pinenut and Rosemary room spray",
+      "price": 12.00,
+      "category": 8,
+      "rating": 4.9,
+      "image_url": "",
+      "image": "/media/refreshing_pine_roomspray.png"
+    }
+  }
+]
+  
