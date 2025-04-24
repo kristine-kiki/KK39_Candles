@@ -24,11 +24,14 @@
                 <div class="product-card">
                     {# Use product image if available, otherwise a placeholder #}
                     {% if product.image %}
+                    <a href="{% url 'product_detail' product.id %}">
                         <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                    </a>
                     {% else %}
                         {# You might want a default placeholder image in your static files #}
-                        <img src="{% static 'images/default_product.png' %}" alt="{{ product.name }}">
-                        {# Or use a placeholder service - adjust size as needed #}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img src="{{ MEDIA_URL }}no_image.png" alt="{{ product.name }}">
+                        </a>{# Or use a placeholder service - adjust size as needed #}
                         {# <img src="https://via.placeholder.com/300x300.png?text={{ product.name|urlencode }}" alt="{{ product.name }}"> #}
                     {% endif %}
 

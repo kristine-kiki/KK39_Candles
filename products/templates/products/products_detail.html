@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Shop All Products - KK39 Candles
+{% endblock title %}
+
+{% block content %}
+
+<section id="all-products" class="shop-section section-padding">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Our Products</h2> {# Added text-center and margin-bottom #}
+
+        {# --- Placeholder for Sorting/Filtering Controls --- #}
+        {# Use standard HTML comments if you want them in source, but not visible #}
+        <!--
+        <div class="row mb-4 product-controls">
+            <div class="col-md-6">
+                {# Sorting dropdown will go here #}
+                <p>Sorting dropdown placeholder</p>
+            </div>
+            <div class="col-md-6 text-md-right">
+                {# Filtering options will go here #}
+                 <p>Filtering options placeholder</p>
+            </div>
+        </div>
+        -->
+        {# --- End Placeholder --- #}
+
+
+        {# Product Grid - Reuses styling from index.html #}
+        <div class="product-grid">
+
+            {% for product in products %}
+                <div class="product-card">
+                    {# Use product image if available, otherwise a placeholder #}
+                    {% if product.image %}
+                        <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                    {% else %}
+                        <img src="{% static 'images/default_product.png' %}" alt="{{ product.name }}">
+                    {% endif %}
+
+                    <h3>{{ product.name }}</h3>
+                    <p class="price">£{{ product.price|floatformat:2 }}</p>
+                    <a href="{% url 'product_detail' product.id %}" class="btn btn-tertiary">View Product</a> {# Adjust URL name and pk/slug #}
+                </div>
+            {% empty %}
+                {# Display a message if no products are found - centered #}
+                <div class="col-12 text-center py-5"> {# Spans full width, centers text, adds padding #}
+                    <p class="lead">Sorry, there are currently no products available.</p>
+                </div>
+            {% endfor %}
+
+        </div> {# End product-grid #}
+
+        {# --- Pagination Placeholder --- #}
+        {# Keep this commented out with Django comments until implemented in the view #}
+        {#
+        {% if is_paginated %}
+            <nav aria-label="Page navigation" class="mt-5">
+                <ul class="pagination justify-content-center">
+                    ... pagination links ...
+                </ul>
+            </nav>
+        {% endif %}
+        #}
+        {# --- End Pagination Placeholder --- #}
+
+    </div> {# End container #}
+</section> {# End all-products section #}
+
+{% endblock content %}
+
+{% block extra_css %}
+<style>
+    /* Ensure product grid behaves correctly even when empty message is shown */
+    /* (This might not be strictly necessary depending on your base CSS) */
+    .product-grid .col-12 {
+        width: 100%; /* Make the empty message span the container */
+    }
+    /* Add any specific styling for this page */
+    .product-controls {
+        /* Example styling for controls area */
+        background-color: #f8f9fa; /* Light background */
+        padding: 1rem;
+        border-radius: 0.25rem;
+    }
+</style>
+{% endblock extra_css %}
