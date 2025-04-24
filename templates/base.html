@@ -55,7 +55,7 @@
 
             <!-- Header Actions Right Aligned -->
             <div class="header-actions">
-                <form action="#" class="search-form"> {# Consider using Django forms/search view URL #}
+                <form action="{% url 'products' %}" class="search-form"> {# Consider using Django forms/search view URL #}
                     <input type="search" placeholder="SEARCH..." class="search-input">
                     <button type="submit" class="search-button" aria-label="Search">
                         <i class="fas fa-search"></i>

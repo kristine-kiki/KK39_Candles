@@ -11,9 +11,9 @@
     <div class="container">
         <h2 class="section-title text-center mb-5">Our Products</h2> {# Added text-center and margin-bottom #}
 
-        {# --- Placeholder for Sorting/Filtering Controls --- #}
+        <!--{# --- Placeholder for Sorting/Filtering Controls --- #}
         {# Use standard HTML comments if you want them in source, but not visible #}
-        <!--
+        
         <div class="row mb-4 product-controls">
             <div class="col-md-6">
                 {# Sorting dropdown will go here #}
@@ -24,11 +24,11 @@
                  <p>Filtering options placeholder</p>
             </div>
         </div>
-        -->
-        {# --- End Placeholder --- #}
+        
+        {# --- End Placeholder --- #} -->
 
 
-        {# Product Grid - Reuses styling from index.html #}
+        
         <div class="product-grid">
 
             {% for product in products %}
@@ -37,7 +37,7 @@
                     {% if product.image %}
                         <img src="{{ product.image.url }}" alt="{{ product.name }}">
                     {% else %}
-                        <img src="{% static 'images/default_product.png' %}" alt="{{ product.name }}">
+                        <img src="{% static 'media/no_image.png' %}" alt="{{ product.name }}">
                     {% endif %}
 
                     <h3>{{ product.name }}</h3>
@@ -51,9 +51,9 @@
                 </div>
             {% endfor %}
 
-        </div> {# End product-grid #}
+        </div> 
 
-        {# --- Pagination Placeholder --- #}
+        <!-- Pagination Placeholder --- #}
         {# Keep this commented out with Django comments until implemented in the view #}
         {#
         {% if is_paginated %}
@@ -64,7 +64,7 @@
             </nav>
         {% endif %}
         #}
-        {# --- End Pagination Placeholder --- #}
+        {# --- End Pagination Placeholder -->
 
     </div> {# End container #}
 </section> {# End all-products section #}
