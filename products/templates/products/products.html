@@ -37,6 +37,17 @@
 
                     <h3>{{ product.name }}</h3>
 
+                    {% if product.category.exists %}
+                        <p class="small mt-1 mb-0 category-link-wrapper"> {# Added wrapper class #}
+                            {# Loop through all associated categories and create a link for each one #}
+                            {% for category in product.category.all %}
+                                <a class="text-muted" href="{% url 'products' %}?category={{ category.name }}">
+                                    <i class="fas fa-tag mr-1"></i>{{ category.friendly_name|default:category.name }}
+                                </a>{% if not forloop.last %}, {% endif %}
+                            {% endfor %}
+                        </p>
+                    {% endif %}
+
                     {# Format the price - assumes 'price' is a DecimalField or similar #}
                     <p class="price">£{{ product.price|floatformat:2 }}</p>
 

@@ -6,13 +6,18 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'sku',
         'name',
-        'category',
+        'get_category',
         'price',
         'rating',
         'image',
     )
 
     ordering = ('sku',)
+
+    def get_category(self, obj):
+        return ", ".join([category.name for category in obj.category.all()])
+    
+    get_category.short_description = 'Categories'  # Optional: sets the column header in the admin panel
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
