@@ -1,89 +1,199 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {# Or your actual base template #}
 {% load static %}
 
 {% block title %}
-    Shop All Products - KK39 Candles
+    {{ product.name }} - KK39 Candles {# Use the product name in the title #}
 {% endblock title %}
 
 {% block content %}
 
-<section id="all-products" class="shop-section section-padding">
+<section class="product-detail-section section-padding">
     <div class="container">
-        <h2 class="section-title text-center mb-5">Our Products</h2> {# Added text-center and margin-bottom #}
+        {# Removed the default h1 styling here, will be handled by CSS block below #}
+        <h1>{{ product.name }}</h1>
+        {# Removed hr, styling will provide separation #}
 
-        <!--{# --- Placeholder for Sorting/Filtering Controls --- #}
-        {# Use standard HTML comments if you want them in source, but not visible #}
-        
-        <div class="row mb-4 product-controls">
-            <div class="col-md-6">
-                {# Sorting dropdown will go here #}
-                <p>Sorting dropdown placeholder</p>
+        <div class="row">
+            <div class="col-md-6 mb-3 mb-md-0"> {# Adjusted margin for responsiveness #}
+                {# Display product image if it exists #}
+                {% if product.image %}
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid product-detail-image">
+                {% else %}
+                    <img src="{% static 'media/no_image.png' %}" alt="No image available" class="img-fluid product-detail-image"> {# Placeholder image #}
+                {% endif %}
             </div>
-            <div class="col-md-6 text-md-right">
-                {# Filtering options will go here #}
-                 <p>Filtering options placeholder</p>
+
+            <div class="col-md-6 product-info"> {# Added class for easier targeting #}
+                {# Display the price - restructured slightly for styling #}
+                <div class="price-section mb-3">
+                     <span class="price-label">Price:</span>
+                     <span class="price-value">£{{ product.price|floatformat:2 }}</span>
+                </div>
+
+                {# Display description if it exists in your model #}
+                {% if product.description %}
+                    <h3 class="description-heading">Description</h3>
+                    <p class="description-text">{{ product.description|linebreaksbr }}</p>
+                {% endif %}
+
+                {# Add other details you might have #}
+                {# ... #}
+
+                {# Placeholder for 'Add to Cart' button/form #}
+                {# Make sure 'add_to_cart_url_name' is a valid URL name in your urls.py #}
+                <form action="#" method="post" class="mt-4"> {# Example action #}
+                    {% csrf_token %}
+                    {# Add quantity selector if needed #}
+                    <button type="submit" class="btn btn-primary">Add to Cart</button> {# Using btn-primary for styling #}
+                </form>
             </div>
         </div>
-        
-        {# --- End Placeholder --- #} -->
 
-
-        
-        <div class="product-grid">
-
-            {% for product in products %}
-                <div class="product-card">
-                    {# Use product image if available, otherwise a placeholder #}
-                    {% if product.image %}
-                        <img src="{{ product.image.url }}" alt="{{ product.name }}">
-                    {% else %}
-                        <img src="{% static 'media/no_image.png' %}" alt="{{ product.name }}">
-                    {% endif %}
-
-                    <h3>{{ product.name }}</h3>
-                    <p class="price">£{{ product.price|floatformat:2 }}</p>
-                    <a href="{% url 'product_detail' product.id %}" class="btn btn-tertiary">View Product</a> {# Adjust URL name and pk/slug #}
-                </div>
-            {% empty %}
-                {# Display a message if no products are found - centered #}
-                <div class="col-12 text-center py-5"> {# Spans full width, centers text, adds padding #}
-                    <p class="lead">Sorry, there are currently no products available.</p>
-                </div>
-            {% endfor %}
-
-        </div> 
-
-        <!-- Pagination Placeholder --- #}
-        {# Keep this commented out with Django comments until implemented in the view #}
-        {#
-        {% if is_paginated %}
-            <nav aria-label="Page navigation" class="mt-5">
-                <ul class="pagination justify-content-center">
-                    ... pagination links ...
-                </ul>
-            </nav>
-        {% endif %}
-        #}
-        {# --- End Pagination Placeholder -->
+        {# Link back to the main shop page #}
+        <div class="mt-5 text-center"> {# Added more margin top and centered the button #}
+             <a href="{% url 'products' %}" class="btn btn-secondary">Back to Shop</a> {# Adjust URL name if needed #}
+        </div>
 
     </div> {# End container #}
-</section> {# End all-products section #}
+</section> {# End product-detail section #}
 
 {% endblock content %}
 
+
+{% comment %} ========================================
+     START: Custom CSS for Product Detail Page
+======================================== {% endcomment %}
 {% block extra_css %}
 <style>
-    /* Ensure product grid behaves correctly even when empty message is shown */
-    /* (This might not be strictly necessary depending on your base CSS) */
-    .product-grid .col-12 {
-        width: 100%; /* Make the empty message span the container */
+    /* --- Font Imports (Ideally place in base.html <head>) ---
+    /* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;700&display=swap'); */
+
+    /* --- Base Styling for Consistency --- */
+    body {
+        /* Ensure the beige background applies if not set globally */
+        /* background-color: #FAF8F1; */ /* Uncomment if needed */
+        font-family: 'Lato', sans-serif; /* Default sans-serif font */
+        color: #555; /* Default text color */
     }
-    /* Add any specific styling for this page */
-    .product-controls {
-        /* Example styling for controls area */
-        background-color: #f8f9fa; /* Light background */
-        padding: 1rem;
-        border-radius: 0.25rem;
+
+    h1, h2, h3, h4, h5, h6, .price-label, .description-heading {
+        font-family: 'Playfair Display', serif; /* Serif font for headings */
+        color: #333; /* Dark grey for headings */
     }
+
+    .product-detail-section {
+        padding-top: 50px; /* More space at the top */
+        padding-bottom: 50px; /* More space at the bottom */
+        /* background-color: #FAF8F1; */ /* Apply beige background if needed */
+    }
+
+    /* --- Product Title --- */
+    .product-detail-section h1 {
+        font-size: 2.8rem; /* Larger title */
+        font-weight: 700; /* Bolder */
+        color: #333; /* Dark grey */
+        margin-bottom: 30px; /* More space below title */
+        text-align: center; /* Center the main title */
+    }
+
+    /* --- Product Image --- */
+    .product-detail-image {
+        border: 1px solid #EAE0D5; /* Subtle border matching theme */
+        padding: 10px;
+        background-color: #fff; /* White background inside padding */
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto; /* Center image within its column */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Subtle shadow */
+    }
+
+    /* --- Product Info Column --- */
+    .product-info {
+        padding-left: 25px; /* Space between image col and text col */
+    }
+     @media (max-width: 767.98px) {
+        .product-info {
+            padding-left: 15px; /* Reset padding on small screens */
+            margin-top: 30px; /* Add space above text when stacked */
+        }
+        .product-detail-section h1 {
+             font-size: 2.2rem; /* Adjust title size on smaller screens */
+        }
+    }
+
+
+    /* --- Price Styling --- */
+    .price-section {
+        margin-bottom: 25px !important; /* More space below price */
+    }
+    .price-label {
+        font-size: 1.1rem;
+        color: #444; /* Slightly darker than body text */
+        font-weight: 700; /* Bold label */
+        margin-right: 8px;
+    }
+    .price-value {
+        font-family: 'Lato', sans-serif; /* Sans-serif for price value */
+        font-size: 2rem; /* Larger price value */
+        color: #E57373; /* Terracotta/Pinkish color from shop */
+        font-weight: 700; /* Bold price */
+    }
+
+    /* --- Description Styling --- */
+    .description-heading {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+        font-weight: 700;
+        color: #333;
+    }
+    .description-text {
+        color: #555; /* Standard text color */
+        line-height: 1.7; /* Improve readability */
+        font-size: 1.3rem;
+    }
+
+    /* --- Button Styling (Matching Shop Page) --- */
+    .btn { /* General button reset/base */
+        border-radius: 2px; /* Subtle rounding */
+        padding: 12px 25px; /* Slightly larger padding */
+        text-transform: uppercase;
+        font-family: 'Lato', sans-serif; /* Ensure sans-serif */
+        font-size: 0.9rem;
+        font-weight: 700; /* Bold text */
+        letter-spacing: 0.8px;
+        transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+        border: 1px solid transparent; /* Start with transparent border */
+        cursor: pointer;
+    }
+
+    /* Style for 'Add to Cart' (like 'View Product') */
+    .btn-primary {
+        background-color: #D3C1AE; /* Tan/Beige from shop */
+        border-color: #C8B6A6; /* Slightly darker border */
+        color: #333; /* Dark text */
+    }
+    .btn-primary:hover, .btn-primary:focus {
+        background-color: #C8B6A6; /* Darken background on hover */
+        border-color: #B5A391; /* Darken border on hover */
+        color: #333;
+    }
+
+    /* Style for 'Back to Shop' */
+    .btn-secondary {
+        background-color: #f8f9fa; /* Light grey/white */
+        border-color: #ddd; /* Light border */
+        color: #555; /* Grey text */
+    }
+    .btn-secondary:hover, .btn-secondary:focus {
+        background-color: #e9ecef; /* Slightly darker grey */
+        border-color: #ccc;
+        color: #333;
+    }
+
 </style>
 {% endblock extra_css %}
+{% comment %} ========================================
+     END: Custom CSS for Product Detail Page
+======================================== {% endcomment %}
