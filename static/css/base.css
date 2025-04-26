@@ -685,6 +685,160 @@ button {
     opacity: 0.7;
 }
 
+ /* Add some basic bag-specific layout styles here if not in main CSS */
+    /* These are examples - adjust to match your project's design */
+.bag-page-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow summary to wrap below items on small screens */
+    gap: 2rem; /* Space between items list and summary */
+    padding: 2rem 0;
+}
+
+.bag-items {
+    flex: 2; /* Takes up more space */
+    min-width: 300px; /* Ensure it doesn't get too squished */
+}
+
+.bag-summary {
+    flex: 1; /* Takes up less space */
+    min-width: 250px;
+    background-color: #f9f9f9; /* Example subtle background */
+    padding: 1.5rem;
+    border-radius: 8px; /* Example border radius */
+    align-self: flex-start; /* Align to top */
+    border: 1px solid #eee; /* Example border */
+}
+
+.bag-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee; /* Separator */
+}
+.bag-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.bag-item-img img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.bag-item-details {
+    flex-grow: 1;
+}
+
+.bag-item-details h3 {
+    margin: 0 0 0.3rem 0;
+    font-size: 1rem; /* Adjust as needed */
+}
+.bag-item-details p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem; /* Adjust as needed */
+    color: #555; /* Example color */
+}
+
+.item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+.item-quantity button {
+    /* Use your project's button styles, maybe smaller ones */
+    padding: 0.2rem 0.5rem;
+    line-height: 1;
+    cursor: pointer;
+}
+.item-quantity input[type="number"] {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.3rem;
+}
+/* Hide spinner arrows for number input */
+.item-quantity input[type=number]::-webkit-inner-spin-button,
+.item-quantity input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.item-quantity input[type=number] {
+    -moz-appearance: textfield; /* Firefox */
+}
+
+
+.item-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align price and remove button to the right */
+    min-width: 80px; /* Ensure enough space */
+}
+
+.item-line-price {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.remove-item-btn {
+    background: none;
+    border: none;
+    color: #cc0000; /* Example remove color */
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-decoration: underline;
+    padding: 0;
+}
+
+.bag-summary h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.8rem;
+}
+.bag-summary p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+.bag-summary .total {
+    font-weight: bold;
+    font-size: 1.2rem; /* Example larger total */
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ccc;
+}
+.bag-summary .checkout-button {
+    /* Use your project's primary button style */
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+.continue-shopping-link {
+        display: block;
+        text-align: center;
+        margin-top: 1rem;
+        /* Use your project's standard link styling */
+}
+
+.empty-bag-message {
+    text-align: center;
+    padding: 3rem 1rem;
+    border: 1px dashed #ccc; /* Example styling */
+    margin-top: 2rem;
+}
+/* Class to hide elements via JS */
+.hidden {
+    display: none;
+}
+
+
 /* --- Responsive Design --- */
 @media (max-width: 1024px) {
     :root { --section-padding: 80px 0; --grid-gap: 25px; }

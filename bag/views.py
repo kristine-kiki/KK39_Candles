@@ -2,6 +2,6 @@ from django.shortcuts import render
 
 # Create your views here.
 
-def home_view(request):
+def bag_view(request):
     
-    return render(request,'home/index.html')
+    return render(request,'bag/bag.html')

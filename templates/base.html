@@ -65,7 +65,7 @@
                 <a href="{% url 'account_login' %}" class="header-icon login-link" aria-label="Log In">
                     <i class="fas fa-user"></i> Log In
                 </a>
-                <a href="#" class="header-icon cart-link" aria-label="Shopping Cart"> {# Replace # with actual cart url name #}
+                <a href="{% url 'bag_view' %}" class="header-icon cart-link" aria-label="Shopping Cart"> {# Replace # with actual cart url name #}
                     <i class="fas fa-shopping-bag"></i>
                     {# You might want to add a cart count here later #}
                 </a>
