@@ -26,6 +26,7 @@ class Product(models.Model):
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
+    is_bestseller = models.BooleanField(default=False, help_text="Display this on the homepage bestseller section?")
 
     def __str__(self):
         return self.name

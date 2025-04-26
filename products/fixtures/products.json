@@ -222,6 +222,34 @@
       "image_url": "",
       "image": "refreshing_pine_roomspray.png"
     }
+  },
+  {
+    "pk": 17,
+    "model": "products.product",
+    "fields": {
+      "sku": "0017",
+      "name": "Spring Blossom Candle",
+      "description": "Scented Eco, handmade, soy candle with rose and jasmin scent",
+      "price": 8.00,
+      "category": [5,9],
+      "rating": 4.9,
+      "image_url": "",
+      "image": "flower_rose_jasmin.jpg"
+    }
+  },
+  {
+    "pk": 18,
+    "model": "products.product",
+    "fields": {
+      "sku": "0018",
+      "name": "Golden Rim",
+      "description": "Scented Eco, handmade, handpainted soy candle with rose and vanilla scent",
+      "price": 25.00,
+      "category": [5,9],
+      "rating": 4.9,
+      "image_url": "",
+      "image": "handpaint_gold_rim.jpg"
+    }
   }
 ]
   
