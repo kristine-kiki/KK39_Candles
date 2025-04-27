@@ -26,7 +26,7 @@
                             {% if item.product.image %}
                                 <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                             {% else %}
-                                <img src="{% static 'images/default_product.png' %}" alt="{{ item.product.name }}"> {# Placeholder image #}
+                                <img src="{% static 'media/default_product.png' %}" alt="{{ item.product.name }}"> {# Placeholder image #}
                             {% endif %}
                         </div>
                         <div class="bag-item-details">
@@ -36,7 +36,7 @@
                             {# --- Quantity and Remove Handling --- #}
                             {# This part requires forms submitting to Django views #}
                             {# Form for updating quantity #}
-                            <form class="form update-form" method="POST" action="#">
+                            <form class="form update-form" method="POST" action="{% url 'bag_view' %}">
                                 {% csrf_token %}
                                 <div class="item-quantity">
                                      <label for="quantity_{{ item.item_id }}{% if item.size %}_{{ item.size }}{% endif %}">Qty:</label>
@@ -53,10 +53,7 @@
                                          <div class="input-group-append">
                                             <button class="quantity-increase btn btn-sm btn-outline-secondary rounded-0" type="button" data-item_id="{{ item.item_id }}" data-size="{{ item.size|default:'' }}" aria-label="Increase quantity">+</button>
                                         </div>
-                                        {# Optional: Add size as hidden input if your adjust_bag view needs it #}
-                                        {% if item.size %}
-                                            <input type="hidden" name="product_size" value="{{ item.size }}">
-                                        {% endif %}
+                                        
                                         {# Implicitly submits on change via JS, or add an Update button #}
                                         {# Or use JS below to handle +/- button clicks #}
                                     </div>
@@ -72,9 +69,6 @@
                             {# Form for removing item #}
                              <form class="form remove-form" method="POST" action="#">
                                 {% csrf_token %}
-                                {% if item.size %}
-                                    <input type="hidden" name="product_size" value="{{ item.size }}">
-                                {% endif %}
                                 <button type="submit" class="remove-item-btn btn btn-link text-danger">Remove</button>
                             </form>
                         </div>
