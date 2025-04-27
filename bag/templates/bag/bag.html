@@ -31,20 +31,12 @@
                         </div>
                         <div class="bag-item-details">
                             <h3>{{ item.product.name }}</h3>
-                            {# Display size only if it exists for this item in the bag #}
-                            {% if item.size %}
-                                <p>Size: {{ item.size|upper }}</p> {# Or however you store/display size #}
-                            {% endif %}
-                            {# You might want to display other product details here #}
-                            {# {% if item.product.scent %}
-                                <p>Scent: {{ item.product.scent }}</p>
-                            {% endif %} #}
                             <p>Price: ${{ item.product.price|floatformat:2 }}</p>
 
                             {# --- Quantity and Remove Handling --- #}
                             {# This part requires forms submitting to Django views #}
                             {# Form for updating quantity #}
-                            <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
+                            <form class="form update-form" method="POST" action="#">
                                 {% csrf_token %}
                                 <div class="item-quantity">
                                      <label for="quantity_{{ item.item_id }}{% if item.size %}_{{ item.size }}{% endif %}">Qty:</label>
@@ -78,7 +70,7 @@
                              {# Assuming you added line_total in contexts.py (Recommended) #}
                             <p class="item-line-price">${{ item.line_total|floatformat:2 }}</p>
                             {# Form for removing item #}
-                             <form class="form remove-form" method="POST" action="{% url 'remove_from_bag' item.item_id %}">
+                             <form class="form remove-form" method="POST" action="#">
                                 {% csrf_token %}
                                 {% if item.size %}
                                     <input type="hidden" name="product_size" value="{{ item.size }}">
@@ -121,7 +113,7 @@
                 </p>
 
                 {# Use Django url tag for checkout link #}
-                <a href="{% url 'checkout' %}" class="button button-primary checkout-button">Proceed to Checkout</a>
+                <a href="#" class="button button-primary checkout-button">Proceed to Checkout</a>
 
                 {# Use Django url tag for continue shopping link #}
                 <a href="{% url 'products' %}" class="continue-shopping-link">Continue Shopping</a> {# Adjust 'products' to your products list view name #}

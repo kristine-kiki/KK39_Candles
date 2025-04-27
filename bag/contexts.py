@@ -1,12 +1,40 @@
 from decimal import Decimal
 from django.conf import settings
+from django.shortcuts import get_object_or_404
+from products .models import Product
 
 def bag_contents(request):
 
     bag_items = []
     total = 0
     product_count = 0
+    bag = request.session.get ('bag',{})
 
+    for item_id, item_data, in bag.items():
+        
+        if isinstance(item_data, int):
+            product = get_object_or_404(Product, pk=item_id)
+            line_total = item_data * product.price
+            total += item_data
+            bag_items.append({
+                'item_id': item_id,
+                'quantity': item_data,
+                'product': product,
+                'line_total': line_total 
+            })
+        else: 
+            product = get_object_or_404(Product, pk=item_id)
+            for size, quantity in item_data['items_by_size'].items():
+                line_total = quantity * product.price # Calculate line total
+                total += line_total
+                product_count += quantity
+                bag_items.append({
+                    'item_id': item_id,
+                    'quantity': quantity,
+                    'product': product,
+                    'size': size,
+                    'line_total': line_total,
+                })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDART_DELIVERY_PRECENTAGE / 100)
