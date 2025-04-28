@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import os
 from pathlib import Path
+from decimal import Decimal
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -157,8 +158,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-FREE_DELIVERY_THRESHOLD = 75
-STANDART_DELIVERY_PERCENTAGE = 12
+FREE_DELIVERY_THRESHOLD = Decimal('75.00')
+STANDART_DELIVERY_PERCENTAGE = Decimal('12.00')
 
 
 # Default primary key field type

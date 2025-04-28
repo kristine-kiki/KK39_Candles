@@ -30,16 +30,23 @@ def adjust_bag(request, item_id):
 
     # Ensure product exists (optional but good practice)
     product = get_object_or_404(Product, pk=item_id)
-    quantity = int(request.POST.get('quantity'))
+    try:
+        quantity = int(request.POST.get('quantity'))
+    except (ValueError, TypeError):
+        messages.error(request, 'Invalid quantity specified.')
+        return redirect(reverse('bag_view'))
 
     bag = request.session.get('bag', {})
 
     if quantity > 0:
-            bag[item_id] = quantity
-            messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
+        bag[item_id] = quantity
+        messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
         # Remove item if quantity is 0 or less
-    bag.pop(item_id)
-    messages.success(request, f'Removed {product.name} from your bag')
+    
+    else:
+        if item_id in bag:
+            bag.pop(item_id)
+            messages.success(request, f'Removed {product.name} from your bag')
 
     request.session['bag'] = bag
     return redirect(reverse('bag_view')) # Redirect back to the bag page
