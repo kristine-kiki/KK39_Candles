@@ -158,7 +158,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 FREE_DELIVERY_THRESHOLD = 75
-STANDART_DELIVERY_PRECENTAGE = 12
+STANDART_DELIVERY_PERCENTAGE = 12
 
 
 # Default primary key field type

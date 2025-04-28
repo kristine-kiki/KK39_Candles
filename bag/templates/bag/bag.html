@@ -31,45 +31,49 @@
                         </div>
                         <div class="bag-item-details">
                             <h3>{{ item.product.name }}</h3>
-                            <p>Price: ${{ item.product.price|floatformat:2 }}</p>
+                            <p>Price: £{{ item.product.price|floatformat:2 }}</p>
 
                             {# --- Quantity and Remove Handling --- #}
                             {# This part requires forms submitting to Django views #}
                             {# Form for updating quantity #}
-                            <form class="form update-form" method="POST" action="{% url 'bag_view' %}">
-                                {% csrf_token %}
-                                <div class="item-quantity">
-                                     <label for="quantity_{{ item.item_id }}{% if item.size %}_{{ item.size }}{% endif %}">Qty:</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <button class="quantity-decrease btn btn-sm btn-outline-secondary rounded-0" type="button" data-item_id="{{ item.item_id }}" data-size="{{ item.size|default:'' }}" aria-label="Decrease quantity">-</button>
+                            {% if item.item_id %}
+                                <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
+                                    {% csrf_token %}
+                                    <div class="item-quantity">
+                                        <label for="id_qty_{{ item.item_id }}">Qty:</label>
+                                        <div class="input-group input-group-sm quantity-selector" style="max-width: 130px;"> {# Adjust max-width as desired #}
+                                            {# Decrease Button #}
+                                            <button type="button" class="btn quantity-btn decrement-qty" {# input-group-text helps alignment if not using btn-* class #}
+                                                data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                −
+                                            </button>
+                                
+                                            {# Input Field - Crucially, place it between the buttons #}
+                                            <input class="form-control form-control-sm text-center qty_input" type="number"
+                                                name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                                data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}"
+                                                aria-label="Quantity"> {# Add aria-label for accessibility #}
+                                
+                                            {# Increase Button #}
+                                            <button type="button" class="btn quantity-btn increment-qty" {# input-group-text helps alignment if not using btn-* class #}
+                                                data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                +
+                                            </button>
                                         </div>
-                                        {# The name attribute is crucial for the view to get the quantity #}
-                                        <input type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" {# Max based on your stock logic #}
-                                               id="quantity_{{ item.item_id }}{% if item.size %}_{{ item.size }}{% endif %}"
-                                               class="item-quantity-input form-control form-control-sm text-center"
-                                               data-item_id="{{ item.item_id }}" data-size="{{ item.size|default:'' }}"
-                                               aria-label="Quantity">
-                                         <div class="input-group-append">
-                                            <button class="quantity-increase btn btn-sm btn-outline-secondary rounded-0" type="button" data-item_id="{{ item.item_id }}" data-size="{{ item.size|default:'' }}" aria-label="Increase quantity">+</button>
-                                        </div>
-                                        
-                                        {# Implicitly submits on change via JS, or add an Update button #}
-                                        {# Or use JS below to handle +/- button clicks #}
                                     </div>
-                                </div>
-                            </form>
+                                </form>
+                            {% endif %}
                         </div>
 
                         <div class="item-actions">
                              {# Calculate line price: item quantity * item price #}
                              {# We need to add line_total to the context OR use a template tag #}
                              {# Assuming you added line_total in contexts.py (Recommended) #}
-                            <p class="item-line-price">${{ item.line_total|floatformat:2 }}</p>
+                            <p class="item-line-price">£{{ item.line_total|floatformat:2 }}</p>
                             {# Form for removing item #}
-                             <form class="form remove-form" method="POST" action="#">
+                             <form class="form remove-form" method="POST" action="{% url 'remove_from_bag' item.item_id %}">
                                 {% csrf_token %}
-                                <button type="submit" class="remove-item-btn btn btn-link text-danger">Remove</button>
+                                <button type="submit" class="remove-item-btn btn btn-link text-danger p-0 aria-label=Remove {{ item.product.name }}">Remove</button>
                             </form>
                         </div>
                     </div>
@@ -82,14 +86,14 @@
                 <p>
                     <span>Subtotal:</span>
                     {# Display total from context, formatted as currency #}
-                    <span id="bag-subtotal">${{ total|floatformat:2 }}</span>
+                    <span id="bag-subtotal">£{{ total|floatformat:2 }}</span>
                 </p>
 
                 {# Display delivery info from context #}
                 <p>
                     <span>Delivery:</span>
                     {% if delivery > 0 %}
-                        <span id="bag-shipping">${{ delivery|floatformat:2 }}</span>
+                        <span id="bag-shipping">£{{ delivery|floatformat:2 }}</span>
                     {% else %}
                          <span id="bag-shipping">FREE</span>
                     {% endif %}
@@ -97,13 +101,13 @@
 
                 {# Optional: Display message about free delivery #}
                 {% if free_delivery_delta > 0 %}
-                    <p class="text-muted">Add ${{ free_delivery_delta|floatformat:2 }} more for free delivery!</p>
+                    <p class="text-muted">Add £{{ free_delivery_delta|floatformat:2 }} more for free delivery!</p>
                 {% endif %}
 
                 <p class="total">
                     <span>Grand Total:</span>
                     {# Display grand_total from context #}
-                    <span id="bag-total">${{ grand_total|floatformat:2 }}</span>
+                    <span id="bag-total">£{{ grand_total|floatformat:2 }}</span>
                 </p>
 
                 {# Use Django url tag for checkout link #}
@@ -119,72 +123,122 @@
         {# This section shows when the bag is empty #}
         <div class="empty-bag-message" id="empty-bag-message">
             <h2>Your Bag is Empty</h2>
-            <p>Looks like you haven't added any candles yet!</p>
+            <p>Looks like you haven't added anything to your bag yet! Take a look at our handmade range of products to find your next favorite!</p>
             <a href="{% url 'products' %}" class="button button-secondary">Start Shopping</a> {# Adjust 'products' #}
         </div>
     {% endif %}
+</div>
+{% endblock %}
 
-</div><!-- /.container -->
 
-{# Remove or keep this script depending on whether you need JS for UI interactions #}
-{# like the +/- buttons, but NOT for loading data or calculating totals #}
-{# <script src="{% static 'js/bag.js' %}" defer></script> #}
 
-{# --- Optional: Add basic JavaScript for quantity buttons --- #}
-{# This JS does NOT load data, just helps submit the update form #}
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    // Handle quantity decrease button clicks
-    document.querySelectorAll('.quantity-decrease').forEach(button => {
-        button.addEventListener('click', e => {
-            const input = e.target.closest('.input-group').querySelector('.item-quantity-input');
-            let currentValue = parseInt(input.value);
-            if (currentValue > input.min) {
-                input.value = currentValue - 1;
-                // Submit the form associated with this button/input
-                input.closest('form').submit();
-            }
+
+{% block postloadjs %}
+{{ block.supper }}
+
+<script type="text/javascript">
+    console.log("Bag page JS: Script starting."); // Check 1: Is script tag even running?
+
+    document.addEventListener('DOMContentLoaded', () => {
+        console.log("Bag page JS: DOMContentLoaded fired."); // Check 2: Does DOM load trigger this?
+
+        // Function to handle enabling/disabling buttons
+        function handleEnableDisable(inputElement) {
+            // ... (keep this function as it was) ...
+             if (!inputElement) return;
+            const min = parseInt(inputElement.min) || 1;
+            const max = parseInt(inputElement.max) || 99;
+            const currentValue = parseInt(inputElement.value);
+            const buttonGroup = inputElement.closest('.input-group');
+            if (!buttonGroup) return;
+            const decreaseBtn = buttonGroup.querySelector('.decrement-qty'); // Correct class
+            const increaseBtn = buttonGroup.querySelector('.increment-qty'); // Correct class
+            if (decreaseBtn) decreaseBtn.disabled = currentValue <= min;
+            if (increaseBtn) increaseBtn.disabled = currentValue >= max;
+        }
+
+        // Handle quantity decrease button clicks
+        const decreaseButtons = document.querySelectorAll('.decrement-qty'); // Use correct class
+        console.log(`Bag page JS: Found ${decreaseButtons.length} decrease buttons.`); // Check 3: Found buttons?
+
+        decreaseButtons.forEach(button => {
+            button.addEventListener('click', e => {
+                console.log("Bag page JS: Decrease button clicked."); // Check 4: Click registered?
+                const input = e.target.closest('.input-group').querySelector('.qty_input');
+                if (!input) {
+                    console.error("Bag page JS: Decrease - Could not find input field!"); // Check 5: Input found?
+                    return;
+                }
+                console.log("Bag page JS: Decrease - Found input:", input);
+
+                let currentValue = parseInt(input.value);
+                const min = parseInt(input.min) || 1;
+                if (currentValue > min) {
+                    input.value = currentValue - 1;
+                    console.log("Bag page JS: Decrease - Input value updated to:", input.value); // Check 6: Value changed?
+                    handleEnableDisable(input);
+                    const form = input.closest('form');
+                    if (form) {
+                         console.log("Bag page JS: Decrease - Submitting form:", form); // Check 7: Form found?
+                         form.submit();
+                    } else {
+                         console.error("Bag page JS: Decrease - Could not find form to submit!");
+                    }
+                } else {
+                     console.log("Bag page JS: Decrease - Already at min value.");
+                }
+            });
         });
-    });
 
-    // Handle quantity increase button clicks
-    document.querySelectorAll('.quantity-increase').forEach(button => {
-        button.addEventListener('click', e => {
-            const input = e.target.closest('.input-group').querySelector('.item-quantity-input');
-             let currentValue = parseInt(input.value);
-             // Check against max attribute if needed
-             if (input.max === "" || currentValue < input.max) {
-                input.value = currentValue + 1;
-                 // Submit the form associated with this button/input
-                 input.closest('form').submit();
-             }
-        });
-    });
+        // Handle quantity increase button clicks
+        const increaseButtons = document.querySelectorAll('.increment-qty'); // Use correct class
+        console.log(`Bag page JS: Found ${increaseButtons.length} increase buttons.`); // Check 8: Found buttons?
 
-    // Optional: Handle direct input change (e.g., typing a number)
-    // Debounce this if you expect users to type quickly
-    document.querySelectorAll('.item-quantity-input').forEach(input => {
-        let debounceTimeout;
-        input.addEventListener('change', e => {
-            // Clear any existing timeout
-            clearTimeout(debounceTimeout);
-            // Set a new timeout to submit the form after a short delay (e.g., 750ms)
-            debounceTimeout = setTimeout(() => {
-                // Ensure value is within min/max before submitting
-                let value = parseInt(input.value);
-                const min = parseInt(input.min);
-                const max = parseInt(input.max);
-                 if (isNaN(value) || value < min) {
-                     input.value = min; // Correct invalid input visually
-                 } else if (!isNaN(max) && value > max) {
-                     input.value = max; // Correct invalid input visually
+        increaseButtons.forEach(button => {
+            button.addEventListener('click', e => {
+                console.log("Bag page JS: Increase button clicked."); // Check 9: Click registered?
+                const input = e.target.closest('.input-group').querySelector('.qty_input');
+                 if (!input) {
+                    console.error("Bag page JS: Increase - Could not find input field!"); // Check 10: Input found?
+                    return;
+                }
+                console.log("Bag page JS: Increase - Found input:", input);
+
+                 let currentValue = parseInt(input.value);
+                 const max = parseInt(input.max) || 99;
+                 if (currentValue < max) {
+                    input.value = currentValue + 1;
+                    console.log("Bag page JS: Increase - Input value updated to:", input.value); // Check 11: Value changed?
+                    handleEnableDisable(input);
+                    const form = input.closest('form');
+                     if (form) {
+                         console.log("Bag page JS: Increase - Submitting form:", form); // Check 12: Form found?
+                         form.submit();
+                     } else {
+                         console.error("Bag page JS: Increase - Could not find form to submit!");
+                     }
+                 } else {
+                     console.log("Bag page JS: Increase - Already at max value.");
                  }
-                 // Submit the form
-                 input.closest('form').submit();
-            }, 750); // Adjust delay as needed
+            });
         });
+
+        // Handle direct input changes (debounced) - Commented out temporarily to isolate button issues
+        /*
+        document.querySelectorAll('.qty_input').forEach(input => {
+            handleEnableDisable(input);
+            let debounceTimeout;
+            input.addEventListener('change', e => {
+                // ... (keep debounce logic if needed later) ...
+            });
+        });
+        */
+       // Initial check for existing inputs on load
+       document.querySelectorAll('.qty_input').forEach(input => {
+            handleEnableDisable(input);
+        });
+
     });
-});
 </script>
 
-{% endblock content %}
+{% endblock postloadjs %}
