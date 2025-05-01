@@ -128,6 +128,22 @@
         </div>
     {% endif %}
 </div>
+
+<div id="remove-confirm-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" style="display: none;"> {# Hidden initially #}
+    <div class="modal-overlay" data-dismiss="modal"></div> {# Background overlay #}
+    <div class="modal-content">
+        <h3 id="modal-title" class="modal-title">Confirm Removal</h3>
+        <p id="modal-message">Are you sure you want to remove this item from your bag?</p> {# Message will be updated by JS #}
+        <div class="modal-actions summary-actions"> {# Re-use summary-actions for button layout #}
+            <button type="button" class="btn btn-outline-secondary action-btn" data-dismiss="modal" style="margin-right: 0.5rem;">No, Cancel</button>
+            <button type="button" id="modal-confirm-remove" class="btn btn-primary action-btn">Yes, Remove</button>
+        </div>
+         {# Optional: Add a close button (X) in the corner if desired #}
+         {# <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close">×</button> #}
+    </div>
+</div>
+{# --- End Confirmation Modal --- #}
+
 {% endblock %}
 
 
@@ -137,11 +153,9 @@
 {{ block.supper }}
 
 <script type="text/javascript">
-    console.log("Bag page JS: Script starting."); // Check 1: Is script tag even running?
-
+    
     document.addEventListener('DOMContentLoaded', () => {
-        console.log("Bag page JS: DOMContentLoaded fired."); // Check 2: Does DOM load trigger this?
-
+        
         // Function to handle enabling/disabling buttons
         function handleEnableDisable(inputElement) {
             // ... (keep this function as it was) ...
@@ -237,6 +251,69 @@
        document.querySelectorAll('.qty_input').forEach(input => {
             handleEnableDisable(input);
         });
+
+        const modal = document.getElementById('remove-confirm-modal');
+        const modalMessage = document.getElementById('modal-message');
+        const confirmRemoveBtn = document.getElementById('modal-confirm-remove');
+        const cancelButtons = modal.querySelectorAll('[data-dismiss="modal"]');
+        let formToSubmit = null; // Variable to store the form
+
+        // Function to show the modal
+        function showModal(form, itemName) {
+            formToSubmit = form; // Store the form for later
+            modalMessage.textContent = `Are you sure you want to remove ${itemName} from your bag?`;
+            modal.style.display = 'flex'; // Show the modal
+        }
+
+        // Function to hide the modal
+        function hideModal() {
+            formToSubmit = null; // Clear the stored form
+            modal.style.display = 'none';
+        }
+
+        // Add listeners to all remove buttons/links
+        document.querySelectorAll('.remove-item-btn').forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.preventDefault(); // STOP default form submission
+
+                const form = event.target.closest('form');
+                if (!form) return; // Should always find form
+
+                // Try to find the item name (adjust selector if needed)
+                const bagItem = event.target.closest('.bag-item');
+                let itemName = 'this item'; // Default text
+                if (bagItem) {
+                    const nameElement = bagItem.querySelector('.bag-item-details h3');
+                    if (nameElement) {
+                        itemName = nameElement.textContent.trim();
+                    }
+                }
+                showModal(form, itemName); // Show the modal
+            });
+        });
+
+        // Listener for the 'Yes, Remove' button IN THE MODAL
+        confirmRemoveBtn.addEventListener('click', () => {
+            if (formToSubmit) {
+                formToSubmit.submit(); // Submit the stored form
+            }
+            hideModal(); // Hide modal regardless
+        });
+
+        // Listeners for 'No, Cancel' button and overlay click
+        cancelButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                hideModal();
+            });
+        });
+
+        // Optional: Close modal on Escape key press
+        document.addEventListener('keydown', (event) => {
+             if (event.key === 'Escape' && modal.style.display === 'flex') {
+                 hideModal();
+             }
+         });
+        // --- End Remove Confirmation Modal Logic ---
 
     });
 </script>
