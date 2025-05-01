@@ -1017,7 +1017,6 @@ button {
 .modal-actions {
     margin-top: 1rem; /* Space above buttons */
     /* Re-uses .summary-actions flex/gap properties if defined */
-    /* Or uncomment if needed: */
     /* display: flex; */
     /* justify-content: center; */
     /* gap: 0.75rem; */
@@ -1026,12 +1025,9 @@ button {
 /* Ensure modal buttons use the same style */
 .modal-actions .action-btn {
     /* Inherits styles from .summary-actions .action-btn */
-    /* Add any overrides if necessary */
-    padding: 0.6rem 1rem; /* Adjust padding slightly if needed */
+    padding: 0.6rem 1rem; 
 }
 
-/* Optional close button styling */
-/*
 .modal-close {
     position: absolute;
     top: 0.75rem;
@@ -1050,8 +1046,6 @@ button {
     color: #333;
     opacity: 1;
 }
-
-
 
 /* --- Responsive Design --- */
 @media (max-width: 1024px) {

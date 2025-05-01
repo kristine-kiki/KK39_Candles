@@ -38,42 +38,36 @@
     <section id="shop" class="shop-section section-padding">
         <div class="container">
             <h2 class="section-title text-center mb-5">Our Bestsellers</h2>
-            <div class="product-grid">
-                
-                <!-- Product Card 1 -->
-                <div class="product-card">
-                    <img src="/media/flower_rose_jasmin.jpg" alt="scented handmade eco soy candle">
-                    <h3>Spring Blossom Candle</h3>
-                    <p class="price">£8.00</p>
-                    <a href="#" class="btn btn-tertiary">View Product</a>
+            {% if bestseller_products %}
+                <div class="product-grid">
+                    {% for product in bestseller_products %}
+                    {# --- SINGLE Generic Product Card Structure --- #}
+                    <div class="product-card">
+                        {# Use the actual product's image #}
+                        {% if product.image %}
+                            <img src="{{ product.image.url }}" alt="{{ product.name }}"> {# Use product.image.url and product.name #}
+                        {% else %}
+                             {# Optional: Placeholder if no image #}
+                            <img src="{% static 'media/default_product.png' %}" alt="{{ product.name }}">
+                        {% endif %}
+
+                        {# Use the actual product's name #}
+                        <h3>{{ product.name }}</h3>
+
+                        {# Use the actual product's price #}
+                        <p class="price">£{{ product.price|floatformat:2 }}</p>
+
+                        {# Link to the actual product's detail page #}
+                        <a href="{% url 'product_detail' product.id %}" class="btn btn-tertiary">View Product</a>
+                    </div>
+                    {# --- End SINGLE Product Card Structure --- #}
+                {% endfor %}
                 </div>
-                <!-- Product Card 2 -->
-                <div class="product-card">
-                    <img src="/media/handpaint_gold_rim.jpg" alt="Golden handpainted eco candle">
-                    <h3>Golden Rim</h3>
-                    <p class="price">£25.00</p>
-                    <a href="#" class="btn btn-tertiary">View Product</a>
-                </div>
-                <!-- Product Card 3 -->
-                <div class="product-card">
-                     <img src="/media/Gift Set.jpg" alt="Magical Gift Set">
-                    <h3>Magical Gift Set</h3>
-                    <p class="price">£45.00</p>
-                    <a href="#" class="btn btn-tertiary">View Product</a>
-                </div>
-                <!-- Product Card 4 -->
-                <div class="product-card">
-                     <img src="/media/Godess1.jpg" alt="Godess Aphrodite">
-                    <h3>Godess Candle</h3>
-                    <p class="price">£12.00</p>
-                    <a href="#" class="btn btn-tertiary">View Product</a>
-                </div>
-                
+            {% endif %}
+            <div class="view-all-link">
+                {# Link to the main shop/products page #}
+                <a href="{% url 'products' %}" class="btn btn-secondary">View All Products</a>
             </div>
-             <div class="view-all-link">
-                 {# Link to the main shop/products page #}
-                 <a href="{% url 'products' %}" class="btn btn-secondary">View All Products</a>
-             </div>
         </div>
     </section>
 
