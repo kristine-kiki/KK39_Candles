@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load bag_tools %}
 
 {% block title %}
     KK39 Candles - Your Shopping Bag
@@ -49,7 +50,7 @@
                                             </button>
                                 
                                             {# Input Field - Crucially, place it between the buttons #}
-                                            <input class="form-control form-control-sm text-center qty_input" type="number"
+                                            <input class="form-control form-control text-center qty_input" type="number"
                                                 name="quantity" value="{{ item.quantity }}" min="1" max="99"
                                                 data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}"
                                                 aria-label="Quantity"> {# Add aria-label for accessibility #}
@@ -67,8 +68,7 @@
 
                         <div class="item-actions">
                              {# Calculate line price: item quantity * item price #}
-                             {# We need to add line_total to the context OR use a template tag #}
-                             {# Assuming you added line_total in contexts.py (Recommended) #}
+                             
                             <p class="item-line-price">£{{ item.line_total|floatformat:2 }}</p>
                             {# Form for removing item #}
                              <form class="form remove-form" method="POST" action="{% url 'remove_from_bag' item.item_id %}">
@@ -84,9 +84,9 @@
             <div class="bag-summary">
                 <h2>Order Summary</h2>
                 <p>
-                    <span>Subtotal:</span>
+                    <span>Subtotal: </span>
                     {# Display total from context, formatted as currency #}
-                    <span id="bag-subtotal">£{{ total|floatformat:2 }}</span>
+                    <span id="bag-total">£{{ subtotal | floatformat:2 }}</span>
                 </p>
 
                 {# Display delivery info from context #}
@@ -107,16 +107,16 @@
                 <p class="total">
                     <span>Grand Total:</span>
                     {# Display grand_total from context #}
-                    <span id="bag-total">£{{ grand_total|floatformat:2 }}</span>
+                        <span id="bag-total">£{{ grand_total | floatformat:2 }}</span>
                 </p>
 
                 {# Use Django url tag for checkout link #}
-                <a href="#" class="button button-primary checkout-button">Proceed to Checkout</a>
-
+                <div class="summary-actions mt-3">
+                <a href="{% url 'products' %}" class="btn btn-outline-secondary action-btn continue-shopping-link">Continue Shopping</a>
                 {# Use Django url tag for continue shopping link #}
-                <a href="{% url 'products' %}" class="continue-shopping-link">Continue Shopping</a> {# Adjust 'products' to your products list view name #}
+                <a href="#" class="btn btn-primary action-btn checkout-btn">Proceed to Checkout</a> {# Adjust 'products' to your products list view name #}
+                </div>
             </div>
-
         </div>
 
     {% else %}

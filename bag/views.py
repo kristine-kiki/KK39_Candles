@@ -1,19 +1,47 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.shortcuts import render, redirect, HttpResponse, get_object_or_404
+from django.urls import reverse
 from django.contrib import messages
+from django.conf import settings
+from decimal import Decimal
 from products.models import Product
 
 # Create your views here.
 
 def bag_view(request):
-    
-    return render(request,'bag/bag.html')
+    bag_items = []
+    total = Decimal(0)
+    for item_id, quantity in request.session.get('bag', {}).items():
+        product = get_object_or_404(Product, pk=item_id)
+        line_total = Decimal(quantity)*product.price
+        total += line_total
+        bag_items.append({
+            'item_id': item_id,
+            'quantity': quantity,
+            'product': product,
+            'line_total': quantity * product.price,
+        })
+
+    delivery_threshold = Decimal(75)
+    delivery_percentage = Decimal(settings.STANDART_DELIVERY_PERCENTAGE) / Decimal(100)
+    delivery = Decimal(0) if total >= delivery_threshold else total * delivery_percentage
+
+    subtotal = sum(item['line_total'] for item in bag_items)
+
+    context = {
+        'bag_items': bag_items,
+        'subtotal': total,
+        'delivery': delivery,
+        'free_delivery_delta': 75 - sum(item['line_total'] for item in bag_items),
+        'grand_total': subtotal + delivery,
+    }
+    return render(request, 'bag/bag.html', context)
+
 
 def add_to_bag(request, item_id):
     """ add a quantity of the specified product to the shopping bag"""
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity', 1))
-    redirect_url = request.POST.get('redirect_url', '/')
     bag = request.session.get('bag', {})
     if item_id in list(bag.keys()):
         bag[item_id] += quantity
@@ -23,7 +51,7 @@ def add_to_bag(request, item_id):
         messages.success(request, f'Added {product.name} to your bag')
 
     request.session['bag'] = bag
-    return redirect(redirect_url)
+    return redirect(request.META.get('HTTP_REFERER', reverse('products')))
 
 def adjust_bag(request, item_id):
     """Adjust the quantity of the specified product to the specified amount"""
@@ -57,8 +85,12 @@ def remove_from_bag(request, item_id):
     try:
         # Ensure product exists (optional)
         product = get_object_or_404(Product, pk=item_id)
-        bag.pop(item_id)
-        messages.success(request, f'Removed {product.name} from your bag')
+        bag = request.session.get('bag', {})
+        if item_id in bag:
+            bag.pop(item_id, None)
+            messages.success(request, f'Removed {product.name} from your bag')
+        else:
+            messages.error(request, "Item is not found in your bag")
 
         request.session['bag'] = bag
         return redirect(reverse('bag_view')) # Redirect back to the bag page

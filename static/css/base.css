@@ -892,18 +892,60 @@ button {
     padding-top: 1rem;
     border-top: 1px solid #ccc;
 }
-.bag-summary .checkout-button {
-    /* Use your project's primary button style */
-    width: 100%;
-    padding: 0.8rem;
-    margin-top: 1rem;
-    text-align: center;
+/* --- Order Summary Button Styling (Not Full Width) --- */
+.summary-actions {
+    /* Aligned right via inline style in HTML, or use: */
+    /* text-align: right; */
+     margin-top: 1.5rem; /* More space above buttons */
+     display: flex;
+     justify-content: center;
+     gap: 0.75rem;
+     flex-wrap: wrap;
 }
-.continue-shopping-link {
-        display: block;
-        text-align: center;
-        margin-top: 1rem;
-        /* Use your project's standard link styling */
+
+.summary-actions .action-btn {
+    padding: 0.6rem 1.2rem; /* Adjust padding as needed */
+    font-size: 0.9rem; /* Slightly smaller */
+    text-transform: uppercase;
+    border-radius: 0;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, color 0.15s ease-in-out;
+    cursor: pointer;
+    line-height: 1.5;
+}
+
+/* Primary button (Checkout) */
+.summary-actions .checkout-btn {
+    background-color: #D8CABB; /* !! ADJUST BEIGE !! */
+    border-color: #D8CABB;
+    color: #333333;           /* !! ADJUST TEXT COLOR !! */
+    /* font-weight: bold; /* Optional: Keep boldness */
+}
+.summary-actions .checkout-btn:hover {
+    background-color: #c8b8ab; /* !! ADJUST DARKER BEIGE !! */
+    border-color: #c8b8ab;
+    color: #333333;
+}
+
+/* Secondary button (Continue Shopping) - Outline Style */
+.summary-actions .continue-shopping-link {
+    background-color: transparent;
+    border: 1px solid #C8B8AB; /* !! ADJUST BORDER COLOR !! */
+    color: #333333;           /* !! ADJUST TEXT COLOR !! */
+}
+.summary-actions .continue-shopping-link:hover {
+    background-color: #f8f9fa;
+    border-color: #C8B8AB;
+    color: #333333;
+}
+
+/* --- General Bag Summary Enhancements (Keep as before) --- */
+.bag-summary {
+    border: 1px solid #eee;
+    padding: 1.5rem;
+    background-color: #fdfdfd;
+    border-radius: 4px;
 }
 
 .empty-bag-message {
