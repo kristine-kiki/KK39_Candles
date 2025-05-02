@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from pathlib import Path
 from decimal import Decimal
+if os.path.isfile('env.py'):
+    import env # flake8 will throw an error here, but it is necessary to import env.py
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1']
 
@@ -49,6 +51,9 @@ INSTALLED_APPS = [
     'bag',
     'checkout',
     'django_countries',
+    'crispy_forms',
+    'crispy_bootstrap5',
+    
 ]
 
 MIDDLEWARE = [
@@ -64,6 +69,9 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'KK39_Candles.urls'
 
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -78,6 +86,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
                 'bag.contexts.bag_contents',
             ],
         },

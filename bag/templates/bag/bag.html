@@ -114,7 +114,7 @@
                 <div class="summary-actions mt-3">
                 <a href="{% url 'products' %}" class="btn btn-outline-secondary action-btn continue-shopping-link">Continue Shopping</a>
                 {# Use Django url tag for continue shopping link #}
-                <a href="#" class="btn btn-primary action-btn checkout-btn">Proceed to Checkout</a> {# Adjust 'products' to your products list view name #}
+                <a href="{% url 'checkout' %}" class="btn btn-primary action-btn checkout-btn">Proceed to Checkout</a> {# Adjust 'products' to your products list view name #}
                 </div>
             </div>
         </div>
