@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    {# Link to the main checkout CSS as styles might overlap #}
+    <link rel="stylesheet" type="text/css" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock extra_css %}
+
+{% block title %}
+    KK39 Candles - Order Successful!
+{% endblock title %}
+
+{% block content %}
+<div class="container checkout-container-main mb-5">
+    <div class="row">
+        <div class="col text-center">
+            <hr>
+            <i class="fas fa-check-circle confirmation-icon"></i> {# Success Icon #}
+            <h1 class="logo-font mb-4">Thank You!</h1>
+            <p class="text-success">Your order has been successfully processed.</p>
+            <p>Your order number is: <strong>{{ order.order_number }}</strong>.</p>
+            <p>A confirmation email has been sent to <strong>{{ order.email }}</strong>.</p>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-lg-8 offset-lg-2">
+            <div class="order-confirmation-box">
+                <h3 class="text-center mb-4">Order Confirmation Summary</h3>
+
+                <div class="order-details-section">
+                    <h4>Items Ordered</h4>
+                    {% for item in order.lineitems.all %}
+                        <div class="summary-item-success row">
+                            <div class="col-2 col-md-1 my-auto">
+                                {% if item.product.image %}
+                                    <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                {% else %}
+                                    <img class="w-100" src="{{ MEDIA_URL }}default_product.png" alt="{{ item.product.name }}">
+                                {% endif %}
+                            </div>
+                            <div class="col-7 col-md-8">
+                                <p class="my-0 font-weight-bold">{{ item.product.name }}</p>
+                                {# <p class="my-0 small text-muted">Size: ... </p> #}
+                                <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                            </div>
+                             <div class="col-3 col-md-3 text-right">
+                                 <p class="my-0 small">£{{ item.lineitem_total|floatformat:2 }}</p>
+                             </div>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                 <div class="order-details-section totals-summary">
+                     <hr class="mt-4">
+                     <h4>Order Totals</h4>
+                     <p><span>Subtotal:</span> <span>£{{ order.order_total|floatformat:2 }}</span></p>
+                     <p><span>Delivery:</span> <span>£{{ order.delivery_cost|floatformat:2 }}</span></p>
+                     <p class="grand-total"><strong>Grand Total:</strong> <strong>£{{ order.grand_total|floatformat:2 }}</strong></p>
+                 </div>
+
+                <div class="order-details-section">
+                    <hr class="mt-4">
+                    <h4>Shipping To</h4>
+                    <p>{{ order.full_name }}</p>
+                    <p>{{ order.street_address1 }}</p>
+                    {% if order.street_address2 %}
+                        <p>{{ order.street_address2 }}</p>
+                    {% endif %}
+                    <p>{{ order.town_or_city }}</p>
+                    {% if order.county %}
+                        <p>{{ order.county }}</p>
+                    {% endif %}
+                    <p>{{ order.postcode }}</p>
+                    <p>{{ order.country.name }}</p> {# Display country name #}
+                    <p>{{ order.phone_number }}</p>
+                </div>
+
+            </div>{# End order-confirmation-box #}
+
+            <div class="text-center mt-4">
+                {# Button to go back to products page #}
+                <a href="{% url 'products' %}" class="btn btn-outline-secondary action-btn continue-shopping-link">
+                     <span class="icon"><i class="fas fa-store"></i></span> Continue Shopping
+                </a>
+                 {# Optional: Link to user's profile/order history #}
+                 {# {% if request.user.is_authenticated %}
+                     <a href="#" class="btn btn-primary action-btn checkout-btn ml-2">
+                          <span class="icon"><i class="fas fa-user"></i></span> View Order History
+                     </a>
+                 {% endif %} #}
+            </div>
+
+        </div>{# End Col #}
+    </div>{# End Row #}
+
+</div>{# End Container #}
+{% endblock %}

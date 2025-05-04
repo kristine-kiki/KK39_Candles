@@ -177,6 +177,59 @@ legend.fieldset-label {
     font-size: 1rem;
 }
 
+.order-confirmation-box {
+    border: 1px solid #eee;
+    padding: 1.5rem;
+    background-color: #fdfdfd;
+    border-radius: 4px; /* Optional */
+    margin-top: 1.5rem;
+}
+.confirmation-icon {
+    font-size: 3rem;
+    color: #28a745; /* Success green */
+    margin-bottom: 1rem;
+}
+.order-details-section h4 {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #333;
+    /* border-bottom: 1px solid #eee; */
+    padding-bottom: 0.25rem;
+}
+ .order-details-section p,
+ .summary-item-success p {
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+ }
+ .summary-item-success {
+     border-bottom: 1px solid #eee;
+     padding-bottom: 0.75rem;
+     margin-bottom: 0.75rem;
+ }
+ .summary-item-success:last-child {
+     border-bottom: none;
+     margin-bottom: 0;
+     padding-bottom: 0;
+ }
+ .summary-item-success img {
+    max-width: 60px; /* Smaller image */
+    height: auto;
+ }
+ .totals-summary p {
+     display: flex;
+     justify-content: space-between;
+     margin-bottom: 0.4rem;
+ }
+ .totals-summary p.grand-total {
+     font-weight: bold;
+     font-size: 1.1rem;
+     margin-top: 0.5rem;
+     padding-top: 0.5rem;
+     border-top: 1px solid #ddd;
+ }
+
+
 /* --- Responsiveness --- */
 
 @media (max-width: 991.98px) {
@@ -188,3 +241,4 @@ legend.fieldset-label {
      .order-lg-last { order: 0 !important; }
      .order-lg-first { order: 0 !important; }
 }
+
