@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
-{% load bag_tools %} 
+{% load bag_tools %}
 {% load crispy_forms_tags %}
 
 {% block extra_css %}
-    <link rel="stylesheet" type="text/css" href="{% static 'checkout/css/checkout.css' %}">
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
 {% block title %}
     KK39 Candles - Secure Checkout
-{% endblock title %}
+{% endblock %}
 
 {% block content %}
 <div class="overlay" id="loading-overlay" style="display: none;">
@@ -28,30 +28,50 @@
     </div>
 
     <div class="row">
-        {# Checkout Form Section #}
+        <!-- Checkout Form Section -->
         <div class="col-12 col-lg-7 order-lg-last mb-4">
             <h2 class="checkout-section-title">Shipping & Contact Details</h2>
             <p class="text-muted">Please fill in your details below.</p>
-            {# The form action points back to the checkout view #}
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
                 <fieldset class="rounded px-3 mb-3 pb-2">
                     <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
-                    {# Render form fields individually for better control #}
-                    {{ order_form.full_name | as_crispy_field }}
-                    {{ order_form.email | as_crispy_field }}
-                    {{ order_form.phone_number | as_crispy_field }}
+                    {{ order_form.full_name|as_crispy_field }}
+                    {{ order_form.email|as_crispy_field }}
+                    {{ order_form.phone_number|as_crispy_field }}
                 </fieldset>
                 <fieldset class="rounded px-3 mb-3 pb-2">
                     <legend class="fieldset-label small text-black px-2 w-auto">Shipping Address</legend>
-                    {{ order_form.street_address1 | as_crispy_field }}
-                    {{ order_form.street_address2 | as_crispy_field }}
-                    {{ order_form.town_or_city | as_crispy_field }}
-                    {{ order_form.county | as_crispy_field }}
-                    {{ order_form.postcode | as_crispy_field }}
-                    {{ order_form.country | as_crispy_field }}
+                    {{ order_form.street_address1|as_crispy_field }}
+                    {{ order_form.street_address2|as_crispy_field }}
+                    {{ order_form.town_or_city|as_crispy_field }}
+                    {{ order_form.county|as_crispy_field }}
+                    {{ order_form.postcode|as_crispy_field }}
+                    
+                    <!-- Country Field with Manual Rendering -->
+                    <div class="mb-3">
+                        <label for="{{ order_form.country.id_for_label }}" class="form-label">Country*</label>
+                        <select name="{{ order_form.country.name }}" id="{{ order_form.country.id_for_label }}" 
+                                class="form-select {% if order_form.country.errors %}is-invalid{% endif %}"
+                                required>
+                            {% for code, name in order_form.fields.country.choices %}
+                                {% if code %}
+                                    <option value="{{ code }}" {% if order_form.country.value == code %}selected{% endif %}>
+                                        {{ name }}
+                                    </option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                        {% if order_form.country.errors %}
+                            <div class="invalid-feedback">
+                                {% for error in order_form.country.errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
 
-                     {# Optional save info checkbox #}
+                    <!-- Save Info Checkbox -->
                     <div class="form-check form-check-inline float-right mr-0">
                         {% if user.is_authenticated %}
                             <label class="form-check-label small" for="id-save-info">Save this delivery information to my profile</label>
@@ -65,20 +85,17 @@
                     </div>
                 </fieldset>
 
-                {# --- Payment Section (Stripe placeholder) --- #}
+                <!-- Payment Section -->
                 <fieldset class="px-3">
                     <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
-                    <!-- Placeholder for Stripe Card Element -->
-                    <div class="mb-3 form-control" id="card-element" style="height: auto; padding: 0;"><!-- A Stripe Element will be inserted here --></div>
-                    <!-- Used to display form errors returned from Stripe -->
+                    <div class="mb-3 form-control" id="card-element"></div>
                     <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
-                    <!-- Hidden input for PaymentIntent client secret (will be needed for Stripe) -->
                     <input type="hidden" value="{{ client_secret }}" name="client_secret">
                 </fieldset>
 
-                {# --- Submit Button & Links --- #}
+                <!-- Submit Button -->
                 <div class="submit-button-container text-right mt-4 mb-2">
-                     <a href="{% url 'bag_view' %}" class="btn action-btn btn-outline-secondary" aria-label="Adjust your shopping bag">
+                    <a href="{% url 'bag_view' %}" class="btn action-btn btn-outline-secondary" aria-label="Adjust your shopping bag">
                         <span class="icon"><i class="fas fa-chevron-left"></i></span> Adjust Bag
                     </a>
                     <button id="submit-button" class="btn btn-primary action-btn checkout-btn">
@@ -93,7 +110,7 @@
             </form>
         </div>
 
-        {# Order Summary Section #}
+        <!-- Order Summary Section -->
         <div class="col-12 col-lg-5 order-lg-first">
             <h2 class="checkout-section-title">Order Summary ({{ product_count }})</h2>
             <div class="summary-container p-3 rounded">
@@ -109,9 +126,8 @@
                         </div>
                         <div class="col-9">
                             <p class="my-0 font-weight-bold">{{ item.product.name }}</p>
-                            {# <p class="my-0 small text-muted">Size: {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p> #}
                             <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
-                            <p class="my-0 small text-muted text-right">£{{ item.line_total|floatformat:2 }}</p> {# Price for this line #}
+                            <p class="my-0 small text-muted text-right">£{{ item.line_total|floatformat:2 }}</p>
                         </div>
                     </div>
                     {% endfor %}
@@ -120,43 +136,108 @@
                     <p class="text-muted">Your bag is empty.</p>
                 {% endif %}
 
-                {# Totals #}
                 <div class="summary-totals">
-                     <p class="d-flex justify-content-between"><span>Subtotal:</span> <span>£{{ total|floatformat:2 }}</span></p>
-                     <p class="d-flex justify-content-between"><span>Delivery:</span> <span>£{{ delivery|floatformat:2 }}</span></p>
-                     <hr>
-                     <p class="d-flex justify-content-between total"><strong>Grand Total:</strong> <strong>£{{ grand_total|floatformat:2 }}</strong></p>
+                    <p class="d-flex justify-content-between"><span>Subtotal:</span> <span>£{{ total|floatformat:2 }}</span></p>
+                    <p class="d-flex justify-content-between"><span>Delivery:</span> <span>£{{ delivery|floatformat:2 }}</span></p>
+                    <hr>
+                    <p class="d-flex justify-content-between total"><strong>Grand Total:</strong> <strong>£{{ grand_total|floatformat:2 }}</strong></p>
                 </div>
-            </div>{# End summary-container #}
-        </div>{# End Order Summary Col #}
-
-    </div>{# End Row #}
-</div>{# End Container #}
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block postloadjs %}
     {{ block.super }}
-    
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
     {{ client_secret|json_script:"id_client_secret" }}
-
-    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
-
-     {# Basic JS for loading overlay (optional) #}
-     <script>
-        var form = document.getElementById('payment-form');
-        var submitButton = document.getElementById('submit-button');
-        var loadingOverlay = document.getElementById('loading-overlay');
-
-        if (form) {
-            form.addEventListener('submit', function(ev){
-                if (submitButton) {
-                    submitButton.disabled = true; // Disable button
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        // Stripe Elements Initialization
+        $(function() {
+            const stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
+            const clientSecret = $('#id_client_secret').text().slice(1, -1);
+            const stripe = Stripe(stripePublicKey);
+            const elements = stripe.elements();
+            
+            // Card Element Styling
+            const style = {
+                base: {
+                    color: '#32325d',
+                    fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                    fontSmoothing: 'antialiased',
+                    fontSize: '16px',
+                    '::placeholder': {
+                        color: '#aab7c4'
+                    }
+                },
+                invalid: {
+                    color: '#fa755a',
+                    iconColor: '#fa755a'
                 }
-                 if (loadingOverlay) {
-                    loadingOverlay.style.display = 'flex'; // Show overlay
-                 }
+            };
+
+            // Create and mount Card Element
+            const card = elements.create('card', {style: style});
+            card.mount('#card-element');
+
+            // Handle real-time validation errors
+            card.addEventListener('change', function(event) {
+                const displayError = document.getElementById('card-errors');
+                if (event.error) {
+                    displayError.innerHTML = `
+                        <span class="icon"><i class="fas fa-times"></i></span>
+                        <span>${event.error.message}</span>
+                    `;
+                } else {
+                    displayError.textContent = '';
+                }
             });
-        }
-     </script>
+
+            // Handle form submission
+            const form = document.getElementById('payment-form');
+            form.addEventListener('submit', function(ev) {
+                ev.preventDefault();
+                const submitButton = document.getElementById('submit-button');
+                const loadingOverlay = document.getElementById('loading-overlay');
+                
+                submitButton.disabled = true;
+                loadingOverlay.style.display = 'flex';
+
+                // Confirm card payment
+                stripe.confirmCardPayment(clientSecret, {
+                    payment_method: {
+                        card: card,
+                        billing_details: {
+                            name: form.full_name.value.trim(),
+                            email: form.email.value.trim(),
+                            phone: form.phone_number.value.trim(),
+                            address: {
+                                line1: form.street_address1.value.trim(),
+                                line2: form.street_address2.value.trim(),
+                                city: form.town_or_city.value.trim(),
+                                state: form.county.value.trim(),
+                                postal_code: form.postcode.value.trim(),
+                                country: form.country.value.trim()
+                            }
+                        }
+                    }
+                }).then(function(result) {
+                    if (result.error) {
+                        document.getElementById('card-errors').innerHTML = `
+                            <span class="icon"><i class="fas fa-times"></i></span>
+                            <span>${result.error.message}</span>
+                        `;
+                        submitButton.disabled = false;
+                        loadingOverlay.style.display = 'none';
+                    } else {
+                        if (result.paymentIntent.status === 'succeeded') {
+                            form.submit();
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 {% endblock %}

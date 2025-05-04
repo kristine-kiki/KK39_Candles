@@ -4,22 +4,23 @@ from django_countries import countries
 
 class OrderForm(forms.ModelForm):
     country = forms.ChoiceField(
-        choices=countries,
-        widget=forms.Select(attrs={'class': 'form-control'})
+        choices=[('', 'Select Country')] + list(countries),
+        widget=forms.Select(attrs={'class': 'form-control'}),
+        required=True
     )
-
+    
     class Meta:
         """
         Meta class for OrderForm to specify model and fields.
         """
         model = Order
         # List the fields from the Order model that the user should fill in
-        fields = (
+        fields = [
             'full_name', 'email', 'phone_number',
             'street_address1', 'street_address2',
             'town_or_city', 'postcode', 'county',
             'country',
-        )
+        ]
 
     def __init__(self, *args, **kwargs):
         """
@@ -27,15 +28,7 @@ class OrderForm(forms.ModelForm):
         labels and set autofocus on first field.
         """
         super().__init__(*args, **kwargs) # Call the default __init__ first
-
-        if 'country' in self.fields:
-            try:
-                # Access the choices and convert them to a list immediately
-                self.fields['country'].choices = list(self.fields['country'].choices)
-                print("DEBUG: Converted country choices to list.") # Optional debug print
-            except Exception as e:
-                # Log error if conversion fails for some reason
-                print(f"DEBUG: Error converting country choices to list: {e}")
+        self.fields['country'].choices = [('', 'Select Country')] + list(countries)
 
         # Define placeholders for the form fields
         placeholders = {
