@@ -1,6 +1,3 @@
-
-import stripe
-import json
 from decimal import Decimal
 
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
@@ -12,6 +9,9 @@ from .forms import OrderForm
 from .models import Order, OrderLineItem
 from products.models import Product
 from bag.contexts import bag_contents
+
+import stripe
+import json
 
 # Create your views here.
 
@@ -38,8 +38,8 @@ def checkout(request):
     Handle the main checkout process (display form, process order).
     Stripe functionality commented out for now.
     """
-    #stripe_public_key = settings.STRIPE_PUBLIC_KEY # Stripe specific
-    # stripe_secret_key = settings.STRIPE_SECRET_KEY # Stripe specific
+    stripe_public_key = settings.STRIPE_PUBLIC_KEY
+    stripe_secret_key = settings.STRIPE_SECRET_KEY
 
     if request.method == 'POST':
         bag = request.session.get('bag', {})
@@ -116,27 +116,26 @@ def checkout(request):
             return redirect(reverse('products'))
 
         # --- Stripe PaymentIntent creation removed ---
-        # current_bag_context = bag_contents(request)
-        # total = current_bag_context['grand_total']
-        # stripe_total = round(total * 100)
-        # stripe.api_key = stripe_secret_key
-        # intent = stripe.PaymentIntent.create(...)
-        # -------------------------------------------
-
+        current_bag_context = bag_contents(request)
+        total = current_bag_context['grand_total']
+        stripe_total = round(total * 100)
+        stripe.api_key = stripe_secret_key
+        intent = stripe.PaymentIntent.create(
+            amount = stripe_total,
+            currency = settings.STRIPE_CURRENCY,
+        )
+        
         order_form = OrderForm()
 
     # --- Warning for Stripe key removed ---
-    # if not stripe_public_key:
-    #    messages.warning(request, ('Stripe public key is missing.'))
-    # --------------------------------------
+    if not stripe_public_key:
+        messages.warning(request, ('Stripe public key is missing.'))
 
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
-        # --- Stripe keys removed from context ---
-        # 'stripe_public_key': stripe_public_key,
-        # 'client_secret': intent.client_secret, # Removed
-        # --------------------------------------
+        'stripe_public_key': stripe_public_key,
+        'client_secret': intent.client_secret,
     }
 
     return render(request, template, context)
