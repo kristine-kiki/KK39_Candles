@@ -1,5 +1,5 @@
 
-# import stripe # Commented out Stripe import
+import stripe
 import json
 from decimal import Decimal
 
@@ -38,7 +38,7 @@ def checkout(request):
     Handle the main checkout process (display form, process order).
     Stripe functionality commented out for now.
     """
-    # stripe_public_key = settings.STRIPE_PUBLIC_KEY # Stripe specific
+    #stripe_public_key = settings.STRIPE_PUBLIC_KEY # Stripe specific
     # stripe_secret_key = settings.STRIPE_SECRET_KEY # Stripe specific
 
     if request.method == 'POST':

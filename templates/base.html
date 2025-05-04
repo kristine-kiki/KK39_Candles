@@ -122,10 +122,10 @@
                 <h4>Shop</h4>
                 <ul>
                     {# Use url tags for navigation #}
-                    <li><a href="#">Shop All</a></li>
-                    <li><a href="#">Candles</a></li>
-                    <li><a href="#">For Home</a></li>
-                    <li><a href="#">Gift Sets</a></li>
+                    <li><a href="{% url 'products' %}">Shop All</a></li>
+                    <li><a href="{% url 'products' %}?category=candles">Candles</a></li>
+                    <li><a href="{% url 'products' %}?category=for_home">For Home</a></li>
+                    <li><a href="{% url 'products' %}?category=gifts">Gift Sets</a></li>
                 </ul>
             </div>
             <div class="footer-column">
