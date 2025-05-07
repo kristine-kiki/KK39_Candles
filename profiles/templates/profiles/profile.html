@@ -4,14 +4,11 @@
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
-     {# Link checkout CSS as well for form/button styles #}
-    <link rel="stylesheet" type="text/css" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
 {% block title %}
     KK39 Candles - My Profile
-{% endblock title %}
-
+{% endblock %}
 
 {% block content %}
 <div class="container profile-container my-5">
@@ -24,61 +21,67 @@
     <div class="row">
         <!-- Default Delivery Information Column -->
         <div class="col-12 col-lg-6 mb-4">
-            <h2 class="profile-section-title">Default Delivery Information</h2>
-            <p class="text-muted small">Update your default address for faster checkout.</p>
-            {# Form to update profile info, posts back to the 'profile' view #}
-            <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
-                {% csrf_token %}
-                {# Render the UserProfileForm passed from the view #}
-                {{ form|crispy }}
-                <div class="text-right mt-3"> {# Align button right #}
-                    <button class="btn btn-primary action-btn checkout-btn">Update Information</button>
-                </div>
-            </form>
+            <div class="profile-card p-4">
+                <h2 class="profile-section-title mb-3">Default Delivery Information</h2>
+                <p class="text-muted small mb-4">Update your default address for faster checkout.</p>
+                <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <div class="text-right mt-4">
+                        <button class="btn btn-primary action-btn checkout-btn">
+                            <i class="fas fa-save mr-2"></i>Update Information
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
 
         <!-- Order History Column -->
         <div class="col-12 col-lg-6">
-            <h2 class="profile-section-title">Your Order History</h2>
-            {% if orders %}
-                <div class="order-history-list">
-                    {% for order in orders %}
-                        <div class="order-history-item mb-3 p-3">
-                            <div class="row">
-                                <div class="col-6 col-md-4">
-                                    <p class="mb-0 font-weight-bold">Order Number:</p>
-                                    {# Link to the order confirmation/detail page #}
-                                    <p><a href="{% url 'checkout_success' order.order_number %}" title="View Order {{ order.order_number }}">
-                                        {{ order.order_number|truncatechars:8 }}... {# Truncate for display #}
-                                    </a></p>
-                                </div>
-                                <div class="col-6 col-md-4">
-                                     <p class="mb-0 font-weight-bold">Date:</p>
-                                     <p>{{ order.date|date:"d M Y" }}</p>
-                                </div>
-                                <div class="col-12 col-md-4 text-md-right">
-                                    <p class="mb-0 font-weight-bold">Total:</p>
-                                    <p>£{{ order.grand_total|floatformat:2 }}</p>
+            <div class="profile-card p-4">
+                <h2 class="profile-section-title mb-3">Your Order History</h2>
+                {% if orders %}
+                    <div class="order-history-list">
+                        {% for order in orders %}
+                            <div class="order-history-item mb-3 p-3 border rounded">
+                                <div class="row align-items-center">
+                                    <div class="col-12 col-md-5 mb-2 mb-md-0">
+                                        <p class="mb-1 font-weight-bold small">Order #{{ order.order_number|truncatechars:10 }}</p>
+                                        <p class="small text-muted mb-0">{{ order.date|date:"d M Y" }}</p>
+                                    </div>
+                                    <div class="col-8 col-md-4">
+                                        <p class="mb-1 small">Total: <strong>£{{ order.grand_total|floatformat:2 }}</strong></p>
+                                        <p class="small mb-0">
+                                            {% with order.lineitems.all|slice:":2" as items %}
+                                                {% for item in items %}
+                                                    {{ item.product.name }}{% if not forloop.last %}, {% endif %}
+                                                {% endfor %}
+                                                {% if order.lineitems.all|length > 2 %} +{{ order.lineitems.all|length|add:"-2" }} more{% endif %}
+                                            {% endwith %}
+                                        </p>
+                                    </div>
+                                    <div class="col-4 col-md-3 text-right">
+                                        <a href="{% url 'order_history' order.order_number %}" 
+                                           class="btn btn-sm btn-outline-primary"
+                                           title="View Order Details">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                            {# Optional: Show a few items from the order #}
-                            {# <p class="small text-muted mb-0">Items:</p>
-                            <ul class="list-unstyled small">
-                                {% for item in order.lineitems.all|slice:":3" %} {# Show first 3 items #}
-                                    {# <li>{{ item.quantity }} x {{ item.product.name }}</li> #}
-                                {# {% endfor %}
-                                {% if order.lineitems.all|length > 3 %}
-                                    <li>... and more</li>
-                                {% endif %}
-                            </ul> #}
-                        </div>
-                    {% endfor %}
-                </div>
-            {% else %}
-                <p class="text-muted">You haven't placed any orders yet.</p>
-            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <div class="text-center py-4">
+                        <i class="fas fa-box-open fa-3x text-muted mb-3"></i>
+                        <p class="text-muted">You haven't placed any orders yet.</p>
+                        <a href="{% url 'products' %}" class="btn btn-primary mt-2">
+                            <i class="fas fa-shopping-bag mr-2"></i>Shop Now
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
         </div>
     </div>
-
 </div>
 {% endblock %}

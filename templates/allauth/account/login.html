@@ -24,7 +24,7 @@
                 {% csrf_token %}
                 {% element fields form=form unlabeled=True %}
                 {% endelement %}
-                {{ redirect_field }}
+                <pre>{{ redirect_field }}</pre>
             {% endslot %}
             {% slot actions %}
                 {% element button type="submit" tags="prominent,login" %}
