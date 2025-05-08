@@ -7,6 +7,7 @@ from django.conf import settings
 from products.models import Product
 from profiles.models import UserProfile
 from .models import Order, OrderLineItem
+import stripe
 
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
@@ -45,37 +46,42 @@ class StripeWH_Handler:
         """
         intent = event.data.object
         pid = intent.id
-        bag = intent.metadata.bag
-        save_info = intent.metadata.save_info
+        metadata = intent.metadata if hasattr(intent, 'metadata') else {}
+        bag = metadata.get('bag', '[]')
+        save_info = metadata.get('save_info', 'false') == 'true'
+        username = metadata.get('username', 'AnonymousUser')
 
         # Get the Charge object
         stripe_charge = stripe.Charge.retrieve(
             intent.latest_charge
-        )
+        ) if hasattr(intent, 'latest_charge') else None
 
-        billing_details = stripe_charge.billing_details
-        shipping_details = intent.shipping
-        grand_total = round(stripe_charge.amount / 100, 2)
+        billing_details = intent.charges.data[0].billing_details if hasattr(intent, 'charges') else {}
+        shipping_details = intent.shipping if hasattr(intent, 'shipping') else {}
+        grand_total = round(intent.amount / 100, 2)
 
         # Clean data in the shipping details
-        for field, value in shipping_details.address.items():
-            if value == "":
-                shipping_details.address[field] = None
+        if shipping_details:
+            for field, value in shipping_details.address.items():
+                if value == "":
+                    shipping_details.address[field] = None
 
         # Update profile information if save_info was checked
         profile = None
-        username = intent.metadata.username
         if username != 'AnonymousUser':
-            profile = UserProfile.objects.get(user__username=username)
-            if save_info:
-                profile.default_phone_number = shipping_details.phone
-                profile.default_street_address1 = shipping_details.address.line1
-                profile.default_street_address2 = shipping_details.address.line2
-                profile.default_town_or_city = shipping_details.address.city
-                profile.default_county = shipping_details.address.state
-                profile.default_postcode = shipping_details.address.postal_code
-                profile.default_country = shipping_details.address.country
-                profile.save()
+            try:
+                profile = UserProfile.objects.get(user__username=username)
+                if save_info and shipping_details:
+                    profile.default_phone_number = shipping_details.phone
+                    profile.default_street_address1 = shipping_details.address.line1
+                    profile.default_street_address2 = shipping_details.address.line2
+                    profile.default_town_or_city = shipping_details.address.city
+                    profile.default_county = shipping_details.address.state
+                    profile.default_postcode = shipping_details.address.postal_code
+                    profile.default_country = shipping_details.address.country
+                    profile.save()
+            except UserProfile.DoesNotExist:
+                profile = None
 
         order_exists = False
         attempt = 1
@@ -89,6 +95,7 @@ class StripeWH_Handler:
             except Order.DoesNotExist:
                 attempt += 1
                 time.sleep(1)
+        
         if order_exists:
             self._send_confirmation_email(order)
             return HttpResponse(
@@ -98,18 +105,21 @@ class StripeWH_Handler:
             order = None
             try:
                 order = Order.objects.create(
-                    full_name=shipping_details.name,
+                    full_name=shipping_details.get('name', ''),
                     user_profile=profile,
-                    email=billing_details.email,
-                    phone_number=shipping_details.phone,
-                    street_address1=shipping_details.address.line1,
-                    street_address2=shipping_details.address.line2,
-                    town_or_city=shipping_details.address.city,
-                    county=shipping_details.address.state,
-                    postcode=shipping_details.address.postal_code,
-                    country=shipping_details.address.country,
+                    email=billing_details.get('email', ''),
+                    phone_number=shipping_details.get('phone', ''),
+                    street_address1=shipping_details.address.get('line1', '') if shipping_details else '',
+                    street_address2=shipping_details.address.get('line2', '') if shipping_details else '',
+                    town_or_city=shipping_details.address.get('city', '') if shipping_details else '',
+                    county=shipping_details.address.get('state', '') if shipping_details else '',
+                    postcode=shipping_details.address.get('postal_code', '') if shipping_details else '',
+                    country=shipping_details.address.get('country', '') if shipping_details else '',
                     original_bag=bag,
                     stripe_pid=pid,
+                    order_total=grand_total,
+                    delivery_cost=0,  # Adjust as needed
+                    grand_total=grand_total,
                 )
                 for item_id, item_data in json.loads(bag).items():
                     product = Product.objects.get(id=item_id)
@@ -126,6 +136,7 @@ class StripeWH_Handler:
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500)
+        
         self._send_confirmation_email(order)
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
