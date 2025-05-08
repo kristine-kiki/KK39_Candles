@@ -1,14 +1,52 @@
-{% extends "account/base_entrance.html" %}
+{% extends 'base.html' %}
+{% load static %}
 {% load i18n %}
-{% load allauth %}
-{% block head_title %}
-    {% trans "Verify Your Email Address" %}
-{% endblock head_title %}
+{% load account %}
+
+{% block title %}
+    {% trans "Verify Your Email Address" %} - KK39 Candles
+{% endblock title %}
+
 {% block content %}
-    {% element h1 %}
-        {% trans "Verify Your Email Address" %}
-    {% endelement %}
-    {% element p %}
-        {% blocktrans %}We have sent an email to you for verification. Follow the link provided to finalize the signup process. If you do not see the verification email in your main inbox, check your spam folder. Please contact us if you do not receive the verification email within a few minutes.{% endblocktrans %}
-    {% endelement %}
+<div class="login-page-container section-padding">
+    <div class="login-form-wrapper text-center"> {# text-center for content alignment #}
+        <h2 class="section-title">{% trans "Verify Your Email Address" %}</h2>
+
+        <p class="login-subtitle">
+            {% blocktrans %}
+            We have sent an email to you for verification. Follow the link provided to finalize the signup process.
+            {% endblocktrans %}
+        </p>
+        <p class="login-subtitle">
+            {% blocktrans %}
+            If you do not see the verification email in your main inbox, please check your spam folder.
+            {% endblocktrans %}
+        </p>
+        <p class="login-subtitle">
+            {% blocktrans %}
+            Please contact us if you do not receive the email within a few minutes.
+            {% endblocktrans %}
+        </p>
+
+        {% if messages %}
+            <div class="messages-container mt-3">
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags|default:'info' }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {# Optional: Link back to home or login #}
+        <div class="mt-4">
+            <a href="{% url 'home' %}" class="btn btn-secondary">{% trans "Back to Home" %}</a>
+            {# Replace 'home' with your actual home page URL name #}
+        </div>
+
+    </div>
+</div>
 {% endblock content %}

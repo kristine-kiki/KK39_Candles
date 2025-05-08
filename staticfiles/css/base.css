@@ -726,6 +726,18 @@ button {
     .newsletter-form input[type="email"] { flex-grow: 0; width: 250px; } /* Fixed width */
 }
 
+@media (max-width: 576px) {
+    .login-form-wrapper {
+        padding: 25px 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .login-form-wrapper .section-title {
+        font-size: 1.8em; /* Adjust if needed */
+    }
+}
+
 @media (max-width: 480px) {
     :root { --section-padding: 50px 0; }
     h1 { font-size: 2rem; }
@@ -753,3 +765,5 @@ button {
     .newsletter-form input[type="email"] { border-radius: 4px; width: 90%; }
     .newsletter-form button { border-radius: 4px; width: 60%; }
 }
+
+

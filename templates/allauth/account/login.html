@@ -1,61 +1,80 @@
-{% extends "account/base_entrance.html" %}
+{% extends 'base.html' %}
+{% load static %}
 {% load i18n %}
-{% load allauth account %}
-{% block head_title %}
-    {% trans "Sign In" %}
-{% endblock head_title %}
+{% load account %} <!-- Allauth's own tags -->
+
+{% block title %}
+    {% trans "Sign In" %} - KK39 Candles
+{% endblock title %}
+
 {% block content %}
-    {% element h1 %}
-        {% trans "Sign In" %}
-    {% endelement %}
-    {% if not SOCIALACCOUNT_ONLY %}
-        {% setvar link %}
-            <a href="{{ signup_url }}">
-            {% endsetvar %}
-            {% setvar end_link %}
-            </a>
-        {% endsetvar %}
-        {% element p %}
-            {% blocktranslate %}If you have not created an account yet, then please {{ link }}sign up{{ end_link }} first.{% endblocktranslate %}
-        {% endelement %}
-        {% url 'account_login' as login_url %}
-        {% element form form=form method="post" action=login_url tags="entrance,login" %}
-            {% slot body %}
+<div class="login-page-container section-padding"> {# Main container for centering and padding #}
+    <div class="login-form-wrapper"> {# The styled box for the form #}
+        <h2 class="section-title text-center">{% trans "Sign In" %}</h2>
+        <p class="login-subtitle text-center">Please login to your KK39 Candles account.</p>
+
+        {% if messages %}
+            <div class="messages-container mb-3">
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags|default:'info' }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {% if not SOCIALACCOUNT_ONLY %}
+            <form method="POST" action="{% url 'account_login' %}" class="login-form">
                 {% csrf_token %}
-                {% element fields form=form unlabeled=True %}
-                {% endelement %}
-                <pre>{{ redirect_field }}</pre>
-            {% endslot %}
-            {% slot actions %}
-                {% element button type="submit" tags="prominent,login" %}
-                    {% trans "Sign In" %}
-                {% endelement %}
-            {% endslot %}
-        {% endelement %}
-    {% endif %}
-    {% if LOGIN_BY_CODE_ENABLED or PASSKEY_LOGIN_ENABLED %}
-        {% element hr %}
-        {% endelement %}
-        {% element button_group vertical=True %}
-            {% if PASSKEY_LOGIN_ENABLED %}
-                {% element button type="submit" form="mfa_login" id="passkey_login" tags="prominent,login,outline,primary" %}
-                    {% trans "Sign in with a passkey" %}
-                {% endelement %}
-            {% endif %}
-            {% if LOGIN_BY_CODE_ENABLED %}
-                {% element button href=request_login_code_url tags="prominent,login,outline,primary" %}
-                    {% trans "Send me a sign-in code" %}
-                {% endelement %}
-            {% endif %}
-        {% endelement %}
-    {% endif %}
-    {% if SOCIALACCOUNT_ENABLED %}
-        {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
-    {% endif %}
+
+                {% for field in form %}
+                    {% if field.widget_type == 'checkbox' %}
+                        <div class="form-group form-check custom-checkbox-group">
+                            {{ field }}
+                            <label class="form-check-label" for="{{ field.id_for_label }}">
+                                {{ field.label }}
+                            </label>
+                        </div>
+                    {% else %}
+                        <div class="form-group">
+                            <label for="{{ field.id_for_label }}">{{ field.label }}:</label>
+                            {{ field }} {# Allauth's field rendering, we'll style the input directly #}
+                        </div>
+                    {% endif %}
+                    {% for error in field.errors %}
+                        <div class="alert alert-danger p-1 mt-1">{{ error }}</div>
+                    {% endfor %}
+                    {% if field.help_text %}
+                        <small class="form-text text-muted mb-2 d-block">{{ field.help_text }}</small>
+                    {% endif %}
+                {% endfor %}
+
+                {% if redirect_field_value %}
+                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                {% endif %}
+
+                <button type="submit" class="btn btn-primary btn-block btn-login-submit">{% trans "Sign In" %}</button>
+
+                <div class="login-links">
+                    <a href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+                    {% if LOGIN_BY_CODE_ENABLED %}
+                        <span class="separator">|</span>
+                        <a href="{% url 'account_login_by_code' %}">{% trans "Login by code" %}</a>
+                    {% endif %}
+                    {% if not PREVENT_SIGNUP %}
+                        <span class="separator">|</span>
+                        <a href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a>
+                    {% endif %}
+                </div>
+            </form>
+        {% endif %}
+
+        {% if SOCIALACCOUNT_ENABLED %}
+            {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
+        {% endif %}
+    </div>
+</div>
 {% endblock content %}
-{% block extra_body %}
-    {{ block.super }}
-    {% if PASSKEY_LOGIN_ENABLED %}
-        {% include "mfa/webauthn/snippets/login_script.html" with button_id="passkey_login" %}
-    {% endif %}
-{% endblock %}

@@ -920,7 +920,7 @@ button {
     background-color: #d8cabb; /* !! ADJUST BEIGE !! */
     border-color: #d8cabb;
     color: #333333;           /* !! ADJUST TEXT COLOR !! */
-    /* font-weight: bold; /* Optional: Keep boldness */
+    font-weight: bold; /* Optional: Keep boldness */
 }
 .summary-actions .checkout-btn:hover {
     background-color: #c8b8ab; /* !! ADJUST DARKER BEIGE !! */
@@ -1045,6 +1045,178 @@ button {
 .modal-close:hover {
     color: #333;
     opacity: 1;
+}
+
+/* === Login Page Specific Styles === */
+
+.login-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    /* Using a very light, neutral beige for the page background to complement your palette */
+    /* If your site body already has a suitable background, this might not be needed */
+    background-color: #f9f7f5; /* Very light neutral beige */
+}
+
+.login-form-wrapper {
+    background-color: #fdfdfd; /* Matching your .bag-summary background */
+    padding: 30px 40px;
+    border-radius: 4px; /* Matching your .bag-summary border-radius */
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.07); /* Softer, more subtle shadow */
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid #eeeeee; /* Matching your .bag-summary border */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.login-form-wrapper .section-title {
+    font-family: 'Playfair Display', serif; /* Keep this for an elegant touch if you like */
+    color: #333333; /* Primary text color */
+    margin-bottom: 10px;
+    font-size: 2.2em;
+    text-align: center; /* Ensuring it's centered if not already */
+}
+
+.login-form-wrapper .login-subtitle {
+    font-size: 0.95em;
+    color: #555555; /* Slightly lighter than primary text */
+    margin-bottom: 30px;
+    text-align: center; /* Ensuring it's centered */
+}
+
+.login-form .form-group {
+    margin-bottom: 20px;
+}
+
+.login-form .form-group label {
+    display: block;
+    font-weight: normal; /* Matching your .form-label */
+    margin-bottom: 0.5rem; /* Matching your .form-label */
+    color: #333333; /* Primary text color */
+    font-size: 0.9em;
+}
+
+.login-form .form-group input[type="text"],
+.login-form .form-group input[type="email"],
+.login-form .form-group input[type="password"] {
+    width: 100%;
+    padding: 10px 12px; /* Slightly adjusted padding */
+    border: 1px solid #d8d1cc; /* Using the lighter border from disabled state */
+    border-radius: 0; /* Square corners, like your buttons */
+    box-sizing: border-box;
+    font-size: 1em;
+    background-color: #ffffff; /* Plain white for input background for clarity */
+    color: #333333; /* Primary text color */
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.login-form .form-group input[type="text"]::placeholder,
+.login-form .form-group input[type="email"]::placeholder,
+.login-form .form-group input[type="password"]::placeholder {
+    color: #888888; /* Softer placeholder text */
+}
+
+.login-form .form-group input[type="text"]:focus,
+.login-form .form-group input[type="email"]:focus,
+.login-form .form-group input[type="password"]:focus {
+    outline: none;
+    border-color: #C8B8AB; /* Using your darker beige for focus */
+    box-shadow: 0 0 0 2px rgba(200, 184, 171, 0.25); /* Subtle glow with focus color */
+}
+
+/* Styling for checkbox (e.g., "Remember Me") */
+.login-form .form-group.custom-checkbox-group {
+    display: flex;
+    align-items: center;
+}
+.login-form .form-group.custom-checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    width: auto;
+    height: auto;
+    /* Consider using a custom checkbox library or more detailed styling if desired */
+}
+.login-form .form-group.custom-checkbox-group label {
+    margin-bottom: 0;
+    font-weight: normal;
+    color: #333333;
+}
+
+
+/* Submit Button - .btn-login-submit for specific overrides */
+.btn-login-submit {
+    background-color: #D8CABB !important; /* Your primary beige */
+    border-color: #C8B8AB !important;     /* Your primary border/darker beige */
+    color: #333333 !important;            /* Your primary text color */
+    padding: 0.75rem 1.2rem; /* Adjusted padding for a slightly taller button */
+    font-size: 1em;
+    font-weight: bold; /* Making login button text bold for emphasis */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 0; /* Square corners */
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    width: 100%; /* Make it full width within the form */
+    display: block; /* Ensure it behaves as a block for width 100% */
+}
+
+.btn-login-submit:hover {
+    background-color: #c8b8ab !important; /* Your darker beige on hover */
+    border-color: #b8a89a !important;     /* Slightly darker border on hover if desired */
+    color: #333333 !important;
+}
+
+.login-links {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.login-links a {
+    color: #555555; /* Slightly muted link color */
+    text-decoration: none;
+}
+
+.login-links a:hover {
+    text-decoration: underline;
+    color: #333333; /* Primary text color on hover */
+}
+
+.login-links .separator {
+    color: #cccccc; /* Soft separator color */
+    margin: 0 8px;
+}
+
+/* Django Allauth Messages Styling (if not already covered by Bootstrap alerts) */
+.login-form-wrapper .messages-container .alert {
+    font-size: 0.9em;
+    border-radius: 0; /* Consistent square corners */
+}
+
+.btn-secondary {
+    background-color: transparent !important;
+    border: 1px solid #C8B8AB !important; /* Your primary border color */
+    color: #333333 !important;           /* Your primary text color */
+    border-radius: 0 !important; /* Square corners */
+}
+
+.btn-secondary:hover {
+    background-color: #f8f9fa !important; /* Light hover background */
+    border-color: #C8B8AB !important;
+    color: #333333 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .login-form-wrapper {
+        padding: 25px 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .login-form-wrapper .section-title {
+        font-size: 1.9em;
+    }
 }
 
 /* --- Responsive Design --- */
