@@ -10,7 +10,7 @@ class OrderAdmin(admin.ModelAdmin):
     inlines = (OrderLineItemAdminInline,) # Display line items within the Order view
 
     # Fields that should not be editable after order creation
-    readonly_fields = ('order_number', 'date',
+    readonly_fields = ('order_number', 'user_profile', 'date',
                        'delivery_cost', 'order_total', 'grand_total',
                        'original_bag', 'stripe_pid')
     list_display = ('order_number', 'date', 'full_name',
