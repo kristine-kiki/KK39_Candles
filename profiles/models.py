@@ -40,8 +40,5 @@ class UserProfile(models.Model):
         """
         if created:
             UserProfile.objects.create(user=instance)
-        try:
-            instance.userprofile.save()
-        except UserProfile.DoesNotExist:
-            UserProfile.objects.create(user=instance)
-            print(f'Profile was missing, created for user {instance.username}')
+        instance.userprofile.save()
+        
