@@ -1,83 +1,115 @@
-{% extends "account/base_manage_email.html" %}
-{% load static allauth i18n %}
-{% block head_title %}
-    {% trans "Email Addresses" %}
-{% endblock head_title %}
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% load account %}
+
+{% block title %}
+    {% trans "Manage Email Addresses" %} - KK39 Candles
+{% endblock title %}
+
 {% block content %}
-    {% element h1 %}
-        {% trans "Email Addresses" %}
-    {% endelement %}
-    {% if emailaddresses %}
-        {% element p %}
-            {% trans 'The following email addresses are associated with your account:' %}
-        {% endelement %}
-        {% url 'account_email' as email_url %}
-        {% element form form=form action=email_url method="post" tags="email,list" %}
-            {% slot body %}
+<div class="login-page-container section-padding">
+    <div class="login-form-wrapper">
+        <h2 class="section-title text-center">{% trans "Manage Email Addresses" %}</h2>
+
+        {% if messages %}
+            <div class="messages-container mb-3">
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags|default:'info' }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {% if user.emailaddress_set.all %}
+            <p class="login-subtitle text-center">{% trans 'The following email addresses are associated with your account:' %}</p>
+
+            <form action="{% url 'account_email' %}" class="email_list login-form mb-4" method="post">
                 {% csrf_token %}
-                {% for radio in emailaddress_radios %}
-                    {% with emailaddress=radio.emailaddress %}
-                        {% element field type="radio" checked=radio.checked name="email" value=emailaddress.email id=radio.id %}
-                            {% slot label %}
+                <fieldset class="blockLabels">
+                    {% for emailaddress in user.emailaddress_set.all %}
+                        <div class="form-group radio {% if emailaddress.primary %}primary_email{% endif %}">
+                            <label for="email_radio_{{forloop.counter}}" class="radio-label {% if emailaddress.primary %}font-weight-bold{% endif %}">
+                                <input id="email_radio_{{forloop.counter}}" type="radio" name="email" {% if emailaddress.primary or user.emailaddress_set.count == 1 %}checked="checked"{%endif %} value="{{emailaddress.email}}"/>
                                 {{ emailaddress.email }}
                                 {% if emailaddress.verified %}
-                                    {% element badge tags="success,email,verified" %}
-                                        {% translate "Verified" %}
-                                    {% endelement %}
+                                    <span class="badge badge-success small-badge">{% trans "Verified" %}</span>
                                 {% else %}
-                                    {% element badge tags="warning,email,unverified" %}
-                                        {% translate "Unverified" %}
-                                    {% endelement %}
+                                    <span class="badge badge-warning small-badge">{% trans "Unverified" %}</span>
                                 {% endif %}
                                 {% if emailaddress.primary %}
-                                    {% element badge tags="email,primary" %}
-                                        {% translate "Primary" %}
-                                    {% endelement %}
+                                    <span class="badge badge-info small-badge">{% trans "Primary" %}</span>
                                 {% endif %}
-                            {% endslot %}
-                        {% endelement %}
-                    {% endwith %}
+                            </label>
+                        </div>
+                    {% endfor %}
+
+                    <div class="form-group mt-3 buttonHolder">
+                        <button class="btn btn-sm btn-outline-secondary mr-2" type="submit" name="action_primary" >{% trans 'Make Primary' %}</button>
+                        <button class="btn btn-sm btn-outline-secondary mr-2" type="submit" name="action_send" >{% trans 'Re-send Verification' %}</button>
+                        <button class="btn btn-sm btn-danger" type="submit" name="action_remove" >{% trans 'Remove' %}</button>
+                    </div>
+                </fieldset>
+            </form>
+
+        {% else %}
+            <p class="login-subtitle"><strong>{% trans 'Warning:'%}</strong> {% trans "You currently do not have any email addresses set up. You should add an email address so you can receive notifications, reset your password, etc." %}</p>
+        {% endif %}
+
+        <hr class="my-4"> {# Visual separator #}
+
+        <h3 class="section-title-subsection text-center h5">{% trans "Add Email Address" %}</h3>
+        <form method="post" action="{% url 'account_email' %}" class="add_email login-form">
+            {% csrf_token %}
+            
+            {% for field in form %} {# `form` here is the AddEmailForm #}
+                <div class="form-group">
+                    <label for="{{ field.id_for_label }}">{{ field.label }}:</label>
+                    {{ field }}
+                </div>
+                {% for error in field.errors %}
+                    <div class="alert alert-danger p-1 mt-1">{{ error }}</div>
                 {% endfor %}
-            {% endslot %}
-            {% slot actions %}
-                {% element button type="submit" name="action_primary" %}
-                    {% trans 'Make Primary' %}
-                {% endelement %}
-                {% element button tags="secondary" type="submit" name="action_send" %}
-                    {% trans 'Re-send Verification' %}
-                {% endelement %}
-                {% element button tags="danger,delete" type="submit" name="action_remove" %}
-                    {% trans 'Remove' %}
-                {% endelement %}
-            {% endslot %}
-        {% endelement %}
-    {% else %}
-        {% include "account/snippets/warn_no_email.html" %}
-    {% endif %}
-    {% if can_add_email %}
-        {% element h2 %}
-            {% trans "Add Email Address" %}
-        {% endelement %}
-        {% url 'account_email' as action_url %}
-        {% element form form=form method="post" action=action_url tags="email,add" %}
-            {% slot body %}
-                {% csrf_token %}
-                {% element fields form=form %}
-                {% endelement %}
-            {% endslot %}
-            {% slot actions %}
-                {% element button name="action_add" type="submit" %}
-                    {% trans "Add Email" %}
-                {% endelement %}
-            {% endslot %}
-        {% endelement %}
-    {% endif %}
+                {% if field.help_text %}
+                    <small class="form-text text-muted mb-2 d-block">{{ field.help_text }}</small>
+                {% endif %}
+            {% endfor %}
+            <button name="action_add" type="submit" class="btn btn-primary btn-block btn-login-submit">{% trans "Add Email" %}</button>
+        </form>
+
+    </div>
+</div>
+
+{# Specific CSS for this page can be added to base.css or in a block_extra_css #}
+<style>
+    .small-badge {
+        font-size: 0.7rem;
+        padding: .2em .4em;
+        vertical-align: middle;
+        margin-left: 5px;
+    }
+    .radio-label {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 0.5rem 0;
+    }
+    .radio-label input[type="radio"] {
+        margin-right: 10px;
+    }
+    .buttonHolder .btn-sm {
+        font-size: 0.8rem;
+        padding: .25rem .5rem;
+    }
+    .section-title-subsection {
+        font-family: var(--font-heading);
+        color: var(--text-heading);
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+    }
+</style>
 {% endblock content %}
-{% block extra_body %}
-    <script src="{% static 'account/js/account.js' %}"></script>
-    <script src="{% static 'account/js/onload.js' %}"></script>
-    <script data-allauth-onload="allauth.account.forms.manageEmailForm" type="application/json">{
-    "i18n": {"confirmDelete": "{% trans 'Do you really want to remove the selected email address?' %}"}
-}
-    </script>
-{% endblock extra_body %}

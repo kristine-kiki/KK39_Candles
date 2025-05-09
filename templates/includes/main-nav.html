@@ -1,76 +1,96 @@
-<div class="collapse navbar-collapse" id="main-nav">
-    {# The surrounding navbar structure might still use Bootstrap for toggling #}
-    <ul class="navbar-nav mx-auto"> {# Centering using Bootstrap class, adjust if kk39 handles it #}
+<nav class="main-navbar navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
 
-        {# Mobile only Home link #}
-        <li class="nav-item d-block d-md-none">
-            <a class="nav-link" href="{% url 'home' %}" id="mobile-home-link">
-                Home
-            </a>
-        </li>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarNavContent" aria-controls="navbarNavContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-        {# Shop All Dropdown (for Sorting/Filtering) #}
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="{% url 'products' %}" id="shop-all-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Shop All
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="shop-all-link">
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-                <div class="dropdown-divider"></div>
-                <h6 class="dropdown-header">Sort By:</h6>
-                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">Price: Low to High</a>
-                <a href="{% url 'products' %}?sort=price&direction=desc" class="dropdown-item">Price: High to Low</a>
-                <a href="{% url 'products' %}?sort=name&direction=asc" class="dropdown-item">Name: A-Z</a>
-                <div class="dropdown-divider"></div>
-                 <h6 class="dropdown-header">Categories:</h6>
-                 <a href="{% url 'products' %}?category=candles" class="dropdown-item">Candles</a>
-                 <a href="{% url 'products' %}?category=for_home" class="dropdown-item">For Home</a>
-                 {# Add other main categories if they exist #}
+        <div class="collapse navbar-collapse" id="navbarNavContent">
+
+            <ul class="navbar-nav main-links-group">    
+                <li class="nav-item d-block d-lg-none">
+                    <a class="nav-link" href="{% url 'home' %}" id="mobile-home-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="{% url 'products' %}" id="shop-all-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop All</a>
+                    <div class="dropdown-menu border-0" aria-labelledby="shop-all-link">
+                        <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+                    <div class="dropdown-divider"></div>
+                    <h6 class="dropdown-header">Sort By:</h6>
+                    <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">Price: Low to High</a>
+                    <a href="{% url 'products' %}?sort=price&direction=desc" class="dropdown-item">Price: High to Low</a>
+                    <a href="{% url 'products' %}?sort=name&direction=asc" class="dropdown-item">Name: A-Z</a>
+                    <div class="dropdown-divider"></div>
+                    <h6 class="dropdown-header">Categories:</h6>
+                    <a href="{% url 'products' %}?category=candles" class="dropdown-item">Candles</a>
+                    <a href="{% url 'products' %}?category=for_home" class="dropdown-item">For Home</a>
+                    </div>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="{% url 'products' %}?category=candles" id="candles-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Candles</a>
+                <div class="dropdown-menu border-0" aria-labelledby="candles-link">
+                    <a href="{% url 'products' %}?category=candles" class="dropdown-item">All Candles</a>
+                    <div class="dropdown-divider"></div>
+                    {# Ensure dropdown items use <li><a> structure or just <a> with .dropdown-item class #}
+                    <a href="{% url 'products' %}?category=scented" class="dropdown-item">Scented Candles</a>
+                    <a href="{% url 'products' %}?category=unscent_candles" class="dropdown-item">Unscented Candles</a>
+                    <a href="{% url 'products' %}?category=pillar" class="dropdown-item">Pillar Candles</a>
+                    <a href="{% url 'products' %}?category=macrame" class="dropdown-item">Macrame Candles</a>
+                    <a href="{% url 'products' %}?category=gifts" class="dropdown-item">Gift Sets</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="{% url 'products' %}?category=for_home" id="for-home-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        For Home
+                    </a>
+                    <div class="dropdown-menu border-0" aria-labelledby="for-home-link">
+                        <a href="{% url 'products' %}?category=for_home" class="dropdown-item">All For Home</a>
+                        <div class="dropdown-divider"></div>
+                        {# === Example Subcategories - Adjust to your actual data === #}
+                        <a href="{% url 'products' %}?category=home_diffuser" class="dropdown-item">Diffusers</a>
+                        <a href="{% url 'products' %}?category=room_spray" class="dropdown-item">Room Sprays</a>
+                        <a href="{% url 'products' %}?category=wax_melts" class="dropdown-item">Wax Melts</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="about-link-main">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="contact-link-main">Contact</a>
+                </li>
+            </ul>
+
+            <div class="navbar-nav align-items-center site-utility-nav"> 
+                {# Search Icon - Assuming you have this #}
+                <a href="#" class="nav-link utility-search-text d-none d-lg-inline-block">SEARCH...</a>
+                <a href="#" class="nav-link utility-icon"><i class="fas fa-search"></i></a>
+
+                {% if user.is_authenticated %}
+                    <div class="nav-item dropdown utility-user-dropdown">
+                        <a class="dropdown-toggle utility-icon" href="#" id="userAccountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user-circle"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right utility-user-dropdown-menu" aria-labelledby="userAccountDropdown">
+                            <span class="dropdown-item-text user-greeting">Hi, {{ user.first_name|default:user.username }}!</span>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{% url 'account_email' %}"><i class="fas fa-envelope fa-fw"></i> Manage Email</a>
+                            <a class="dropdown-item" href="{% url 'profile' %}"><i class="fas fa-history fa-fw"></i> Order History</a>
+                            <a class="dropdown-item" href="{% url 'bag_view' %}"><i class="fas fa-shopping-bag"></i> My Shopping bag</a>
+                            <a class="dropdown-item" href="{% url 'account_logout' %}"><i class="fas fa-sign-out-alt fa-fw"></i> Logout</a>
+                        </div>
+                    </div>
+                {% else %}
+                    <a href="{% url 'account_login' %}" class="nav-link"><i class="fas fa-user mr-1"></i> LOG IN</a>
+                    <a href="{% url 'account_signup' %}" class="nav-link"><i class="fas fa-user-plus mr-1"></i> SIGN UP </a>
+                {% endif %}
+
+                {# Shopping Bag Icon #}
+                <a href="{% url 'bag_view' %}" class="nav-link utility-icon position-relative">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="badge utility-bag-indicator">{{ product_count|default:0 }}</span>
+                </a>
             </div>
-        </li>
-
-        {# Candles Dropdown (for Subcategories) #}
-        <li class="nav-item dropdown"> 
-            <a class="nav-link dropdown-toggle" href="{% url 'products' %}?category=candles" id="candles-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Candles</a>
-            <div class="dropdown-menu border-0" aria-labelledby="candles-link">
-                <a href="{% url 'products' %}?category=candles" class="dropdown-item">All Candles</a>
-                 <div class="dropdown-divider"></div>
-                {# Ensure dropdown items use <li><a> structure or just <a> with .dropdown-item class #}
-                <a href="{% url 'products' %}?category=scented" class="dropdown-item">Scented Candles</a>
-                <a href="{% url 'products' %}?category=unscent_candles" class="dropdown-item">Unscented Candles</a>
-                <a href="{% url 'products' %}?category=pillar" class="dropdown-item">Pillar Candles</a>
-                <a href="{% url 'products' %}?category=macrame" class="dropdown-item">Macrame Candles</a>
-                <a href="{% url 'products' %}?category=gifts" class="dropdown-item">Gift Sets</a>
-                </div>
-        </li>
-        
-        {# For Home Dropdown (for Subcategories) #}
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="{% url 'products' %}?category=for_home" id="for-home-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                For Home
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="for-home-link">
-                 <a href="{% url 'products' %}?category=for_home" class="dropdown-item">All For Home</a>
-                 <div class="dropdown-divider"></div>
-                 {# === Example Subcategories - Adjust to your actual data === #}
-                 <a href="{% url 'products' %}?category=home_diffuser" class="dropdown-item">Diffusers</a>
-                 <a href="{% url 'products' %}?category=room_spray" class="dropdown-item">Room Sprays</a>
-                 <a href="{% url 'products' %}?category=wax_melts" class="dropdown-item">Wax Melts</a>
-                  {# === End Example Subcategories === #}
-            </div>
-        </li>
-
-        {# Standard Links (No Dropdown) #}
-        <li class="nav-item">
-            <a class="nav-link" href="#" id="about-link">
-                About
-            </a>
-        </li>
-         <li class="nav-item">
-            <a class="nav-link" href="#" id="contact-link">
-                Contact
-            </a>
-        </li>
-    </ul>
-</div>
-
+        </div>
+    </div> 
+</nav>

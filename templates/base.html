@@ -65,22 +65,46 @@
             </nav>
 
             <!-- Header Actions Right Aligned -->
-            <div class="header-actions">
+            <!-- <div class="header-actions">
                 <form action="{% url 'products' %}" class="search-form"> {# Consider using Django forms/search view URL #}
                     <input type="search" placeholder="SEARCH..." class="search-input">
                     <button type="submit" class="search-button" aria-label="Search">
                         <i class="fas fa-search"></i>
                     </button>
                 </form>
-                {# Example links using url template tag - adjust 'account_login' and 'view_cart' to your actual URL names #}
-                <a href="{% url 'account_login' %}" class="header-icon login-link" aria-label="Log In">
-                    <i class="fas fa-user"></i> Log In
-                </a>
-                <a href="{% url 'bag_view' %}" class="header-icon cart-link" aria-label="Shopping Cart"> {# Replace # with actual cart url name #}
-                    <i class="fas fa-shopping-bag"></i>
-                    {# You might want to add a cart count here later #}
-                </a>
-            </div>
+                # This is just a guess, find your actual code #
+                <div class="top-nav-right">
+
+                    {% if user.is_authenticated %}
+                        {# User is LOGGED IN #}
+                        <div class="nav-item dropdown"> {# Using a dropdown for account options #}
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="userAccountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-user-circle mr-1"></i> {{ user.first_name|default:user.username }}
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userAccountDropdown">
+                                {# Add links to profile, orders, etc. here if you have them #}
+                                {# <a class="dropdown-item" href="{% url 'profile' %}">My Profile</a> #}
+                                <a class="dropdown-item" href="{% url 'account_email' %}">Manage Email</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{% url 'account_logout' %}">
+                                    <i class="fas fa-sign-out-alt mr-1"></i> Logout
+                                </a>
+                            </div>
+                        </div>
+                    {% else %}
+                        {# User is LOGGED OUT #}
+                        <a href="{% url 'account_login' %}" class="nav-link"> {# Assuming nav-link is your style for these icons #}
+                            <i class="fas fa-user mr-1"></i> LOG IN
+                        </a>
+                        {# Optionally, add a distinct Sign Up link/icon if desired, or keep it simpler #}
+                        {# <a href="{% url 'account_signup' %}" class="nav-link">
+                            <i class="fas fa-user-plus mr-1"></i> SIGN UP
+                        </a> #}
+                    {% endif %}
+
+                    <a href="{% url 'bag_view' %}" class="bag-icon"><i class="fas fa-shopping-bag"></i></a>
+                </div>
+            </div> -->
         </div>
     </header>
 

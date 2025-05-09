@@ -27,11 +27,9 @@ def profile(request):
                   country_choices_list.insert(0, blank_label)
                   print(f"DEBUG VIEW: Manually added blank choice: {blank_label}")
 
-    # --- CORRECTED INDENTATION for except block ---
     except Exception as e:
         print(f"ERROR VIEW: Failed to get/process country choices from model field: {e}")
         country_choices_list = [('', 'Error loading countries')] # Provide fallback
-    # --- END CORRECTION ---
 
     if request.method == 'POST':
         # Pass instance for update

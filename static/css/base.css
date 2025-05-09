@@ -217,7 +217,7 @@ button {
 }
 .logo:hover { opacity: 1; } /* No hover effect on logo link */
 
-/* Navigation */
+/* Navigation 
 .main-nav ul { display: flex; gap: 40px; }
 .main-nav a {
     font-size: 0.9rem;
@@ -228,7 +228,7 @@ button {
     padding-bottom: 8px;
     position: relative;
 }
-.main-nav a::after { /* Underline hover effect */
+.main-nav a::after { /* Underline hover effect 
     content: '';
     position: absolute;
     bottom: 0;
@@ -242,12 +242,12 @@ button {
 .main-nav a:hover { opacity: 1; } /* Override general link hover */
 
 
-/* Header Actions */
+/* Header Actions 
 .header-actions {
     position: absolute;
-    right: -70px; /* Position relative to container padding */
+    right: -70px; /* Position relative to container padding *
     top: 50%;
-    transform: translateY(-50%); /* Center vertically relative to whole header */
+    transform: translateY(-50%); /* Center vertically relative to whole header *
     display: flex;
     align-items: center;
     gap: 35px;
@@ -260,7 +260,7 @@ button {
     padding: 5px 0;
     font-size: 0.9rem;
     color: var(--text-color);
-    width: 0; /* Hidden initially */
+    width: 0; /* Hidden initially *
     opacity: 0;
     transition: all 0.4s ease;
     background-color: transparent;
@@ -271,20 +271,20 @@ button {
     font-size: 0.85rem;
     letter-spacing: 1px;
 }
-.search-button { /* Position search icon, clicking it reveals input */
+.search-button { /* Position search icon, clicking it reveals input *
     background: none;
     border: none;
     color: var(--text-color);
     font-size: 1.1rem;
     cursor: pointer;
     padding: 5px;
-    order: 1; /* Icon appears first */
+    order: 1; /* Icon appears first *
 }
 .search-button:hover + .search-input,
-.search-input:focus { /* Show input on hover/focus of button/input */
+.search-input:focus { /* Show input on hover/focus of button/input *
     width: 150px;
     opacity: 1;
-    margin-left: -5px; /* Adjust position slightly */
+    margin-left: -5px; /* Adjust position slightly 
 }
 .search-button:hover { color: var(--text-heading); opacity: 1; }
 
@@ -297,8 +297,189 @@ button {
 }
 .header-icon i { font-size: 1.3rem; }
 .header-icon:hover { opacity: 0.7; }
-.login-link { font-size: 0.85rem; font-weight: 400; text-transform: uppercase; letter-spacing: 1px;}
+.login-link { font-size: 0.85rem; font-weight: 400; text-transform: uppercase; letter-spacing: 1px;}/
 
+/* --- Main Navigation Bar (Your Existing .main-navbar or equivalent) --- */
+/* Assuming you have a class on your <nav> element, e.g., .main-navbar */
+.main-navbar .navbar-nav .nav-item .nav-link { /* For Shop All, Candles etc. */
+    color: #555555; /* Muted text for nav links */
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 1rem;
+    font-weight: normal; /* Or your preferred weight */
+}
+
+.main-navbar .navbar-nav .nav-item .nav-link:hover,
+.main-navbar .navbar-nav .nav-item .nav-link:focus {
+    color: #333333; /* Primary text color on hover */
+}
+
+/* Dropdowns for main nav (Shop All, Candles, etc.) */
+.main-navbar .dropdown-menu { /* This is for main-nav-dropdown-menu */
+    background-color: #fdfdfd; /* Light background for dropdown */
+    border: 1px solid #eeeeee; /* Light border */
+    border-radius: 0; /* Square corners */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07); /* Softer shadow */
+    margin-top: 0.25rem !important;
+}
+.main-navbar .dropdown-menu .dropdown-item {
+    color: #333333; /* Primary text color */
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+}
+.main-navbar .dropdown-menu .dropdown-item:hover,
+.main-navbar .dropdown-menu .dropdown-item:focus {
+    background-color: #e9e5e2; /* Your very light beige from disabled buttons, good for hover */
+    color: #333333;
+}
+.main-navbar .dropdown-menu .dropdown-header { /* For "Sort By:", "Categories:" */
+    font-size: 0.75rem;
+    color: #777777; /* Muted text for headers */
+    padding: 0.5rem 1rem 0.25rem;
+}
+.main-navbar .dropdown-menu .dropdown-divider {
+    border-top: 1px solid #f0f0f0; /* Very light divider */
+}
+
+.main-navbar .navbar-collapse {
+    display: flex !important; /* Crucial: Make it a flex container */
+    justify-content: space-between !important; /* Crucial: Push children to ends */
+    align-items: center !important; /* Vertically align children */
+    width: 100% !important;
+}
+
+.main-navbar .navbar-collapse > .navbar-nav:first-child {
+    flex-grow: 0;
+}
+
+.main-navbar .navbar-collapse > .site-utility-nav {
+    flex-grow: 0; /* Don't allow utility links to grow excessively */
+    flex-shrink: 0;
+}
+
+.main-navbar ul.navbar-nav.main-links-group > .nav-item > .nav-link {
+    padding-left: 0.8rem; /* Original was 1rem */
+    padding-right: 0.8rem; /* Original was 1rem */
+    /* Keep other styles: color, text-transform, font-size, letter-spacing, font-weight */
+    color: var(--text-color, #555555);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    font-weight: normal;
+}
+.main-navbar ul.navbar-nav.main-links-group > .nav-item > .nav-link:hover,
+.main-navbar ul.navbar-nav.main-links-group > .nav-item > .nav-link:focus {
+    color: var(--text-heading, #333333);
+}
+
+.site-utility-nav .nav-link.utility-icon,
+.site-utility-nav .dropdown.utility-user-dropdown {
+    margin-left: 0.5rem; /* Add a little space between utility icons */
+}
+.site-utility-nav .nav-link.utility-search-text {
+    margin-right: 0; /* Remove its specific margin if icons have their own */
+}
+
+.site-utility-nav .nav-link { /* Base for items in utility nav */
+    padding: 0.25rem 0.4rem;
+    color: #555555; /* Muted text/icon color */
+}
+.site-utility-nav .nav-link:hover,
+.site-utility-nav .nav-link:focus {
+    color: #333333; /* Primary text color on hover */
+}
+
+.utility-search-text {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #777777; /* Muted color for "SEARCH..." */
+    margin-right: 0.25rem;
+    line-height: 1.5;
+}
+.utility-search-text:hover {
+    color: #333333;
+}
+
+.utility-icon { /* For search, user, bag icons */
+    font-size: 1.2rem; /* Slightly larger icons for better visibility */
+    padding-left: 0.6rem !important;
+    padding-right: 0.6rem !important;
+    color: #333333; /* Primary text color for icons to make them clear */
+}
+.utility-icon:hover, .utility-icon:focus {
+    color: #C8B8AB; /* Your darker beige for icon hover */
+}
+.utility-icon .fas, .utility-icon .far {
+    vertical-align: middle;
+}
+
+/* User Dropdown (Icon Only Toggle) in Utility Nav */
+.utility-user-dropdown .dropdown-toggle {
+    /* .utility-icon class styles the icon part */
+}
+.utility-user-dropdown .dropdown-toggle::after {
+    display: none; /* Hide Bootstrap's default arrow */
+}
+
+.utility-user-dropdown-menu {
+    background-color: #fdfdfd; /* Light background */
+    border: 1px solid #eeeeee; /* Light border */
+    border-radius: 0; /* Square corners */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+    margin-top: 0.5rem !important;
+    min-width: 220px; /* Slightly wider for comfort */
+    padding: 0.5rem 0;
+}
+.utility-user-dropdown-menu .user-greeting {
+    display: block;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    color: #555555; /* Muted text for greeting */
+    font-weight: normal;
+    border-bottom: 1px solid #f0f0f0; /* Separator below greeting */
+    margin-bottom: 0.25rem;
+}
+.utility-user-dropdown-menu .dropdown-item {
+    color: #333333; /* Primary text color */
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem; /* Slightly more padding for items */
+}
+.utility-user-dropdown-menu .dropdown-item:hover,
+.utility-user-dropdown-menu .dropdown-item:focus {
+    background-color: #e9e5e2; /* Your light beige for hover */
+    color: #333333;
+}
+.utility-user-dropdown-menu .dropdown-item .fas,
+.utility-user-dropdown-menu .dropdown-item .far {
+    margin-right: 0.7em; /* More space for icon */
+    width: 1.2em;
+    text-align: center;
+    color: #777777; /* Muted icon color inside dropdown */
+}
+.utility-user-dropdown-menu .dropdown-divider { /* If you still have one here, for consistency */
+    border-top: 1px solid #f0f0f0;
+    margin: 0.4rem 0;
+}
+
+
+/* Bag Indicator */
+.utility-bag-indicator {
+    background-color: #D8CABB !important; /* Your primary beige for badge background */
+    color: #333333 !important;            /* Your primary text color for badge text */
+    font-size: 0.6rem;
+    font-weight: bold; /* Make count bold */
+    padding: 0.15em 0.4em;
+    border-radius: 50%;
+    position: absolute;
+    top: -2px;      /* Adjust these for precise positioning on your bag icon */
+    right: -2px;   /* Adjust these for precise positioning on your bag icon */
+    line-height: 1;
+    min-width: 15px; /* Ensure it's somewhat circular */
+    text-align: center;
+    /* border: 1px solid #fdfdfd; /* Optional light border around badge */
+}
 
 /* --- Social Sidebar --- */
 .social-sidebar {
@@ -1204,6 +1385,51 @@ button {
     background-color: #f8f9fa !important; /* Light hover background */
     border-color: #C8B8AB !important;
     color: #333333 !important;
+}
+
+/* --- KK39 Form Field Styling --- */
+.kk39-input,
+.kk39-select,
+.kk39-textarea {
+    /* Inherits from .form-control Bootstrap */
+    border: 1px solid var(--border-color, #d8d1cc); /* Your theme's border color */
+    border-radius: 0; /* Square corners if that's your theme */
+    padding: 10px 12px; /* Consistent padding */
+    background-color: var(--bg-light, #ffffff); /* Or a specific input background */
+    color: var(--text-color, #333333);
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    font-size: 0.95rem; /* Consistent font size for inputs */
+}
+
+.kk39-input:focus,
+.kk39-select:focus,
+.kk39-textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color, #C8B8AB); /* Your theme's focus color */
+    box-shadow: 0 0 0 2px rgba(200, 184, 171, 0.25); /* Using your darker beige for glow */
+}
+
+.kk39-textarea {
+    min-height: 120px; /* Good default height for description */
+}
+
+.kk39-select {
+    /* Specific styles for select if different from text input */
+}
+
+.kk39-checkbox {
+    /* Inherits from .form-check-input Bootstrap */
+    /* Add custom styles if needed */
+    margin-top: 0.3rem; /* Align with labels a bit better */
+}
+
+/* Styling for your CustomClearableFileInput if needed */
+.kk39-file-input {
+    /* Style this to match other inputs if Bootstrap's default isn't ideal */
+    /* Often, file inputs require more elaborate custom styling */
+}
+.custom-clearable-file-input-container { /* Assuming your widget has a container */
+    /* ... styles for the widget layout ... */
 }
 
 /* Responsive adjustments */
