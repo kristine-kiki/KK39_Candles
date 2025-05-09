@@ -119,3 +119,15 @@ def edit_product(request, product_id):
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing "{product.name}"')
+
+    template = 'products/add_product.html'
+    context = {'form': form, 'product': product}
+
+    return render(request, template, context)
+
+def index(request):
+    featured_products = Product.objects.filter(is_featured=True)
+    for p in featured_products:
+        print(f"Featured Product: {p.name}, ID: {p.id}") # Debug print
+    context = {'featured_products': featured_products}
+    return render(request, 'home/index.html', context)

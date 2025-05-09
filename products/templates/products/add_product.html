@@ -1,0 +1,276 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}
+    {% if form.instance.pk %}
+        Edit Product - KK39 Candles
+    {% else %}
+        Add New Product - KK39 Candles
+    {% endif %}
+{% endblock %}
+
+{% block extra_css %}
+    <style>
+        .product-form-box-wide {
+            max-width: 900px;
+        }
+        .product-form-container .form-group label {
+            font-weight: 600;
+            color: var(--text-heading, #33312e);
+            margin-bottom: 0.4rem; /* Slightly reduced margin for labels */
+        }
+        .product-form-container .form-text {
+            font-size: 0.8rem;
+            color: #6c757d;
+        }
+        .custom-clearable-file-input-container p {
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+            font-size: 0.85rem;
+        }
+        .custom-clearable-file-input-container p a {
+            color: var(--secondary-color);
+        }
+        .custom-clearable-file-input-container input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        /* Reduce bottom margin of form groups slightly for compactness */
+        .product-form-container .form-group {
+            margin-bottom: 0.8rem; /* Was likely 1rem or more */
+        }
+        /* Ensure columns have some bottom padding if rows are stacked */
+        .product-form-container .row > .col,
+        .product-form-container .row > [class*="col-"] {
+            padding-bottom: 0.8rem; /* Match form-group margin-bottom */
+        }
+
+        .form-actions-footer {
+            display: flex;
+            justify-content: flex-end; /* Aligns buttons to the right */
+            align-items: center; /* Vertically aligns buttons if they have different heights */
+            gap: 0.75rem; /* Adds space between the buttons (Bootstrap 4 might need margin on buttons instead) */
+            padding-top: 1rem; /* Add some space above the buttons */
+            border-top: 1px solid var(--border-color, #eeeeee); /* Optional: separator line */
+            margin-top: 1.5rem; /* Ensure enough space from the last form field */
+        }
+
+        /* Ensure your buttons have consistent styling */
+        .form-actions-footer .btn-outline-secondary {
+            /* Using your KK39 palette for secondary/outline button */
+            background-color: transparent;
+            color: var(--text-color, #333333);
+            border: 1px solid var(--secondary-color, #C8B8AB); /* Your beige/tan border */
+            border-radius: 0; /* Assuming square theme */
+            padding: 0.6rem 1.2rem; /* Match other buttons */
+            text-transform: uppercase;
+        }
+        .form-actions-footer .btn-outline-secondary:hover {
+            background-color: var(--bg-accent, #e9e5e2); /* Light beige hover */
+            color: var(--text-color, #333333);
+            border-color: var(--secondary-color, #C8B8AB);
+        }
+
+        /* The .btn-login-submit (Update/Add Product button) should already be styled with your primary beige */
+        .form-actions-footer .btn-login-submit {
+            padding: 0.6rem 1.2rem; /* Ensure consistent padding */
+            /* Other styles (bg, color, border) should come from existing .btn-login-submit rules */
+        }
+        @media (min-width: 768px) { 
+            .product-form-box-wide {
+                max-width: 80%;
+            }
+        }
+        @media (min-width: 992px) { 
+            .product-form-box-wide {
+                max-width: 70%; // Or a fixed pixel width like 900px
+            }
+        }
+        @media (min-width: 1200px) { 
+            .product-form-box-wide {
+                max-width: 900px; // Cap it at a fixed width on very large screens
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+<div class="login-page-container section-padding product-form-container">
+    <div class="login-form-wrapper product-form-box-wide">
+
+        <h2 class="section-title text-center">
+            {% if form.instance.pk %}
+                {% trans "Edit Product" %}
+            {% else %}
+                {% trans "Add New Product" %}
+            {% endif %}
+        </h2>
+        <p class="login-subtitle text-center">
+            {% if form.instance.pk %}
+                Update the details for "{{ product.name|default:form.instance.name }}"
+            {% else %}
+                Fill in the details to add a new candle or home product.
+            {% endif %}
+        </p>
+
+        {% comment %} --- Messages Block --- {% endcomment %}
+        {% if messages %}
+            <div class="messages-container mb-3">
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags|default:'info' }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <form method="POST" action="" enctype="multipart/form-data" class="login-form">
+            {% csrf_token %}
+            
+            {% if form.non_field_errors %}
+                <div class="alert alert-danger">
+                    {% for error in form.non_field_errors %}<p class="mb-0">{{ error }}</p>{% endfor %}
+                </div>
+            {% endif %}
+
+            {# --- Name (Full Width) --- #}
+            {% with field=form.name %} {# Assuming 'name' is the field name #}
+                <div class="form-group">
+                    <label for="{{ field.id_for_label }}">{{ field.label }}{% if field.field.required %}<span class="text-danger">*</span>{% endif %}</label>
+                    {{ field }}
+                    {% if field.help_text %}<small class="form-text text-muted">{{ field.help_text|safe }}</small>{% endif %}
+                    {% for error in field.errors %}<div class="alert alert-danger p-1 mt-1">{{ error }}</div>{% endfor %}
+                </div>
+            {% endwith %}
+
+            {# --- Description (Full Width) --- #}
+            {% with field=form.description %} {# Assuming 'description' is the field name #}
+                <div class="form-group">
+                    <label for="{{ field.id_for_label }}">{{ field.label }}{% if field.field.required %}<span class="text-danger">*</span>{% endif %}</label>
+                    {{ field }}
+                    {% if field.help_text %}<small class="form-text text-muted">{{ field.help_text|safe }}</small>{% endif %}
+                    {% for error in field.errors %}<div class="alert alert-danger p-1 mt-1">{{ error }}</div>{% endfor %}
+                </div>
+            {% endwith %}
+
+            {# --- Category and SKU (Side-by-Side) --- #}
+            <div class="row">
+                <div class="col-md-6">
+                    {% with field=form.category %} {# Assuming 'category' #}
+                        <div class="form-group">
+                            <label for="{{ field.id_for_label }}">{{ field.label }}{% if field.field.required %}<span class="text-danger">*</span>{% endif %}</label>
+                            {{ field }}
+                            {% if field.help_text %}<small class="form-text text-muted">{{ field.help_text|safe }}</small>{% endif %}
+                            {% for error in field.errors %}<div class="alert alert-danger p-1 mt-1">{{ error }}</div>{% endfor %}
+                        </div>
+                    {% endwith %}
+                </div>
+                <div class="col-md-6">
+                    {% with field=form.sku %} {# Assuming 'sku' #}
+                        <div class="form-group">
+                            <label for="{{ field.id_for_label }}">{{ field.label }}{% if field.field.required %}<span class="text-danger">*</span>{% endif %}</label>
+                            {{ field }}
+                            {% if field.help_text %}<small class="form-text text-muted">{{ field.help_text|safe }}</small>{% endif %}
+                            {% for error in field.errors %}<div class="alert alert-danger p-1 mt-1">{{ error }}</div>{% endfor %}
+                        </div>
+                    {% endwith %}
+                </div>
+            </div>
+
+            {# --- Price and Rating (Side-by-Side) --- #}
+            <div class="row">
+                <div class="col-md-6">
+                    {% with field=form.price %} {# Assuming 'price' #}
+                        <div class="form-group">
+                            <label for="{{ field.id_for_label }}">{{ field.label }}{% if field.field.required %}<span class="text-danger">*</span>{% endif %}</label>
+                            {{ field }}
+                            {% if field.help_text %}<small class="form-text text-muted">{{ field.help_text|safe }}</small>{% endif %}
+                            {% for error in field.errors %}<div class="alert alert-danger p-1 mt-1">{{ error }}</div>{% endfor %}
+                        </div>
+                    {% endwith %}
+                </div>
+                <div class="col-md-6">
+                    {% with field=form.rating %} {# Assuming 'rating' #}
+                        <div class="form-group">
+                            <label for="{{ field.id_for_label }}">{{ field.label }}{% if field.field.required %}<span class="text-danger">*</span>{% endif %}</label>
+                            {{ field }}
+                            {% if field.help_text %}<small class="form-text text-muted">{{ field.help_text|safe }}</small>{% endif %}
+                            {% for error in field.errors %}<div class="alert alert-danger p-1 mt-1">{{ error }}</div>{% endfor %}
+                        </div>
+                    {% endwith %}
+                </div>
+            </div>
+
+            {% if form.image_url %} {# Check if the field exists in the form #}
+                {% with field=form.image_url %}
+                    <div class="form-group">
+                        <label for="{{ field.id_for_label }}">{{ field.label }}{% if field.field.required %}<span class="text-danger">*</span>{% endif %}</label>
+                        {{ field }}
+                        {% if field.help_text %}<small class="form-text text-muted">{{ field.help_text|safe }}</small>{% endif %}
+                        {% for error in field.errors %}<div class="alert alert-danger p-1 mt-1">{{ error }}</div>{% endfor %}
+                    </div>
+                {% endwith %}
+            {% endif %}
+
+            {# --- Product Image Upload (Full Width or specific layout) --- #}
+            {% with field=form.image %} {# Assuming 'image' for file upload #}
+                <div class="form-group">
+                    <label for="{{ field.id_for_label }}">{{ field.label }}{% if field.field.required %}<span class="text-danger">*</span>{% endif %}</label>
+                    {{ field }} {# This renders your CustomClearableFileInput #}
+                    {% if field.help_text %}<small class="form-text text-muted">{{ field.help_text|safe }}</small>{% endif %}
+                    {% for error in field.errors %}<div class="alert alert-danger p-1 mt-1">{{ error }}</div>{% endfor %}
+                </div>
+            {% endwith %}
+
+            {# --- Checkboxes (e.g., Is Bestseller) --- #}
+            <div class="form-group mt-3"> {# Add some top margin before checkboxes #}
+                {% if form.is_bestseller %} {# Check if the field exists #}
+                    {% with field=form.is_bestseller %}
+                        <div class="form-check custom-checkbox-group">
+                            {{ field }}
+                            <label class="form-check-label" for="{{ field.id_for_label }}">
+                                {{ field.label }}
+                                {% if field.field.required %}<span class="text-danger">*</span>{% endif %}
+                            </label>
+                            {% if field.help_text %}<small class="form-text text-muted d-block">{{ field.help_text|safe }}</small>{% endif %}
+                            {% for error in field.errors %}<div class="alert alert-danger p-1 mt-1">{{ error }}</div>{% endfor %}
+                        </div>
+                    {% endwith %}
+                {% endif %}
+                {# Add other checkboxes here in similar .form-check divs if needed #}
+            </div>
+
+            {# --- Any other fields that were not explicitly laid out --- #}
+            {# This loop handles fields not manually placed above #}
+            {% for field in form %}
+                {% if field.name != 'name' and field.name != 'description' and field.name != 'category' and field.name != 'sku' and field.name != 'price' and field.name != 'rating' and field.name != 'image_url' and field.name != 'image' and field.name != 'is_bestseller' %}
+                    <div class="form-group {% if field.field.widget.input_type == 'checkbox' %}form-check custom-checkbox-group{% endif %}">
+                        {% if field.field.widget.input_type != 'checkbox' %}
+                            <label for="{{ field.id_for_label }}">{{ field.label }}{% if field.field.required %}<span class="text-danger">*</span>{% endif %}</label>
+                        {% endif %}
+                        {{ field }}
+                        {% if field.field.widget.input_type == 'checkbox' %}
+                            <label class="form-check-label" for="{{ field.id_for_label }}">{{ field.label }}{% if field.field.required %}<span class="text-danger">*</span>{% endif %}</label>
+                        {% endif %}
+                        {% if field.help_text %}<small class="form-text text-muted">{{ field.help_text|safe }}</small>{% endif %}
+                        {% for error in field.errors %}<div class="alert alert-danger p-1 mt-1">{{ error }}</div>{% endfor %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+
+
+            <div class="form-actions-footer mt-4"> {# New class for styling #}
+                <a href="{% url 'products' %}" class="btn btn-outline-secondary">{% trans "Cancel" %}</a>
+                <button type="submit" class="btn btn-primary btn-login-submit">
+                    {% if form.instance.pk %}
+                        {% trans "Update Product" %}
+                    {% else %}
+                        {% trans "Add Product" %}
+                    {% endif %}
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

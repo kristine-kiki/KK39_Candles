@@ -69,6 +69,12 @@
                     {# Add to Cart Button - ensure styling matches quantity buttons #}
                     <button type="submit" class="btn add-to-cart-btn mt-3">ADD TO CART</button>
                 </form>
+                {% if user.is_superuser %}
+                    <div class="admin-actions mt-3">
+                        <a href="{% url 'edit_product' product.id %}" class="btn edit-button">Edit Product</a>
+                        {# <a href="{% url 'delete_product' product.id %}" class="btn btn-danger ml-2" onclick="return confirm('Are you sure?');">DELETE</a> #}
+                    </div>
+                {% endif %}
             </div>
         </div>
 

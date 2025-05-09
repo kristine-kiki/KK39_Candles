@@ -1025,6 +1025,26 @@ button {
    background-color: #c8b8ab; /* Darker beige on hover - ADJUST! */
 }
 
+.edit-button { /* Or use existing .btn-secondary, .btn-outline-primary etc. */
+    background-color: transparent; /* Example: Outline style */
+    color: var(--text-color, #333333);
+    border: 1px solid var(--border-color, #C8B8AB); /* Your KK39 border color */
+    padding: 0.6rem 1.2rem; /* Match other buttons */
+    text-transform: uppercase;
+    font-weight: normal; /* Or bold if you prefer */
+    border-radius: 0; /* Square corners if that's your theme */
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none; /* If using <a> tag */
+}
+
+.edit-button:hover {
+    background-color: var(--bg-accent, #e9e5e2); /* Light beige hover */
+    color: var(--text-color, #333333);
+    border-color: var(--border-color, #C8B8AB);
+}
+
 /* --- Label Styling --- */
 .form-label {
    color: #333333;
@@ -1141,7 +1161,6 @@ button {
 }
 
 /* Confirmation Modal Styles             */
-/* ===================================== */
 
 .modal {
     position: fixed; /* Stay in place */
@@ -1246,7 +1265,7 @@ button {
     border-radius: 4px; /* Matching your .bag-summary border-radius */
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.07); /* Softer, more subtle shadow */
     width: 100%;
-    max-width: 450px;
+    max-width: 600px;
     border: 1px solid #eeeeee; /* Matching your .bag-summary border */
     margin-top: 20px;
     margin-bottom: 20px;

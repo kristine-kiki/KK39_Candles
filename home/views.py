@@ -23,3 +23,4 @@ def home_view(request):
         # ... other context variables for your page ...
     }
     return render(request, 'home/index.html', context)
+

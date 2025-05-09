@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}
+    {% if form.instance.pk %} {# <--- This condition handles the title #}
+        Edit Product - KK39 Candles
+    {% else %}
+        Add New Product - KK39 Candles
+    {% endif %}
+{% endblock %}
+
+{# ... extra_css block ... #}
+
+{% block content %}
+<div class="login-page-container section-padding product-form-container">
+    <div class="login-form-wrapper">
+
+        <h2 class="section-title text-center">
+            {% if form.instance.pk %} 
+                {% trans "Edit Product" %}
+            {% else %}
+                {% trans "Add New Product" %}
+            {% endif %}
+        </h2>
+        <p class="login-subtitle text-center">
+            {% if form.instance.pk %} {# <--- This condition handles the subtitle #}
+                Update the details for "{{ product.name|default:form.instance.name }}"
+            {% else %}
+                Fill in the details to add a new candle or home product.
+            {% endif %}
+        </p>
+
+        {# ... messages block ... #}
+
+        <form method="POST" action="" enctype="multipart/form-data" class="login-form">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="form-group {% if field.field.widget.input_type == 'checkbox' %}form-check custom-checkbox-group{% endif %}">
+                    {% if field.field.widget.input_type != 'checkbox' %}
+                        <label for="{{ field.id_for_label }}">
+                            {{ field.label }}
+                            {% if field.field.required %}<span class="text-danger">*</span>{% endif %}
+                        </label>
+                    {% endif %}
+                    
+                    {{ field }}
+
+                    {% if field.field.widget.input_type == 'checkbox' %}
+                        <label class="form-check-label" for="{{ field.id_for_label }}">
+                            {{ field.label }}
+                            {% if field.field.required %}<span class="text-danger">*</span>{% endif %}
+                        </label>
+                    {% endif %}
+
+                    {% if field.help_text %}<small id="{{ field.id_for_label }}_help" class="form-text text-muted">{{ field.help_text|safe }}</small>{% endif %}
+                    {% for error in field.errors %}<div class="alert alert-danger p-1 mt-1">{{ error }}</div>{% endfor %}
+                </div>
+            {% endfor %}
+
+            <div class="text-right mt-4">
+                <a href="{% url 'products' %}" class="btn btn-outline-secondary mr-2">{% trans "Cancel" %}</a>
+                <button type="submit" class="btn btn-primary btn-login-submit">
+                    {% if form.instance.pk %} 
+                        {% trans "Update Product" %}
+                    {% else %}
+                        {% trans "Add Product" %}
+                    {% endif %}
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
