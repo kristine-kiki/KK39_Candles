@@ -3,8 +3,8 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
 from django.db.models import Q
-from .models import Product, Category
-from .forms import ProductForm
+from .models import Product, Category, Rating
+from .forms import ProductForm, RatingForm
 
 # Create your views here.
 
@@ -73,10 +73,48 @@ def home_view(request):
 def product_detail(request, product_id):
     """ A view to show individual product details """
     product = get_object_or_404(Product, pk=product_id)
+    ratings = Rating.objects.filter(product=product).order_by('-created_at') # Get existing ratings
+    
+    existing_rating_by_user = None
+    if request.user.is_authenticated:
+        existing_rating_by_user = Rating.objects.filter(product=product, user=request.user).first()
+
+    if request.method == 'POST':
+        # Ensure user is authenticated before processing the form
+        if not request.user.is_authenticated:
+            messages.error(request, "You must be logged in to submit a rating.")
+            # Redirect to login, then back to product? Or just show error.
+            # For simplicity, let's redirect to the product page, the template will show login link.
+            return redirect('product_detail', product_id=product.id)
+
+        # If user has already rated, prevent new submission (unless you want to allow updates)
+        if existing_rating_by_user:
+            messages.info(request, "You have already rated this product.")
+            return redirect('product_detail', product_id=product.id)
+
+        rating_form = RatingForm(request.POST)
+        if rating_form.is_valid():
+            rating = rating_form.save(commit=False)
+            rating.product = product
+            rating.user = request.user
+            rating.save() # This will trigger product.update_average_rating()
+            messages.success(request, f"Thank you for rating {product.name}!")
+            return redirect('product_detail', product_id=product.id) # Redirect to refresh and see new rating
+        else:
+            messages.error(request, "There was an error with your submission. Please check the form.")
+            # We'll pass this invalid form to the template to show errors
+    else:
+        # For GET request, provide an empty form
+        rating_form = RatingForm()
+
     context = {
-        'product': product
+        'product': product,
+        'ratings': ratings, # All ratings for this product
+        'rating_form': rating_form,
+        'existing_rating_by_user': existing_rating_by_user,
     }
     return render(request, 'products/products_detail.html', context)
+
 
 @login_required
 def add_product(request):
@@ -131,3 +169,38 @@ def index(request):
         print(f"Featured Product: {p.name}, ID: {p.id}") # Debug print
     context = {'featured_products': featured_products}
     return render(request, 'home/index.html', context)
+
+@login_required 
+def add_rating(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+
+    # Check if the user has already rated this product
+    existing_rating = Rating.objects.filter(product=product, user=request.user).first()
+
+    if existing_rating:
+        messages.info(request, "You have already rated this product.")
+        
+        form = RatingForm(instance=existing_rating)
+        return redirect('product_detail', product_id=product.id) # Redirect to product detail page
+
+    if request.method == 'POST':
+        form = RatingForm(request.POST)
+        if form.is_valid():
+            rating = form.save(commit=False) 
+            rating.product = product
+            rating.user = request.user
+            rating.save() # This will now trigger the update_average_rating on Product
+            messages.success(request, f"Thank you for rating {product.name}!")
+            return redirect('product_detail', product_id=product.id) # Redirect to product detail page
+        else:
+            messages.error(request, "There was an error with your rating. Please check the form.")
+    else:
+        form = RatingForm()
+
+    context = {
+        'form': form,
+        'product': product,
+        'existing_rating': existing_rating # Pass this to template to conditionally show form or message
+    }
+
+    return render(request, 'products/add_rating.html', context)

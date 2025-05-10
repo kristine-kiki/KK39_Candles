@@ -1,6 +1,6 @@
 from django import forms
 from .widgets import CustomClearableFileInput 
-from .models import Product, Category
+from .models import Product, Category, Rating
 
 class ProductForm(forms.ModelForm):
     """
@@ -95,3 +95,32 @@ class ProductForm(forms.ModelForm):
                 'step': '0.1',
                 'placeholder': '0.0 - 5.0'
             })
+
+class RatingForm(forms.ModelForm):
+    
+    score = forms.ChoiceField(
+        choices=[(i, str(i)) for i in range(1, 6)], # Choices from 1 to 5
+        widget=forms.RadioSelect, 
+        label="Your Rating (1-5)"
+    )
+
+    class Meta:
+        model = Rating
+        # Fields that the user will fill out
+        fields = ['score', 'comment']
+        widgets = {
+            'comment': forms.Textarea(attrs={'rows': 4, 'placeholder': 'Write your review (optional)...'}),
+        }
+        labels = {
+            'score': 'Your Rating',
+            'comment': 'Your Review',
+        }
+        help_texts = {
+            'comment': 'Provide any additional comments about the product.'
+        }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        
+        self.fields['score'].widget.attrs.update({'class': 'rating-score-input'})
+        self.fields['comment'].widget.attrs.update({'class': 'rating-comment-input'})

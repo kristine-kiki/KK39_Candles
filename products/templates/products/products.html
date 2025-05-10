@@ -51,9 +51,11 @@
                     {# Format the price - assumes 'price' is a DecimalField or similar #}
                     <p class="price">£{{ product.price|floatformat:2 }}</p>
 
-                    {# Link to the product detail page #}
-                    {# Adjust 'product_detail' to your actual URL name #}
-                    {# Adjust 'product.id' to 'product.slug' if using slugs #}
+                    {% if product.rating %}
+                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                    {% else %}
+                        <small class="text-muted">No Rating</small>
+                    {% endif %}
                     <a href="{% url 'product_detail' product.id %}" class="btn btn-tertiary">View Product</a>
 
                     {# Alternatively, if your Product model has a get_absolute_url method: #}
