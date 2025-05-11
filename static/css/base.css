@@ -704,7 +704,7 @@ button {
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--grid-gap);
+    gap: 20px; (--grid-gap);
     margin-bottom: 50px;
 }
 .product-card {
@@ -714,28 +714,133 @@ button {
     overflow: hidden;
     text-align: center;
     padding: 25px;
-    padding-top: 15px; /* Image touches top */
+    padding-top: 15px; /* Image touches top 
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 .product-card:hover {
-    box-shadow: 0 10px 25px rgba(79, 74, 69, 0.1); /* Softer shadow */
+    box-shadow: 0 10px 25px rgba(79, 74, 69, 0.1); /* Softer shadow 
     transform: translateY(-5px);
 }
 .product-card img {
     width: 100%;
-    /* height: 300px; /* Let height be auto or set fixed */
+    /* height: 300px; /* Let height be auto or set fixed *
     object-fit: cover;
     margin-bottom: 25px;
-    border-radius: 4px 4px 0 0; /* Round top corners only */
+    border-radius: 4px 4px 0 0; /* Round top corners only 
     border-bottom: 1px solid var(--border-color);
 }
 .product-card h3 { margin-bottom: 10px; }
 .product-card .price {
     font-weight: 700;
-    color: var(--accent-color); /* Use accent color for price */
+    color: var(--accent-color); /* Use accent color for price *
     margin-bottom: 20px;
     font-size: 1.1rem;
+} 
+
+/* Inside your {% block extra_css %} or main CSS file */
+
+.product-grid {
+    display: grid;
+    /* Adjust columns based on your design, e.g., for 4 columns: */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between cards */
+    /* align-items: stretch; /* Default, makes cards in a row the same height if their content allows */
 }
+
+.product-card {
+    display: flex; /* Use flexbox for internal layout */
+    flex-direction: column; /* Stack items vertically */
+    border: 1px solid #EAE0D5; /* Your existing border or similar */
+    background-color: #FAF8F1; /* Your card background or similar */
+    padding: 15px;
+    text-align: center; /* If you want most text centered */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Subtle shadow for depth */
+    height: 100%; /* Make card take full height of its grid cell if align-items: stretch is used on parent */
+}
+
+.product-card .product-image-container {
+    width: 100%;
+    /* Option 1: Fixed Aspect Ratio (e.g., square, or 4:3, 3:4) - Recommended! */
+    aspect-ratio: 1 / 1; /* For square images. Adjust (e.g., 4/3 for landscape-ish) */
+    overflow: hidden; /* Crucial to contain the image within the aspect ratio box */
+    margin-bottom: 15px; /* Space below the image container */
+}
+
+.product-card .product-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Scales image to cover the container, cropping if necessary.
+                          Use 'contain' if you want to see the whole image, possibly with letterboxing. */
+    display: block; /* Removes extra space below image */
+}
+
+/* If you don't want aspect-ratio and prefer a fixed height (less flexible for different image shapes): */
+
+.product-card .product-image-container {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.product-card .product-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+} 
+
+
+.product-card h3 { /* Product Name */
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem; /* Or your chosen size */
+    color: #333;
+    margin-top: 0; 
+    margin-bottom: 4px; 
+}
+
+.product-card .category-link-wrapper {
+    font-size: 0.95rem; 
+    color: #555;
+    margin-bottom: 6px; 
+}
+
+.product-card .price {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem; 
+    font-weight: bold;
+    color: #E57373;
+    margin-bottom: 3px; 
+}
+
+.product-card-content-spacer {
+    flex-grow: 0.5; 
+}
+
+.product-card .rating-and-button-wrapper {
+    margin-top: 8px;
+    margin-bottom: 8px; 
+}
+
+.product-card .product-rating-display {
+    display: inline-block; 
+    margin-right: 10px; /* Space between rating and button */
+    vertical-align: middle;
+    font-size: 0.9rem;
+    color: #555;
+}
+.product-card .product-rating-display .fa-star {
+    color: #FFD700; /* Gold star */
+    /* margin-right: 5px; // Using Bootstrap mr-2/mr-3 on the icon itself is fine */
+}
+
+.product-card .btn-tertiary { /* View Product Button */
+    display: inline-block; /* Or block if you want it full width */
+    vertical-align: middle;
+    /* Your existing button styles for .btn-tertiary or .btn */
+    padding: 8px 15px; /* Example padding */
+    
+}
+
 .view-all-link { text-align: center; margin-top: 50px; }
 
 /* --- Testimonial Section --- */

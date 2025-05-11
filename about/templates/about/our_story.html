@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Our Story - KK39 Candles{% endblock title %}
+
+{% block content %}
+<section class="section-padding">
+    <div class="container">
+        <h1 class="section-title text-center mb-4">Our Story</h1>
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <!--Story Content-->
+                <p class="lead">
+                    Welcome to KK39 Candles! Our journey began with a simple spark... 
+                    .......
+                </p>
+                <p>
+                    ....Elaborate on your passion, your values, what inspired you to start making candles. 
+                    Maybe share a bit about the founder or the team...
+                </p>
+                
+                {# You can add images too #}
+                {# <img src="{% static 'images/your_story_image.jpg' %}" alt="Our Workshop" class="img-fluid my-4 rounded"> #}
+                
+                <p>
+                    Our mission is to bring warmth, light, and beautiful aromas into your homes...
+                </p>
+                
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

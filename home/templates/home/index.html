@@ -39,33 +39,58 @@
         <div class="container">
             <h2 class="section-title text-center mb-5">Our Bestsellers</h2>
             {% if bestseller_products %}
-                <div class="product-grid">
+                <div class="product-grid"> {# Ensure this class matches your main products page grid #}
                     {% for product in bestseller_products %}
-                    {# --- SINGLE Generic Product Card Structure --- #}
+                    {# --- Start: Replicated Product Card Structure (from products.html) --- #}
                     <div class="product-card">
-                        {# Use the actual product's image #}
-                        {% if product.image %}
-                            <img src="{{ product.image.url }}" alt="{{ product.name }}"> {# Use product.image.url and product.name #}
-                        {% else %}
-                             {# Optional: Placeholder if no image #}
-                            <img src="{% static 'media/default_product.png' %}" alt="{{ product.name }}">
-                        {% endif %}
-
-                        {# Use the actual product's name #}
+                        <div class="product-image-container">
+                            {% if product.image %}
+                            <a href="{% url 'product_detail' product.id %}">
+                                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                            </a>
+                            {% else %}
+                            <a href="{% url 'product_detail' product.id %}">
+                                {# Use the same placeholder path as your products.html #}
+                                <img src="{% static 'media/no_image.png' %}" alt="{{ product.name }}">
+                            </a>
+                            {% endif %}
+                        </div>
+    
                         <h3>{{ product.name }}</h3>
-
-                        {# Use the actual product's price #}
+    
+                        {% if product.category.exists %} {# Check if product has categories #}
+                            <p class="small mt-1 mb-0 category-link-wrapper">
+                                {% for category in product.category.all %}
+                                    <a class="text-muted category-tag-link" href="{% url 'products' %}?category={{ category.name }}">
+                                        <i class="fas fa-tag mr-1"></i>{{ category.friendly_name|default:category.name }}
+                                    </a>{% if not forloop.last %}, {% endif %}
+                                {% endfor %}
+                            </p>
+                        {% endif %}
+    
                         <p class="price">£{{ product.price|floatformat:2 }}</p>
-
-                        {# Link to the actual product's detail page #}
-                        <a href="{% url 'product_detail' product.id %}" class="btn btn-tertiary">View Product</a>
+    
+                        {# This spacer div helps push the button to the bottom consistently #}
+                        <div class="product-card-content-spacer"></div>
+    
+                        <div class="rating-and-button-wrapper">
+                            {% if product.rating %}
+                                <small class="text-muted product-rating-display">
+                                    <i class="fas fa-star mr-2"></i>{{ product.rating|floatformat:1 }} / 5 {# Use floatformat:1 for rating #}
+                                </small>
+                            {% else %}
+                                <small class="text-muted product-rating-display">No Rating</small>
+                            {% endif %}
+                            <a href="{% url 'product_detail' product.id %}" class="btn btn-tertiary">View Product</a>
+                        </div>
                     </div>
-                    {# --- End SINGLE Product Card Structure --- #}
-                {% endfor %}
+                    {# --- End: Replicated Product Card Structure --- #}
+                    {% endfor %}
                 </div>
+            {% else %}
+                <p class="text-center lead my-5">We are curating our bestsellers. Check back soon!</p> {# Optional message if no bestsellers #}
             {% endif %}
-            <div class="view-all-link">
-                {# Link to the main shop/products page #}
+            <div class="view-all-link text-center mt-4"> {# Added text-center and margin-top for better spacing #}
                 <a href="{% url 'products' %}" class="btn btn-secondary">View All Products</a>
             </div>
         </div>

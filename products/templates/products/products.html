@@ -22,19 +22,19 @@
 
             {% for product in products %}
                 <div class="product-card">
-                    {# Use product image if available, otherwise a placeholder #}
-                    {% if product.image %}
-                    <a href="{% url 'product_detail' product.id %}">
-                        <img src="{{ product.image.url }}" alt="{{ product.name }}">
-                    </a>
-                    {% else %}
-                        {# You might want a default placeholder image in your static files #}
+                    <div class="product-image-container">
+                        {% if product.image %}
                         <a href="{% url 'product_detail' product.id %}">
-                            <img src="{{ MEDIA_URL }}no_image.png" alt="{{ product.name }}">
-                        </a>{# Or use a placeholder service - adjust size as needed #}
-                        {# <img src="https://via.placeholder.com/300x300.png?text={{ product.name|urlencode }}" alt="{{ product.name }}"> #}
-                    {% endif %}
-
+                            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                        {% else %}
+                            {# You might want a default placeholder image in your static files #}
+                            <a href="{% url 'product_detail' product.id %}">
+                                <img src="{{ MEDIA_URL }}no_image.png" alt="{{ product.name }}">
+                            </a>
+                            {# <img src="https://via.placeholder.com/300x300.png?text={{ product.name|urlencode }}" alt="{{ product.name }}"> #}
+                        {% endif %}
+                    </div>  
                     <h3>{{ product.name }}</h3>
 
                     {% if product.category.exists %}
@@ -51,13 +51,14 @@
                     {# Format the price - assumes 'price' is a DecimalField or similar #}
                     <p class="price">£{{ product.price|floatformat:2 }}</p>
 
-                    {% if product.rating %}
-                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                    {% else %}
-                        <small class="text-muted">No Rating</small>
-                    {% endif %}
-                    <a href="{% url 'product_detail' product.id %}" class="btn btn-tertiary">View Product</a>
-
+                    <div class="rating-and-button-wrapper">
+                        {% if product.rating %}
+                            <small class="text-muted product-rating-display"><i class="fas fa-star mr-2"></i>{{ product.rating }} / 5</small>
+                        {% else %}
+                            <small class="text-muted product-rating-display">No Rating</small>
+                        {% endif %}
+                        <a href="{% url 'product_detail' product.id %}" class="btn btn-tertiary">View Product</a>
+                    </div>
                     {# Alternatively, if your Product model has a get_absolute_url method: #}
                     {# <a href="{{ product.get_absolute_url }}" class="btn btn-tertiary">View Product</a> #}
                 </div>
@@ -120,6 +121,20 @@
 </section> 
 
 {% endblock content %}
+
+{% block extra_css %}
+<style>
+    
+    .product-card .text-muted {
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+
+    .product-card .btn-tertiary {
+        vertical-align: middle;
+    }
+</style>
+{% endblock extra_css %}
 
 {% block extra_js %}
     {# Add any page-specific JavaScript here if needed later #}
