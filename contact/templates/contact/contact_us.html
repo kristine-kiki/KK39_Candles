@@ -20,9 +20,46 @@
                 <h3 class="mt-4">Business Hours</h3>
                 <p>Monday - Friday: 9:00 AM - 5:00 PM (GMT)</p>
                 <p>Weekends & Public Holidays: Closed</p>
-
+            </div>
+            <!--Contact form-->
+            <div class="col-md-7">
+                <h3>Send Us a Message</h3>
+                <form method="POST" action="{% url 'contact:contact_us' %}" id="contact-us-form">
+                    {% csrf_token %}
+                    {{ form.as_p }} 
+                    <button type="submit" class="btn btn-primary mt-2">Send Message</button>
+                </form>
             </div>
         </div>
     </div>
 </section>
 {% endblock content %}
+
+{% block extra_css %}
+<style>
+    /* Optional: Add some basic styling */
+    #contact-us-form p { /* Styles for when using form.as_p */
+        margin-bottom: 1rem;
+    }
+    #contact-us-form label {
+        display: block;
+        margin-bottom: .3rem;
+        font-weight: bold;
+    }
+    #contact-us-form input[type="text"],
+    #contact-us-form input[type="email"],
+    #contact-us-form textarea {
+        width: 100%;
+        padding: .5rem .75rem;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+    }
+    #contact-us-form textarea {
+        min-height: 120px;
+    }
+    #contact-us-form .invalid-feedback { /* For custom loop rendering errors */
+        color: #dc3545;
+        font-size: 0.875em;
+    }
+</style>
+{% endblock extra_css %}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Contact Message</title>
+</head>
+<body>
+    <h2>New Message via KK39 Contact Form</h2>
+    <p><strong>From:</strong> {{ name }}</p>
+    <p><strong>Email:</strong> <a href="mailto:{{ from_email }}">{{ from_email }}</a></p>
+    {% if subject %}
+    <p><strong>Subject:</strong> {{ subject }}</p>
+    {% endif %}
+    <hr>
+    <p><strong>Message:</strong></p>
+    <p>{{ message_body|linebreaksbr }}</p>  
+    <br>
+</body>
+</html>
