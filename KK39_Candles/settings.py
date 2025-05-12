@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'bag',
     'checkout',
     'about',
+    'contact',
     'django_countries',
     'crispy_forms',
     'crispy_bootstrap5',

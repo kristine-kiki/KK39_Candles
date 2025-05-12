@@ -637,7 +637,7 @@ button {
     transform: translateY(-50%); /* Vertically center */
     padding: 20px;
     z-index: 2; /* Place above the ::after overlay */
-    text-align: left center; /* Align text left */
+    text-align: center; /* Align text left */
 }
 .hero-content h1 {
     font-family: var(--font-heading); 
@@ -701,43 +701,6 @@ button {
 
 /* --- Shop Section --- */
 .shop-section { background-color: var(--bg-accent); } /* Contrast background */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px; (--grid-gap);
-    margin-bottom: 50px;
-}
-.product-card {
-    background-color: var(--bg-light);
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-    overflow: hidden;
-    text-align: center;
-    padding: 25px;
-    padding-top: 15px; /* Image touches top 
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-.product-card:hover {
-    box-shadow: 0 10px 25px rgba(79, 74, 69, 0.1); /* Softer shadow 
-    transform: translateY(-5px);
-}
-.product-card img {
-    width: 100%;
-    /* height: 300px; /* Let height be auto or set fixed *
-    object-fit: cover;
-    margin-bottom: 25px;
-    border-radius: 4px 4px 0 0; /* Round top corners only 
-    border-bottom: 1px solid var(--border-color);
-}
-.product-card h3 { margin-bottom: 10px; }
-.product-card .price {
-    font-weight: 700;
-    color: var(--accent-color); /* Use accent color for price *
-    margin-bottom: 20px;
-    font-size: 1.1rem;
-} 
-
-/* Inside your {% block extra_css %} or main CSS file */
 
 .product-grid {
     display: grid;
