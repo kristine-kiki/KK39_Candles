@@ -22,8 +22,8 @@
                 <p>Weekends & Public Holidays: Closed</p>
             </div>
             <!--Contact form-->
-            <div class="col-md-7">
-                <h3>Send Us a Message</h3>
+            <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 text-center">
+                <h3><strong>Send Us a Message</strong></h3>
                 <form method="POST" action="{% url 'contact:contact_us' %}" id="contact-us-form">
                     {% csrf_token %}
                     {{ form.as_p }} 
@@ -37,7 +37,6 @@
 
 {% block extra_css %}
 <style>
-    /* Optional: Add some basic styling */
     #contact-us-form p { /* Styles for when using form.as_p */
         margin-bottom: 1rem;
     }
@@ -45,6 +44,7 @@
         display: block;
         margin-bottom: .3rem;
         font-weight: bold;
+        text-align: left;
     }
     #contact-us-form input[type="text"],
     #contact-us-form input[type="email"],

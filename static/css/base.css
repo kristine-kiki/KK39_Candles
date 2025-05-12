@@ -1322,8 +1322,6 @@ button {
     justify-content: center;
     align-items: center;
     min-height: 70vh;
-    /* Using a very light, neutral beige for the page background to complement your palette */
-    /* If your site body already has a suitable background, this might not be needed */
     background-color: #f9f7f5; /* Very light neutral beige */
 }
 
