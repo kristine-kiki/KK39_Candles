@@ -163,10 +163,10 @@
             <div class="footer-column">
                 <h4>Support</h4>
                 <ul>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Shipping & Returns</a></li>
-                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="{% url 'contact:contact_us' %}">Contact Us</a></li>
+                    <li><a href="{% url 'contact:faq' %}">FAQ</a></li>
+                    <li><a href="{% url 'contact:shipping_returns' %}">Shipping & Returns</a></li>
+                    <li><a href="{% url 'contact:terms_service' %}">Terms of Service</a></li>
                 </ul>
             </div>
             <div class="footer-column">

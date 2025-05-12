@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}FAQ - KK39 Candles{% endblock title %}
+
+{% block content %}
+<section class="section-padding">
+    <div class="container">
+        <h1 class="section-title text-center mb-5">Frequently Asked Questions</h1>
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                
+                <div class="faq-item mb-4">
+                    <h4>Q: What kind of wax do you use?</h4>
+                    <p>A: We primarily use a natural soy wax blend known for its clean burn and excellent scent throw. You can find more details on our <a href="{% url 'about:ingredients' %}">Ingredients page</a>.</p>
+                </div>
+                <hr>
+                <div class="faq-item mb-4">
+                    <h4>Q: How long does shipping take?</h4>
+                    <p>A: Standard shipping usually takes 3-5 business days within the UK. Please see our <a href="{% url 'contact:shipping_returns' %}">Shipping & Returns</a> page for more detailed information.</p>
+                </div>
+                <hr>
+                <div class="faq-item mb-4">
+                    <h4>Q: Do you offer international shipping?</h4>
+                    <p>A: Currently, we only ship within the United Kingdom. We hope to expand in the future!</p>
+                </div>
+                <!--more FAQ items here -->
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

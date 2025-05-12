@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Shipping & Returns - KK39 Candles{% endblock title %}
+
+{% block content %}
+<section class="section-padding">
+    <div class="container">
+        <h1 class="section-title text-center mb-4">Shipping & Returns</h1>
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <h3 class="mt-3">Shipping Information</h3>
+                <p>We aim to dispatch all orders within 1-2 business days.</p>
+                <p><strong>UK Standard Shipping (3-5 business days):</strong> £X.XX</p>
+                <p><strong>UK Express Shipping (1-2 business days):</strong> £Y.YY</p>
+                <p>Enjoy free standard shipping on all UK orders over £{{ free_delivery_threshold }}!</p>
+                {# Add more details about couriers, tracking, etc. #}
+
+                <h3 class="mt-5">Returns Policy</h3>
+                <p>We hope you love your KK39 Candles products! However, if you're not completely satisfied, we're here to help.</p>
+                <p>You can return unused items in their original packaging within 14 days of receipt for a full refund or exchange. Please note that return shipping costs are the responsibility of the customer unless the item is faulty or incorrect.</p>
+                <p>To initiate a return, please contact us at <a href="mailto:support@kk39candles.com">support@kk39candles.com</a> with your order number and reason for return.</p>
+                {# Add more details about conditions for return, process for damaged goods, etc. #}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
