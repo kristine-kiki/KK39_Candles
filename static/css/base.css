@@ -934,8 +934,18 @@ button {
     opacity: 0.7;
 }
 
+.icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 20px 0;
+}
+
+
  /* Add some basic bag-specific layout styles here if not in main CSS */
-    /* These are examples - adjust to match your project's design */
+
 .bag-page-content {
     display: flex;
     flex-wrap: wrap; /* Allow summary to wrap below items on small screens */
@@ -1314,6 +1324,58 @@ button {
     color: #333;
     opacity: 1;
 }
+
+/* checkout.css */
+.or-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #888;
+}
+.or-divider::before,
+.or-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+}
+.or-divider:not(:empty)::before {
+    margin-right: .5em;
+}
+.or-divider:not(:empty)::after {
+    margin-left: .5em;
+}
+.btn-paypal {
+    background-color: #0070ba; /* PayPal Blue */
+    color: white;
+    /* Add other button styles like padding, border-radius etc. */
+}
+.btn-paypal:hover {
+    background-color: #005ea6;
+    color: white;
+}
+
+#payment-request-button:empty + .or-divider-after-wallets,
+#payment-request-button[style*="display: none"] + .or-divider-after-wallets {
+    display: none;
+}
+
+.or-divider {
+    display: flex; /* Initially shown. JS or the rule above might hide the first one */
+    align-items: center;
+    text-align: center;
+    color: #888; 
+    font-size: 0.9em;
+    margin-top: 1rem !important; 
+    margin-bottom: 1rem !important;
+}
+.or-divider::before,
+.or-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ccc; 
+}
+.or-divider:not(:empty)::before { margin-right: .75em; }
+.or-divider:not(:empty)::after { margin-left: .75em; }
 
 /* === Login Page Specific Styles === */
 

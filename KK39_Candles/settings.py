@@ -181,11 +181,35 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 FREE_DELIVERY_THRESHOLD = Decimal('75.00')
 STANDART_DELIVERY_PERCENTAGE = 12
 STRIPE_CURRENCY = 'gbp'
+STRIPE_MINIMUM_AMOUNT_CENTS = 30
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET','')
 DEFAULT_FROM_EMAIL = 'hello@kk39candles.com'
 CONTACT_EMAIL = 'hello@kk39candles.com'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'stripe_webhooks.log',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+        'checkout.webhooks': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+        },
+    },
+}
 
 
 # Default primary key field type
