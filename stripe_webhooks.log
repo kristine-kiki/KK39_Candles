@@ -1076,3 +1076,119 @@ Not Found: /.well-known/appspecific/com.chrome.devtools.json
 "GET /static/css/base.css HTTP/1.1" 304 0
 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
 "GET /static/checkout/css/checkout.css HTTP/1.1" 304 0
+"GET /bag/ HTTP/1.1" 200 30062
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /checkout/ HTTP/1.1" 200 100571
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /bag/ HTTP/1.1" 200 30062
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /bag/ HTTP/1.1" 200 29043
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /bag/ HTTP/1.1" 200 29043
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /static/css/base.css HTTP/1.1" 200 58281
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"POST /bag/adjust/2/ HTTP/1.1" 302 0
+"GET /bag/ HTTP/1.1" 200 29494
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /bag/ HTTP/1.1" 200 29044
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 59181
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /bag/ HTTP/1.1" 200 29410
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 59648
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /bag/ HTTP/1.1" 200 29410
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 61020
+"GET /bag/ HTTP/1.1" 200 29410
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /static/css/base.css HTTP/1.1" 200 61020
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /bag/ HTTP/1.1" 200 29410
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /static/css/base.css HTTP/1.1" 200 59558
+"GET /bag/ HTTP/1.1" 200 29410
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 59558
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /bag/ HTTP/1.1" 200 30936
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /static/css/base.css HTTP/1.1" 200 59530
+"GET /bag/ HTTP/1.1" 200 30936
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /static/css/base.css HTTP/1.1" 200 59530
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 25267
+"GET /static/css/base.css HTTP/1.1" 200 59530
+"GET /bag/ HTTP/1.1" 200 30936
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+"GET /bag/ HTTP/1.1" 200 30936
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /static/css/base.css HTTP/1.1" 200 59530
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /bag/ HTTP/1.1" 200 29131
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /bag/ HTTP/1.1" 200 29131
+"GET /static/css/base.css HTTP/1.1" 200 56914
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"POST /bag/adjust/7/ HTTP/1.1" 302 0
+"GET /bag/ HTTP/1.1" 200 29582
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"POST /bag/remove/2/ HTTP/1.1" 302 0
+"GET /bag/ HTTP/1.1" 200 26115
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /checkout/ HTTP/1.1" 200 99930
+"GET /static/css/base.css HTTP/1.1" 304 0
+"POST /checkout/wh/ HTTP/1.1" 200 50
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+- Broken pipe from ('127.0.0.1', 61971)
