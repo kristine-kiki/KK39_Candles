@@ -1280,3 +1280,4 @@ Not Found: /.well-known/appspecific/com.chrome.devtools.json
 "GET /products/?category=unscented_candles HTTP/1.1" 200 18179
 "GET /static/css/base.css HTTP/1.1" 304 0
 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
