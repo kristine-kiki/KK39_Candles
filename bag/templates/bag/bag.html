@@ -86,8 +86,10 @@
 
             <!-- Bag Summary Section -->
             <div class="bag-summary-section col-12 col-lg-4">
+                <h3 class="checkout-section-title ">Order Summary</h3>
+                
                 <div class="bag-summary p-3 border rounded shadow-sm"> {# Removed inline style="top: 20px;" here, will be handled by CSS #}
-                    <h2 class="h4 mb-3">Order Summary</h2>
+                    <p class="h5 mb-3">Please check your order summary below.</p>
                     <p class="d-flex justify-content-between">
                         <span>Subtotal:</span>
                         <span id="bag-subtotal">£{{ subtotal|floatformat:2 }}</span>

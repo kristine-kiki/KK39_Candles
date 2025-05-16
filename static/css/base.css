@@ -1261,6 +1261,13 @@ button {
     border: 1px dashed #ccc; /* Example styling */
     margin-top: 2rem;
 }
+
+.checkout-section-title {
+    font-size: 2.3rem; /* Adjust as needed */
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1.25rem;
+    color: #333333; /* Dark text */
+}
 /* Class to hide elements via JS */
 .hidden {
     display: none;
