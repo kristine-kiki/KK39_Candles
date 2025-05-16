@@ -1281,3 +1281,40 @@ Not Found: /.well-known/appspecific/com.chrome.devtools.json
 "GET /static/css/base.css HTTP/1.1" 304 0
 Not Found: /.well-known/appspecific/com.chrome.devtools.json
 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /bag/ HTTP/1.1" 200 25776
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /checkout/ HTTP/1.1" 200 99930
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"POST /checkout/ HTTP/1.1" 302 0
+"GET /checkout/checkout_success/FA44E8090B924B71BF692CFD8F97B4A5/ HTTP/1.1" 200 17561
+"POST /checkout/wh/ HTTP/1.1" 200 88
+"POST /checkout/wh/ HTTP/1.1" 200 44
+"POST /checkout/wh/ HTTP/1.1" 200 42
+"GET /profile/ HTTP/1.1" 200 98716
+"GET /static/profiles/css/profile.css HTTP/1.1" 304 0
+"GET /profile/ HTTP/1.1" 200 98716
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /profile/ HTTP/1.1" 200 98736
+"GET /profile/ HTTP/1.1" 200 98736
+"GET /profile/ HTTP/1.1" 200 98736
+"GET /static/css/base.css HTTP/1.1" 200 57104
+"GET /static/profiles/css/profile.css HTTP/1.1" 200 1722
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /profile/ HTTP/1.1" 200 98736
+"GET /profile/ HTTP/1.1" 200 98736
+"GET /profile/ HTTP/1.1" 200 98736
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /profile/ HTTP/1.1" 200 98736
+"GET /profile/ HTTP/1.1" 200 98736
+"GET /static/css/base.css HTTP/1.1" 200 57104
+"GET /static/profiles/css/profile.css HTTP/1.1" 200 1720
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /profile/ HTTP/1.1" 200 98726
+"GET /static/profiles/css/profile.css HTTP/1.1" 304 0
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/profiles/css/profile.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
