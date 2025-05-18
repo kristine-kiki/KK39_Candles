@@ -213,6 +213,7 @@ button {
     color: var(--text-heading);
     border: 1px solid var(--text-heading);
     padding: 10px 40px;
+    white-space: nowrap;
     letter-spacing: 3px;
 }
 .logo:hover { opacity: 1; } /* No hover effect on logo link */
@@ -301,184 +302,285 @@ button {
 
 /* --- Main Navigation Bar (Your Existing .main-navbar or equivalent) --- */
 /* Assuming you have a class on your <nav> element, e.g., .main-navbar */
-.main-navbar .navbar-nav .nav-item .nav-link { /* For Shop All, Candles etc. */
-    color: #555555; /* Muted text for nav links */
+
+/* --- Base Navbar Styling --- */
+.main-navbar { /* The main <nav> element */
+    /* background-color: #f8f9fa; /* Example: if you want a distinct background for the nav bar */
+    /* border-bottom: 1px solid #e7e7e7; /* Example bottom border */
+    padding-top: 0.5rem; /* Adjust vertical padding of the entire navbar */
+    padding-bottom: 0.5rem;
+}
+
+/* The collapsible container within the navbar */
+.main-navbar .navbar-collapse {
+    /* Bootstrap handles display:flex and flex-wrap:wrap.
+       We use mx-auto on .main-links-group and ml-auto on .site-utility-nav for positioning. */
+}
+
+/* --- Main Navigation Links (Shop All, Candles, etc.) --- */
+.main-navbar .main-links-group .nav-item .nav-link {
+    color: var(--brand-text-dark, #555555); 
     text-transform: uppercase;
     font-size: 0.85rem;
     letter-spacing: 0.05em;
-    padding: 0.5rem 1rem;
-    font-weight: normal; /* Or your preferred weight */
+    padding: 0.5rem 0.8rem; /* Consistent padding */
+    font-weight: normal; 
+}
+.main-navbar .main-links-group .nav-item .nav-link:hover,
+.main-navbar .main-links-group .nav-item .nav-link:focus,
+.main-navbar .main-links-group .nav-item.active .nav-link { /* Style for active link */
+    color: var(--brand-beige-secondary, #333333); /* Use a theme color for active/hover */
 }
 
-.main-navbar .navbar-nav .nav-item .nav-link:hover,
-.main-navbar .navbar-nav .nav-item .nav-link:focus {
-    color: #333333; /* Primary text color on hover */
+/* --- Dropdown Menus for Main Links --- */
+.main-navbar .main-links-group .dropdown-menu {
+    background-color: #fdfdfd; 
+    border: 1px solid #eeeeee; 
+    border-radius: 0; 
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07); 
+    margin-top: 0.125rem !important; /* Standard Bootstrap spacing */
 }
-
-/* Dropdowns for main nav (Shop All, Candles, etc.) */
-.main-navbar .dropdown-menu { /* This is for main-nav-dropdown-menu */
-    background-color: #fdfdfd; /* Light background for dropdown */
-    border: 1px solid #eeeeee; /* Light border */
-    border-radius: 0; /* Square corners */
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07); /* Softer shadow */
-    margin-top: 0.25rem !important;
-}
-.main-navbar .dropdown-menu .dropdown-item {
-    color: #333333; /* Primary text color */
+.main-navbar .main-links-group .dropdown-menu .dropdown-item {
+    color: var(--brand-text-dark, #333333); 
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
 }
-.main-navbar .dropdown-menu .dropdown-item:hover,
-.main-navbar .dropdown-menu .dropdown-item:focus {
-    background-color: #e9e5e2; /* Your very light beige from disabled buttons, good for hover */
-    color: #333333;
+.main-navbar .main-links-group .dropdown-menu .dropdown-item:hover,
+.main-navbar .main-links-group .dropdown-menu .dropdown-item:focus {
+    background-color: var(--brand-beige-light, #e9e5e2); 
+    color: var(--brand-text-dark, #333333);
 }
-.main-navbar .dropdown-menu .dropdown-header { /* For "Sort By:", "Categories:" */
+.main-navbar .main-links-group .dropdown-menu .dropdown-header {
     font-size: 0.75rem;
-    color: #777777; /* Muted text for headers */
+    color: #777777; 
     padding: 0.5rem 1rem 0.25rem;
 }
-.main-navbar .dropdown-menu .dropdown-divider {
-    border-top: 1px solid #f0f0f0; /* Very light divider */
+.main-navbar .main-links-group .dropdown-menu .dropdown-divider {
+    border-top: 1px solid #f0f0f0; 
 }
 
-.main-navbar .navbar-collapse {
-    display: flex !important; /* Crucial: Make it a flex container */
-    justify-content: space-between !important; /* Crucial: Push children to ends */
-    align-items: center !important; /* Vertically align children */
-    width: 100% !important;
+
+/* --- Site Utility Navigation (Search, User, Bag Icons) --- */
+.main-navbar .site-utility-nav {
+    /* This group uses .ml-auto in HTML to be pushed to the right */
+    /* align-items: center; /* Already on the div in HTML */
+}
+.main-navbar .site-utility-nav .nav-link {
+    color: var(--brand-text-dark, #555555);
+    padding: 0.25rem 0.6rem; /* Adjust padding for utility links */
+    display: inline-flex; /* Helps align icon and text if present */
+    align-items: center;
+    white-space: nowrap;
+    text-decoration: none;
+}
+.main-navbar .site-utility-nav .nav-link:hover,
+.main-navbar .site-utility-nav .nav-link:focus {
+    color: var(--brand-beige-secondary, #333333);
 }
 
-.main-navbar .navbar-collapse > .navbar-nav:first-child {
-    flex-grow: 0;
-}
-
-.main-navbar .navbar-collapse > .site-utility-nav {
-    flex-grow: 0; /* Don't allow utility links to grow excessively */
-    flex-shrink: 0;
-}
-
-.main-navbar ul.navbar-nav.main-links-group > .nav-item > .nav-link {
-    padding-left: 0.8rem; /* Original was 1rem */
-    padding-right: 0.8rem; /* Original was 1rem */
-    /* Keep other styles: color, text-transform, font-size, letter-spacing, font-weight */
-    color: var(--text-color, #555555);
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 0.05em;
-    font-weight: normal;
-}
-.main-navbar ul.navbar-nav.main-links-group > .nav-item > .nav-link:hover,
-.main-navbar ul.navbar-nav.main-links-group > .nav-item > .nav-link:focus {
-    color: var(--text-heading, #333333);
-}
-
-.site-utility-nav .nav-link.utility-icon,
-.site-utility-nav .dropdown.utility-user-dropdown {
-    margin-left: 0.5rem; /* Add a little space between utility icons */
-}
-.site-utility-nav .nav-link.utility-search-text {
-    margin-right: 0; /* Remove its specific margin if icons have their own */
-}
-
-.site-utility-nav .nav-link { /* Base for items in utility nav */
-    padding: 0.25rem 0.4rem;
-    color: #555555; /* Muted text/icon color */
-}
-.site-utility-nav .nav-link:hover,
-.site-utility-nav .nav-link:focus {
-    color: #333333; /* Primary text color on hover */
-}
-
-.utility-search-text {
+/* Specific Utility Items */
+.main-navbar .site-utility-nav .utility-search-text {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: #777777; /* Muted color for "SEARCH..." */
-    margin-right: 0.25rem;
-    line-height: 1.5;
+    color: #777777; 
+    margin-right: 0.25rem; /* Space before the icon if both shown */
 }
-.utility-search-text:hover {
-    color: #333333;
+.main-navbar .site-utility-nav .utility-search-text:hover {
+    color: var(--brand-text-dark, #333333);
 }
 
-.utility-icon { /* For search, user, bag icons */
-    font-size: 1.2rem; /* Slightly larger icons for better visibility */
-    padding-left: 0.6rem !important;
-    padding-right: 0.6rem !important;
-    color: #333333; /* Primary text color for icons to make them clear */
+.main-navbar .site-utility-nav .utility-icon { /* For the <i> tags */
+    font-size: 1.1rem; /* Adjusted size */
+    color: var(--brand-text-dark, #333333);
 }
-.utility-icon:hover, .utility-icon:focus {
-    color: #C8B8AB; /* Your darker beige for icon hover */
-}
-.utility-icon .fas, .utility-icon .far {
+.main-navbar .site-utility-nav .utility-icon .fas, /* Target FontAwesome icons directly */
+.main-navbar .site-utility-nav .utility-icon .far {
     vertical-align: middle;
 }
-
-/* User Dropdown (Icon Only Toggle) in Utility Nav */
-.utility-user-dropdown .dropdown-toggle {
-    /* .utility-icon class styles the icon part */
-}
-.utility-user-dropdown .dropdown-toggle::after {
-    display: none; /* Hide Bootstrap's default arrow */
+/* Make sure icons are not overly padded if they are inside a .nav-link */
+.main-navbar .site-utility-nav .nav-link > .utility-icon {
+    padding-left: 0.2rem !important;
+    padding-right: 0.2rem !important;
 }
 
-.utility-user-dropdown-menu {
-    background-color: #fdfdfd; /* Light background */
-    border: 1px solid #eeeeee; /* Light border */
-    border-radius: 0; /* Square corners */
+
+/* --- User Dropdown in Utility Nav --- */
+.main-navbar .utility-user-dropdown .dropdown-toggle.utility-icon {
+    /* Styles primarily from .utility-icon */
+}
+.main-navbar .utility-user-dropdown .dropdown-toggle.utility-icon::after {
+    display: none; /* Hide Bootstrap's default arrow if it's just an icon toggle */
+}
+
+.main-navbar .utility-user-dropdown .utility-user-dropdown-menu { /* Be specific */
+    background-color: #fdfdfd; 
+    border: 1px solid #eeeeee; 
+    border-radius: 0; 
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
-    margin-top: 0.5rem !important;
-    min-width: 220px; /* Slightly wider for comfort */
+    margin-top: 0.5rem !important; /* More space from toggle */
+    min-width: 230px; /* Good width */
     padding: 0.5rem 0;
 }
-.utility-user-dropdown-menu .user-greeting {
+.main-navbar .utility-user-dropdown .user-greeting {
     display: block;
     padding: 0.6rem 1rem;
     font-size: 0.9rem;
-    color: #555555; /* Muted text for greeting */
-    font-weight: normal;
-    border-bottom: 1px solid #f0f0f0; /* Separator below greeting */
+    color: #555555; 
+    border-bottom: 1px solid #f0f0f0; 
     margin-bottom: 0.25rem;
 }
-.utility-user-dropdown-menu .dropdown-item {
-    color: #333333; /* Primary text color */
+.main-navbar .utility-user-dropdown .dropdown-item {
+    color: var(--brand-text-dark, #333333); 
     font-size: 0.9rem;
-    padding: 0.6rem 1rem; /* Slightly more padding for items */
+    padding: 0.6rem 1rem; 
 }
-.utility-user-dropdown-menu .dropdown-item:hover,
-.utility-user-dropdown-menu .dropdown-item:focus {
-    background-color: #e9e5e2; /* Your light beige for hover */
-    color: #333333;
+.main-navbar .utility-user-dropdown .dropdown-item:hover,
+.main-navbar .utility-user-dropdown .dropdown-item:focus {
+    background-color: var(--brand-beige-light, #e9e5e2); 
+    color: var(--brand-text-dark, #333333);
 }
-.utility-user-dropdown-menu .dropdown-item .fas,
-.utility-user-dropdown-menu .dropdown-item .far {
-    margin-right: 0.7em; /* More space for icon */
+.main-navbar .utility-user-dropdown .dropdown-item .fas,
+.main-navbar .utility-user-dropdown .dropdown-item .far {
+    margin-right: 0.7em; 
     width: 1.2em;
     text-align: center;
-    color: #777777; /* Muted icon color inside dropdown */
+    color: #777777; 
 }
-.utility-user-dropdown-menu .dropdown-divider { /* If you still have one here, for consistency */
+.main-navbar .utility-user-dropdown .dropdown-divider {
     border-top: 1px solid #f0f0f0;
     margin: 0.4rem 0;
 }
 
-
-/* Bag Indicator */
-.utility-bag-indicator {
-    background-color: #D8CABB !important; /* Your primary beige for badge background */
-    color: #333333 !important;            /* Your primary text color for badge text */
+/* --- Bag Indicator in Utility Nav --- */
+.main-navbar .utility-bag-indicator {
+    background-color: var(--brand-beige-primary, #D8CABB) !important; 
+    color: var(--brand-text-on-beige, #333333) !important;            
     font-size: 0.6rem;
-    font-weight: bold; /* Make count bold */
-    padding: 0.15em 0.4em;
+    font-weight: bold; 
+    padding: 0.2em 0.45em; /* Fine-tuned padding */
     border-radius: 50%;
     position: absolute;
-    top: -2px;      /* Adjust these for precise positioning on your bag icon */
-    right: -2px;   /* Adjust these for precise positioning on your bag icon */
+    top: 0px;     /* Adjust for best position on bag icon */
+    right: 0px;  /* Adjust for best position on bag icon */
     line-height: 1;
-    min-width: 15px; /* Ensure it's somewhat circular */
+    min-width: 16px; /* Ensure a good circular shape */
     text-align: center;
-    /* border: 1px solid #fdfdfd; /* Optional light border around badge */
+    /* border: 1px solid #fff; /* Optional white border to separate from icon */
+}
+
+/* --- Mobile Collapsed Menu Specific Styles --- */
+/* These styles apply when the main-nav.html content is collapsed on mobile */
+/* They assume the toggler is in mobile-top-header.html and targets #mainNavbarContent */
+
+/* Target the .navbar-collapse when it's in the mobile view (not expanded by navbar-expand-lg) */
+@media (max-width: 991.98px) { 
+    .main-header .navbar-collapse#mainNavbarContent {
+        background-color: #fff; 
+        position: fixed; /* Or absolute, depending on desired behavior */
+        top: 55px; /* Height of your .mobile-header-bar, ADJUST THIS VALUE! */
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow-y: auto;
+        z-index: 1025; /* Below mobile-top-header (1030), above main content */
+        padding: 0; /* Add some padding inside the full-screen menu */
+        border-top: 1px solid #e7e7e7;
+    }
+
+    .main-header .navbar-collapse#mainNavbarContent .navbar-nav {
+        width: 100%; 
+    }
+
+    .main-header .navbar-collapse#mainNavbarContent .main-links-group {
+        margin-left: 0;  /* Reset desktop centering */
+        margin-right: 0;
+    }
+    .main-header .navbar-collapse#mainNavbarContent .site-utility-nav {
+        margin-left: 0; /* Reset desktop push */
+        flex-direction: column; /* Stack utility items on mobile */
+        align-items: flex-start !important; /* Align items to the start */
+        padding: 0 1rem; /* Add padding for these items */
+        border-top: 1px solid #f0f0f0;
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+    .main-header .navbar-collapse#mainNavbarContent .site-utility-nav .nav-link,
+    .main-header .navbar-collapse#mainNavbarContent .site-utility-nav .dropdown { /* Target dropdown div */
+        width: 100%; /* Make utility links take full width */
+        margin-bottom: 0.5rem;
+    }
+     .main-header .navbar-collapse#mainNavbarContent .site-utility-nav .utility-search-text {
+        display: inline-block !important; /* Show search text on mobile */
+    }
+    .main-header .navbar-collapse#mainNavbarContent .site-utility-nav .utility-icon-text span {
+        display: inline !important; /* Ensure LOG IN / SIGN UP text shows */
+    }
+
+    .main-header .navbar-collapse#mainNavbarContent .nav-item {
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .main-header .navbar-collapse#mainNavbarContent .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .main-header .navbar-collapse#mainNavbarContent .nav-link {
+        padding: 0.8rem 1rem; 
+        color: var(--brand-text-dark, #333);
+        font-weight: 500;
+        display: block; 
+        font-size: 1rem;
+        white-space: normal;
+    }
+
+    .main-header .navbar-collapse#mainNavbarContent .nav-link:hover,
+    .main-header .navbar-collapse#mainNavbarContent .nav-item.active .nav-link { 
+        background-color: #f8f9fa;
+        color: #000;
+    }
+
+    /* Dropdowns within the collapsed mobile menu */
+    .main-header .navbar-collapse#mainNavbarContent .dropdown-menu {
+        background-color: #f8f9fa; 
+        border: none; !important
+        box-shadow: none; !important
+        padding-left: 1.5rem; /* Indent dropdown items more */
+        position: static !important; 
+        float: none !important;
+        width: 100% !important;
+        margin-top: 0 !important;
+        border-radius: 0;
+        display: none; /* Hidden by default, shown by .show */
+    }
+    .main-header .navbar-collapse#mainNavbarContent .dropdown-menu.show {
+        display: block; /* Bootstrap's class to show dropdown */
+    }
+
+    .main-header .navbar-collapse#mainNavbarContent .dropdown-item {
+        padding: 0.7rem 1rem 0.7rem 0.5rem; /* Adjust padding from the indented left */
+        font-size: 0.9rem;
+        color: #444;
+        border-top: 1px solid #eee;
+    }
+
+    .main-header .navbar-collapse#mainNavbarContent .dropdown-item:first-child {
+        border-top: none;
+    }
+    .main-header .navbar-collapse#mainNavbarContent .dropdown-header {
+        padding: 0.8rem 1rem 0.4rem; /* Adjusted padding */
+        font-size: 0.8rem;
+        color: #6c757d;
+        font-weight: bold;
+    }
+
+    .main-header .navbar-collapse#mainNavbarContent .nav-link.dropdown-toggle::after {
+        display: inline-block; /* Ensure arrow is shown */
+        margin-left: auto; /* Push arrow to the right */
+        transition: transform 0.2s ease-in-out;
+    }
+    .main-header .navbar-collapse#mainNavbarContent .nav-link.dropdown-toggle[aria-expanded="true"]::after {
+        transform: rotate(-180deg); /* Rotate arrow when open */
+    }
 }
 
 /* --- Social Sidebar --- */
@@ -932,387 +1034,6 @@ button {
     font-size: 0.85rem;
     color: var(--footer-text);
     opacity: 0.7;
-}
-
- /* Add some basic bag-specific layout styles here if not in main CSS */
-    /* These are examples - adjust to match your project's design */
-.bag-page-content {
-    display: flex;
-    flex-wrap: wrap; /* Allow summary to wrap below items on small screens */
-    gap: 2rem; /* Space between items list and summary */
-    padding: 2rem 0;
-}
-
-.bag-items {
-    flex: 2; /* Takes up more space */
-    min-width: 300px; /* Ensure it doesn't get too squished */
-}
-
-.bag-summary {
-    flex: 1; /* Takes up less space */
-    min-width: 250px;
-    background-color: #f9f9f9; /* Example subtle background */
-    padding: 1.5rem;
-    border-radius: 8px; /* Example border radius */
-    align-self: flex-start; /* Align to top */
-    border: 1px solid #eee; /* Example border */
-}
-
-.bag-item {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid #eee; /* Separator */
-}
-.bag-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-.bag-item-img img {
-    width: 90px;
-    height: 90px;
-    object-fit: cover;
-    border-radius: 4px;
-}
-
-.bag-item-details {
-    flex-grow: 1;
-}
-
-.bag-item-details h3 {
-    margin: 0 0 0.3rem 0;
-    font-size: 1rem; /* Adjust as needed */
-}
-.bag-item-details p {
-    margin: 0.2rem 0;
-    font-size: 0.9rem; /* Adjust as needed */
-    color: #555; /* Example color */
-}
-
-/* --- Horizontal Quantity Selector Styling --- */
-
-/* Style the wrapper if needed, e.g., limiting width */
-.quantity-selector.input-group {
-    /* max-width is set inline in HTML, e.g., 130px */
-    flex-wrap: nowrap; /* Prevent wrapping on small screens if using standard input-group */
-}
-
-/* Common styles for buttons and input */
-.quantity-selector .quantity-btn,
-.quantity-selector .qty_input {
-   font-size: 1rem; /* Adjust as needed */
-   padding: 0.375rem 0.75rem; /* Standard padding */
-   height: 38px; /* Example fixed height */
-   box-sizing: border-box;
-   border-radius: 0 !important; /* Force square corners */
-}
-
-.quantity-selector .quantity-btn {
-   /* Specific button styles */
-   background-color: #D8CABB; /* Beige background - ADJUST! */
-   color: #333333; /* Dark text color - ADJUST! */
-   border: 1px solid #C8B8AB; /* Subtle border color - ADJUST! */
-   cursor: pointer;
-   line-height: 1.5; /* Vertically center text/icon */
-   flex-shrink: 0; /* Prevent buttons shrinking */
-   z-index: 2; /* Ensure buttons overlap input borders correctly */
-   position: relative; /* Needed for z-index */
-   transition: background-color 0.15s ease-in-out;
-}
-.quantity-selector .quantity-btn:hover {
-   background-color: #c8b8ab; /* Darker beige on hover - ADJUST! */
-}
-
-.quantity-selector .qty_input {
-   /* Specific input styles */
-   text-align: center;
-   /* Input border - match button border */
-   border: 1px solid #C8B8AB; /* ADJUST! */
-   /* Remove adjacent borders visually */
-   border-left: none;
-   border-right: none;
-   /* Allow input to take up flexible space but limit its base size */
-   flex: 1 1 auto;
-   width: 1%; /* Bootstrap input-group hack */
-   min-width: 45px; /* Ensure minimum width */
-
-   /* Remove spinners */
-   -moz-appearance: textfield;
-}
-.quantity-selector .qty_input::-webkit-outer-spin-button,
-.quantity-selector .qty_input::-webkit-inner-spin-button {
-   -webkit-appearance: none;
-   margin: 0;
-}
-/* Fix focus state if needed */
-.quantity-selector .qty_input:focus {
- z-index: 3; /* Ensure input border shows over buttons on focus */
- border-color: #C8B8AB; /* Keep border color same on focus */
- box-shadow: none; /* Remove default focus glow */
-}
-
-/* Adjust button borders next to input */
-.quantity-selector .decrement-qty {
-   border-right: none; /* Remove right border to merge with input */
-}
-.quantity-selector .increment-qty {
-    border-left: none; /* Remove left border to merge with input */
-}
-
-
-/* Disabled state for buttons */
-.quantity-selector .quantity-btn:disabled {
-   background-color: #e9e5e2; /* Lighter background - ADJUST! */
-   border-color: #d8d1cc; /* Lighter border - ADJUST! */
-   color: #888; /* Faded text */
-   cursor: not-allowed;
-   opacity: 0.7;
-   z-index: 1; /* Ensure disabled buttons are behind input border */
-}
-
-/* --- Add to Cart Button Styling (Ensure Consistency) --- */
-.add-to-cart-btn {
-   background-color: #D8CABB; /* SAME Beige background - ADJUST! */
-   color: #333333; /* SAME Dark text color - ADJUST! */
-   border: 1px solid #C8B8AB; /* SAME Border - ADJUST! */
-   padding: 0.6rem 1.2rem;
-   text-transform: uppercase;
-   font-weight: normal;
-   cursor: pointer;
-   border-radius: 0; /* Square corners */
-   transition: background-color 0.15s ease-in-out;
-   display: inline-block;
-   text-align: center;
-   margin-top: 1rem;
-}
-
-.add-to-cart-btn:hover {
-   background-color: #c8b8ab; /* Darker beige on hover - ADJUST! */
-}
-
-.edit-button { /* Or use existing .btn-secondary, .btn-outline-primary etc. */
-    background-color: transparent; /* Example: Outline style */
-    color: var(--text-color, #333333);
-    border: 1px solid var(--border-color, #C8B8AB); /* Your KK39 border color */
-    padding: 0.6rem 1.2rem; /* Match other buttons */
-    text-transform: uppercase;
-    font-weight: normal; /* Or bold if you prefer */
-    border-radius: 0; /* Square corners if that's your theme */
-    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
-    display: inline-block;
-    text-align: center;
-    text-decoration: none; /* If using <a> tag */
-}
-
-.edit-button:hover {
-    background-color: var(--bg-accent, #e9e5e2); /* Light beige hover */
-    color: var(--text-color, #333333);
-    border-color: var(--border-color, #C8B8AB);
-}
-
-/* --- Label Styling --- */
-.form-label {
-   color: #333333;
-   font-weight: normal;
-   display: block;
-   margin-bottom: 0.5rem;
-}
-
-/* --- Label Styling (Optional) --- */
-.form-label {
-    color: #333333; /* Match text color */
-    font-weight: normal; /* Looks like normal weight */
-    /* font-family: /* Match your site's font */
-}
-
-.item-line-price {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
-.remove-item-btn {
-    background: none;
-    border: none;
-    color: #cc0000; /* Example remove color */
-    cursor: pointer;
-    font-size: 0.8rem;
-    text-decoration: underline;
-    padding: 0;
-}
-
-.bag-summary h2 {
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 0.8rem;
-}
-.bag-summary p {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.8rem;
-}
-.bag-summary .total {
-    font-weight: bold;
-    font-size: 1.2rem; /* Example larger total */
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid #ccc;
-}
-/* --- Order Summary Button Styling (Not Full Width) --- */
-.summary-actions {
-    /* Aligned right via inline style in HTML, or use: */
-    /* text-align: right; */
-     margin-top: 1.5rem; /* More space above buttons */
-     display: flex;
-     justify-content: center;
-     gap: 0.75rem;
-     flex-wrap: wrap;
-}
-
-.summary-actions .action-btn {
-    padding: 0.6rem 1.2rem; /* Adjust padding as needed */
-    font-size: 0.9rem; /* Slightly smaller */
-    text-transform: uppercase;
-    border-radius: 0;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, color 0.15s ease-in-out;
-    cursor: pointer;
-    line-height: 1.5;
-}
-
-/* Primary button (Checkout) */
-.summary-actions .checkout-btn {
-    background-color: #d8cabb; /* !! ADJUST BEIGE !! */
-    border-color: #d8cabb;
-    color: #333333;           /* !! ADJUST TEXT COLOR !! */
-    font-weight: bold; /* Optional: Keep boldness */
-}
-.summary-actions .checkout-btn:hover {
-    background-color: #c8b8ab; /* !! ADJUST DARKER BEIGE !! */
-    border-color: #c8b8ab;
-    color: #333333;
-}
-
-/* Secondary button (Continue Shopping) - Outline Style */
-.summary-actions .continue-shopping-link {
-    background-color: transparent;
-    border: 1px solid #C8B8AB; /* !! ADJUST BORDER COLOR !! */
-    color: #333333;           /* !! ADJUST TEXT COLOR !! */
-}
-.summary-actions .continue-shopping-link:hover {
-    background-color: #f8f9fa;
-    border-color: #C8B8AB;
-    color: #333333;
-}
-
-/* --- General Bag Summary Enhancements (Keep as before) --- */
-.bag-summary {
-    border: 1px solid #eee;
-    padding: 1.5rem;
-    background-color: #fdfdfd;
-    border-radius: 4px;
-}
-
-.empty-bag-message {
-    text-align: center;
-    padding: 3rem 1rem;
-    border: 1px dashed #ccc; /* Example styling */
-    margin-top: 2rem;
-}
-/* Class to hide elements via JS */
-.hidden {
-    display: none;
-}
-
-/* Confirmation Modal Styles             */
-
-.modal {
-    position: fixed; /* Stay in place */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1050; /* Ensure it's on top */
-    /* display: none; /* Controlled by JS/inline style */
-    /* Use flexbox to center content */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal-overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(51, 51, 51, 0.6); /* Semi-transparent dark overlay */
-    z-index: 1; /* Behind content, above page */
-    cursor: pointer; /* Indicate it might be clickable to close */
-}
-
-.modal-content {
-    position: relative; /* For z-index and optional close button positioning */
-    background-color: #ffffff; /* White background */
-    padding: 2rem;
-    border: 1px solid #eee;
-    border-radius: 0; /* Square corners */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    z-index: 2; /* Above overlay */
-    max-width: 400px; /* Limit width */
-    width: 90%; /* Responsive width */
-    text-align: center;
-}
-
-.modal-title {
-    font-size: 1.5rem;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    color: #333333; /* Dark text */
-}
-
-#modal-message { /* Target specific message p tag */
-    margin-bottom: 1.5rem;
-    color: #555555;
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-.modal-actions {
-    margin-top: 1rem; /* Space above buttons */
-    /* Re-uses .summary-actions flex/gap properties if defined */
-    /* display: flex; */
-    /* justify-content: center; */
-    /* gap: 0.75rem; */
-}
-
-/* Ensure modal buttons use the same style */
-.modal-actions .action-btn {
-    /* Inherits styles from .summary-actions .action-btn */
-    padding: 0.6rem 1rem; 
-}
-
-.modal-close {
-    position: absolute;
-    top: 0.75rem;
-    right: 0.75rem;
-    font-size: 1.8rem;
-    font-weight: bold;
-    line-height: 1;
-    color: #888;
-    background: none;
-    border: none;
-    opacity: 0.7;
-    cursor: pointer;
-    padding: 0.25rem 0.5rem;
-}
-.modal-close:hover {
-    color: #333;
-    opacity: 1;
 }
 
 /* === Login Page Specific Styles === */

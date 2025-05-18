@@ -1,0 +1,412 @@
+/* --- GLOBAL VARS (Optional, but can be helpful for theming) --- */
+:root {
+    --brand-beige-primary: #D8CABB;   /* Main beige for backgrounds */
+    --brand-beige-secondary: #c8b8ab; /* Darker beige for hover, accents */
+    --brand-beige-light: #e9e5e2;     /* Lighter beige for disabled or subtle elements */
+    --brand-border-color: #C8B8AB;    /* Main border color for beige elements */
+    --brand-border-focus: #b8a89a;    /* Darker border for focus */
+    --brand-text-dark: #333333;       /* Main dark text */
+    --brand-text-on-beige: #4F4F4F;   /* Text color for on beige buttons */
+    --brand-symbol-active: #5D5147;   /* Active symbols on beige buttons */
+    --brand-symbol-disabled: #9E9086; /* Disabled symbols on beige buttons */
+    --brand-remove-red: #D32F2F;      /* Red for remove actions */
+    --brand-remove-red-hover: #B71C1C;/* Darker red for hover */
+}
+
+/* --- Bag Page General & Item Styles --- */
+.bag-items-list .bag-item { /* Target .bag-item inside .bag-items-list for separators */
+    /* Bootstrap's .row on .bag-item handles its direct children's flex layout */
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee; 
+}
+.bag-items-list .bag-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.bag-product-image {
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover;
+    border-radius: 4px; /* preferred radius */
+}
+
+.bag-item-details h3.product-name-bag {
+    font-size: 1.1rem; 
+    margin: 0 0 0.5rem 0; /* Adjusted margin slightly */
+    color: var(--brand-text-dark);
+    /* font-family: 'Playfair Display', serif; /* Uncomment if you use a specific font */
+}
+
+.bag-item-details p { /* For "Unit Price: ..." etc. */
+    margin: 0.2rem 0;
+    font-size: 0.9rem; 
+    color: #555; 
+}
+
+.item-line-price {
+    font-weight: bold;
+    margin-bottom: 0.5rem; 
+    color: var(--brand-text-dark);
+    font-size: 1rem; /* Ensure it's clearly visible */
+}
+
+.remove-item-btn {
+    background: none;
+    border: none;
+    color: var(--brand-remove-red);
+    cursor: pointer;
+    font-size: 0.85rem;
+    text-decoration: underline;
+    padding: 0;
+    font-weight: 500; /* Medium weight */
+}
+.remove-item-btn:hover {
+    color: var(--brand-remove-red-hover);
+    text-decoration: none;
+}
+
+.free-shipping-notice {
+    line-height: 1.5; 
+    font-size: 0.8rem; 
+    color: #555;
+}
+.free-shipping-notice strong {
+    font-weight: 600;
+    color: var(--brand-text-dark);
+}
+
+/* --- Quantity Selector Styles (Beige Theme, Distinct Borders) --- */
+.quantity-selector.input-group {
+    flex-wrap: nowrap; 
+    /* max-width for this is usually set inline in HTML (e.g., style="max-width: 120px;") */
+}
+.quantity-selector .quantity-btn,
+.quantity-selector .qty_input {
+   font-size: 0.9rem;       
+   height: 38px;            
+   box-sizing: border-box;  
+   border-radius: 0 !important; 
+   padding-top: 0; padding-bottom: 0; padding-left: 0.5rem; padding-right: 0.5rem;
+   line-height: 36px;       
+   vertical-align: middle;  
+   border: 1px solid var(--brand-border-color); 
+}
+.quantity-selector .quantity-btn {
+   color: var(--brand-symbol-active);            
+   background-color: var(--brand-beige-primary);  
+   cursor: pointer;
+   flex-shrink: 0;             
+   position: relative; 
+   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, color 0.15s ease-in-out;
+   display: inline-flex; align-items: center; justify-content: center;
+}
+.quantity-selector .quantity-btn:not(:disabled):hover {
+    background-color: var(--brand-beige-secondary); 
+    border-color: var(--brand-border-focus);     
+    color: var(--brand-text-on-beige);            
+}
+.quantity-selector .quantity-btn:disabled { 
+    background-color: var(--brand-beige-primary);   
+    border-color: var(--brand-border-color);       
+    color: var(--brand-symbol-disabled);              
+    cursor: not-allowed;
+    opacity: 0.7; 
+}
+.quantity-selector .qty_input {
+   text-align: center; background-color: #FFFFFF; color: var(--brand-text-dark); 
+   -moz-appearance: textfield; 
+}
+.quantity-selector .qty_input::-webkit-outer-spin-button,
+.quantity-selector .qty_input::-webkit-inner-spin-button {
+   -webkit-appearance: none; margin: 0;
+}
+.quantity-selector .qty_input:focus {
+   border-color: var(--brand-border-focus); 
+   box-shadow: 0 0 0 0.15rem rgba(216, 202, 187, 0.35); /* Adjusted shadow color */
+   position: relative; z-index: 3;            
+}
+
+/* --- Bag Summary Styling --- */
+.bag-summary-section > h2.h4 { /* The "Order Summary" heading */
+    color: var(--brand-text-dark);
+    /* font-family: 'Playfair Display', serif; */
+    margin-bottom: 1rem; /* Ensure space before the summary box */
+}
+
+.bag-summary { /* The inner box for summary details */
+    position: static; /* Default for mobile/tablet */
+    background-color: #fdfdfd;
+    padding: 1.5rem;
+    border-radius: 4px; /* Your preferred radius */
+    border: 1px solid #eee; /* Your preferred border */
+}
+
+.bag-summary p.text-muted.small { /* For "Please review your items..." */
+    margin-bottom: 1rem; /* Space before hr */
+}
+
+.bag-summary p:not(.text-muted):not(.free-shipping-notice) { /* Target subtotal, delivery lines */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem; 
+    color: #555;
+}
+.bag-summary .total { /* For Grand Total */
+    font-weight: bold;
+    font-size: 1.2rem; 
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ccc;
+    color: var(--brand-text-dark);
+}
+.bag-summary hr {
+    border-top-color: #ddd; /* Lighter hr lines */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Summary Action Buttons (Proceed to Checkout, Continue Shopping) */
+.summary-actions {
+     margin-top: 1.5rem; 
+     display: flex;
+     flex-direction: column; /* Stack buttons by default */
+     gap: 0.75rem; /* Space between stacked buttons */
+}
+.summary-actions .action-btn { /* Common style for both buttons */
+    padding: 0.75rem 1.2rem; 
+    font-size: 0.9rem; 
+    text-transform: uppercase;
+    border-radius: 0; /* Your square style */
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, color 0.15s ease-in-out;
+    cursor: pointer;
+    line-height: 1.5;
+    display: block; 
+    width: 100%;
+}
+.summary-actions .checkout-btn { /* Primary button */
+    background-color: var(--brand-beige-primary); 
+    border: 1px solid var(--brand-beige-primary); 
+    color: var(--brand-text-on-beige);           
+    font-weight: bold;
+}
+.summary-actions .checkout-btn:hover {
+    background-color: var(--brand-beige-secondary); 
+    border-color: var(--brand-beige-secondary);
+    color: var(--brand-text-on-beige);
+}
+.summary-actions .continue-shopping-link { /* Secondary button - Outline Style */
+    background-color: transparent;
+    border: 1px solid var(--brand-border-color); 
+    color: var(--brand-text-on-beige);          
+}
+.summary-actions .continue-shopping-link:hover {
+    background-color: var(--brand-beige-light); 
+    border-color: var(--brand-border-color);
+    color: var(--brand-text-on-beige);
+}
+
+/* --- Sticky Behavior for Bag Summary --- */
+@media (min-width: 992px) { /* lg breakpoint and up - Desktop */
+    .bag-summary-section .bag-summary { 
+        position: -webkit-sticky; 
+        position: sticky;
+        top: 20px; /* Adjust space from top of viewport (e.g., below header) */
+        align-self: flex-start;
+    }
+    /* Optional: make summary buttons side-by-side on desktop if preferred */
+    /*
+    .summary-actions {
+        flex-direction: row;
+        justify-content: space-between; 
+    }
+    .summary-actions .action-btn {
+        width: auto; 
+        flex-grow: 1;
+    }
+    .summary-actions .action-btn:first-child { margin-right: 0.375rem; }
+    .summary-actions .action-btn:last-child { margin-left: 0.375rem; }
+    */
+}
+@media (max-width: 991.98px) { /* Screens smaller than lg */
+    .bag-summary-section .bag-summary,
+    .bag-summary-section { /* Ensure column itself is not sticky */
+        position: static !important; 
+        top: auto !important; 
+    }
+}
+
+/* --- Responsive Adjustments for Bag Items on Smaller Screens --- */
+@media (max-width: 767.98px) { /* md breakpoint and below */
+    .bag-item .item-actions { 
+        text-align: left !important; 
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+        width: 100%; 
+        margin-top: 0.75rem; 
+    }
+    .bag-item .item-actions .item-line-price { margin-bottom: 0; }
+    .bag-item .product-name-bag { font-size: 1rem; }
+   
+    }
+
+/* --- Empty Bag Message --- */
+.empty-bag-message {
+    text-align: center;
+    padding: 3rem 1rem;
+    border: 1px dashed #ccc; 
+    margin-top: 2rem;
+    background-color: #fdfdfd; 
+}
+.empty-bag-message h2 {
+    color: var(--brand-text-dark);
+}
+.empty-bag-message p {
+    color: #555;
+}
+.empty-bag-message .btn-primary {
+    background-color: var(--brand-beige-primary); 
+    border-color: var(--brand-beige-primary);
+    color: var(--brand-text-on-beige);
+    padding: 0.75rem 1.5rem;
+    text-transform: uppercase;
+    border-radius: 0;
+}
+.empty-bag-message .btn-primary:hover {
+    background-color: var(--brand-beige-secondary); 
+    border-color: var(--brand-beige-secondary);
+}
+
+/* --- Confirmation Modal Styles --- */
+.modal {
+    position: fixed; left: 0; top: 0; width: 100%; height: 100%;
+    z-index: 1050; 
+    /* display: none; /* JS will control this with modal.style.display = 'flex'; */
+    display: flex; 
+    align-items: center; justify-content: center;
+}
+.modal-overlay {
+    position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(51, 51, 51, 0.6); 
+    z-index: 1; cursor: pointer; 
+}
+.modal-content {
+    position: relative; background-color: #ffffff; 
+    padding: 2rem; border: 1px solid #eee; border-radius: 0; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 2; max-width: 400px; width: 90%; text-align: center;
+}
+.modal-title {
+    font-size: 1.5rem; margin-top: 0; margin-bottom: 1rem; color: var(--brand-text-dark); 
+    /* font-family: 'Playfair Display', serif; */
+}
+#modal-message { 
+    margin-bottom: 1.5rem; color: #555555; font-size: 1rem; line-height: 1.6;
+}
+.modal-actions {
+    margin-top: 1.5rem;
+    display: flex; 
+    justify-content: center; 
+    gap: 0.75rem; 
+    flex-wrap: wrap; 
+}
+.modal-actions .action-btn { /* Using existing action-btn styles for modal */
+    padding: 0.75rem 1rem; /* Adjusted for consistency */
+    min-width: 100px; /* Give buttons a decent width */
+    flex-grow: 1; /* Allow buttons to grow if space allows */
+}
+.modal-actions .action-btn.btn-primary { /* Ensure primary button in modal uses theme */
+    background-color: var(--brand-beige-primary);
+    border-color: var(--brand-beige-primary);
+    color: var(--brand-text-on-beige);
+}
+.modal-actions .action-btn.btn-primary:hover {
+    background-color: var(--brand-beige-secondary);
+    border-color: var(--brand-beige-secondary);
+}
+.modal-actions .action-btn.btn-outline-secondary { /* Theming "No, Cancel" */
+    background-color: transparent;
+    border: 1px solid var(--brand-border-color);
+    color: var(--brand-text-on-beige);
+}
+.modal-actions .action-btn.btn-outline-secondary:hover {
+    background-color: var(--brand-beige-light);
+    border-color: var(--brand-border-color);
+}
+
+.modal-close {
+    position: absolute; top: 0.75rem; right: 0.75rem;
+    font-size: 1.8rem; font-weight: bold; line-height: 1;
+    color: #888; background: none; border: none;
+    opacity: 0.7; cursor: pointer; padding: 0.25rem 0.5rem;
+}
+.modal-close:hover { color: #333; opacity: 1; }
+
+/* --- Mobile Header Bar (Top fixed bar) --- */
+.mobile-compact-logo-text {
+    font-family: 'Playfair Display', serif;
+}
+
+.mobile-compact-logo-link {
+    font-family: 'Playfair Display', serif;
+}
+
+.mobile-header-bar {
+    background-color: #ffffff; 
+    border-bottom: 1px solid #e7e7e7;
+    /* To make it fixed top, add class 'fixed-top' in HTML and manage body padding with JS/CSS */
+}
+.mobile-header-bar.fixed-top {
+    z-index: 1030; /* Ensure it's above other content */
+}
+
+.mobile-header-bar .navbar-toggler {
+    padding: 0.25rem 0.5rem;
+    font-size: 1.25rem; /* Bootstrap default */
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid rgba(0,0,0,.1); /* Or your theme's border */
+    border-radius: .25rem; /* Bootstrap default */
+    /* Ensure it's not accidentally hidden */
+    display: block; /* Or inline-block, flex depending on parent */
+}
+.mobile-header-bar .navbar-toggler:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(var(--brand-beige-primary-rgb, 216,202,187),.25);
+}
+.mobile-header-bar .navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: none; /* Override content: "" if it's causing issues, allow background to show */
+                   /* Or you can remove this line if background-image works directly */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    /* The SVG for the hamburger icon lines */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.mobile-compact-logo-link .mobile-compact-logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem; 
+    color: var(--brand-text-dark, #333);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.mobile-utility-icons .utility-icon { color: var(--brand-text-dark, #555); }
+.mobile-utility-icons .utility-icon:hover { color: #000; }
+.mobile-utility-icons .dropdown-menu { font-size: 0.9rem; }
+.mobile-utility-icons .utility-bag-indicator.mobile-indicator {
+    font-size: 0.6rem; padding: .15em .35em; position: absolute;
+    top: -6px; right: -7px; background-color: var(--brand-remove-red, #D32F2F); 
+    color: white; border-radius: 50%; line-height: 1;
+}

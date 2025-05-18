@@ -1,100 +1,99 @@
-<script>
-    // products/includes/quantity_input_script.html - REVISED
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("Quantity script starting (Product Detail Page Version)...");
 
-console.log("Quantity script starting (Revised)...");
-
-// Function to handle enabling/disabling buttons based on quantity
-function handleEnableDisable(inputId) {
-    const input = document.getElementById(inputId);
-    if (!input) return;
-
-    const currentValue = parseInt(input.value);
-    const min = parseInt(input.min) || 1;
-    const max = parseInt(input.max) || 99; // Get max from attribute
-    const itemId = input.dataset.item_id; // Get item_id from data attribute
-
-    const decrementBtn = document.getElementById(`decrement-qty_${itemId}`);
-    const incrementBtn = document.getElementById(`increment-qty_${itemId}`);
-
-    if (decrementBtn) {
-        decrementBtn.disabled = currentValue <= min; // Disable if value is at or below min
-    }
-    if (incrementBtn) {
-        incrementBtn.disabled = currentValue >= max; // Disable if value is at or above max
-    }
-}
-
-// --- Event Listeners ---
-
-// Use event delegation on a parent element (like the form or body) if many products,
-// Or target buttons directly if only one or a few quantity inputs per page.
-// This example targets directly assuming the script runs after HTML is loaded.
-
-// Find all decrement buttons
-document.querySelectorAll('.decrement-qty').forEach(button => {
-    button.addEventListener('click', function() {
-        const itemId = this.dataset.item_id; // Get the item ID from the button
-        const inputId = `id_qty_${itemId}`; // Construct the input ID
+    function handleEnableDisable(inputId) {
         const input = document.getElementById(inputId);
+        if (!input) {
+            // console.warn(`Quantity script: Input with ID ${inputId} not found in handleEnableDisable.`);
+            return;
+        }
 
-        if (input) {
-            const min = parseInt(input.min) || 1;
-            let currentValue = parseInt(input.value);
-            if (currentValue > min) {
-                input.value = currentValue - 1;
-                handleEnableDisable(inputId); // Update button states
-            }
-             // Optionally trigger change event for other scripts
-             input.dispatchEvent(new Event('change', { bubbles: true }));
+        const currentValue = parseInt(input.value);
+        const min = parseInt(input.min) || 1;
+        let max = parseInt(input.max); // Get max from attribute
+        if (isNaN(max) || max === null) { // Fallback if max attribute isn't set or is not a number
+            max = 99;
+        }
+
+        const itemId = input.dataset.item_id;
+
+        const decrementBtn = document.getElementById(`decrement-qty-detail-${itemId}`);
+        const incrementBtn = document.getElementById(`increment-qty-detail-${itemId}`);
+
+        if (decrementBtn) {
+            decrementBtn.disabled = currentValue <= min;
         } else {
-            console.error(`Input field with ID ${inputId} not found for decrement button.`);
+            // console.warn(`Quantity script: Decrement button 'decrement-qty-detail-${itemId}' not found.`);
         }
-    });
-});
-
-// Find all increment buttons
-document.querySelectorAll('.increment-qty').forEach(button => {
-    button.addEventListener('click', function() {
-        const itemId = this.dataset.item_id; // Get the item ID from the button
-        const inputId = `id_qty_${itemId}`; // Construct the input ID
-        const input = document.getElementById(inputId);
-
-        if (input) {
-            const max = parseInt(input.max) || 99; // Get max from attribute
-            let currentValue = parseInt(input.value);
-            if (currentValue < max) {
-                input.value = currentValue + 1;
-                handleEnableDisable(inputId); // Update button states
-            }
-            // Optionally trigger change event for other scripts
-            input.dispatchEvent(new Event('change', { bubbles: true }));
+        if (incrementBtn) {
+            incrementBtn.disabled = currentValue >= max;
         } else {
-             console.error(`Input field with ID ${inputId} not found for increment button.`);
+            // console.warn(`Quantity script: Increment button 'increment-qty-detail-${itemId}' not found.`);
         }
-    });
-});
+    }
 
-// Add listener for manual input changes to ensure min/max and button states
-document.querySelectorAll('.qty_input').forEach(input => {
-    const inputId = input.id; // Get the ID of the current input
+    
+    const detailPageQuantityForms = document.querySelectorAll('form.add-to-bag-form'); // Be specific to product detail
+    
+    detailPageQuantityForms.forEach(form => {
+        const decrementButton = form.querySelector('.decrement-qty');
+        const incrementButton = form.querySelector('.increment-qty');
+        const qtyInput = form.querySelector('.qty_input');
 
-    input.addEventListener('change', function() {
-        const min = parseInt(this.min) || 1;
-        const max = parseInt(this.max) || 99;
-        let currentValue = parseInt(this.value);
-
-        if (isNaN(currentValue) || currentValue < min) {
-            this.value = min;
-        } else if (currentValue > max) {
-            this.value = max;
+        if (!decrementButton || !incrementButton || !qtyInput) {
+            // console.warn("Quantity script: Missing quantity elements within a form.");
+            return; // Skip this form if elements are missing
         }
-        handleEnableDisable(inputId); // Update button states after manual change
+        
+        const itemId = qtyInput.dataset.item_id; // Should match product.id
+        const inputId = qtyInput.id; // Should be 'id_qty_{{product.id}}'
+
+        decrementButton.addEventListener('click', function() {
+            const input = document.getElementById(inputId); // Re-fetch to be sure
+            if (input) {
+                const min = parseInt(input.min) || 1;
+                let currentValue = parseInt(input.value);
+                if (currentValue > min) {
+                    input.value = currentValue - 1;
+                    handleEnableDisable(inputId);
+                    input.dispatchEvent(new Event('change', { bubbles: true }));
+                }
+            }
+        });
+
+        incrementButton.addEventListener('click', function() {
+            const input = document.getElementById(inputId); // Re-fetch
+            if (input) {
+                let max = parseInt(input.max);
+                if (isNaN(max) || max === null) max = 99;
+                let currentValue = parseInt(input.value);
+                if (currentValue < max) {
+                    input.value = currentValue + 1;
+                    handleEnableDisable(inputId);
+                    input.dispatchEvent(new Event('change', { bubbles: true }));
+                }
+            }
+        });
+
+        qtyInput.addEventListener('change', function() {
+            const min = parseInt(this.min) || 1;
+            let max = parseInt(this.max);
+            if (isNaN(max) || max === null) max = 99;
+            let currentValue = parseInt(this.value);
+
+            if (isNaN(currentValue) || currentValue < min) {
+                this.value = min;
+            } else if (currentValue > max) {
+                this.value = max;
+            }
+            handleEnableDisable(this.id); 
+        });
+
+        // Initial check for this specific quantity input
+        handleEnableDisable(inputId);
     });
 
-    // Initial check to set button states on page load
-    handleEnableDisable(inputId);
+    console.log("Quantity script (Product Detail Page Version) loaded and listeners attached.");
 });
-
-
-console.log("Quantity script loaded and listeners attached (Revised).");
 </script>

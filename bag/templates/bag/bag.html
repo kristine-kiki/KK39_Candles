@@ -2,61 +2,61 @@
 {% load static %}
 {% load bag_tools %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/bag.css' %}"> 
+{% endblock %}
+
 {% block title %}
     KK39 Candles - Your Shopping Bag
 {% endblock title %}
 
 {% block content %}
 
-<div class="container">
-    <h1>Your Shopping Bag</h1>
+<div class="container my-5">
+    <div class="row mb-4">
+        <div class="col">
+            <h1 class="logo-font">Your Shopping Bag</h1>
+            <hr>
+        </div>
+    </div>
 
-    {# Check if there are items in the bag using the context #}
     {% if bag_items %}
-        <div class="bag-page-content" id="bag-with-items">
+        <!-- This is the main row for the two-column layout -->
+        <div class="bag-page-content row">
 
-            <div class="bag-items">
-                <h2>Items ({{ product_count }})</h2>
+            <!-- Bag Items Section (Left Column on Desktop) -->
+            <div class="bag-items-section col-12 col-lg-8 mb-4 mb-lg-0">
+                <h2 class="h4 mb-3">Items ({{ product_count }})</h2>
                 <div class="bag-items-list" id="bag-items-list">
 
-                    {# Loop through items provided by bag_contents context #}
                     {% for item in bag_items %}
-                    <div class="bag-item"> {# Removed data-product-id as we might handle removal differently #}
-                        <div class="bag-item-img">
-                            {# Assuming your Product model has an ImageField named 'image' #}
+                    <!-- Individual Bag Item Structure -->
+                    <div class="bag-item row align-items-center py-3 my-2 border rounded shadow-sm">
+                        <div class="bag-item-img col-12 col-sm-3 col-md-2 text-center mb-3 mb-sm-0">
                             {% if item.product.image %}
-                                <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" class="img-fluid rounded bag-product-image">
                             {% else %}
-                                <img src="{% static 'media/default_product.png' %}" alt="{{ item.product.name }}"> {# Placeholder image #}
+                                <img src="{% static 'media/default_product.png' %}" alt="{{ item.product.name }}" class="img-fluid rounded bag-product-image">
                             {% endif %}
                         </div>
-                        <div class="bag-item-details">
-                            <h3>{{ item.product.name }}</h3>
-                            <p>Price: £{{ item.product.price|floatformat:2 }}</p>
-
-                            {# --- Quantity and Remove Handling --- #}
-                            {# This part requires forms submitting to Django views #}
-                            {# Form for updating quantity #}
+                        <div class="bag-item-details col-12 col-sm-9 col-md-7">
+                            <h3 class="h5 mb-1 product-name-bag">{{ item.product.name }}</h3>
+                            <p class="mb-2 text-muted small">Unit Price: £{{ item.product.price|floatformat:2 }}</p>
                             {% if item.item_id %}
-                                <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
+                                <form class="form update-form mb-0" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                     {% csrf_token %}
-                                    <div class="item-quantity">
-                                        <label for="id_qty_{{ item.item_id }}">Qty:</label>
-                                        <div class="input-group input-group-sm quantity-selector" style="max-width: 130px;"> {# Adjust max-width as desired #}
-                                            {# Decrease Button #}
-                                            <button type="button" class="btn quantity-btn decrement-qty" {# input-group-text helps alignment if not using btn-* class #}
+                                    <div class="item-quantity d-flex align-items-center">
+                                        <label for="id_qty_{{ item.item_id }}" class="mr-2 mb-0 small text-muted">Qty:</label>
+                                        <div class="input-group input-group-sm quantity-selector" style="max-width: 120px;">
+                                            <button type="button" class="btn quantity-btn decrement-qty"
                                                 data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
                                                 −
                                             </button>
-                                
-                                            {# Input Field - Crucially, place it between the buttons #}
-                                            <input class="form-control form-control text-center qty_input" type="number"
+                                            <input class="form-control text-center qty_input" type="number"
                                                 name="quantity" value="{{ item.quantity }}" min="1" max="99"
                                                 data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}"
-                                                aria-label="Quantity"> {# Add aria-label for accessibility #}
-                                
-                                            {# Increase Button #}
-                                            <button type="button" class="btn quantity-btn increment-qty" {# input-group-text helps alignment if not using btn-* class #}
+                                                aria-label="Quantity for {{ item.product.name }}">
+                                            <button type="button" class="btn quantity-btn increment-qty"
                                                 data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
                                                 +
                                             </button>
@@ -65,256 +65,305 @@
                                 </form>
                             {% endif %}
                         </div>
-
-                        <div class="item-actions">
-                             {# Calculate line price: item quantity * item price #}
-                             
-                            <p class="item-line-price">£{{ item.line_total|floatformat:2 }}</p>
-                            {# Form for removing item #}
-                             <form class="form remove-form" method="POST" action="{% url 'remove_from_bag' item.item_id %}">
+                        <div class="item-actions col-12 col-md-3 text-md-right mt-3 mt-md-0">
+                            <p class="item-line-price font-weight-bold mb-1">£{{ item.line_total|floatformat:2 }}</p>
+                            {% if item.item_id %}
+                            <form class="form remove-form d-inline-block mb-0" method="POST" action="{% url 'remove_from_bag' item.item_id %}">
                                 {% csrf_token %}
-                                <button type="submit" class="remove-item-btn btn btn-link text-danger p-0 aria-label=Remove {{ item.product.name }}">Remove</button>
+                                <button type="submit" class="remove-item-btn btn btn-link text-danger p-0 small">Remove</button>
                             </form>
+                            {% endif %}
                         </div>
                     </div>
                     {% endfor %}
                 </div>
             </div>
 
-            <div class="bag-summary">
-                <h2>Order Summary</h2>
-                <p>
-                    <span>Subtotal: </span>
-                    {# Display total from context, formatted as currency #}
-                    <span id="bag-total">£{{ subtotal | floatformat:2 }}</span>
-                </p>
-
-                {# Display delivery info from context #}
-                <p>
-                    <span>Delivery:</span>
-                    {% if delivery > 0 %}
-                        <span id="bag-shipping">£{{ delivery|floatformat:2 }}</span>
-                    {% else %}
-                         <span id="bag-shipping">FREE</span>
+            <!-- Bag Summary Section (Right Column on Desktop) -->
+            <!-- MODIFIED: Changed class from bag-items-section to bag-summary-section -->
+            <div class="bag-summary-section col-12 col-lg-4"> 
+                <h2 class="h4 mb-3">Order Summary</h2>
+                <div class="bag-summary p-3 border rounded shadow-sm">
+                    <p class="text-muted small mb-3">Please review your items and proceed to checkout.</p>
+                    <hr class="mt-0 mb-3"> 
+                    <p class="d-flex justify-content-between">
+                        <span>Subtotal:</span>
+                        <span id="bag-subtotal">£{{ subtotal|floatformat:2 }}</span>
+                    </p>
+                    <p class="d-flex justify-content-between">
+                        <span>Delivery:</span>
+                        {% if delivery > 0 %}
+                            <span id="bag-delivery">£{{ delivery|floatformat:2 }}</span>
+                        {% else %}
+                            <span id="bag-delivery">FREE</span>
+                        {% endif %}
+                    </p>
+                    {% if free_delivery_delta > 0 %}
+                        <p class="small text-muted mb-2 free-shipping-notice">Add <strong>£{{ free_delivery_delta|floatformat:2 }}</strong> more for FREE delivery!</p>
                     {% endif %}
-                </p>
-
-                {# Optional: Display message about free delivery #}
-                {% if free_delivery_delta > 0 %}
-                    <p class="text-muted">Add £{{ free_delivery_delta|floatformat:2 }} more for free delivery!</p>
-                {% endif %}
-
-                <p class="total">
-                    <span>Grand Total:</span>
-                    {# Display grand_total from context #}
-                        <span id="bag-total">£{{ grand_total | floatformat:2 }}</span>
-                </p>
-
-                {# Use Django url tag for checkout link #}
-                <div class="summary-actions mt-3">
-                <a href="{% url 'products' %}" class="btn btn-outline-secondary action-btn continue-shopping-link">Continue Shopping</a>
-                {# Use Django url tag for continue shopping link #}
-                <a href="{% url 'checkout' %}" class="btn btn-primary action-btn checkout-btn">Proceed to Checkout</a> {# Adjust 'products' to your products list view name #}
+                    <hr>
+                    <p class="d-flex justify-content-between font-weight-bold h5 total">
+                        <span>Grand Total:</span>
+                        <span id="bag-grand-total">£{{ grand_total|floatformat:2 }}</span>
+                    </p>
+                    <hr>
+                    <div class="summary-actions mt-3">
+                        <a href="{% url 'checkout' %}" class="btn btn-primary btn-block action-btn checkout-btn mb-2">Proceed to Checkout</a>
+                        <a href="{% url 'products' %}" class="btn btn-outline-secondary btn-block action-btn continue-shopping-link">Continue Shopping</a>
+                    </div>
                 </div>
             </div>
         </div>
 
     {% else %}
-        {# This section shows when the bag is empty #}
-        <div class="empty-bag-message" id="empty-bag-message">
-            <h2>Your Bag is Empty</h2>
-            <p>Looks like you haven't added anything to your bag yet! Take a look at our handmade range of products to find your next favorite!</p>
-            <a href="{% url 'products' %}" class="button button-secondary">Start Shopping</a> {# Adjust 'products' #}
+        <!-- Empty Bag Message -->
+        <div class="row">
+            <div class="col text-center">
+                <div class="empty-bag-message py-5">
+                    <h2 class="logo-font mb-3">Your Bag is Empty</h2>
+                    <p class="mb-4">Looks like you haven't added anything to your bag yet!<br>Take a look at our handmade range of products to find your next favorite!</p>
+                    <a href="{% url 'products' %}" class="btn btn-primary action-btn">Start Shopping</a>
+                </div>
+            </div>
         </div>
     {% endif %}
 </div>
 
-<div id="remove-confirm-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" style="display: none;"> {# Hidden initially #}
-    <div class="modal-overlay" data-dismiss="modal"></div> {# Background overlay #}
+<!-- MODAL HTML - CORRECTED IDs and data-dismiss attributes -->
+<div id="remove-confirm-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" style="display: none;">
+    <div class="modal-overlay" data-dismiss="modal"></div>
     <div class="modal-content">
         <h3 id="modal-title" class="modal-title">Confirm Removal</h3>
-        <p id="modal-message">Are you sure you want to remove this item from your bag?</p> {# Message will be updated by JS #}
-        <div class="modal-actions summary-actions"> {# Re-use summary-actions for button layout #}
+        <p id="modal-message">Are you sure you want to remove this item from your bag?</p>
+        
+        <div class="modal-actions summary-actions">
             <button type="button" class="btn btn-outline-secondary action-btn" data-dismiss="modal" style="margin-right: 0.5rem;">No, Cancel</button>
-            <button type="button" id="modal-confirm-remove" class="btn btn-primary action-btn">Yes, Remove</button>
+            <button type="button" id="modal-confirm-remove" class="btn btn-primary action-btn">Yes, Remove</button> 
         </div>
-         <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close">×</button>
+         <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close">×</button> 
     </div>
 </div>
-{# --- End Confirmation Modal --- #}
+<!-- End Confirmation Modal -->
 
 {% endblock %}
 
-
-
-
 {% block postloadjs %}
-{{ block.supper }}
+    {{ block.super }} 
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("BAG.HTML JS: DOMContentLoaded event fired. Script starting.");
 
-<script type="text/javascript">
-    
-    document.addEventListener('DOMContentLoaded', () => {
-        
-        // Function to handle enabling/disabling buttons
-        function handleEnableDisable(inputElement) {
-            // ... (keep this function as it was) ...
-             if (!inputElement) return;
-            const min = parseInt(inputElement.min) || 1;
-            const max = parseInt(inputElement.max) || 99;
-            const currentValue = parseInt(inputElement.value);
-            const buttonGroup = inputElement.closest('.input-group');
-            if (!buttonGroup) return;
-            const decreaseBtn = buttonGroup.querySelector('.decrement-qty'); // Correct class
-            const increaseBtn = buttonGroup.querySelector('.increment-qty'); // Correct class
-            if (decreaseBtn) decreaseBtn.disabled = currentValue <= min;
-            if (increaseBtn) increaseBtn.disabled = currentValue >= max;
-        }
-
-        // Handle quantity decrease button clicks
-        const decreaseButtons = document.querySelectorAll('.decrement-qty'); // Use correct class
-        console.log(`Bag page JS: Found ${decreaseButtons.length} decrease buttons.`); // Check 3: Found buttons?
-
-        decreaseButtons.forEach(button => {
-            button.addEventListener('click', e => {
-                console.log("Bag page JS: Decrease button clicked."); // Check 4: Click registered?
-                const input = e.target.closest('.input-group').querySelector('.qty_input');
-                if (!input) {
-                    console.error("Bag page JS: Decrease - Could not find input field!"); // Check 5: Input found?
-                    return;
-                }
-                console.log("Bag page JS: Decrease - Found input:", input);
-
-                let currentValue = parseInt(input.value);
-                const min = parseInt(input.min) || 1;
-                if (currentValue > min) {
-                    input.value = currentValue - 1;
-                    console.log("Bag page JS: Decrease - Input value updated to:", input.value); // Check 6: Value changed?
-                    handleEnableDisable(input);
-                    const form = input.closest('form');
-                    if (form) {
-                         console.log("Bag page JS: Decrease - Submitting form:", form); // Check 7: Form found?
-                         form.submit();
-                    } else {
-                         console.error("Bag page JS: Decrease - Could not find form to submit!");
-                    }
+            // --- Helper: Log if element is found ---
+            function logElementFound(selector, element) {
+                if (element) {
+                    // console.log(`BAG.HTML JS: Found element with selector "${selector}"`, element);
                 } else {
-                     console.log("Bag page JS: Decrease - Already at min value.");
+                    console.error(`BAG.HTML JS: FAILED to find element with selector "${selector}"`);
                 }
-            });
-        });
+            }
+            function logElementsFound(selector, elements) {
+                console.log(`BAG.HTML JS: Found ${elements.length} elements with selector "${selector}"`);
+                if (elements.length === 0) {
+                    console.warn(`BAG.HTML JS: No elements found for "${selector}", listeners might not attach.`);
+                }
+            }
 
-        // Handle quantity increase button clicks
-        const increaseButtons = document.querySelectorAll('.increment-qty'); // Use correct class
-        console.log(`Bag page JS: Found ${increaseButtons.length} increase buttons.`); // Check 8: Found buttons?
-
-        increaseButtons.forEach(button => {
-            button.addEventListener('click', e => {
-                console.log("Bag page JS: Increase button clicked."); // Check 9: Click registered?
-                const input = e.target.closest('.input-group').querySelector('.qty_input');
-                 if (!input) {
-                    console.error("Bag page JS: Increase - Could not find input field!"); // Check 10: Input found?
+            // --- Quantity Update Logic ---
+            function handleEnableDisable(inputElement) {
+                if (!inputElement) {
+                    console.error("BAG.HTML JS: handleEnableDisable called with no inputElement.");
                     return;
                 }
-                console.log("Bag page JS: Increase - Found input:", input);
+                const min = parseInt(inputElement.min) || 1;
+                const max = parseInt(inputElement.max) || 99;
+                const currentValue = parseInt(inputElement.value);
+                const buttonGroup = inputElement.closest('.input-group.quantity-selector');
 
-                 let currentValue = parseInt(input.value);
-                 const max = parseInt(input.max) || 99;
-                 if (currentValue < max) {
-                    input.value = currentValue + 1;
-                    console.log("Bag page JS: Increase - Input value updated to:", input.value); // Check 11: Value changed?
-                    handleEnableDisable(input);
-                    const form = input.closest('form');
-                     if (form) {
-                         console.log("Bag page JS: Increase - Submitting form:", form); // Check 12: Form found?
-                         form.submit();
-                     } else {
-                         console.error("Bag page JS: Increase - Could not find form to submit!");
-                     }
-                 } else {
-                     console.log("Bag page JS: Increase - Already at max value.");
-                 }
-            });
-        });
-
-        // Handle direct input changes (debounced) - Commented out temporarily to isolate button issues
-        /*
-        document.querySelectorAll('.qty_input').forEach(input => {
-            handleEnableDisable(input);
-            let debounceTimeout;
-            input.addEventListener('change', e => {
-                // ... (keep debounce logic if needed later) ...
-            });
-        });
-        */
-       // Initial check for existing inputs on load
-       document.querySelectorAll('.qty_input').forEach(input => {
-            handleEnableDisable(input);
-        });
-
-        const modal = document.getElementById('remove-confirm-modal');
-        const modalMessage = document.getElementById('modal-message');
-        const confirmRemoveBtn = document.getElementById('modal-confirm-remove');
-        const cancelButtons = modal.querySelectorAll('[data-dismiss="modal"]');
-        let formToSubmit = null; // Variable to store the form
-
-        // Function to show the modal
-        function showModal(form, itemName) {
-            formToSubmit = form; // Store the form for later
-            modalMessage.textContent = `Are you sure you want to remove ${itemName} from your bag?`;
-            modal.style.display = 'flex'; // Show the modal
-        }
-
-        // Function to hide the modal
-        function hideModal() {
-            formToSubmit = null; // Clear the stored form
-            modal.style.display = 'none';
-        }
-
-        // Add listeners to all remove buttons/links
-        document.querySelectorAll('.remove-item-btn').forEach(button => {
-            button.addEventListener('click', (event) => {
-                event.preventDefault(); // STOP default form submission
-
-                const form = event.target.closest('form');
-                if (!form) return; // Should always find form
-
-                // Try to find the item name (adjust selector if needed)
-                const bagItem = event.target.closest('.bag-item');
-                let itemName = 'this item'; // Default text
-                if (bagItem) {
-                    const nameElement = bagItem.querySelector('.bag-item-details h3');
-                    if (nameElement) {
-                        itemName = nameElement.textContent.trim();
-                    }
+                if (!buttonGroup) {
+                    console.error("BAG.HTML JS: handleEnableDisable - could not find parent '.input-group.quantity-selector' for input:", inputElement);
+                    return;
                 }
-                showModal(form, itemName); // Show the modal
-            });
-        });
 
-        // Listener for the 'Yes, Remove' button IN THE MODAL
-        confirmRemoveBtn.addEventListener('click', () => {
-            if (formToSubmit) {
-                formToSubmit.submit(); // Submit the stored form
+                const decreaseBtn = buttonGroup.querySelector('.decrement-qty');
+                const increaseBtn = buttonGroup.querySelector('.increment-qty');
+
+                if (decreaseBtn) {
+                    decreaseBtn.disabled = currentValue <= min;
+                } else {
+                    // console.warn("BAG.HTML JS: handleEnableDisable - decrement button not found for input:", inputElement);
+                }
+                if (increaseBtn) {
+                    increaseBtn.disabled = currentValue >= max;
+                } else {
+                    // console.warn("BAG.HTML JS: handleEnableDisable - increase button not found for input:", inputElement);
+                }
             }
-            hideModal(); // Hide modal regardless
-        });
 
-        // Listeners for 'No, Cancel' button and overlay click
-        cancelButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                hideModal();
+            const decreaseButtons = document.querySelectorAll('.decrement-qty');
+            logElementsFound('.decrement-qty', decreaseButtons);
+            decreaseButtons.forEach(button => {
+                button.addEventListener('click', e => {
+                    console.log("BAG.HTML JS: Decrement button clicked.");
+                    const input = e.target.closest('.input-group.quantity-selector').querySelector('.qty_input');
+                    if (!input) {
+                        console.error("BAG.HTML JS: Decrement - Could not find qty_input!"); return;
+                    }
+                    let currentValue = parseInt(input.value);
+                    const min = parseInt(input.min) || 1;
+                    if (currentValue > min) {
+                        input.value = currentValue - 1;
+                        handleEnableDisable(input);
+                        const form = input.closest('form.update-form');
+                        if (form) {
+                            console.log("BAG.HTML JS: Decrement - Submitting update form.");
+                            form.submit();
+                        } else { console.error("BAG.HTML JS: Decrement - Could not find update-form!"); }
+                    }
+                });
             });
+
+            const increaseButtons = document.querySelectorAll('.increment-qty');
+            logElementsFound('.increment-qty', increaseButtons);
+            increaseButtons.forEach(button => {
+                button.addEventListener('click', e => {
+                    console.log("BAG.HTML JS: Increase button clicked.");
+                    const input = e.target.closest('.input-group.quantity-selector').querySelector('.qty_input');
+                    if (!input) {
+                        console.error("BAG.HTML JS: Increase - Could not find qty_input!"); return;
+                    }
+                    let currentValue = parseInt(input.value);
+                    const max = parseInt(input.max) || 99;
+                    if (currentValue < max) {
+                        input.value = currentValue + 1;
+                        handleEnableDisable(input);
+                        const form = input.closest('form.update-form');
+                        if (form) {
+                            console.log("BAG.HTML JS: Increase - Submitting update form.");
+                            form.submit();
+                        } else { console.error("BAG.HTML JS: Increase - Could not find update-form!"); }
+                    }
+                });
+            });
+            
+            const qtyInputs = document.querySelectorAll('.qty_input');
+            logElementsFound('.qty_input', qtyInputs);
+            qtyInputs.forEach(input => {
+                handleEnableDisable(input); // Initial state
+                let debounceTimeout;
+                input.addEventListener('change', (e) => {
+                    console.log("BAG.HTML JS: Quantity input changed directly.");
+                    clearTimeout(debounceTimeout);
+                    const form = e.target.closest('form.update-form');
+                    if (form) {
+                        debounceTimeout = setTimeout(() => {
+                            let val = parseInt(e.target.value);
+                            const min = parseInt(e.target.min) || 1;
+                            const max = parseInt(e.target.max) || 99;
+                            if (isNaN(val) || val < min) val = min;
+                            if (val > max) val = max;
+                            e.target.value = val; 
+                            handleEnableDisable(e.target);
+                            console.log("BAG.HTML JS: Quantity input direct change - Submitting update form.");
+                            form.submit();
+                        }, 750);
+                    } else { console.error("BAG.HTML JS: Quantity input direct change - Could not find update-form!"); }
+                });
+            });
+
+            // --- Remove Confirmation Modal Logic ---
+            console.log("BAG.HTML JS: Setting up modal logic...");
+            const modal = document.getElementById('remove-confirm-modal');
+            logElementFound('#remove-confirm-modal', modal);
+
+            const modalMessage = document.getElementById('modal-message');
+            logElementFound('#modal-message', modalMessage); // This should now find the element
+
+            const confirmRemoveBtn = document.getElementById('modal-confirm-remove');
+            logElementFound('#modal-confirm-remove', confirmRemoveBtn); // This should now find the element
+            
+            const cancelButtons = modal ? modal.querySelectorAll('[data-dismiss="modal"]') : [];
+            if (modal) {
+                logElementsFound('[data-dismiss="modal"] in modal', cancelButtons); // This should now find 3 elements
+            }
+
+
+            let formToSubmitForRemoval = null; 
+
+            function showModal(form, itemName) {
+                console.log("BAG.HTML JS: showModal called. Form:", form, "Item Name:", itemName);
+                if (!modal || !modalMessage) {
+                    console.error("BAG.HTML JS: showModal - Modal or modalMessage element not found!");
+                    return;
+                }
+                formToSubmitForRemoval = form; 
+                modalMessage.textContent = `Are you sure you want to remove ${itemName} from your bag?`;
+                modal.style.display = 'flex'; 
+                if(confirmRemoveBtn) confirmRemoveBtn.focus();
+            }
+
+            function hideModal() {
+                console.log("BAG.HTML JS: hideModal called.");
+                if (!modal) return;
+                formToSubmitForRemoval = null; 
+                modal.style.display = 'none';
+            }
+
+            const removeButtons = document.querySelectorAll('.remove-item-btn');
+            logElementsFound('.remove-item-btn', removeButtons);
+            removeButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    console.log("BAG.HTML JS: Remove button clicked.", event.target);
+                    event.preventDefault(); 
+                    const form = event.target.closest('form.remove-form');
+                    if (!form) {
+                        console.error("BAG.HTML JS: Remove button - Could not find parent 'form.remove-form'!"); return; 
+                    }
+                    const bagItem = event.target.closest('.bag-item');
+                    let itemName = 'this item'; 
+                    if (bagItem) {
+                        const nameElement = bagItem.querySelector('.product-name-bag');
+                        if (nameElement) itemName = nameElement.textContent.trim();
+                    }
+                    showModal(form, itemName); 
+                });
+            });
+
+            if (confirmRemoveBtn) {
+                confirmRemoveBtn.addEventListener('click', () => {
+                    console.log("BAG.HTML JS: Modal 'Yes, Remove' clicked. Form to submit:", formToSubmitForRemoval);
+                    if (formToSubmitForRemoval) {
+                        formToSubmitForRemoval.submit(); 
+                    } else {
+                        console.warn("BAG.HTML JS: Modal 'Yes, Remove' - formToSubmitForRemoval was null.");
+                    }
+                    hideModal(); 
+                });
+            } else {
+                // This error should no longer appear if modal HTML is correct
+                console.error("BAG.HTML JS: Modal 'Confirm Remove' button (confirmRemoveBtn) not found, cannot attach listener.");
+            }
+
+            if (cancelButtons.length > 0) {
+                cancelButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        console.log("BAG.HTML JS: Modal cancel button/overlay clicked."); // Changed log
+                        hideModal();
+                    });
+                });
+            } else if (modal) { 
+                // This warning should no longer appear
+                console.warn("BAG.HTML JS: No modal cancel buttons found with data-dismiss='modal'.");
+            }
+            
+            if (modal) { 
+                document.addEventListener('keydown', (event) => {
+                    if (event.key === 'Escape' && modal.style.display === 'flex') {
+                        console.log("BAG.HTML JS: Escape key pressed, hiding modal.");
+                        hideModal();
+                    }
+                });
+            }
+            console.log("BAG.HTML JS: Script setup finished.");
         });
-
-        // Optional: Close modal on Escape key press
-        document.addEventListener('keydown', (event) => {
-             if (event.key === 'Escape' && modal.style.display === 'flex') {
-                 hideModal();
-             }
-         });
-        // --- End Remove Confirmation Modal Logic ---
-
-    });
-</script>
-
-{% endblock postloadjs %}
+    </script>
+{% endblock %}

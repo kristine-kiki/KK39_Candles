@@ -2,8 +2,14 @@
 {% load static %}
 
 {% block title %}
-    {{ product.name }} - KK39 Candles {# Use the product name in the title #}
+    {{ product.name }} - KK39 Candles 
 {% endblock title %}
+
+{% block extra_css %}
+    {{ block.super }} 
+    <link rel="stylesheet" href="{% static 'css/products_detail.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bag.css' %}">
+{% endblock %}
 
 {% block content %}
 
@@ -44,6 +50,33 @@
                 {% endif %}
 
                 <hr class="my-4"> {# Added a horizontal rule for separation #}
+
+                {# Add to Cart form #}
+                <form action="{% url 'add_to_bag' product.id %}" method="POST" class="mt-4 add-to-bag-form">
+                    {% csrf_token %}
+                    <div class="item-quantity d-flex align-items-center mb-3"> 
+                        <label for="id_qty_{{ product.id }}" class="form-label quantity-label mr-2 mb-0">Quantity:</label> 
+                        <div class="input-group input-group-sm quantity-selector" style="max-width: 130px;"> 
+                            <button type="button" class="btn quantity-btn decrement-qty" 
+                                data-item_id="{{ product.id }}" id="decrement-qty-detail-{{ product.id }}"> 
+                                −
+                            </button>
+                            <input class="form-control text-center qty_input" type="number"
+                                name="quantity" value="1" min="1" 
+                                {% if product.stock_count %}max="{{ product.stock_count }}"{% else %}max="99"{% endif %}
+                                data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}" 
+                                aria-label="Quantity for {{ product.name }}">
+                            <button type="button" class="btn quantity-btn increment-qty"
+                                data-item_id="{{ product.id }}" id="increment-qty-detail-{{ product.id }}"> 
+                                +
+                            </button>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn add-to-cart-btn mt-3">ADD TO CART</button>
+                    {% if product.stock_count == 0 %}
+                        <p class="text-danger mt-2 small">Out of Stock</p> 
+                    {% endif %}
+                </form>
 
                 <!-- Rating Submission Section & Existing Ratings -->
                 {% if user.is_authenticated %}
@@ -120,29 +153,6 @@
                 
                 <hr class="my-4">
 
-                {# Add to Cart form #}
-                <form action="{% url 'add_to_bag' product.id %}" method="post" class="mt-4 add-to-bag-form">
-                    {% csrf_token %}
-                    <div class="mb-3">
-                        <label for="id_qty_{{ product.id }}" class="form-label quantity-label" style="display: block; margin-bottom: 0.5rem;">Quantity:</label>
-                        <div class="input-group quantity-selector" style="max-width: 130px;">
-                            <button type="button" class="btn quantity-btn decrement-qty input-group-text"
-                                data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
-                                −
-                            </button>
-                            <input class="form-control text-center qty_input" type="number"
-                                name="quantity" value="1" min="1" max="99"
-                                data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}"
-                                aria-label="Quantity">
-                            <button type="button" class="btn quantity-btn increment-qty input-group-text"
-                                data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
-                                +
-                            </button>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn add-to-cart-btn mt-3">ADD TO CART</button> {# Consider using btn-primary or a custom class for styling #}
-                </form>
-
                 {% if user.is_superuser %}
                     <div class="admin-actions mt-4">
                         <a href="{% url 'edit_product' product.id %}" class="btn edit-button btn-outline-secondary">Edit Product</a>
@@ -161,261 +171,7 @@
 
 {% endblock content %}
 
-
-{% comment %} ========================================
-     START: Custom CSS for Product Detail Page
-======================================== {% endcomment %}
-{% block extra_css %}
-<style>
-    /* --- Font Imports (Ideally place in base.html <head>) --- */
-    /* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;700&display=swap'); */
-
-    /* --- Base Styling for Consistency --- */
-    body {
-        /* font-family: 'Lato', sans-serif; */ /* Default sans-serif font */
-        /* color: #555; */ /* Default text color */
-    }
-
-    h1, h2, h3, h4, h5, h6, .price-label, .description-heading, .average-rating-label, .reviews-heading {
-        /* font-family: 'Playfair Display', serif; */ /* Serif font for headings */
-        /* color: #333; */ /* Dark grey for headings */
-    }
-
-    .product-detail-section {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-
-    /* --- Product Title --- */
-    .product-detail-section h1 {
-        font-size: 2.8rem;
-        font-weight: 700;
-        color: #333;
-        margin-bottom: 30px;
-        text-align: center;
-    }
-
-    /* --- Product Image --- */
-    .product-detail-image {
-        border: 1px solid #EAE0D5;
-        padding: 10px;
-        background-color: #fff;
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-
-    /* --- Product Info Column --- */
-    .product-info {
-        padding-left: 25px;
-    }
-     @media (max-width: 767.98px) {
-        .product-info {
-            padding-left: 15px;
-            margin-top: 30px;
-        }
-        .product-detail-section h1 {
-             font-size: 2.2rem;
-        }
-    }
-
-    /* --- Price Styling --- */
-    .price-section {
-        margin-bottom: 15px !important; /* Reduced from 25px to make space for avg rating */
-    }
-    .price-label {
-        font-size: 1.1rem;
-        color: #444;
-        font-weight: 700;
-        margin-right: 8px;
-    }
-    .price-value {
-        font-family: 'Lato', sans-serif;
-        font-size: 2rem;
-        color: #E57373;
-        font-weight: 700;
-    }
-
-    /* --- Average Rating Display --- */
-    .average-rating-section {
-        font-size: 1.1rem;
-        color: #333;
-    }
-    .average-rating-label {
-        font-weight: 700;
-    }
-    .average-rating-value .fa-star {
-        color: #FFD700; /* Gold star color */
-    }
-
-    /* --- Description Styling --- */
-    .description-heading {
-        font-size: 1.6rem;
-        margin-top: 20px; /* Added margin top */
-        margin-bottom: 10px;
-        font-weight: 700;
-        color: #333;
-    }
-    .description-text {
-        color: #555;
-        line-height: 1.7;
-        font-size: 1.1rem; /* Adjusted from 1.3rem to be slightly smaller */
-    }
-    
-    /* --- Rating Form Styling --- */
-    .rating-form h4 {
-        font-size: 1.5rem; /* Match description heading */
-        font-weight: 700;
-    }
-    .rating-form .form-group label { /* For Score and Comment labels */
-        font-weight: bold;
-        color: #444;
-        margin-bottom: .3rem;
-    }
-    .rating-form .radio-inline {
-        cursor: pointer;
-    }
-    .rating-form .rating-stars input[type="radio"] {
-        margin-right: 2px; /* Space between radio and its number */
-    }
-     .rating-form .rating-stars label { /* Label for each radio button (1, 2, 3, 4, 5) */
-        margin-right: 10px; /* Space between each star/rating option */
-    }
-    .rating-form textarea { /* Styling for the comment box */
-        min-height: 80px; /* Ensure it's not too small */
-        border-radius: 2px;
-        border: 1px solid #ced4da; /* Bootstrap-like border */
-        padding: .375rem .75rem;
-        width: 100%; /* Make it full width */
-    }
-    .submit-review-btn { /* Style to match your add-to-cart if desired */
-        background-color: #D3C1AE; /* Tan/Beige from shop */
-        border-color: #C8B6A6; /* Slightly darker border */
-        color: #333; /* Dark text */
-    }
-    .submit-review-btn:hover {
-        background-color: #C8B6A6;
-        border-color: #B5A391;
-        color: #333;
-    }
-    .user-review-comment { /* Styling for the user's own already submitted comment */
-        background-color: #f8f9fa;
-        border-left: 3px solid #D3C1AE;
-        padding: 10px;
-        border-radius: 3px;
-        font-style: italic;
-    }
-
-
-    /* --- Reviews List Styling --- */
-    .reviews-heading {
-        font-size: 1.8rem; /* Prominent heading for reviews */
-        font-weight: 700;
-    }
-    .review-card {
-        border: 1px solid #EAE0D5; /* Match product image border */
-        background-color: #fff;
-    }
-    .review-card .card-body {
-        padding: 1rem;
-    }
-    .review-user {
-        font-size: 1.1rem;
-        font-weight: bold;
-        color: #333; /* Match heading color */
-    }
-    .review-score .fa-star {
-        color: #FFD700; /* Gold star color */
-        font-size: 0.9em; /* Slightly smaller star */
-    }
-    .review-date {
-        font-size: 0.85rem;
-    }
-    .review-comment {
-        font-size: 1rem; /* Standard text size for comments */
-        line-height: 1.6;
-        color: #555;
-    }
-    .no-reviews-text {
-        font-style: italic;
-        color: #777;
-    }
-
-    /* --- Horizontal Rule --- */
-    hr.my-4 {
-        border-top: 1px solid #EAE0D5; /* Lighter HR */
-    }
-
-
-    /* --- Button Styling (Matching Shop Page) --- */
-    .btn { /* General button reset/base */
-        border-radius: 2px;
-        padding: 10px 20px; /* Adjusted padding slightly */
-        text-transform: uppercase;
-        font-family: 'Lato', sans-serif;
-        font-size: 0.9rem;
-        font-weight: 700;
-        letter-spacing: 0.8px;
-        transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-        border: 1px solid transparent;
-        cursor: pointer;
-    }
-
-    .add-to-cart-btn { /* Specifically for add to cart button */
-        background-color: #D3C1AE; 
-        border-color: #C8B6A6; 
-        color: #333; 
-    }
-    .add-to-cart-btn:hover, .add-to-cart-btn:focus {
-        background-color: #C8B6A6; 
-        border-color: #B5A391; 
-        color: #333;
-    }
-
-    .btn-secondary.back-to-shop-btn { /* Ensure back to shop has secondary styles */
-        background-color: #f8f9fa;
-        border-color: #ddd;
-        color: #555;
-    }
-    .btn-secondary.back-to-shop-btn:hover, .btn-secondary.back-to-shop-btn:focus {
-        background-color: #e9ecef;
-        border-color: #ccc;
-        color: #333;
-    }
-    .btn.edit-button { /* Make edit button distinct but themed */
-        background-color: transparent;
-        border-color: #B5A391; /* Theme border color */
-        color: #B5A391; /* Theme text color */
-    }
-    .btn.edit-button:hover {
-        background-color: #B5A391;
-        color: #fff;
-    }
-
-    /* FontAwesome star icon for ratings - if you don't have it globally */
-    /* .fa-star { color: #FFD700; } */
-
-    /* Alert styling for form errors (basic) */
-    .alert-danger {
-        color: #721c24;
-        background-color: #f8d7da;
-        border-color: #f5c6cb;
-        padding: .5rem .75rem; /* Smaller padding for inline errors */
-        margin-top: .25rem;
-        border-radius: .25rem;
-        font-size: 0.875em;
-    }
-
-</style>
-{% endblock extra_css %}
-{% comment %} ========================================
-     END: Custom CSS for Product Detail Page
-======================================== {% endcomment %}
-
 {% block postloadjs %}
-{{ block.super }}
-{% include 'includes/quantity_input_script.html' %}
+    {{ block.super }}
+    {% include 'includes/quantity_input_script.html' %} 
 {% endblock %}

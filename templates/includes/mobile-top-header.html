@@ -1,0 +1,39 @@
+{% load static %}
+{% load bag_tools %}
+
+<div class="mobile-header-bar d-flex d-lg-none align-items-center justify-content-between w-100 px-3 py-2 bg-light border-bottom"> {# Added bg-light and border for visibility #}
+    <div class="mobile-header-left d-flex align-items-center">
+        <!-- THIS BUTTON NOW TARGETS 'mainNavbarContent' -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbarContent" aria-controls="mainNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars fa-lg"></i>
+        </button>
+        <a href="{% url 'home' %}" class="ml-2 mobile-compact-logo-link">
+             <strong class="mobile-compact-logo-text">KK39</strong>
+        </a>
+    </div>
+    
+    <div class="mobile-utility-icons d-flex align-items-center">
+        {% if user.is_authenticated %}
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle utility-icon p-0 mx-2" href="#" id="mobileUserDropdownTop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="My Account">
+                    <i class="fas fa-user fa-lg"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="mobileUserDropdownTop">
+                    {% if user.is_superuser %}<a class="dropdown-item" href="{% url 'add_product' %}">Product Mgmt</a>{% endif %}
+                    <a class="dropdown-item" href="{% url 'profile' %}">My Profile</a>
+                    <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
+                </div>
+            </div>
+        {% else %}
+            <a href="{% url 'account_login' %}" class="nav-link utility-icon p-0 mx-2" aria-label="Log In">
+                <i class="fas fa-user fa-lg"></i>
+            </a>
+        {% endif %}
+        <a href="{% url 'bag_view' %}" class="nav-link utility-icon position-relative p-0 ml-2" aria-label="Shopping Bag">
+            <i class="fas fa-shopping-bag fa-lg"></i>
+            {% if product_count > 0 %}
+                <span class="badge badge-pill badge-danger utility-bag-indicator mobile-indicator">{{ product_count }}</span>
+            {% endif %}
+        </a>
+    </div>
+</div>
