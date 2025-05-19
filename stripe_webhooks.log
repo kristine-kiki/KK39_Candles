@@ -1329,3 +1329,66 @@ Watching for file changes with StatReloader
 "GET /static/css/base.css HTTP/1.1" 200 61924
 Not Found: /favicon.ico
 "GET /favicon.ico HTTP/1.1" 404 3683
+Watching for file changes with StatReloader
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 19807
+"GET /static/css/base.css HTTP/1.1" 200 47560
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /admin/login/?next=/accounts/login HTTP/1.1" 200 4200
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/css/login.css HTTP/1.1" 200 951
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"POST /admin/login/?next=/accounts/login HTTP/1.1" 200 4371
+"POST /admin/login/?next=/accounts/login HTTP/1.1" 200 4371
+"POST /admin/login/?next=/accounts/login HTTP/1.1" 302 0
+"GET /accounts/login HTTP/1.1" 301 0
+"GET /accounts/login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 22839
+"GET /admin HTTP/1.1" 301 0
+"GET /admin/ HTTP/1.1" 200 15658
+"GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"GET /admin/account/emailaddress/ HTTP/1.1" 200 16435
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+"GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+"GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+"GET /static/admin/js/actions.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+"GET /static/admin/js/core.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+"GET /static/admin/img/search.svg HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/admin/js/filters.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+"GET /admin/auth/group/ HTTP/1.1" 200 15429
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/auth/user/ HTTP/1.1" 200 18992
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+"GET /admin/account/emailaddress/ HTTP/1.1" 200 16435
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/auth/user/ HTTP/1.1" 200 18992
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/account/emailaddress/ HTTP/1.1" 200 16435
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/auth/ HTTP/1.1" 200 6127
+"GET /admin/account/emailaddress/ HTTP/1.1" 200 16435
+"GET /admin/account/ HTTP/1.1" 200 5531
+"GET /admin/account/emailaddress/ HTTP/1.1" 200 16435
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/auth/ HTTP/1.1" 200 6127
+"GET /admin/ HTTP/1.1" 200 15658
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
+Watching for file changes with StatReloader
