@@ -88,8 +88,23 @@
                 <!-- Payment Section -->
                 <fieldset class="px-3">
                     <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
-                    <div class="mb-3 form-control" id="card-element"></div>
+
+                    <div id="payment-request-button" class="mb-3">
+
+                    </div>
+
+                    <p class="text-center my-2 or-divider or-divider-after-wallets"><span>OR</span></p> 
+
+                    <div class="mb-3 form-control" id="card-element" title="Enter your card details here"></div>
                     <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+
+                    <p class="text-center my-2 or-divider or-divider-after-card"><span>OR</span></p>
+
+                    <div id="paypal-button-container" class="mb-3 text-center">
+                        <button type="button" id="paypal-button" class="btn btn-paypal">
+                            <i class="fab fa-paypal mr-2"></i>Pay with PayPal
+                        </button>
+                    </div>
                     <input type="hidden" value="{{ client_secret }}" name="client_secret">
                 </fieldset>
 
@@ -160,6 +175,10 @@
             const clientSecret = $('#id_client_secret').text().slice(1, -1);
             const stripe = Stripe(stripePublicKey);
             const elements = stripe.elements();
+            const form = document.getElementById('payment-form');
+            const submitButton = document.getElementById('submit-button');
+            const loadingOverlay = document.getElementById('loading-overlay');
+            const cardErrors = document.getElementById('card-errors');
             
             // Card Element Styling
             const style = {
@@ -195,9 +214,131 @@
                 }
             });
 
+            // ---- Helper function to display messages ----
+            function showMessage(messageText) {
+                cardErrors.innerHTML = `<span class="icon"><i class="fas fa-times"></i></span><span>${messageText}</span>`;
+            }
+
+            // ---- Helper function to handle server response after payment confirmation ----
+            function handleServerResponse(response) {
+                if (response.error) {
+                    showMessage(response.error.message);
+                    submitButton.disabled = false;
+                    loadingOverlay.style.display = 'none';
+                } else if (response.paymentIntent && response.paymentIntent.status === 'succeeded') {
+                    // Payment succeeded, submit the form to Django backend to save order
+                    form.submit();
+                } else if (response.paymentIntent && response.paymentIntent.status === 'requires_action') {
+                    // Handle 3D Secure or other actions
+                    stripe.handleNextAction({ clientSecret: response.paymentIntent.client_secret })
+                    .then(function(resultAfterAction) {
+                        if (resultAfterAction.error) {
+                            showMessage(resultAfterAction.error.message);
+                        } else {
+                            // Typically, you'd submit the form now, or re-check status
+                            // For simplicity, if further actions handled by Stripe.js lead to success, submit.
+                            // Your webhook should be the ultimate source of truth for order fulfillment.
+                            form.submit(); 
+                        }
+                        submitButton.disabled = false;
+                        loadingOverlay.style.display = 'none';
+                    });
+                } else {
+                    // Other statuses or unexpected response
+                    showMessage('An unexpected error occurred.');
+                    submitButton.disabled = false;
+                    loadingOverlay.style.display = 'none';
+                }
+            }
+
+            // ---- Apple Pay / Google Pay (Payment Request Button) ----
+            const amountInPence = Math.round(parseFloat("{{ grand_total }}") * 100); // Get grand_total from Django template
+
+            if (amountInPence > 0) { // Only show if there's an amount to pay
+                const paymentRequest = stripe.paymentRequest({
+                    country: 'GB', // Assuming GB, change if needed
+                    currency: 'gbp', // Assuming gbp
+                    total: {
+                        label: 'KK39 Candles Order Total',
+                        amount: amountInPence,
+                    },
+                    requestPayerName: true,
+                    requestPayerEmail: true,
+                    // requestShipping: true, // Add if you need to collect shipping address via Apple/Google Pay UI
+                });
+
+                const prButton = elements.create('paymentRequestButton', {
+                    paymentRequest: paymentRequest,
+                    style: {
+                        paymentRequestButton: {
+                        type: 'buy', // 'default', 'buy', 'donate', 'book'
+                        theme: 'dark', // 'dark', 'light', or 'light-outline'
+                        height: '48px',
+                        },
+                    }
+                });
+
+                paymentRequest.canMakePayment().then(function (result) {
+                    console.log('PaymentRequest canMakePayment result:', result); // For debugging
+                    const prButtonDiv = document.getElementById('payment-request-button');
+                    const firstOrDivider = document.querySelector('.or-divider-after-wallets'); 
+
+                    if (result && prButtonDiv) { 
+                        prButton.mount('#payment-request-button'); // Mount the Apple/Google Pay button
+                        if (firstOrDivider) firstOrDivider.style.display = 'flex'; // Ensure "OR" is visible
+                    } else {
+                        if (prButtonDiv) prButtonDiv.style.display = 'none'; // Hide button container
+                        if (firstOrDivider) firstOrDivider.style.display = 'none'; // Hide first "OR"
+                    }
+                });
+
+                paymentRequest.on('paymentmethod', async (ev) => {
+                    loadingOverlay.style.display = 'flex';
+                    submitButton.disabled = true; // Disable main submit button
+
+                    const { paymentIntent, error: confirmError } = await stripe.confirmCardPayment(
+                        clientSecret, // From the initial PaymentIntent created on page load
+                        { payment_method: ev.paymentMethod.id },
+                        { handleActions: false } // We'll handle actions below if needed
+                    );
+
+                    if (confirmError) {
+                        ev.complete('fail');
+                        showMessage(confirmError.message);
+                        loadingOverlay.style.display = 'none';
+                        submitButton.disabled = false; // Re-enable main submit button
+                        return;
+                    }
+                    
+                    ev.complete('success'); // Tell Apple/Google Pay UI the first step was okay
+
+                    if (paymentIntent.status === 'requires_action') {
+                        const { error: actionError } = await stripe.handleNextAction({ clientSecret: paymentIntent.client_secret });
+                        if (actionError) {
+                            showMessage(actionError.message);
+                            loadingOverlay.style.display = 'none';
+                            submitButton.disabled = false;
+                        } else {
+                            // Action handled, now submit form (server will verify final status via webhook)
+                            form.submit(); 
+                        }
+                    } else if (paymentIntent.status === 'succeeded') {
+                        // Payment succeeded, submit form
+                        form.submit();
+                    } else {
+                        showMessage('Payment processing failed. Please try another method.');
+                        loadingOverlay.style.display = 'none';
+                        submitButton.disabled = false;
+                    }
+                });
+            } else {
+                // Hide payment request button if grand total is 0 or not available
+                document.getElementById('payment-request-button').style.display = 'none';
+            }
+
+
             // Handle form submission
-            const form = document.getElementById('payment-form');
-            form.addEventListener('submit', function(ev) {
+            form.addEventListener('submit', async function(ev) {
                 ev.preventDefault();
                 const submitButton = document.getElementById('submit-button');
                 const loadingOverlay = document.getElementById('loading-overlay');
@@ -238,6 +379,48 @@
                     }
                 });
             });
+
+                // ---- PayPal Button Logic ----
+            const payPalButton = document.getElementById('paypal-button');
+            if (payPalButton) {
+                payPalButton.addEventListener('click', function() {
+                    loadingOverlay.style.display = 'flex';
+                    submitButton.disabled = true; // Also disable main submit button
+
+                    // Call Stripe to confirm the payment with PayPal
+                    stripe.confirmPayPalPayment(
+                        clientSecret, // From the PaymentIntent
+                        {
+                            return_url: `${window.location.origin}/checkout/stripe-paypal-return/`, // IMPORTANT: Create this URL/view in Django
+                        }
+                    ).then(function(result) {
+                        // handleServerResponse will take care of success/failure/actions
+                        // but we need to re-enable buttons if there's an immediate client-side error
+                        if (result.error) {
+                            showMessage(result.error.message);
+                            loadingOverlay.style.display = 'none';
+                            submitButton.disabled = false;
+                        }
+                        // If no immediate error, Stripe.js handles the redirect to PayPal.
+                        // After user returns, Stripe.js processes the redirect, and if successful, 
+                        // the `then` block *might* be re-entered with a paymentIntent.
+                        // However, the most reliable way to confirm PayPal is via webhooks
+                        // or by checking the PaymentIntent status on your server after the return_url is hit.
+                        // For now, we'll rely on the initial error check.
+                        // The form submission for order creation usually happens after webhook confirmation for PayPal.
+                        // For a simpler flow here, we might not submit the Django form directly
+                        // but rather wait for webhook and redirect to an order success page.
+                        // For now, let's just log.
+                        console.log("PayPal confirm result:", result);
+                        if (result.paymentIntent && result.paymentIntent.status === 'succeeded') {
+                            // Potentially submit a simplified version of the form or just redirect
+                            // For a robust solution, the django form.submit() should happen after webhook confirmation.
+                            alert('PayPal payment seems successful, your order will be processed.');
+                            window.location.href = "{% url 'home' %}"; // Example success page
+                        }
+                    });
+                });
+            }
         });
     </script>
 {% endblock %}

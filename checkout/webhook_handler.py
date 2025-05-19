@@ -18,7 +18,8 @@ class StripeWH_Handler:
 
     def __init__(self, request):
         self.request = request
-        print(f"StripeWH_Handler __init__ CALLED for request: {request.path}")
+        #print(f"StripeWH_Handler __init__ CALLED for request: {request.path}")
+        print(f"StripeWH_Handler payment_intent.created")
 
     def _send_confirmation_email(self, order):
         """
@@ -118,7 +119,6 @@ class StripeWH_Handler:
         
         shipping_details = intent.get('shipping') # This can be None
         grand_total = round(intent.amount / 100, 2)
-
         print(f"--- handle_payment_intent_succeeded: Billing Details: {billing_details} ---")
         print(f"--- handle_payment_intent_succeeded: Shipping Details: {shipping_details} ---")
         retrieved_email_from_billing = billing_details.get('email')
@@ -248,7 +248,7 @@ class StripeWH_Handler:
         
         # This part is reached if order_exists was False and order creation succeeded (or was None and failed silently before)
         if order: # Ensure order object is valid before sending email
-            print(f"--- handle_payment_intent_succeeded: Attempting to send confirmation for newly created order {order.order_number}. ---")
+            print(f"--- handle_payment_intent_succeeded: Attempting to send confirmation for newly created order {order.order_number}.Email from order: '{order.email}' ---")
             email_sent_status = self._send_confirmation_email(order)
             print(f"--- handle_payment_intent_succeeded: Email sent status for new order {order.order_number}: {email_sent_status} ---")
         else:

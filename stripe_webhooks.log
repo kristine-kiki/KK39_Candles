@@ -1,0 +1,1320 @@
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 26174
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /bag/ HTTP/1.1" 200 27804
+"GET /checkout/ HTTP/1.1" 302 0
+"GET /bag/ HTTP/1.1" 200 28286
+"POST /checkout/wh/ HTTP/1.1" 200 50
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\checkout\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /bag/ HTTP/1.1" 200 27804
+"GET /checkout/ HTTP/1.1" 302 0
+"GET /bag/ HTTP/1.1" 200 28286
+"POST /checkout/wh/ HTTP/1.1" 200 50
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\checkout\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /bag/ HTTP/1.1" 200 27804
+"GET /bag/ HTTP/1.1" 200 27804
+"GET /bag/ HTTP/1.1" 200 27804
+"GET /static/css/base.css HTTP/1.1" 200 51305
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /checkout/ HTTP/1.1" 302 0
+"GET /bag/ HTTP/1.1" 200 28286
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\checkout\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /bag/ HTTP/1.1" 200 27804
+"GET /bag/ HTTP/1.1" 200 27804
+"GET /static/css/base.css HTTP/1.1" 200 51305
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /checkout/ HTTP/1.1" 302 0
+"GET /bag/ HTTP/1.1" 200 28286
+"POST /checkout/wh/ HTTP/1.1" 200 50
+- Broken pipe from ('127.0.0.1', 65202)
+"GET /bag/ HTTP/1.1" 200 27804
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /checkout/ HTTP/1.1" 302 0
+"GET /bag/ HTTP/1.1" 200 28286
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /bag/ HTTP/1.1" 200 27804
+"GET /static/css/base.css HTTP/1.1" 200 51305
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /about/ingredients/ HTTP/1.1" 200 16729
+"GET / HTTP/1.1" 200 26174
+"GET / HTTP/1.1" 200 26174
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 26174
+"GET /bag/ HTTP/1.1" 200 27804
+"GET /checkout/ HTTP/1.1" 302 0
+"GET /bag/ HTTP/1.1" 200 28286
+"POST /checkout/wh/ HTTP/1.1" 200 50
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\checkout\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /bag/ HTTP/1.1" 200 27804
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /bag/ HTTP/1.1" 200 27804
+"GET /bag/ HTTP/1.1" 200 27804
+"GET /static/css/base.css HTTP/1.1" 200 51305
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /checkout/ HTTP/1.1" 302 0
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /bag/ HTTP/1.1" 200 28322
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\checkout\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\checkout\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\checkout\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\checkout\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 26174
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /bag/ HTTP/1.1" 200 27804
+"GET /checkout/ HTTP/1.1" 302 0
+"GET /bag/ HTTP/1.1" 200 28322
+"POST /checkout/wh/ HTTP/1.1" 200 50
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 26174
+"GET /bag/ HTTP/1.1" 200 27804
+"GET /checkout/ HTTP/1.1" 200 100552
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /checkout/ HTTP/1.1" 200 100858
+"GET /static/css/base.css HTTP/1.1" 304 0
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /checkout/ HTTP/1.1" 200 100858
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /static/checkout/css/checkout.css HTTP/1.1" 200 6222
+"GET /static/css/base.css HTTP/1.1" 200 51305
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /checkout/ HTTP/1.1" 200 100638
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /checkout/ HTTP/1.1" 200 100638
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /checkout/ HTTP/1.1" 200 100622
+"GET /checkout/ HTTP/1.1" 200 100622
+"GET /static/css/base.css HTTP/1.1" 200 51502
+"GET /static/checkout/css/checkout.css HTTP/1.1" 200 6222
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+"POST /checkout/wh/ HTTP/1.1" 200 50
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 26174
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /bag/ HTTP/1.1" 200 27804
+"GET /checkout/ HTTP/1.1" 200 100622
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /checkout/ HTTP/1.1" 200 100642
+"GET /static/css/base.css HTTP/1.1" 304 0
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /checkout/ HTTP/1.1" 200 100642
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /static/css/base.css HTTP/1.1" 200 51502
+"GET /static/checkout/css/checkout.css HTTP/1.1" 200 6222
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+"GET /checkout/ HTTP/1.1" 200 100588
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /checkout/ HTTP/1.1" 200 100897
+"GET /static/css/base.css HTTP/1.1" 200 52006
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /checkout/ HTTP/1.1" 200 100897
+"GET /static/css/base.css HTTP/1.1" 200 52006
+"GET /static/checkout/css/checkout.css HTTP/1.1" 200 6222
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+"POST /checkout/wh/ HTTP/1.1" 200 50
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /checkout/ HTTP/1.1" 200 100837
+"GET /static/css/base.css HTTP/1.1" 304 0
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"POST /checkout/wh/ HTTP/1.1" 200 58
+Not Found: /checkout/stripe-paypal-return/
+"GET /checkout/stripe-paypal-return/?payment_intent=pi_3ROm7z06yCuA3rLF0NUklfhh&payment_intent_client_secret=pi_3ROm7z06yCuA3rLF0NUklfhh_secret_OnMReuy4LlGdmc02uqJ4gCVs7&redirect_status=succeeded HTTP/1.1" 404 4870
+"POST /checkout/wh/ HTTP/1.1" 200 44
+"POST /checkout/wh/ HTTP/1.1" 200 42
+"POST /checkout/wh/ HTTP/1.1" 200 99
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 26174
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/PXL_20250410_184409289.jpg HTTP/1.1" 200 1683574
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+"GET /static/images/instagram/rococo_royalty.jpg HTTP/1.1" 200 151697
+"GET /static/images/instagram/gorgeous_peony.jpg HTTP/1.1" 200 230690
+"GET /static/images/instagram/queen_of_hearts.jpg HTTP/1.1" 200 1453740
+"GET /static/images/instagram/white_swan.jpg HTTP/1.1" 200 178759
+"GET / HTTP/1.1" 200 26174
+"GET / HTTP/1.1" 200 24357
+"GET /static/css/base.css HTTP/1.1" 200 52006
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/PXL_20250410_184409289.jpg HTTP/1.1" 200 1683574
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+"GET /static/images/instagram/rococo_royalty.jpg HTTP/1.1" 200 151697
+"GET /static/images/instagram/gorgeous_peony.jpg HTTP/1.1" 200 230690
+"GET /static/images/instagram/white_swan.jpg HTTP/1.1" 200 178759
+"GET /static/images/instagram/queen_of_hearts.jpg HTTP/1.1" 200 1453740
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /products/ HTTP/1.1" 200 44151
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/Simple%20Truth.jpg HTTP/1.1" 200 145915
+"GET /media/Gold%20Bee.jpg HTTP/1.1" 200 223941
+"GET /media/Coconut_roomspray.png HTTP/1.1" 200 325659
+"GET /media/macrame_candle.jpg HTTP/1.1" 200 371979
+"GET /media/Floral%20Flow1.jpg HTTP/1.1" 200 143623
+"GET /media/strawberry_waxmelt.png HTTP/1.1" 200 870850
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+"GET /media/Magestic_sea.jpg HTTP/1.1" 200 93271
+"GET /media/heavenly_cloud-vaxmelt.png HTTP/1.1" 200 1981393
+"GET /media/flower_rose_jasmin.jpg HTTP/1.1" 200 1456108
+"GET /media/giftset_large.jpg HTTP/1.1" 200 2657401
+"GET /products/1/ HTTP/1.1" 200 28237
+"POST /bag/add/1/ HTTP/1.1" 302 0
+"GET /products/1/ HTTP/1.1" 200 28683
+"GET /bag/ HTTP/1.1" 200 25977
+"GET /checkout/ HTTP/1.1" 200 98937
+"GET /static/checkout/css/checkout.css HTTP/1.1" 200 6222
+"POST /checkout/wh/ HTTP/1.1" 200 50
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\checkout\webhook_handler.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 26174
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /bag/ HTTP/1.1" 200 27804
+"GET /checkout/ HTTP/1.1" 200 100837
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"POST /checkout/wh/ HTTP/1.1" 200 58
+Not Found: /checkout/stripe-paypal-return/
+"GET /checkout/stripe-paypal-return/?payment_intent=pi_3ROmQv06yCuA3rLF0iBvfDOW&payment_intent_client_secret=pi_3ROmQv06yCuA3rLF0iBvfDOW_secret_AzHWtiaWF8XSgV1DlOd0Nnd9P&redirect_status=succeeded HTTP/1.1" 404 4870
+"POST /checkout/wh/ HTTP/1.1" 200 44
+"POST /checkout/wh/ HTTP/1.1" 200 42
+"POST /checkout/wh/ HTTP/1.1" 200 99
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\checkout\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\checkout\webhook_handler.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /bag/ HTTP/1.1" 200 27804
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /checkout/ HTTP/1.1" 200 100837
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"POST /checkout/wh/ HTTP/1.1" 200 58
+Not Found: /checkout/stripe-paypal-return/
+"GET /checkout/stripe-paypal-return/?payment_intent=pi_3ROme806yCuA3rLF0OCv5avV&payment_intent_client_secret=pi_3ROme806yCuA3rLF0OCv5avV_secret_zUlgjQjkU6F65YAjoLMLqATXt&redirect_status=succeeded HTTP/1.1" 404 4870
+"POST /checkout/wh/ HTTP/1.1" 200 44
+"POST /checkout/wh/ HTTP/1.1" 200 42
+"POST /checkout/wh/ HTTP/1.1" 200 99
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\checkout\webhook_handler.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\checkout\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\checkout\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 26174
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /bag/ HTTP/1.1" 200 27804
+"GET /checkout/ HTTP/1.1" 200 100837
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"POST /checkout/wh/ HTTP/1.1" 200 58
+Not Found: /checkout/stripe-paypal-return/
+"GET /checkout/stripe-paypal-return/?payment_intent=pi_3ROmkL06yCuA3rLF0OjgAxBF&payment_intent_client_secret=pi_3ROmkL06yCuA3rLF0OjgAxBF_secret_vAIbOzbaloPf0UKjsYr5p71FB&redirect_status=succeeded HTTP/1.1" 404 4870
+"POST /checkout/wh/ HTTP/1.1" 200 44
+"POST /checkout/wh/ HTTP/1.1" 200 42
+"POST /checkout/wh/ HTTP/1.1" 200 99
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\checkout\urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 26174
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /bag/ HTTP/1.1" 200 27804
+"GET /checkout/ HTTP/1.1" 200 100837
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"POST /checkout/wh/ HTTP/1.1" 200 58
+"GET /checkout/stripe-paypal-return/?payment_intent=pi_3ROmqx06yCuA3rLF1FmT8DSv&payment_intent_client_secret=pi_3ROmqx06yCuA3rLF1FmT8DSv_secret_zMVNxqd8plTs3nAKOYQrJbXay&redirect_status=succeeded HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 27093
+"POST /checkout/wh/ HTTP/1.1" 200 44
+"POST /checkout/wh/ HTTP/1.1" 200 42
+"POST /checkout/wh/ HTTP/1.1" 200 99
+"GET /bag/ HTTP/1.1" 200 27804
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\checkout\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /bag/ HTTP/1.1" 200 27804
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /bag/ HTTP/1.1" 200 27804
+"GET /static/css/base.css HTTP/1.1" 200 52006
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /checkout/ HTTP/1.1" 200 100837
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"POST /checkout/wh/ HTTP/1.1" 200 58
+"POST /checkout/wh/ HTTP/1.1" 200 44
+"GET /checkout/stripe-paypal-return/?payment_intent=pi_3ROn7G06yCuA3rLF0rzay746&payment_intent_client_secret=pi_3ROn7G06yCuA3rLF0rzay746_secret_tgreKBKYwPTr0lEHlrHfXRGGe&redirect_status=succeeded HTTP/1.1" 302 0
+"GET /bag/ HTTP/1.1" 200 24439
+"POST /checkout/wh/ HTTP/1.1" 200 42
+"POST /checkout/wh/ HTTP/1.1" 200 99
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\checkout\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 26174
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /products/ HTTP/1.1" 200 45968
+"GET /media/macrame_candle.jpg HTTP/1.1" 304 0
+"GET /media/strawberry_waxmelt.png HTTP/1.1" 304 0
+"GET /media/Coconut_roomspray.png HTTP/1.1" 304 0
+"GET /media/persian_star_macrame.png HTTP/1.1" 304 0
+"GET /media/giftset_large.jpg HTTP/1.1" 304 0
+"GET /media/heavenly_cloud-vaxmelt.png HTTP/1.1" 304 0
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 304 0
+"GET /media/flower_rose_jasmin.jpg HTTP/1.1" 304 0
+"GET /media/Magestic_sea.jpg HTTP/1.1" 304 0
+"GET /products/3/ HTTP/1.1" 200 32137
+"POST /bag/add/3/ HTTP/1.1" 302 0
+"GET /products/3/ HTTP/1.1" 200 32593
+"GET /bag/ HTTP/1.1" 200 27832
+"GET /checkout/ HTTP/1.1" 200 100856
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"POST /checkout/wh/ HTTP/1.1" 200 58
+"POST /checkout/wh/ HTTP/1.1" 200 44
+"GET /checkout/stripe-paypal-return/?payment_intent=pi_3ROnIy06yCuA3rLF0pzLdbXz&payment_intent_client_secret=pi_3ROnIy06yCuA3rLF0pzLdbXz_secret_k8AHHPN0dTUkcOZWqnB4rDgTS&redirect_status=succeeded HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 27093
+"POST /checkout/wh/ HTTP/1.1" 200 42
+"POST /checkout/wh/ HTTP/1.1" 200 99
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\checkout\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 26174
+"GET /products/?category=home_diffuser HTTP/1.1" 200 18618
+"GET /products/15/ HTTP/1.1" 200 32122
+"POST /bag/add/15/ HTTP/1.1" 302 0
+"GET /products/15/ HTTP/1.1" 200 32571
+"GET /bag/ HTTP/1.1" 200 27827
+"GET /checkout/ HTTP/1.1" 200 100849
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"POST /checkout/wh/ HTTP/1.1" 200 58
+"POST /checkout/wh/ HTTP/1.1" 200 44
+"GET /checkout/stripe-paypal-return/?payment_intent=pi_3ROnR006yCuA3rLF1SlVmOM4&payment_intent_client_secret=pi_3ROnR006yCuA3rLF1SlVmOM4_secret_CUHmnkkPhkJqccsze5l4fwmqM&redirect_status=succeeded HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 26744
+"GET /static/css/base.css HTTP/1.1" 304 0
+"POST /checkout/wh/ HTTP/1.1" 200 99
+"POST /checkout/wh/ HTTP/1.1" 200 42
+"GET /products/?category=room_spray HTTP/1.1" 200 18640
+"GET /products/8/ HTTP/1.1" 200 32120
+"POST /bag/add/8/ HTTP/1.1" 302 0
+"GET /products/8/ HTTP/1.1" 200 32575
+"GET /bag/ HTTP/1.1" 200 27832
+"GET /checkout/ HTTP/1.1" 200 100857
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"POST /checkout/ HTTP/1.1" 302 0
+"GET /checkout/checkout_success/86C98C5EA1664C658E6DCD1A0D4479C0/ HTTP/1.1" 200 18573
+"POST /checkout/wh/ HTTP/1.1" 200 88
+"POST /checkout/wh/ HTTP/1.1" 200 44
+"POST /checkout/wh/ HTTP/1.1" 200 42
+"GET /profile/ HTTP/1.1" 200 98025
+"GET /static/profiles/css/profile.css HTTP/1.1" 304 0
+"GET /profile/order_history/AE5E0035362C4E5C917DC83E54E9BEC6/ HTTP/1.1" 200 18427
+"GET /profile/ HTTP/1.1" 200 98025
+"GET /profile/order_history/86C98C5EA1664C658E6DCD1A0D4479C0/ HTTP/1.1" 200 18556
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 26174
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+- Broken pipe from ('127.0.0.1', 56572)
+"GET /bag/ HTTP/1.1" 200 23560
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /products/?category=home_diffuser HTTP/1.1" 200 18618
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /products/7/ HTTP/1.1" 200 32125
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"POST /bag/add/7/ HTTP/1.1" 302 0
+"GET /products/7/ HTTP/1.1" 200 32572
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /bag/ HTTP/1.1" 200 27804
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /checkout/ HTTP/1.1" 200 100837
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /checkout/ HTTP/1.1" 200 100837
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"POST /checkout/wh/ HTTP/1.1" 200 50
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 26174
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /about/our_story/ HTTP/1.1" 200 16574
+"GET / HTTP/1.1" 200 27176
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /about/our_story/ HTTP/1.1" 200 16574
+"GET /about/our_story/ HTTP/1.1" 200 17776
+"GET / HTTP/1.1" 200 28378
+"GET /about/our_story/ HTTP/1.1" 200 17776
+"GET /about/ingredients/ HTTP/1.1" 200 18933
+"GET /about/ingredients/ HTTP/1.1" 200 18829
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /about/ingredients/ HTTP/1.1" 200 18829
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 54225
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 28274
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 28274
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25620
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /bag/ HTTP/1.1" 200 27250
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /bag/ HTTP/1.1" 200 27250
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /bag/ HTTP/1.1" 200 27164
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /bag/ HTTP/1.1" 200 27164
+"GET /static/css/base.css HTTP/1.1" 200 54225
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /bag/ HTTP/1.1" 200 27164
+"GET /static/css/base.css HTTP/1.1" 200 54225
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /bag/ HTTP/1.1" 200 27164
+"GET /bag/ HTTP/1.1" 200 27164
+"GET /static/css/base.css HTTP/1.1" 200 53096
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /support/contact/ HTTP/1.1" 200 16868
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /about/ingredients/ HTTP/1.1" 200 16089
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 25534
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25248
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /support/contact/ HTTP/1.1" 200 16582
+"GET /products/ HTTP/1.1" 200 45042
+"GET /media/Magestic_sea.jpg HTTP/1.1" 304 0
+"GET /products/2/ HTTP/1.1" 200 31155
+"POST /bag/add/2/ HTTP/1.1" 302 0
+"GET /products/2/ HTTP/1.1" 200 31601
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 53085
+"GET / HTTP/1.1" 200 25248
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+- Broken pipe from ('127.0.0.1', 60899)
+"GET / HTTP/1.1" 200 25248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 53025
+"GET / HTTP/1.1" 200 25248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 56088
+"GET / HTTP/1.1" 200 25248
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /products/?sort=price&direction=asc HTTP/1.1" 200 45042
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25248
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25248
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+- Broken pipe from ('127.0.0.1', 61519)
+"GET / HTTP/1.1" 200 25220
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25220
+"GET /static/css/base.css HTTP/1.1" 200 57268
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25220
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25220
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25308
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25284
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25284
+"GET /static/css/base.css HTTP/1.1" 200 57360
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25284
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25220
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 25220
+"GET /static/css/base.css HTTP/1.1" 200 57376
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25220
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 57377
+"GET / HTTP/1.1" 200 25220
+"GET /static/css/base.css HTTP/1.1" 200 57105
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/PXL_20250410_184409289.jpg HTTP/1.1" 200 1683574
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+"GET /static/images/instagram/rococo_royalty.jpg HTTP/1.1" 200 151697
+"GET /static/images/instagram/gorgeous_peony.jpg HTTP/1.1" 200 230690
+"GET /static/images/instagram/queen_of_hearts.jpg HTTP/1.1" 200 1453740
+"GET /static/images/instagram/white_swan.jpg HTTP/1.1" 200 178759
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 25220
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25220
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 57047
+"GET / HTTP/1.1" 200 25220
+"GET /static/css/base.css HTTP/1.1" 200 57047
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/PXL_20250410_184409289.jpg HTTP/1.1" 200 1683574
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /static/images/instagram/gorgeous_peony.jpg HTTP/1.1" 200 230690
+"GET /static/images/instagram/rococo_royalty.jpg HTTP/1.1" 200 151697
+"GET /static/images/instagram/white_swan.jpg HTTP/1.1" 200 178759
+"GET /static/images/instagram/queen_of_hearts.jpg HTTP/1.1" 200 1453740
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 25220
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 57048
+"GET / HTTP/1.1" 200 25248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25244
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 56886
+"GET / HTTP/1.1" 200 25244
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 56837
+"GET / HTTP/1.1" 200 25244
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 56809
+"GET / HTTP/1.1" 200 25244
+"GET /static/css/base.css HTTP/1.1" 200 56831
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/PXL_20250410_184409289.jpg HTTP/1.1" 200 1683574
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+"GET /static/images/instagram/rococo_royalty.jpg HTTP/1.1" 200 151697
+"GET /static/images/instagram/gorgeous_peony.jpg HTTP/1.1" 200 230690
+"GET /static/images/instagram/white_swan.jpg HTTP/1.1" 200 178759
+"GET /static/images/instagram/queen_of_hearts.jpg HTTP/1.1" 200 1453740
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 25244
+"GET /static/css/base.css HTTP/1.1" 200 56837
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25244
+"GET /static/css/base.css HTTP/1.1" 200 56837
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/PXL_20250410_184409289.jpg HTTP/1.1" 200 1683574
+"GET /static/images/instagram/rococo_royalty.jpg HTTP/1.1" 200 151697
+"GET /static/images/instagram/white_swan.jpg HTTP/1.1" 200 178759
+"GET /static/images/instagram/gorgeous_peony.jpg HTTP/1.1" 200 230690
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+"GET /static/images/instagram/queen_of_hearts.jpg HTTP/1.1" 200 1453740
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 25220
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 57076
+"GET / HTTP/1.1" 200 25220
+"GET /static/css/base.css HTTP/1.1" 200 57076
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/PXL_20250410_184409289.jpg HTTP/1.1" 200 1683574
+"GET /static/images/instagram/rococo_royalty.jpg HTTP/1.1" 200 151697
+"GET /static/images/instagram/gorgeous_peony.jpg HTTP/1.1" 200 230690
+"GET /static/images/instagram/white_swan.jpg HTTP/1.1" 200 178759
+"GET /static/images/instagram/queen_of_hearts.jpg HTTP/1.1" 200 1453740
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 25220
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25220
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25220
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25220
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 57049
+"GET / HTTP/1.1" 200 25220
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 57049
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/PXL_20250410_184409289.jpg HTTP/1.1" 200 1683574
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /static/images/instagram/gorgeous_peony.jpg HTTP/1.1" 200 230690
+"GET /static/images/instagram/rococo_royalty.jpg HTTP/1.1" 200 151697
+"GET /static/images/instagram/white_swan.jpg HTTP/1.1" 200 178759
+"GET /static/images/instagram/queen_of_hearts.jpg HTTP/1.1" 200 1453740
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 25220
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 25220
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25220
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /about/our_story/ HTTP/1.1" 200 14618
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25220
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25220
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25340
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 58266
+"GET / HTTP/1.1" 200 25340
+"GET /static/css/base.css HTTP/1.1" 200 55263
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25340
+"GET /static/css/base.css HTTP/1.1" 200 55263
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/PXL_20250410_184409289.jpg HTTP/1.1" 200 1683574
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+"GET /static/images/instagram/rococo_royalty.jpg HTTP/1.1" 200 151697
+"GET /static/images/instagram/gorgeous_peony.jpg HTTP/1.1" 200 230690
+"GET /static/images/instagram/white_swan.jpg HTTP/1.1" 200 178759
+"GET /static/images/instagram/queen_of_hearts.jpg HTTP/1.1" 200 1453740
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 25340
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /products/ HTTP/1.1" 200 45134
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25340
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 25249
+"GET /static/css/base.css HTTP/1.1" 200 58468
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25249
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25249
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /products/?category=candles HTTP/1.1" 200 35581
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /products/?category=candles HTTP/1.1" 200 35581
+"GET /static/css/base.css HTTP/1.1" 200 56459
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/macrame_candle.jpg HTTP/1.1" 200 371979
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/Gold%20Bee.jpg HTTP/1.1" 200 223941
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/Simple%20Truth.jpg HTTP/1.1" 200 145915
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/giftset_large.jpg HTTP/1.1" 200 2657401
+"GET /media/Floral%20Flow1.jpg HTTP/1.1" 200 143623
+"GET /media/flower_rose_jasmin.jpg HTTP/1.1" 200 1456108
+"GET /media/Magestic_sea.jpg HTTP/1.1" 200 93271
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /products/?category=candles HTTP/1.1" 200 35577
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/base.css HTTP/1.1" 200 56380
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/macrame_candle.jpg HTTP/1.1" 200 371979
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/Gold%20Bee.jpg HTTP/1.1" 200 223941
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/Simple%20Truth.jpg HTTP/1.1" 200 145915
+"GET /media/Floral%20Flow1.jpg HTTP/1.1" 200 143623
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/Magestic_sea.jpg HTTP/1.1" 200 93271
+"GET /media/flower_rose_jasmin.jpg HTTP/1.1" 200 1456108
+"GET /media/giftset_large.jpg HTTP/1.1" 200 2657401
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 25245
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 25237
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /static/css/base.css HTTP/1.1" 200 57778
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/PXL_20250410_184409289.jpg HTTP/1.1" 200 1683574
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+"GET /static/images/instagram/gorgeous_peony.jpg HTTP/1.1" 200 230690
+"GET /static/images/instagram/rococo_royalty.jpg HTTP/1.1" 200 151697
+"GET /static/images/instagram/white_swan.jpg HTTP/1.1" 200 178759
+"GET /static/images/instagram/queen_of_hearts.jpg HTTP/1.1" 200 1453740
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 25237
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /bag/ HTTP/1.1" 200 30032
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25237
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25237
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25237
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25237
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25237
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 57778
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/PXL_20250410_184409289.jpg HTTP/1.1" 200 1683574
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+"GET /static/images/instagram/rococo_royalty.jpg HTTP/1.1" 200 151697
+"GET /static/images/instagram/gorgeous_peony.jpg HTTP/1.1" 200 230690
+"GET /static/images/instagram/queen_of_hearts.jpg HTTP/1.1" 200 1453740
+"GET /static/images/instagram/white_swan.jpg HTTP/1.1" 200 178759
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 25237
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25237
+"GET /static/css/base.css HTTP/1.1" 200 57870
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/PXL_20250410_184409289.jpg HTTP/1.1" 200 1683574
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+"GET /static/images/instagram/gorgeous_peony.jpg HTTP/1.1" 200 230690
+"GET /static/images/instagram/rococo_royalty.jpg HTTP/1.1" 200 151697
+"GET /static/images/instagram/white_swan.jpg HTTP/1.1" 200 178759
+"GET /static/images/instagram/queen_of_hearts.jpg HTTP/1.1" 200 1453740
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 25237
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25237
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /products/ HTTP/1.1" 200 45031
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25237
+"GET /static/css/base.css HTTP/1.1" 200 57895
+"GET / HTTP/1.1" 200 25237
+"GET / HTTP/1.1" 200 25237
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 25237
+"GET /static/css/base.css HTTP/1.1" 200 57895
+"GET / HTTP/1.1" 200 25237
+"GET /static/css/base.css HTTP/1.1" 200 57895
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/PXL_20250410_184409289.jpg HTTP/1.1" 200 1683574
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /static/images/instagram/rococo_royalty.jpg HTTP/1.1" 200 151697
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+"GET /static/images/instagram/white_swan.jpg HTTP/1.1" 200 178759
+"GET /static/images/instagram/gorgeous_peony.jpg HTTP/1.1" 200 230690
+"GET /static/images/instagram/queen_of_hearts.jpg HTTP/1.1" 200 1453740
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 25237
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25237
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25267
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 58003
+"GET / HTTP/1.1" 200 25267
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/base.css HTTP/1.1" 200 58003
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/PXL_20250410_184409289.jpg HTTP/1.1" 200 1683574
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /static/images/instagram/rococo_royalty.jpg HTTP/1.1" 200 151697
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+"GET /static/images/instagram/gorgeous_peony.jpg HTTP/1.1" 200 230690
+"GET /static/images/instagram/white_swan.jpg HTTP/1.1" 200 178759
+"GET /static/images/instagram/queen_of_hearts.jpg HTTP/1.1" 200 1453740
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 25267
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /products/?category=candles HTTP/1.1" 200 35599
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 25267
+"GET /products/ HTTP/1.1" 200 45061
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /bag/ HTTP/1.1" 200 30062
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 25267
+"GET /static/css/base.css HTTP/1.1" 200 58003
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/PXL_20250410_184409289.jpg HTTP/1.1" 200 1683574
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+"GET /static/images/instagram/rococo_royalty.jpg HTTP/1.1" 200 151697
+"GET /static/images/instagram/gorgeous_peony.jpg HTTP/1.1" 200 230690
+"GET /static/images/instagram/queen_of_hearts.jpg HTTP/1.1" 200 1453740
+"GET /static/images/instagram/white_swan.jpg HTTP/1.1" 200 178759
+"GET / HTTP/1.1" 200 25267
+"GET /support/contact/ HTTP/1.1" 200 16601
+"GET /products/?category=for_home HTTP/1.1" 200 24023
+"GET /media/Coconut_roomspray.png HTTP/1.1" 200 325659
+"GET /media/strawberry_waxmelt.png HTTP/1.1" 200 870850
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+"GET /media/heavenly_cloud-vaxmelt.png HTTP/1.1" 200 1981393
+"GET / HTTP/1.1" 200 25267
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+- Broken pipe from ('127.0.0.1', 56164)
+"GET / HTTP/1.1" 200 25267
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25267
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 26317
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25267
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25277
+"GET /static/css/base.css HTTP/1.1" 200 58014
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25267
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/base.css HTTP/1.1" 200 58014
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/PXL_20250410_184409289.jpg HTTP/1.1" 200 1683574
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /static/images/instagram/rococo_royalty.jpg HTTP/1.1" 200 151697
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+"GET /static/images/instagram/gorgeous_peony.jpg HTTP/1.1" 200 230690
+"GET /static/images/instagram/white_swan.jpg HTTP/1.1" 200 178759
+"GET /static/images/instagram/queen_of_hearts.jpg HTTP/1.1" 200 1453740
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 25267
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 58005
+"GET / HTTP/1.1" 200 25267
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25267
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25267
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 58050
+"GET / HTTP/1.1" 200 25267
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25270
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 25250
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25250
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25267
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25267
+"GET /static/css/base.css HTTP/1.1" 200 58076
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25267
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25267
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25267
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25267
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25267
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25267
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 25267
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /bag/ HTTP/1.1" 200 30062
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /checkout/ HTTP/1.1" 200 100571
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/checkout/css/checkout.css HTTP/1.1" 304 0
+"GET /bag/ HTTP/1.1" 200 30062
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /checkout/ HTTP/1.1" 200 100571
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /bag/ HTTP/1.1" 200 30062
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /bag/ HTTP/1.1" 200 29043
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /bag/ HTTP/1.1" 200 29043
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /static/css/base.css HTTP/1.1" 200 58281
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"POST /bag/adjust/2/ HTTP/1.1" 302 0
+"GET /bag/ HTTP/1.1" 200 29494
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /bag/ HTTP/1.1" 200 29044
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 59181
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /bag/ HTTP/1.1" 200 29410
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 59648
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /bag/ HTTP/1.1" 200 29410
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 61020
+"GET /bag/ HTTP/1.1" 200 29410
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /static/css/base.css HTTP/1.1" 200 61020
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /bag/ HTTP/1.1" 200 29410
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /static/css/base.css HTTP/1.1" 200 59558
+"GET /bag/ HTTP/1.1" 200 29410
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 59558
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /bag/ HTTP/1.1" 200 30936
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /static/css/base.css HTTP/1.1" 200 59530
+"GET /bag/ HTTP/1.1" 200 30936
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /static/css/base.css HTTP/1.1" 200 59530
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 25267
+"GET /static/css/base.css HTTP/1.1" 200 59530
+"GET /bag/ HTTP/1.1" 200 30936
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+"GET /bag/ HTTP/1.1" 200 30936
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /static/css/base.css HTTP/1.1" 200 59530
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /bag/ HTTP/1.1" 200 29131
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /bag/ HTTP/1.1" 200 29131
+"GET /static/css/base.css HTTP/1.1" 200 56914
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"POST /bag/adjust/7/ HTTP/1.1" 302 0
+"GET /bag/ HTTP/1.1" 200 29582
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"POST /bag/remove/2/ HTTP/1.1" 302 0
+"GET /bag/ HTTP/1.1" 200 26115
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /checkout/ HTTP/1.1" 200 99930
+"GET /static/css/base.css HTTP/1.1" 304 0
+"POST /checkout/wh/ HTTP/1.1" 200 50
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+- Broken pipe from ('127.0.0.1', 61971)
+"GET /checkout/ HTTP/1.1" 200 99930
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /bag/ HTTP/1.1" 200 25665
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /checkout/ HTTP/1.1" 200 99930
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /bag/ HTTP/1.1" 200 25665
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /bag/ HTTP/1.1" 200 25816
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /checkout/ HTTP/1.1" 200 99930
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /bag/ HTTP/1.1" 200 25816
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /bag/ HTTP/1.1" 200 25816
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /bag/ HTTP/1.1" 200 25816
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /bag/ HTTP/1.1" 200 25816
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /static/css/base.css HTTP/1.1" 200 57104
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /bag/ HTTP/1.1" 200 25816
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /static/css/base.css HTTP/1.1" 200 57102
+"GET /bag/ HTTP/1.1" 200 25816
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /static/css/base.css HTTP/1.1" 200 57104
+"GET /checkout/ HTTP/1.1" 200 99930
+"GET /static/css/base.css HTTP/1.1" 304 0
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /bag/ HTTP/1.1" 200 25816
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /checkout/ HTTP/1.1" 200 99930
+"GET /static/css/base.css HTTP/1.1" 304 0
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /bag/ HTTP/1.1" 200 25816
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /bag/ HTTP/1.1" 200 25778
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /bag/ HTTP/1.1" 200 25777
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /bag/ HTTP/1.1" 200 25777
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /bag/ HTTP/1.1" 200 25775
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /bag/ HTTP/1.1" 200 25775
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /bag/ HTTP/1.1" 200 25775
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /checkout/ HTTP/1.1" 200 99930
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /products/ HTTP/1.1" 200 45061
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/macrame_candle.jpg HTTP/1.1" 200 371979
+"GET /media/Gold%20Bee.jpg HTTP/1.1" 200 223941
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/Simple%20Truth.jpg HTTP/1.1" 200 145915
+"GET /media/Floral%20Flow1.jpg HTTP/1.1" 200 143623
+"GET /media/flower_rose_jasmin.jpg HTTP/1.1" 200 1456108
+"GET /media/Magestic_sea.jpg HTTP/1.1" 200 93271
+"GET /media/giftset_large.jpg HTTP/1.1" 200 2657401
+"GET /bag/ HTTP/1.1" 200 25775
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /bag/ HTTP/1.1" 200 25789
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /bag/ HTTP/1.1" 200 25789
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /products/?category=unscented_candles HTTP/1.1" 200 18179
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /bag/ HTTP/1.1" 200 25776
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/css/bag.css HTTP/1.1" 404 1847
+"GET /checkout/ HTTP/1.1" 200 99930
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"POST /checkout/ HTTP/1.1" 302 0
+"GET /checkout/checkout_success/FA44E8090B924B71BF692CFD8F97B4A5/ HTTP/1.1" 200 17561
+"POST /checkout/wh/ HTTP/1.1" 200 88
+"POST /checkout/wh/ HTTP/1.1" 200 44
+"POST /checkout/wh/ HTTP/1.1" 200 42
+"GET /profile/ HTTP/1.1" 200 98716
+"GET /static/profiles/css/profile.css HTTP/1.1" 304 0
+"GET /profile/ HTTP/1.1" 200 98716
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /profile/ HTTP/1.1" 200 98736
+"GET /profile/ HTTP/1.1" 200 98736
+"GET /profile/ HTTP/1.1" 200 98736
+"GET /static/css/base.css HTTP/1.1" 200 57104
+"GET /static/profiles/css/profile.css HTTP/1.1" 200 1722
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /profile/ HTTP/1.1" 200 98736
+"GET /profile/ HTTP/1.1" 200 98736
+"GET /profile/ HTTP/1.1" 200 98736
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /profile/ HTTP/1.1" 200 98736
+"GET /profile/ HTTP/1.1" 200 98736
+"GET /static/css/base.css HTTP/1.1" 200 57104
+"GET /static/profiles/css/profile.css HTTP/1.1" 200 1720
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /profile/ HTTP/1.1" 200 98726
+"GET /static/profiles/css/profile.css HTTP/1.1" 304 0
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/profiles/css/profile.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794

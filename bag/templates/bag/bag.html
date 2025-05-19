@@ -6,11 +6,23 @@
     <link rel="stylesheet" href="{% static 'css/bag.css' %}"> 
 {% endblock %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/bag.css' %}"> 
+{% endblock %}
+
 {% block title %}
     KK39 Candles - Your Shopping Bag
 {% endblock title %}
 
 {% block content %}
+
+<div class="container my-5">
+    <div class="row mb-4">
+        <div class="col">
+            <h1 class="logo-font">Your Shopping Bag</h1>
+            <hr>
+        </div>
+    </div>
 
 <div class="container my-5">
     <div class="row mb-4">
@@ -35,7 +47,9 @@
                         <div class="bag-item-img col-12 col-sm-3 col-md-2 text-center mb-3 mb-sm-0">
                             {% if item.product.image %}
                                 <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" class="img-fluid rounded bag-product-image">
+                                <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" class="img-fluid rounded bag-product-image">
                             {% else %}
+                                <img src="{% static 'media/default_product.png' %}" alt="{{ item.product.name }}" class="img-fluid rounded bag-product-image">
                                 <img src="{% static 'media/default_product.png' %}" alt="{{ item.product.name }}" class="img-fluid rounded bag-product-image">
                             {% endif %}
                         </div>
@@ -43,6 +57,7 @@
                             <h3 class="h5 mb-1 product-name-bag">{{ item.product.name }}</h3>
                             <p class="mb-2 text-muted small">Unit Price: £{{ item.product.price|floatformat:2 }}</p>
                             {% if item.item_id %}
+                                <form class="form update-form mb-0" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                 <form class="form update-form mb-0" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                     {% csrf_token %}
                                     <div class="item-quantity d-flex align-items-center">
@@ -53,8 +68,11 @@
                                                 −
                                             </button>
                                             <input class="form-control text-center qty_input" type="number"
+                                            <input class="form-control text-center qty_input" type="number"
                                                 name="quantity" value="{{ item.quantity }}" min="1" max="99"
                                                 data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}"
+                                                aria-label="Quantity for {{ item.product.name }}">
+                                            <button type="button" class="btn quantity-btn increment-qty"
                                                 aria-label="Quantity for {{ item.product.name }}">
                                             <button type="button" class="btn quantity-btn increment-qty"
                                                 data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
@@ -71,7 +89,9 @@
                             <form class="form remove-form d-inline-block mb-0" method="POST" action="{% url 'remove_from_bag' item.item_id %}">
                                 {% csrf_token %}
                                 <button type="submit" class="remove-item-btn btn btn-link text-danger p-0 small">Remove</button>
+                                <button type="submit" class="remove-item-btn btn btn-link text-danger p-0 small">Remove</button>
                             </form>
+                            {% endif %}
                             {% endif %}
                         </div>
                     </div>

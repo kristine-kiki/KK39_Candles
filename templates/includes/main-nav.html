@@ -4,14 +4,13 @@
 <nav class="main-navbar navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
 
-        <button class="navbar-toggler d-lg-none d-none" type="button" data-toggle="collapse" data-target="#{{ navbar_id|default:'mainNavbarContent' }}" 
-        aria-controls="{{ navbar_id|default:'mainNavbarContent' }}" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarNavContent" aria-controls="navbarNavContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse justify-content-between" id="{{ navbar_id|default:'mainNavbarContent' }}">
 
-            <ul class="navbar-nav main-links-group mx-auto">    
+            <ul class="navbar-nav main-links-group">    
                 <li class="nav-item d-block d-lg-none">
                     <a class="nav-link" href="{% url 'home' %}" id="mobile-home-link">Home</a>
                 </li>
@@ -45,23 +44,23 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="{% url 'products' %}?category=for_home" id="for-home-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="{% url 'products' %}?category=for_home" id="for-home-link-main-nav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         For Home
                     </a>
-                    <div class="dropdown-menu border-0" aria-labelledby="for-home-link">
+                    <div class="dropdown-menu border-0" aria-labelledby="for-home-link-main-nav">
                         <a href="{% url 'products' %}?category=for_home" class="dropdown-item">All For Home</a>
                         <div class="dropdown-divider"></div>
-                        {# === Example Subcategories - Adjust to your actual data === #}
+                        
                         <a href="{% url 'products' %}?category=home_diffuser" class="dropdown-item">Diffusers</a>
                         <a href="{% url 'products' %}?category=room_spray" class="dropdown-item">Room Sprays</a>
                         <a href="{% url 'products' %}?category=wax_melts" class="dropdown-item">Wax Melts</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="about-link-main" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="{% url 'products' %}?category=for_home" id="for-home-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         About
                     </a>
-                    <div class="dropdown-menu border-0" aria-labelledby="about-link-main">    
+                    <div class="dropdown-menu border-0" aria-labelledby="for-home-link">    
                         <a href="{% url 'about:our_story' %}" class="dropdown-item">Our Story</a>
                         <a href="{% url 'about:ingredients' %}" class="dropdown-item">Ingredients</a>
                         <a href="{% url 'about:blog_list' %}" class="dropdown-item">Blog</a>
@@ -74,17 +73,17 @@
 
             <div class="navbar-nav align-items-center site-utility-nav ml-auto"> 
                 {# Search Icon - Assuming you have this #}
-                <a href="#" class="nav-link utility-search-text d-none d-lg-inline-block">SEARCH...</a>
-                <a href="#" class="nav-link utility-icon"><i class="fas fa-search"></i></a>
+                <a href="#" class="nav-link utility-icon d-lg-inline-block d-none"><i class="fas fa-search"></i></a>
 
                 {% if user.is_authenticated %}
                     <div class="nav-item dropdown utility-user-dropdown">
                         <a class="dropdown-toggle utility-icon" href="#" id="userAccountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-user-circle"></i>
+                            <span class="d-lg-none ml-2">My Account</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right utility-user-dropdown-menu" aria-labelledby="userAccountDropdown">
-                            <span class="dropdown-item-text user-greeting">Hi, {{ user.first_name|default:user.username }}!</span>
-                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-item-text user-greeting d-none d-lg-block">Hi, {{ user.first_name|default:user.username }}!</span>
+                            <div class="dropdown-divider d-none d-lg-block"></div>
                             <a class="dropdown-item" href="{% url 'account_email' %}"><i class="fas fa-envelope fa-fw"></i> Manage Email</a>
                             <a class="dropdown-item" href="{% url 'profile' %}"><i class="fas fa-history fa-fw"></i> Order History</a>
                             <a class="dropdown-item" href="{% url 'bag_view' %}"><i class="fas fa-shopping-bag"></i> My Shopping bag</a>
@@ -101,7 +100,7 @@
                 {% endif %}
 
                 {# Shopping Bag Icon #}
-                <a href="{% url 'bag_view' %}" class="nav-link utility-icon position-relative">
+                <a href="{% url 'bag_view' %}" class="nav-link utility-icon position-relative d-none d-lg-flex align-items-center">
                     <i class="fas fa-shopping-bag"></i>
                     <span class="badge utility-bag-indicator">{{ product_count|default:0 }}</span>
                 </a>
