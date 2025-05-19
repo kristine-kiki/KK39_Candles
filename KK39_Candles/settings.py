@@ -47,6 +47,9 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
+    'crispy_bootstrap5',
+    'storages',
 
     'allauth',
     'allauth.account',
@@ -59,10 +62,6 @@ INSTALLED_APPS = [
     'about',
     'contact',
     'django_countries',
-    'crispy_forms',
-    'storages'
-    'crispy_bootstrap5',
-
     'profiles.apps.ProfilesConfig',
 ]
 
