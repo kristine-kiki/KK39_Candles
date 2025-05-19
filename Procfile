@@ -1,1 +1,1 @@
-web: gunicorn kk39_candles.wsgi:application
+web: gunicorn KK39_Candles.wsgi:application

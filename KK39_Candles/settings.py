@@ -33,7 +33,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
-    'kk39-candles-be4d55c2b536.herokuapp.com'
+    'kk39-candles-24591ccdc142.herokuapp.com'
 ]
 
 
@@ -112,11 +112,9 @@ AUTHENTICATION_BACKENDS = [
 
 SITE_ID = 1
 
-ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
-ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_LOGIN_METHODS = ['username', 'email']
+ACCOUNT_SIGNUP_FIELDS = ['email*', 'username*', 'password1', 'password2']
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
-ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
-ACCOUNT_USERNAME_MIN_LENGTH = 4
 
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
@@ -135,9 +133,9 @@ SESSION_COOKIE_SECURE = False
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        'default':dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-else: 
+else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',

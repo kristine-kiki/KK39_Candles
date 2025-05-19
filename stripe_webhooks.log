@@ -1318,3 +1318,14 @@ Not Found: /favicon.ico
 "GET /static/profiles/css/profile.css HTTP/1.1" 304 0
 Not Found: /.well-known/appspecific/com.chrome.devtools.json
 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+Watching for file changes with StatReloader
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 29662
+"GET /static/css/base.css HTTP/1.1" 200 61924
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
