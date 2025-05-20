@@ -712,7 +712,7 @@ button {
     top: -10px; left: -10px; bottom: -10px;
     width: calc(75% + 10px);
     background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.05)),
-    url('/media/PXL_20250410_184409289.jpg');
+    url('/media/cherryblossom_hero.jpg');
     background-size: cover;
     background-position: center left;
     filter: blur(4px);
