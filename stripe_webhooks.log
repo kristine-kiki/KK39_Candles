@@ -1718,3 +1718,16 @@ Not Found: /.well-known/appspecific/com.chrome.devtools.json
 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
 "GET /static/css/base.css HTTP/1.1" 200 47556
 "GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+"GET / HTTP/1.1" 200 22954
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 22954
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 22949
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /about/our_story/ HTTP/1.1" 200 19681
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
