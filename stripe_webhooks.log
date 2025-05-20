@@ -1641,3 +1641,60 @@ C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\sett
 Watching for file changes with StatReloader
 C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 22839
+"GET /products/ HTTP/1.1" 200 48555
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/Coconut_roomspray.png HTTP/1.1" 200 325659
+"GET /media/Simple%20Truth.jpg HTTP/1.1" 200 145915
+"GET /media/giftset_large.jpg HTTP/1.1" 200 2657401
+"GET /media/heavenly_cloud-vaxmelt.png HTTP/1.1" 200 1981393
+"GET /media/macrame_candle.jpg HTTP/1.1" 200 371979
+"GET /media/strawberry_waxmelt.png HTTP/1.1" 200 870850
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+"GET /products/4/ HTTP/1.1" 200 29409
+"GET /static/css/bag.css HTTP/1.1" 304 0
+"GET /static/css/products_detail.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 22839
+"GET / HTTP/1.1" 200 19807
+"GET /static/css/base.css HTTP/1.1" 200 47560
+"GET /static/images/instagram/rococo_royalty.jpg HTTP/1.1" 200 151697
+Not Found: /media/PXL_20250410_184409289.jpg
+"GET /media/PXL_20250410_184409289.jpg HTTP/1.1" 404 4003
+"GET /static/images/instagram/gorgeous_peony.jpg HTTP/1.1" 200 230690
+"GET /static/images/instagram/queen_of_hearts.jpg HTTP/1.1" 200 1453740
+"GET /static/images/instagram/white_swan.jpg HTTP/1.1" 200 178759
+Not Found: /media/PXL_20250410_184409289.jpg
+"GET /media/PXL_20250410_184409289.jpg HTTP/1.1" 404 4003
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 19807
+Not Found: /media/PXL_20250410_184409289.jpg
+"GET /media/PXL_20250410_184409289.jpg HTTP/1.1" 404 4003
+Not Found: /media/PXL_20250410_184409289.jpg
+"GET /media/PXL_20250410_184409289.jpg HTTP/1.1" 404 4003
+Not Found: /media/PXL_20250410_184409289.jpg
+"GET /media/PXL_20250410_184409289.jpg HTTP/1.1" 404 4003
+"GET /products/?category=candles HTTP/1.1" 200 36061
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/Simple%20Truth.jpg HTTP/1.1" 200 145915
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/macrame_candle.jpg HTTP/1.1" 200 371979
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/Gold%20Bee.jpg HTTP/1.1" 200 223941
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/giftset_large.jpg HTTP/1.1" 200 2657401
+"GET /media/Floral%20Flow1.jpg HTTP/1.1" 200 143623
+"GET /media/flower_rose_jasmin.jpg HTTP/1.1" 200 1456108
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
+Watching for file changes with StatReloader

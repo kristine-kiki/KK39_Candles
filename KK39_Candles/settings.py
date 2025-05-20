@@ -11,13 +11,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
-
-print(f"--- DEBUG START ---")
-heroku_use_aws_env = os.environ.get('USE_AWS', 'NOT_SET')
-print(f"Value of os.environ.get('USE_AWS'): {heroku_use_aws_env}")
-print(f"Is 'USE_AWS' in os.environ: {'USE_AWS' in os.environ}")
-print(f"Condition check (os.environ.get('USE_AWS', '').upper() == 'TRUE'): {heroku_use_aws_env.upper() == 'TRUE'}")
-
 import dj_database_url
 if os.path.isfile('env.py'):
     import env # flake8 will throw an error here, but it is necessary to import env.py
@@ -58,6 +51,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'corsheaders',
 
     'home',
     'products',
@@ -82,6 +76,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'allauth.account.middleware.AccountMiddleware',
+    'corsheaders.middleware.CorsMiddleware'
 ]
 
 ROOT_URLCONF = 'KK39_Candles.urls'
@@ -93,7 +88,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR,'templates'),
+            os.path.join(BASE_DIR, 'templates'),
             os.path.join(BASE_DIR, 'templates', 'allauth'),
         ],
         'APP_DIRS': True,
@@ -131,7 +126,7 @@ LOGOUT_REDIRECT_URL = '/'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 WSGI_APPLICATION = 'KK39_Candles.wsgi.application'
-
+CORS_ALLOW_ALL_ORIGINS = True
 CSRF_COOKIE_SECURE = False
 SESSION_COOKIE_SECURE = False
 
