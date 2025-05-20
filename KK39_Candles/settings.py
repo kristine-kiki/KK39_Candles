@@ -55,8 +55,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms',
-    'crispy_bootstrap5',
     'storages',
+    'crispy_bootstrap5',
 
     'allauth',
     'allauth.account',
@@ -187,69 +187,34 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_default_collect') # For clarity
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+print('BASE_DIR:', BASE_DIR)
 MEDIA_URL = '/media/'
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media_default_root') # For clarity
-DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
-print(f"DEBUG: Initial MEDIA_URL: {MEDIA_URL}")
-print(f"DEBUG: Initial STATIC_URL: {STATIC_URL}")
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-
-if 'USE_AWS' in os.environ and os.environ.get('USE_AWS', '').upper() == 'TRUE':
-    print(f"DEBUG: Activating AWS S3 configuration.")
+if 'USE_AWS' in os.environ:
+    # Cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
     
-    # Print each environment variable value individually
-    heroku_aws_bucket_name = os.environ.get('AWS_STORAGE_BUCKET_NAME')
-    heroku_aws_region_name = os.environ.get('AWS_S3_REGION_NAME')
-    heroku_aws_access_key = os.environ.get('AWS_ACCESS_KEY_ID')
-    heroku_aws_secret_key = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = 'kk39-candles'
+    AWS_S3_REGION_NAME = 'eu-north-1'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 
-    print(f"DEBUG: AWS_STORAGE_BUCKET_NAME from env: {heroku_aws_bucket_name}")
-    print(f"DEBUG: AWS_S3_REGION_NAME from env: {heroku_aws_region_name}")
-    print(f"DEBUG: AWS_ACCESS_KEY_ID from env is present: {bool(heroku_aws_access_key)}") # Just check presence for keys
-    print(f"DEBUG: AWS_SECRET_ACCESS_KEY from env is present: {bool(heroku_aws_secret_key)}")
+    # static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
 
-    # Proceed only if essential variables are present
-    if heroku_aws_bucket_name and heroku_aws_region_name and heroku_aws_access_key and heroku_aws_secret_key:
-        print(f"DEBUG: All essential AWS env vars seem present.")
-        AWS_STORAGE_BUCKET_NAME = heroku_aws_bucket_name
-        AWS_S3_REGION_NAME = heroku_aws_region_name
-        AWS_ACCESS_KEY_ID = heroku_aws_access_key
-        AWS_SECRET_ACCESS_KEY = heroku_aws_secret_key
-        AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_S3_REGION_NAME}.amazonaws.com'
-        print(f"DEBUG: AWS_S3_CUSTOM_DOMAIN: {AWS_S3_CUSTOM_DOMAIN}")
-
-        # Cache control
-        AWS_S3_OBJECT_PARAMETERS = {
-            'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
-            'CacheControl': 'max-age=94608000',
-        }
-        
-        # Static and media files
-        STATICFILES_STORAGE = 'custom_storages.StaticStorage'
-        STATICFILES_LOCATION = 'static'
-        DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
-        MEDIAFILES_LOCATION = 'media'
-
-        # Override static and media URLs in production
-        STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
-        MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
-        
-        print(f"DEBUG: S3 STATIC_URL set to: {STATIC_URL}")
-        print(f"DEBUG: S3 MEDIA_URL set to: {MEDIA_URL}")
-        print(f"DEBUG: S3 STATICFILES_STORAGE: {STATICFILES_STORAGE}")
-        print(f"DEBUG: S3 DEFAULT_FILE_STORAGE: {DEFAULT_FILE_STORAGE}")
-    else:
-        print(f"DEBUG: One or more essential AWS env vars are missing! Cannot configure S3 fully.")
-        # STATIC_URL, MEDIA_URL will remain their default local values
-else:
-    print(f"DEBUG: AWS S3 configuration NOT active (USE_AWS condition not met). Using local file storage.")
-    # The defaults set above will be used.
-
-print(f"DEBUG: Final MEDIA_URL before exiting settings: {MEDIA_URL}")
-print(f"DEBUG: Final STATIC_URL before exiting settings: {STATIC_URL}")
-print(f"--- DEBUG END ---")
+    # Override static and media URLs in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
 FREE_DELIVERY_THRESHOLD = Decimal('75.00')
 STANDART_DELIVERY_PERCENTAGE = 12
