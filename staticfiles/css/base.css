@@ -213,11 +213,17 @@ button {
     color: var(--text-heading);
     border: 1px solid var(--text-heading);
     padding: 10px 40px;
+    white-space: nowrap;
+    white-space: nowrap;
     letter-spacing: 3px;
 }
-.logo:hover { opacity: 1; } /* No hover effect on logo link */
+.logo:hover { 
+    opacity: 1;
+    background-color:var(--hero-overlay-bg); /* Your very light beige from disabled buttons, good for hover */
+    color: var(--text-heading);
+} 
 
-/* Navigation */
+/* Navigation 
 .main-nav ul { display: flex; gap: 40px; }
 .main-nav a {
     font-size: 0.9rem;
@@ -228,7 +234,7 @@ button {
     padding-bottom: 8px;
     position: relative;
 }
-.main-nav a::after { /* Underline hover effect */
+.main-nav a::after { /* Underline hover effect 
     content: '';
     position: absolute;
     bottom: 0;
@@ -242,12 +248,12 @@ button {
 .main-nav a:hover { opacity: 1; } /* Override general link hover */
 
 
-/* Header Actions */
+/* Header Actions 
 .header-actions {
     position: absolute;
-    right: -70px; /* Position relative to container padding */
+    right: -70px; /* Position relative to container padding *
     top: 50%;
-    transform: translateY(-50%); /* Center vertically relative to whole header */
+    transform: translateY(-50%); /* Center vertically relative to whole header *
     display: flex;
     align-items: center;
     gap: 35px;
@@ -260,7 +266,7 @@ button {
     padding: 5px 0;
     font-size: 0.9rem;
     color: var(--text-color);
-    width: 0; /* Hidden initially */
+    width: 0; /* Hidden initially *
     opacity: 0;
     transition: all 0.4s ease;
     background-color: transparent;
@@ -271,20 +277,20 @@ button {
     font-size: 0.85rem;
     letter-spacing: 1px;
 }
-.search-button { /* Position search icon, clicking it reveals input */
+.search-button { /* Position search icon, clicking it reveals input *
     background: none;
     border: none;
     color: var(--text-color);
     font-size: 1.1rem;
     cursor: pointer;
     padding: 5px;
-    order: 1; /* Icon appears first */
+    order: 1; /* Icon appears first *
 }
 .search-button:hover + .search-input,
-.search-input:focus { /* Show input on hover/focus of button/input */
+.search-input:focus { /* Show input on hover/focus of button/input *
     width: 150px;
     opacity: 1;
-    margin-left: -5px; /* Adjust position slightly */
+    margin-left: -5px; /* Adjust position slightly 
 }
 .search-button:hover { color: var(--text-heading); opacity: 1; }
 
@@ -297,8 +303,289 @@ button {
 }
 .header-icon i { font-size: 1.3rem; }
 .header-icon:hover { opacity: 0.7; }
-.login-link { font-size: 0.85rem; font-weight: 400; text-transform: uppercase; letter-spacing: 1px;}
+.login-link { font-size: 0.85rem; font-weight: 400; text-transform: uppercase; letter-spacing: 1px;}/
 
+/* Assuming you have a class on your <nav> element, e.g., .main-navbar */
+
+/* --- Base Navbar Styling --- */
+.main-navbar { /* The main <nav> element */
+    /* background-color: #f8f9fa; /* Example: if you want a distinct background for the nav bar */
+    /* border-bottom: 1px solid #e7e7e7; /* Example bottom border */
+    padding-top: 0.5rem; /* Adjust vertical padding of the entire navbar */
+    padding-bottom: 0.5rem;
+}
+
+/* The collapsible container within the navbar */
+.main-navbar .navbar-collapse {
+    /* Bootstrap handles display:flex and flex-wrap:wrap.
+       We use mx-auto on .main-links-group and ml-auto on .site-utility-nav for positioning. */
+}
+
+/* --- Main Navigation Links (Shop All, Candles, etc.) --- */
+.main-navbar .main-links-group .nav-item .nav-link {
+    color: var(--brand-text-dark, #555555); 
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 0.8rem; /* Consistent padding */
+    font-weight: normal; 
+}
+.main-navbar .main-links-group .nav-item .nav-link:hover,
+.main-navbar .main-links-group .nav-item .nav-link:focus,
+.main-navbar .main-links-group .nav-item.active .nav-link { /* Style for active link */
+    color: var(--brand-beige-secondary, #333333); /* Use a theme color for active/hover */
+}
+
+/* --- Dropdown Menus for Main Links --- */
+.main-navbar .main-links-group .dropdown-menu {
+    background-color: #fdfdfd; 
+    border: 1px solid #eeeeee; 
+    border-radius: 0; 
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07); 
+    margin-top: 0.125rem !important; /* Standard Bootstrap spacing */
+}
+.main-navbar .main-links-group .dropdown-menu .dropdown-item {
+    color: var(--brand-text-dark, #333333); 
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+}
+.main-navbar .main-links-group .dropdown-menu .dropdown-item:hover,
+.main-navbar .main-links-group .dropdown-menu .dropdown-item:focus {
+    background-color: var(--brand-beige-light, #e9e5e2); 
+    color: var(--brand-text-dark, #333333);
+}
+.main-navbar .main-links-group .dropdown-menu .dropdown-header {
+    font-size: 0.75rem;
+    color: #777777; 
+    padding: 0.5rem 1rem 0.25rem;
+}
+.main-navbar .main-links-group .dropdown-menu .dropdown-divider {
+    border-top: 1px solid #f0f0f0; 
+}
+
+
+/* --- Site Utility Navigation (Search, User, Bag Icons) --- */
+.main-navbar .site-utility-nav {
+    /* This group uses .ml-auto in HTML to be pushed to the right */
+    /* align-items: center; /* Already on the div in HTML */
+}
+.main-navbar .site-utility-nav .nav-link {
+    color: var(--brand-text-dark, #555555);
+    padding: 0.25rem 0.6rem; /* Adjust padding for utility links */
+    display: inline-flex; /* Helps align icon and text if present */
+    align-items: center;
+    white-space: nowrap;
+    text-decoration: none;
+}
+.main-navbar .site-utility-nav .nav-link:hover,
+.main-navbar .site-utility-nav .nav-link:focus {
+    color: var(--brand-beige-secondary, #333333);
+}
+
+/* Specific Utility Items */
+.main-navbar .site-utility-nav .utility-search-text {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #777777; 
+    margin-right: 0.25rem; /* Space before the icon if both shown */
+}
+.main-navbar .site-utility-nav .utility-search-text:hover {
+    color: var(--brand-text-dark, #333333);
+}
+
+.main-navbar .site-utility-nav .utility-icon { /* For the <i> tags */
+    font-size: 1.1rem; /* Adjusted size */
+    color: var(--brand-text-dark, #333333);
+}
+.main-navbar .site-utility-nav .utility-icon .fas, /* Target FontAwesome icons directly */
+.main-navbar .site-utility-nav .utility-icon .far {
+    vertical-align: middle;
+}
+/* Make sure icons are not overly padded if they are inside a .nav-link */
+.main-navbar .site-utility-nav .nav-link > .utility-icon {
+    padding-left: 0.2rem !important;
+    padding-right: 0.2rem !important;
+}
+
+
+/* --- User Dropdown in Utility Nav --- */
+.main-navbar .utility-user-dropdown .dropdown-toggle.utility-icon {
+    /* Styles primarily from .utility-icon */
+}
+.main-navbar .utility-user-dropdown .dropdown-toggle.utility-icon::after {
+    display: none; /* Hide Bootstrap's default arrow if it's just an icon toggle */
+}
+
+.main-navbar .utility-user-dropdown .utility-user-dropdown-menu { /* Be specific */
+    background-color: #fdfdfd; 
+    border: 1px solid #eeeeee; 
+    border-radius: 0; 
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+    margin-top: 0.5rem !important; /* More space from toggle */
+    min-width: 230px; /* Good width */
+    padding: 0.5rem 0;
+}
+.main-navbar .utility-user-dropdown .user-greeting {
+    display: block;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    color: #555555; 
+    border-bottom: 1px solid #f0f0f0; 
+    margin-bottom: 0.25rem;
+}
+.main-navbar .utility-user-dropdown .dropdown-item {
+    color: var(--brand-text-dark, #333333); 
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem; 
+}
+.main-navbar .utility-user-dropdown .dropdown-item:hover,
+.main-navbar .utility-user-dropdown .dropdown-item:focus {
+    background-color: var(--brand-beige-light, #e9e5e2); 
+    color: var(--brand-text-dark, #333333);
+}
+.main-navbar .utility-user-dropdown .dropdown-item .fas,
+.main-navbar .utility-user-dropdown .dropdown-item .far {
+    margin-right: 0.7em; 
+    width: 1.2em;
+    text-align: center;
+    color: #777777; 
+}
+.main-navbar .utility-user-dropdown .dropdown-divider {
+    border-top: 1px solid #f0f0f0;
+    margin: 0.4rem 0;
+}
+
+/* --- Bag Indicator in Utility Nav --- */
+.main-navbar .utility-bag-indicator {
+    background-color: var(--brand-beige-primary, #D8CABB) !important; 
+    color: var(--brand-text-on-beige, #333333) !important;            
+    font-size: 0.6rem;
+    font-weight: bold; 
+    padding: 0.2em 0.45em; /* Fine-tuned padding */
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;     /* Adjust for best position on bag icon */
+    right: 0px;  /* Adjust for best position on bag icon */
+    line-height: 1;
+    min-width: 16px; /* Ensure a good circular shape */
+    text-align: center;
+    /* border: 1px solid #fff; /* Optional white border to separate from icon */
+}
+
+/* --- Mobile Collapsed Menu Specific Styles --- */
+/* These styles apply when the main-nav.html content is collapsed on mobile */
+/* They assume the toggler is in mobile-top-header.html and targets #mainNavbarContent */
+
+/* Target the .navbar-collapse when it's in the mobile view (not expanded by navbar-expand-lg) */
+@media (max-width: 991.98px) { 
+    .main-header .navbar-collapse#mainNavbarContent {
+        background-color: #fff; 
+        position: fixed; /* Or absolute, depending on desired behavior */
+        top: 55px; /* Height of your .mobile-header-bar, ADJUST THIS VALUE! */
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow-y: auto;
+        z-index: 1025; /* Below mobile-top-header (1030), above main content */
+        padding: 0; /* Add some padding inside the full-screen menu */
+        border-top: 1px solid #e7e7e7;
+    }
+
+    .main-header .navbar-collapse#mainNavbarContent .navbar-nav {
+        width: 100%; 
+    }
+
+    .main-header .navbar-collapse#mainNavbarContent .main-links-group {
+        margin-left: 0;  /* Reset desktop centering */
+        margin-right: 0;
+    }
+    .main-header .navbar-collapse#mainNavbarContent .site-utility-nav {
+        margin-left: 0; /* Reset desktop push */
+        flex-direction: column; /* Stack utility items on mobile */
+        align-items: flex-start !important; /* Align items to the start */
+        padding: 0 1rem; /* Add padding for these items */
+        border-top: 1px solid #f0f0f0;
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+    .main-header .navbar-collapse#mainNavbarContent .site-utility-nav .nav-link,
+    .main-header .navbar-collapse#mainNavbarContent .site-utility-nav .dropdown { /* Target dropdown div */
+        width: 100%; /* Make utility links take full width */
+        margin-bottom: 0.5rem;
+    }
+     .main-header .navbar-collapse#mainNavbarContent .site-utility-nav .utility-search-text {
+        display: inline-block !important; /* Show search text on mobile */
+    }
+    .main-header .navbar-collapse#mainNavbarContent .site-utility-nav .utility-icon-text span {
+        display: inline !important; /* Ensure LOG IN / SIGN UP text shows */
+    }
+
+    .main-header .navbar-collapse#mainNavbarContent .nav-item {
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .main-header .navbar-collapse#mainNavbarContent .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .main-header .navbar-collapse#mainNavbarContent .nav-link {
+        padding: 0.8rem 1rem; 
+        color: var(--brand-text-dark, #333);
+        font-weight: 500;
+        display: block; 
+        font-size: 1rem;
+        white-space: normal;
+    }
+
+    .main-header .navbar-collapse#mainNavbarContent .nav-link:hover,
+    .main-header .navbar-collapse#mainNavbarContent .nav-item.active .nav-link { 
+        background-color: #f8f9fa;
+        color: #000;
+    }
+
+    /* Dropdowns within the collapsed mobile menu */
+    .main-header .navbar-collapse#mainNavbarContent .dropdown-menu {
+        background-color: #f8f9fa; 
+        border: none; !important
+        box-shadow: none; !important
+        padding-left: 1.5rem; /* Indent dropdown items more */
+        position: static !important; 
+        float: none !important;
+        width: 100% !important;
+        margin-top: 0 !important;
+        border-radius: 0;
+        display: none; /* Hidden by default, shown by .show */
+    }
+    .main-header .navbar-collapse#mainNavbarContent .dropdown-menu.show {
+        display: block; /* Bootstrap's class to show dropdown */
+    }
+
+    .main-header .navbar-collapse#mainNavbarContent .dropdown-item {
+        padding: 0.7rem 1rem 0.7rem 0.5rem; /* Adjust padding from the indented left */
+        font-size: 0.9rem;
+        color: #444;
+        border-top: 1px solid #eee;
+    }
+
+    .main-header .navbar-collapse#mainNavbarContent .dropdown-item:first-child {
+        border-top: none;
+    }
+    .main-header .navbar-collapse#mainNavbarContent .dropdown-header {
+        padding: 0.8rem 1rem 0.4rem; /* Adjusted padding */
+        font-size: 0.8rem;
+        color: #6c757d;
+        font-weight: bold;
+    }
+
+    .main-header .navbar-collapse#mainNavbarContent .nav-link.dropdown-toggle::after {
+        display: inline-block; /* Ensure arrow is shown */
+        margin-left: auto; /* Push arrow to the right */
+        transition: transform 0.2s ease-in-out;
+    }
+    .main-header .navbar-collapse#mainNavbarContent .nav-link.dropdown-toggle[aria-expanded="true"]::after {
+        transform: rotate(-180deg); /* Rotate arrow when open */
+    }
+}
 
 /* --- Social Sidebar --- */
 .social-sidebar {
@@ -456,7 +743,7 @@ button {
     transform: translateY(-50%); /* Vertically center */
     padding: 20px;
     z-index: 2; /* Place above the ::after overlay */
-    text-align: left center; /* Align text left */
+    text-align: center; /* Align text left */
 }
 .hero-content h1 {
     font-family: var(--font-heading); 
@@ -520,41 +807,109 @@ button {
 
 /* --- Shop Section --- */
 .shop-section { background-color: var(--bg-accent); } /* Contrast background */
+
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--grid-gap);
-    margin-bottom: 50px;
+    /* Adjust columns based on your design, e.g., for 4 columns: */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between cards */
+    /* align-items: stretch; /* Default, makes cards in a row the same height if their content allows */
 }
+
 .product-card {
-    background-color: var(--bg-light);
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-    overflow: hidden;
-    text-align: center;
-    padding: 25px;
-    padding-top: 15px; /* Image touches top */
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    display: flex; /* Use flexbox for internal layout */
+    flex-direction: column; /* Stack items vertically */
+    border: 1px solid #EAE0D5; /* Your existing border or similar */
+    background-color: #FAF8F1; /* Your card background or similar */
+    padding: 15px;
+    text-align: center; /* If you want most text centered */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Subtle shadow for depth */
+    height: 100%; /* Make card take full height of its grid cell if align-items: stretch is used on parent */
 }
-.product-card:hover {
-    box-shadow: 0 10px 25px rgba(79, 74, 69, 0.1); /* Softer shadow */
-    transform: translateY(-5px);
-}
-.product-card img {
+
+.product-card .product-image-container {
     width: 100%;
-    /* height: 300px; /* Let height be auto or set fixed */
+    /* Option 1: Fixed Aspect Ratio (e.g., square, or 4:3, 3:4) - Recommended! */
+    aspect-ratio: 1 / 1; /* For square images. Adjust (e.g., 4/3 for landscape-ish) */
+    overflow: hidden; /* Crucial to contain the image within the aspect ratio box */
+    margin-bottom: 15px; /* Space below the image container */
+}
+
+.product-card .product-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Scales image to cover the container, cropping if necessary.
+                          Use 'contain' if you want to see the whole image, possibly with letterboxing. */
+    display: block; /* Removes extra space below image */
+}
+
+/* If you don't want aspect-ratio and prefer a fixed height (less flexible for different image shapes): */
+
+.product-card .product-image-container {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.product-card .product-image-container img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    margin-bottom: 25px;
-    border-radius: 4px 4px 0 0; /* Round top corners only */
-    border-bottom: 1px solid var(--border-color);
+    display: block;
+} 
+
+
+.product-card h3 { /* Product Name */
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem; /* Or your chosen size */
+    color: #333;
+    margin-top: 0; 
+    margin-bottom: 4px; 
 }
-.product-card h3 { margin-bottom: 10px; }
+
+.product-card .category-link-wrapper {
+    font-size: 0.95rem; 
+    color: #555;
+    margin-bottom: 6px; 
+}
+
 .product-card .price {
-    font-weight: 700;
-    color: var(--accent-color); /* Use accent color for price */
-    margin-bottom: 20px;
-    font-size: 1.1rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem; 
+    font-weight: bold;
+    color: #E57373;
+    margin-bottom: 3px; 
 }
+
+.product-card-content-spacer {
+    flex-grow: 0.5; 
+}
+
+.product-card .rating-and-button-wrapper {
+    margin-top: 8px;
+    margin-bottom: 8px; 
+}
+
+.product-card .product-rating-display {
+    display: inline-block; 
+    margin-right: 10px; /* Space between rating and button */
+    vertical-align: middle;
+    font-size: 0.9rem;
+    color: #555;
+}
+.product-card .product-rating-display .fa-star {
+    color: #FFD700; /* Gold star */
+    /* margin-right: 5px; // Using Bootstrap mr-2/mr-3 on the icon itself is fine */
+}
+
+.product-card .btn-tertiary { /* View Product Button */
+    display: inline-block; /* Or block if you want it full width */
+    vertical-align: middle;
+    /* Your existing button styles for .btn-tertiary or .btn */
+    padding: 8px 15px; /* Example padding */
+    
+}
+
 .view-all-link { text-align: center; margin-top: 50px; }
 
 /* --- Testimonial Section --- */
@@ -685,6 +1040,278 @@ button {
     opacity: 0.7;
 }
 
+/* === Login Page Specific Styles === */
+
+.login-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    background-color: #f9f7f5; /* Very light neutral beige */
+}
+
+.login-form-wrapper {
+    background-color: #fdfdfd; /* Matching your .bag-summary background */
+    padding: 30px 40px;
+    border-radius: 4px; /* Matching your .bag-summary border-radius */
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.07); /* Softer, more subtle shadow */
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid #eeeeee; /* Matching your .bag-summary border */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.login-form-wrapper .section-title {
+    font-family: 'Playfair Display', serif; /* Keep this for an elegant touch if you like */
+    color: #333333; /* Primary text color */
+    margin-bottom: 10px;
+    font-size: 2.2em;
+    text-align: center; /* Ensuring it's centered if not already */
+}
+
+.login-form-wrapper .login-subtitle {
+    font-size: 0.95em;
+    color: #555555; /* Slightly lighter than primary text */
+    margin-bottom: 30px;
+    text-align: center; /* Ensuring it's centered */
+}
+
+.login-form .form-group {
+    margin-bottom: 20px;
+}
+
+.login-form .form-group label {
+    display: block;
+    font-weight: normal; /* Matching your .form-label */
+    margin-bottom: 0.5rem; /* Matching your .form-label */
+    color: #333333; /* Primary text color */
+    font-size: 0.9em;
+}
+
+.login-form .form-group input[type="text"],
+.login-form .form-group input[type="email"],
+.login-form .form-group input[type="password"] {
+    width: 100%;
+    padding: 10px 12px; /* Slightly adjusted padding */
+    border: 1px solid #d8d1cc; /* Using the lighter border from disabled state */
+    border-radius: 0; /* Square corners, like your buttons */
+    box-sizing: border-box;
+    font-size: 1em;
+    background-color: #ffffff; /* Plain white for input background for clarity */
+    color: #333333; /* Primary text color */
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.login-form .form-group input[type="text"]::placeholder,
+.login-form .form-group input[type="email"]::placeholder,
+.login-form .form-group input[type="password"]::placeholder {
+    color: #888888; /* Softer placeholder text */
+}
+
+.login-form .form-group input[type="text"]:focus,
+.login-form .form-group input[type="email"]:focus,
+.login-form .form-group input[type="password"]:focus {
+    outline: none;
+    border-color: #C8B8AB; /* Using your darker beige for focus */
+    box-shadow: 0 0 0 2px rgba(200, 184, 171, 0.25); /* Subtle glow with focus color */
+}
+
+/* Styling for checkbox (e.g., "Remember Me") */
+.login-form .form-group.custom-checkbox-group {
+    display: flex;
+    align-items: center;
+}
+.login-form .form-group.custom-checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    width: auto;
+    height: auto;
+    /* Consider using a custom checkbox library or more detailed styling if desired */
+}
+.login-form .form-group.custom-checkbox-group label {
+    margin-bottom: 0;
+    font-weight: normal;
+    color: #333333;
+}
+
+
+/* Submit Button - .btn-login-submit for specific overrides */
+.btn-login-submit {
+    background-color: #D8CABB !important; /* Your primary beige */
+    border-color: #C8B8AB !important;     /* Your primary border/darker beige */
+    color: #333333 !important;            /* Your primary text color */
+    padding: 0.75rem 1.2rem; /* Adjusted padding for a slightly taller button */
+    font-size: 1em;
+    font-weight: bold; /* Making login button text bold for emphasis */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 0; /* Square corners */
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    width: 100%; /* Make it full width within the form */
+    display: block; /* Ensure it behaves as a block for width 100% */
+}
+
+.btn-login-submit:hover {
+    background-color: #c8b8ab !important; /* Your darker beige on hover */
+    border-color: #b8a89a !important;     /* Slightly darker border on hover if desired */
+    color: #333333 !important;
+}
+
+.login-links {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.login-links a {
+    color: #555555; /* Slightly muted link color */
+    text-decoration: none;
+}
+
+.login-links a:hover {
+    text-decoration: underline;
+    color: #333333; /* Primary text color on hover */
+}
+
+.login-links .separator {
+    color: #cccccc; /* Soft separator color */
+    margin: 0 8px;
+}
+
+/* Django Allauth Messages Styling (if not already covered by Bootstrap alerts) */
+.login-form-wrapper .messages-container .alert {
+    font-size: 0.9em;
+    border-radius: 0; /* Consistent square corners */
+}
+
+.btn-secondary {
+    background-color: transparent !important;
+    border: 1px solid #C8B8AB !important; /* Your primary border color */
+    color: #333333 !important;           /* Your primary text color */
+    border-radius: 0 !important; /* Square corners */
+}
+
+.btn-secondary:hover {
+    background-color: #f8f9fa !important; /* Light hover background */
+    border-color: #C8B8AB !important;
+    color: #333333 !important;
+}
+
+/* --- KK39 Form Field Styling --- */
+.kk39-input,
+.kk39-select,
+.kk39-textarea {
+    /* Inherits from .form-control Bootstrap */
+    border: 1px solid var(--border-color, #d8d1cc); /* Your theme's border color */
+    border-radius: 0; /* Square corners if that's your theme */
+    padding: 10px 12px; /* Consistent padding */
+    background-color: var(--bg-light, #ffffff); /* Or a specific input background */
+    color: var(--text-color, #333333);
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    font-size: 0.95rem; /* Consistent font size for inputs */
+}
+
+.kk39-input:focus,
+.kk39-select:focus,
+.kk39-textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color, #C8B8AB); /* Your theme's focus color */
+    box-shadow: 0 0 0 2px rgba(200, 184, 171, 0.25); /* Using your darker beige for glow */
+}
+
+.kk39-textarea {
+    min-height: 120px; /* Good default height for description */
+}
+
+.kk39-select {
+    /* Specific styles for select if different from text input */
+}
+
+.kk39-checkbox {
+    /* Inherits from .form-check-input Bootstrap */
+    /* Add custom styles if needed */
+    margin-top: 0.3rem; /* Align with labels a bit better */
+}
+
+/* Styling for your CustomClearableFileInput if needed */
+.kk39-file-input {
+    /* Style this to match other inputs if Bootstrap's default isn't ideal */
+    /* Often, file inputs require more elaborate custom styling */
+}
+.custom-clearable-file-input-container { /* Assuming your widget has a container */
+    /* ... styles for the widget layout ... */
+}
+
+/* --- Mobile Top Header Bar (when .container class is applied to it) --- */
+.mobile-header-bar {
+    height: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.mobile-header-bar .mobile-header-left {
+    /* Intentionally empty for now, relies on parent flex */
+    flex-shrink: 0;
+    min-width: 0;
+}
+
+.mobile-header-bar .navbar-toggler {
+    padding: .25rem .4rem;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    margin-right: 5px;
+    flex-shrink: 0;
+}
+
+.mobile-header-bar .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.mobile-header-bar .mobile-logo-link {
+    text-decoration: none;
+}
+
+.mobile-header-bar .mobile-logo-text {
+    font-weight: bold;
+    color: #333333;
+    font-family: 'Playfair Display', serif;
+    text-decoration: none;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    line-height: 1;
+    display: inline-block;
+    letter-spacing: normal;
+}
+.mobile-header-bar .mobile-logo:hover {
+    color: #555555;
+}
+
+.mobile-header-bar .mobile-utility-icons {
+    /* Intentionally empty, relies on parent flex (justify-content-between) */
+    margin-left: auto;
+}
+
+.mobile-header-bar .mobile-utility-icons .mobile-bag-icon {
+    padding: 0.5rem 0.1rem;
+    font-size: 1.2rem;
+    color: #333333;
+    line-height: 1;
+}
+.mobile-header-bar .mobile-utility-icons .mobile-bag-icon:hover {
+    color: #555555;
+}
+
+.mobile-header-bar .mobile-utility-icons .utility-bag-indicator {
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    font-size: 0.6em;
+    padding: .15em .35em;
+}
+
+
+
 /* --- Responsive Design --- */
 @media (max-width: 1024px) {
     :root { --section-padding: 80px 0; --grid-gap: 25px; }
@@ -694,6 +1321,52 @@ button {
     .about-container { gap: 40px; }
     .product-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
     .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+}
+
+@media (min-width: 992px) { /* lg and up */
+    .main-navbar .navbar-collapse {
+        
+    }
+
+    .main-navbar .main-links-group {
+        /* It has mr-auto from HTML class */
+    }
+
+    .main-navbar .site-utility-nav {
+        /* This group will be pushed to the right */
+        /* Ensure items within it are aligned and spaced nicely */
+        gap: 0.5rem; /* Adds space between items in site-utility-nav if they are direct children */
+    }
+
+    /* Adjust spacing for individual utility items if needed */
+    .site-utility-nav .nav-link,
+    .site-utility-nav .dropdown { /* Target the dropdown container */
+        margin-left: 0.5rem; /* Add some space to the left of each utility item */
+    }
+    .site-utility-nav .nav-link:first-child,
+    .site-utility-nav .dropdown:first-child {
+        margin-left: 0; /* No margin for the very first utility item */
+    }
+
+    /* Ensure your existing styles for .utility-icon, .utility-search-text, etc. 
+       give them appropriate padding and font sizes. */
+    .utility-icon {
+        font-size: 1.2rem;
+        padding: 0.25rem 0.5rem;
+    }
+     .site-utility-nav .nav-link { /* General style for LOGIN/SIGNUP text links */
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        padding: 0.25rem 0.5rem;
+    }
+    .bag-summary {
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 20px; /* Adjust based on your header height or desired spacing */
+    }
+    .bag-item-details .quantity-selector.input-group {
+        max-width: 150px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -724,17 +1397,22 @@ button {
     .social-links { justify-content: center; }
     .newsletter-form { justify-content: center; }
     .newsletter-form input[type="email"] { flex-grow: 0; width: 250px; } /* Fixed width */
-}
 
-@media (max-width: 576px) {
-    .login-form-wrapper {
-        padding: 25px 20px;
-        margin-left: 15px;
-        margin-right: 15px;
+    .item-actions {
+        text-align: left !important; /* Override text-md-right */
+        display: flex;
+        justify-content: space-between; /* Puts price left, remove right */
+        align-items: center; /* Vertically aligns them */
     }
-
-    .login-form-wrapper .section-title {
-        font-size: 1.8em; /* Adjust if needed */
+    .item-actions .item-line-price {
+        margin-bottom: 0; /* Remove bottom margin if it's now inline */
+    }
+    .product-name-bag {
+        font-size: 1rem; /* Slightly smaller on mobile */
+    }
+    .bag-item {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 }
 
@@ -765,5 +1443,3 @@ button {
     .newsletter-form input[type="email"] { border-radius: 4px; width: 90%; }
     .newsletter-form button { border-radius: 4px; width: 60%; }
 }
-
-

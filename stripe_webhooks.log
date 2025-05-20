@@ -1392,3 +1392,224 @@ Not Found: /favicon.ico
 "GET /admin/ HTTP/1.1" 200 15658
 C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 22839
+"GET /products/?category=scented HTTP/1.1" 200 27666
+"GET /products/5/ HTTP/1.1" 200 29388
+"GET /static/css/bag.css HTTP/1.1" 200 14545
+"GET /static/css/products_detail.css HTTP/1.1" 200 6532
+"POST /bag/add/5/ HTTP/1.1" 302 0
+"GET /products/5/ HTTP/1.1" 200 30075
+Internal Server Error: /bag/
+Traceback (most recent call last):
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\bag\views.py", line 37, in bag_view
+    return render(request, 'bag/bag.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 228, in do_block
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'extra_css' appears more than once
+"GET /bag/ HTTP/1.1" 500 231230
+Internal Server Error: /bag/
+Traceback (most recent call last):
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\bag\views.py", line 37, in bag_view
+    return render(request, 'bag/bag.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 228, in do_block
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'extra_css' appears more than once
+"GET /bag/ HTTP/1.1" 500 231367
+Internal Server Error: /bag/
+Traceback (most recent call last):
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\bag\views.py", line 37, in bag_view
+    return render(request, 'bag/bag.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 962, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 567, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 91: 'endif', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+"GET /bag/ HTTP/1.1" 500 271380
+"GET /bag/ HTTP/1.1" 200 37699
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /checkout/ HTTP/1.1" 200 105073
+"GET /static/checkout/css/checkout.css HTTP/1.1" 304 0
+"POST /checkout/wh/ HTTP/1.1" 200 44
+"POST /checkout/ HTTP/1.1" 302 0
+"GET /checkout/checkout_success/D1D828FFAC534FF18F4BCB53EAA96A54/ HTTP/1.1" 200 22688
+"GET /static/css/base.css HTTP/1.1" 304 0
+"POST /checkout/wh/ HTTP/1.1" 200 42
+"POST /checkout/wh/ HTTP/1.1" 200 88

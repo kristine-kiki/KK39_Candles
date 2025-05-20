@@ -1,0 +1,66 @@
+.profile-container {
+    /* Add padding if needed */
+}
+
+.profile-section-title {
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif';
+    margin-bottom: 0.75rem;
+    color: #333333; /* Dark text */
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+/* Style the form using checkout styles */
+#profile-update-form .form-control,
+#profile-update-form .django-countries-countryselect {
+    border: 1px solid #C8B8AB;
+    border-radius: 0;
+    padding: 0.5rem 0.75rem;
+    box-shadow: none;
+    color: #333333; 
+    margin-bottom: 1rem; /* Add space below fields if not using crispy mb-3 */
+}
+#profile-update-form .form-control:focus,
+#profile-update-form .django-countries-countryselect:focus {
+    border-color: #A8988B; 
+    box-shadow: none;
+}
+
+/* Ensure button uses the same style as checkout */
+#profile-update-form .action-btn {
+    background-color: #D8CABB;
+    border-color: #D8CABB;
+    color: #333333;
+}
+
+/* Order History Styling */
+.order-history-list {
+    margin-top: 1rem;
+}
+
+.order-history-item {
+    background-color: #fdfdfd; /* Light background for each item */
+    border: 1px solid #eee;
+    border-radius: 4px; /* Optional rounding */
+}
+
+.order-history-item p {
+    margin-bottom: 0.25rem; /* Reduce space between lines */
+    font-size: 0.9rem;
+}
+
+.order-history-item a {
+    color: #A8988B; /* Use a theme color for links - ADJUST */
+    text-decoration: underline;
+}
+.order-history-item a:hover {
+     color: #333333;
+}
+
+@media (max-width: 991.98px) {
+    .order-history-item .text-md-right {
+        text-align: left !important; /* Stack alignment on medium/small */
+        margin-top: 0.5rem;
+    }
+}
