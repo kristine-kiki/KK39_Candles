@@ -29,9 +29,9 @@ class UserProfile(models.Model):
         return f"{self.user.first_name} {self.user.last_name}"
 
     @property
-    def email(self):
-        """Returns the user's email"""
-        return self.user.email
+    #def email(self):
+    #   """Returns the user's email"""
+    #   return self.user.email
     
     @receiver(post_save, sender=User)
     def create_or_update_user_profile(sender, instance, created, **kwargs):
