@@ -22,7 +22,7 @@
         <div class="container about-container">
             <div class="about-image">
                 {# Note: /media/ paths assume MEDIA_URL is configured correctly #}
-                <img src="/media/PXL_20250410_184409289.jpg" alt="Natural candle ingredients">
+                <img src="{{ MEDIA_URL }}PXL_20250410_184409289.jpg" alt="Natural candle ingredients">
             </div>
             <div class="about-text">
                 <h2 class="section-title--left">Our Story</h2>
@@ -117,10 +117,10 @@
                     <img src="{% static '/images/instagram/gorgeous_peony.jpg' %}" alt="gorgeous flower soy candle peony">
                 </a>
                 <a href="https://www.instagram.com/p/DDj_St2CpFF/?img_index=1" target="_blank">
-                    <img src="{% static '/images/instagram/queen_of_hearts.jpg' %}" alt="red rose handmade candle">
+                    <img src="https://kk39-candles.s3.eu-north-1.amazonaws.com/media/Queen+of+Hearts.jpg" alt="red rose handmade candle">
                 </a>
                 <a href="https://www.instagram.com/p/DEfXD3GCDXv/?img_index=1" target="_blank">
-                    <img src="{% static 'images/instagram/white_swan.jpg' %}" alt="white gold swan candle">
+                    <img src="https://kk39-candles.s3.eu-north-1.amazonaws.com/media/white_swan.jpg" alt="white gold swan candle">
                 </a>
             </div>
         </div>
