@@ -54,10 +54,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'crispy_forms',
-    'storages',
-    'crispy_bootstrap5',
-
+    
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -70,6 +67,10 @@ INSTALLED_APPS = [
     'contact',
     'django_countries',
     'profiles.apps.ProfilesConfig',
+
+    'crispy_forms',
+    'storages',
+    'crispy_bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -140,7 +141,7 @@ SESSION_COOKIE_SECURE = False
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default':dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
 else:
     DATABASES = {
@@ -189,6 +190,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 print('BASE_DIR:', BASE_DIR)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_collected')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 

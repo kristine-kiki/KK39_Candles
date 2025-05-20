@@ -1613,3 +1613,31 @@ django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 91: 'e
 "GET /static/css/base.css HTTP/1.1" 304 0
 "POST /checkout/wh/ HTTP/1.1" 200 42
 "POST /checkout/wh/ HTTP/1.1" 200 88
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 22839
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /admin/login/?next=/accounts/login HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 15658
+"GET /admin/account/emailaddress/ HTTP/1.1" 200 16435
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/auth/user/ HTTP/1.1" 200 18992
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/profiles/userprofile/ HTTP/1.1" 200 16429
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/account/emailaddress/add/ HTTP/1.1" 200 17732
+"GET /static/admin/css/forms.css HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+"GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+"GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/account/emailaddress/add/ HTTP/1.1" 200 18064
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/auth/user/?_to_field=id&_popup=1 HTTP/1.1" 200 7311
+"POST /admin/account/emailaddress/add/ HTTP/1.1" 302 0
+"GET /admin/account/emailaddress/ HTTP/1.1" 200 18707
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
+Watching for file changes with StatReloader
