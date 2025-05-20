@@ -222,6 +222,7 @@ STRIPE_MINIMUM_AMOUNT_CENTS = 30
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET','')
+
 DEFAULT_FROM_EMAIL = 'hello@kk39candles.com'
 CONTACT_EMAIL = 'hello@kk39candles.com'
 
