@@ -11,6 +11,11 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
+
+print(f"--- DEBUG START ---")
+print(f"Value of os.environ.get('USE_AWS'): {os.environ.get('USE_AWS')}")
+print(f"Is 'USE_AWS' in os.environ: {'USE_AWS' in os.environ}")
+
 import dj_database_url
 if os.path.isfile('env.py'):
     import env # flake8 will throw an error here, but it is necessary to import env.py
@@ -181,11 +186,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_default_collect')
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media_default_root')
+DEFAULT_FILE_STORAGE = "django.core.files.storage.FileSystemStorage"
+STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 
-if 'USE_AWS' in os.environ:
+if 'USE_AWS' in os.environ and os.environ.get('USE_AWS', '').upper() == 'TRUE':
+    print(f"DEBUG: Activating AWS S3 configuration.")
     # Cache control
     AWS_S3_OBJECT_PARAMETERS = {
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
@@ -193,11 +201,11 @@ if 'USE_AWS' in os.environ:
     }
 
     # Bucket Config
-    AWS_STORAGE_BUCKET_NAME = 'kk39-candles'
-    AWS_S3_REGION_NAME = 'eu-north-1'
+    AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME', 'kk39-candles')
+    AWS_S3_REGION_NAME = os.environ.get('AWS_S3_REGION_NAME', 'eu-north-1')
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_S3_REGION_NAME}.amazonaws.com'
 
     # static and media files
     STATICFILES_STORAGE = 'custom_storages.StaticStorage'
@@ -208,6 +216,23 @@ if 'USE_AWS' in os.environ:
     # Override static and media URLs in production
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    # Override static and media URLs in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+    print(f"DEBUG: S3 STATIC_URL set to: {STATIC_URL}")
+    print(f"DEBUG: S3 MEDIA_URL set to: {MEDIA_URL}")
+    print(f"DEBUG: S3 STATICFILES_STORAGE: {STATICFILES_STORAGE}")
+    print(f"DEBUG: S3 DEFAULT_FILE_STORAGE: {DEFAULT_FILE_STORAGE}")
+else:
+    print(f"DEBUG: AWS S3 configuration NOT active. Using local file storage.")
+
+print(f"--- DEBUG END ---")
 
 FREE_DELIVERY_THRESHOLD = Decimal('75.00')
 STANDART_DELIVERY_PERCENTAGE = 12
