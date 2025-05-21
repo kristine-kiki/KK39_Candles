@@ -478,17 +478,22 @@ button {
 /* They assume the toggler is in mobile-top-header.html and targets #mainNavbarContent */
 
 /* Target the .navbar-collapse when it's in the mobile view (not expanded by navbar-expand-lg) */
-@media (max-width: 991.98px) { 
-    .main-header .navbar-collapse#mainNavbarContent {
-        background-color: #fff; 
-        position: fixed; /* Or absolute, depending on desired behavior */
-        top: 55px; /* Height of your .mobile-header-bar, ADJUST THIS VALUE! */
+@media (max-width: 991.98px) {
+    /* Apply these styles ONLY when the collapsed menu is SHOWN (open) */
+    .main-navbar .navbar-collapse:not(.show) {
+        display: none !important; /* Force it to be hidden if not shown */
+    }
+    
+    .main-header .navbar-collapse#mainNavbarContent.show {
+        background-color: #fff;
+        position: fixed;
+        top: 55px;
         left: 0;
         right: 0;
         bottom: 0;
         overflow-y: auto;
-        z-index: 1025; /* Below mobile-top-header (1030), above main content */
-        padding: 0; /* Add some padding inside the full-screen menu */
+        z-index: 1025;
+        padding: 15px; /* Add some padding when it's open */
         border-top: 1px solid #e7e7e7;
     }
 
@@ -1413,6 +1418,23 @@ button {
     .bag-item {
         padding-top: 1rem;
         padding-bottom: 1rem;
+    }
+    .main-navbar .navbar-nav.main-links-group .nav-item .nav-link {
+        font-size: 0.875rem; /* Adjust as needed */
+        padding-top: 0.4rem;    /* Bootstrap default is often 0.5rem */
+        padding-bottom: 0.4rem;
+        padding-left: 0.6rem;   /* Bootstrap default is often 0.5rem or 1rem */
+        padding-right: 0.6rem;
+    }
+
+    /* For the My Account / Login / Signup links in the utility nav */
+    .main-navbar .navbar-nav.site-utility-nav .nav-link {
+        font-size: 0.875rem;
+        padding-left: 0.6rem;
+        padding-right: 0.6rem;
+    }
+    .main-navbar .navbar-collapse.justify-content-between {
+        /* You might need to adjust flex properties or margins on main-links-group/site-utility-nav */
     }
 }
 

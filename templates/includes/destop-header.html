@@ -1,0 +1,26 @@
+{% load static %}
+{% load bag_tools %} 
+
+<div class="container">
+    <div class="logo-container text-center py-3 d-none d-lg-block"> 
+    <a href="{% url 'home' %}" class="logo logo-desktop d-inline-block">
+        <span class="logo-text-line logo-text-upper">KK39</span>
+        <span class="logo-text-line logo-text-lower">Candles</span>
+    </a>
+</div>
+
+    <!--Desktop Main Navigation Bar: Links & Utilities side-by-side below the logo -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent desktop-main-nav-bar">
+        
+        <div class="container-fluid"> 
+            <!--Main Nav Links: SHOP ALL, CANDLES, etc. - Centered -->
+            <div class="navbar-nav main-page-links-desktop mx-auto"> 
+               {% include 'includes/main-nav.html' %} 
+            </div>
+
+            <div class="navbar-nav desktop-utility-links ml-auto"> 
+               {% include 'includes/utility-nav.html' %} 
+            </div>
+        </div>
+    </nav>
+</div>

@@ -1871,3 +1871,2192 @@ Watching for file changes with StatReloader
 "GET /about/our_story/ HTTP/1.1" 200 19431
 "GET / HTTP/1.1" 200 30421
 "GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /products/ HTTP/1.1" 200 48297
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"POST /checkout/wh/ HTTP/1.1" 200 58
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"POST /checkout/wh/ HTTP/1.1" 200 47
+"POST /checkout/wh/ HTTP/1.1" 200 41
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\profiles\models.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 30421
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /accounts/logout/ HTTP/1.1" 200 19204
+"POST /accounts/logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 28076
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /accounts/signup/ HTTP/1.1" 200 18391
+"POST /accounts/signup/ HTTP/1.1" 200 18638
+"POST /accounts/signup/ HTTP/1.1" 302 0
+"GET /accounts/confirm-email/ HTTP/1.1" 200 17587
+"GET / HTTP/1.1" 200 27639
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /accounts/login/ HTTP/1.1" 200 18226
+"POST /accounts/login/ HTTP/1.1" 200 18240
+"POST /accounts/login/ HTTP/1.1" 200 18240
+"POST /accounts/login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 30884
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /products/4/ HTTP/1.1" 200 28910
+"GET /static/css/products_detail.css HTTP/1.1" 304 0
+"GET /static/css/bag.css HTTP/1.1" 304 0
+"POST /products/4/ HTTP/1.1" 302 0
+"GET /products/4/ HTTP/1.1" 200 27896
+"GET /admin/login/?next=/accounts/login HTTP/1.1" 200 3732
+Not Found: /edit
+"GET /edit HTTP/1.1" 404 3662
+Not Found: /delete
+"GET /delete HTTP/1.1" 404 3668
+"GET / HTTP/1.1" 200 30417
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /products/4/ HTTP/1.1" 200 27443
+"GET /products/ HTTP/1.1" 200 48293
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /products/ HTTP/1.1" 200 48293
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 47556
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/macrame_candle.jpg HTTP/1.1" 200 371979
+"GET /media/Gold%20Bee.jpg HTTP/1.1" 200 223941
+"GET /media/strawberry_waxmelt.png HTTP/1.1" 200 870850
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/Simple%20Truth.jpg HTTP/1.1" 200 145915
+"GET /media/Coconut_roomspray.png HTTP/1.1" 200 325659
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+"GET /media/Floral%20Flow1.jpg HTTP/1.1" 200 143623
+"GET /media/giftset_large.jpg HTTP/1.1" 200 2657401
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/flower_rose_jasmin.jpg HTTP/1.1" 200 1456108
+"GET /media/heavenly_cloud-vaxmelt.png HTTP/1.1" 200 1981393
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /products/ HTTP/1.1" 200 48293
+"GET /static/css/base.css HTTP/1.1" 200 47746
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/macrame_candle.jpg HTTP/1.1" 200 371979
+"GET /media/Gold%20Bee.jpg HTTP/1.1" 200 223941
+"GET /media/strawberry_waxmelt.png HTTP/1.1" 200 870850
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+"GET /media/Coconut_roomspray.png HTTP/1.1" 200 325659
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/Floral%20Flow1.jpg HTTP/1.1" 200 143623
+"GET /media/Simple%20Truth.jpg HTTP/1.1" 200 145915
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/flower_rose_jasmin.jpg HTTP/1.1" 200 1456108
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/heavenly_cloud-vaxmelt.png HTTP/1.1" 200 1981393
+"GET /media/giftset_large.jpg HTTP/1.1" 200 2657401
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /products/ HTTP/1.1" 200 48278
+"GET /static/css/base.css HTTP/1.1" 200 48309
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/Gold%20Bee.jpg HTTP/1.1" 200 223941
+"GET /media/macrame_candle.jpg HTTP/1.1" 200 371979
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/strawberry_waxmelt.png HTTP/1.1" 200 870850
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+"GET /media/Simple%20Truth.jpg HTTP/1.1" 200 145915
+"GET /media/Floral%20Flow1.jpg HTTP/1.1" 200 143623
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/Coconut_roomspray.png HTTP/1.1" 200 325659
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/heavenly_cloud-vaxmelt.png HTTP/1.1" 200 1981393
+"GET /media/flower_rose_jasmin.jpg HTTP/1.1" 200 1456108
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+"GET /media/giftset_large.jpg HTTP/1.1" 200 2657401
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /products/ HTTP/1.1" 200 48278
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 48309
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/macrame_candle.jpg HTTP/1.1" 200 371979
+"GET /media/Gold%20Bee.jpg HTTP/1.1" 200 223941
+"GET /media/strawberry_waxmelt.png HTTP/1.1" 200 870850
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+"GET /media/Coconut_roomspray.png HTTP/1.1" 200 325659
+"GET /media/Simple%20Truth.jpg HTTP/1.1" 200 145915
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+"GET /media/Floral%20Flow1.jpg HTTP/1.1" 200 143623
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/flower_rose_jasmin.jpg HTTP/1.1" 200 1456108
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+"GET /media/heavenly_cloud-vaxmelt.png HTTP/1.1" 200 1981393
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/giftset_large.jpg HTTP/1.1" 200 2657401
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 30402
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 30402
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 48240
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+"GET /profile/ HTTP/1.1" 200 80266
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 48240
+"GET /static/profiles/css/profile.css HTTP/1.1" 200 1720
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 30402
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /static/css/base.css HTTP/1.1" 200 48348
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+"GET / HTTP/1.1" 200 28768
+"GET /static/css/base.css HTTP/1.1" 200 48348
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 27535
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /static/css/base.css HTTP/1.1" 200 48348
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /profile/ HTTP/1.1" 200 76883
+"GET /static/css/base.css HTTP/1.1" 200 48348
+"GET /static/profiles/css/profile.css HTTP/1.1" 200 1720
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'else'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\profiles\views.py", line 69, in profile
+    return render(request, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\engine.py", line 208, in select_template
+    return self.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 577, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 14: 'else'. Did you forget to register or load this tag?
+"GET /profile/ HTTP/1.1" 500 326558
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /profile/ HTTP/1.1" 200 77398
+"GET /static/profiles/css/profile.css HTTP/1.1" 200 1720
+"GET /static/css/base.css HTTP/1.1" 200 48348
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /about/our_story/ HTTP/1.1" 200 16544
+"GET /about/ingredients/ HTTP/1.1" 200 17701
+"GET /products/ HTTP/1.1" 200 45410
+"GET /products/?category=candles HTTP/1.1" 200 35948
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /products/?category=candles HTTP/1.1" 200 27906
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 48348
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/macrame_candle.jpg HTTP/1.1" 200 371979
+"GET /media/Gold%20Bee.jpg HTTP/1.1" 200 223941
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/Simple%20Truth.jpg HTTP/1.1" 200 145915
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/giftset_large.jpg HTTP/1.1" 200 2657401
+"GET /media/Floral%20Flow1.jpg HTTP/1.1" 200 143623
+"GET /media/flower_rose_jasmin.jpg HTTP/1.1" 200 1456108
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 19492
+"GET /static/css/base.css HTTP/1.1" 200 48348
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+"GET / HTTP/1.1" 200 19492
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/base.css HTTP/1.1" 200 48348
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+"GET /bag/ HTTP/1.1" 200 20481
+"GET /static/css/bag.css HTTP/1.1" 200 14665
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/base.css HTTP/1.1" 200 48348
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /products/ HTTP/1.1" 200 37368
+"GET /products/ HTTP/1.1" 200 42446
+"GET /products/ HTTP/1.1" 200 42446
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /static/css/base.css HTTP/1.1" 200 48348
+"GET /media/macrame_candle.jpg HTTP/1.1" 200 371979
+"GET /media/Gold%20Bee.jpg HTTP/1.1" 200 223941
+"GET /media/strawberry_waxmelt.png HTTP/1.1" 200 870850
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+"GET /media/Coconut_roomspray.png HTTP/1.1" 200 325659
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/Simple%20Truth.jpg HTTP/1.1" 200 145915
+"GET /media/Floral%20Flow1.jpg HTTP/1.1" 200 143623
+"GET /media/giftset_large.jpg HTTP/1.1" 200 2657401
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/flower_rose_jasmin.jpg HTTP/1.1" 200 1456108
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+"GET /media/heavenly_cloud-vaxmelt.png HTTP/1.1" 200 1981393
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /products/ HTTP/1.1" 200 45410
+"GET /static/css/base.css HTTP/1.1" 200 48348
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/macrame_candle.jpg HTTP/1.1" 200 371979
+"GET /media/Gold%20Bee.jpg HTTP/1.1" 200 223941
+"GET /media/strawberry_waxmelt.png HTTP/1.1" 200 870850
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+"GET /media/Coconut_roomspray.png HTTP/1.1" 200 325659
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/Simple%20Truth.jpg HTTP/1.1" 200 145915
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+"GET /media/Floral%20Flow1.jpg HTTP/1.1" 200 143623
+"GET /media/giftset_large.jpg HTTP/1.1" 200 2657401
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/flower_rose_jasmin.jpg HTTP/1.1" 200 1456108
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/heavenly_cloud-vaxmelt.png HTTP/1.1" 200 1981393
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /admin/login/?next=/accounts/login HTTP/1.1" 200 3732
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/css/login.css HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"POST /admin/login/?next=/accounts/login HTTP/1.1" 200 3903
+"POST /admin/login/?next=/accounts/login HTTP/1.1" 200 3913
+"POST /admin/login/?next=/accounts/login HTTP/1.1" 200 3903
+"POST /admin/login/?next=/accounts/login HTTP/1.1" 302 0
+"GET /accounts/login HTTP/1.1" 301 0
+"GET /accounts/login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 27701
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /admin/ HTTP/1.1" 200 16067
+"GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET /admin/sites/site/ HTTP/1.1" 200 17098
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+"GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+"GET /static/admin/js/core.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+"GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+"GET /static/admin/img/search.svg HTTP/1.1" 304 0
+"GET /static/admin/js/actions.js HTTP/1.1" 304 0
+"GET /static/admin/js/filters.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+"GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+"GET /admin/sites/site/1/change/ HTTP/1.1" 200 16784
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/sites/site/1/change/ HTTP/1.1" 302 0
+"GET /admin/sites/site/ HTTP/1.1" 200 17318
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+"GET /admin/auth/user/ HTTP/1.1" 200 20469
+"GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+"GET /admin/account/emailaddress/ HTTP/1.1" 200 20042
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/account/emailaddress/2/change/ HTTP/1.1" 200 18081
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/account/emailaddress/2/change/ HTTP/1.1" 302 0
+"GET /admin/account/emailaddress/ HTTP/1.1" 200 20265
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/about/post/ HTTP/1.1" 200 18174
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/about/post/add/ HTTP/1.1" 200 20588
+"GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+"GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+"GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+"GET /admin/profiles/userprofile/ HTTP/1.1" 200 17324
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+Internal Server Error: /admin/profiles/userprofile/1/change/
+Traceback (most recent call last):
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1081, in render
+    return render_value_in_context(output, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1058, in render_value_in_context
+    value = str(value)
+            ^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\utils.py", line 79, in __str__
+    return self.as_widget()
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\boundfield.py", line 95, in as_widget
+    attrs = self.build_widget_attrs(attrs, widget)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\boundfield.py", line 270, in build_widget_attrs
+    widget.use_required_attribute(self.initial)
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\widgets.py", line 851, in use_required_attribute
+    first_choice = next(iter(self.choices), None)
+                             ^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django_countries\widgets.py", line 29, in get_choices
+    self._choices: ChoiceList = list(self._choices)
+                                ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\utils\functional.py", line 188, in __wrapper__
+    return getattr(result, __method_name)(*args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BlankChoiceIterator' object has no attribute '__len__'. Did you mean: '__le__'?
+- Broken pipe from ('127.0.0.1', 61573)
+Internal Server Error: /admin/profiles/userprofile/1/change/
+Traceback (most recent call last):
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1081, in render
+    return render_value_in_context(output, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1058, in render_value_in_context
+    value = str(value)
+            ^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\utils.py", line 79, in __str__
+    return self.as_widget()
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\boundfield.py", line 95, in as_widget
+    attrs = self.build_widget_attrs(attrs, widget)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\boundfield.py", line 270, in build_widget_attrs
+    widget.use_required_attribute(self.initial)
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\widgets.py", line 851, in use_required_attribute
+    first_choice = next(iter(self.choices), None)
+                             ^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django_countries\widgets.py", line 29, in get_choices
+    self._choices: ChoiceList = list(self._choices)
+                                ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\utils\functional.py", line 188, in __wrapper__
+    return getattr(result, __method_name)(*args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BlankChoiceIterator' object has no attribute '__len__'. Did you mean: '__le__'?
+- Broken pipe from ('127.0.0.1', 61277)
+Internal Server Error: /admin/profiles/userprofile/1/change/
+Traceback (most recent call last):
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1081, in render
+    return render_value_in_context(output, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1058, in render_value_in_context
+    value = str(value)
+            ^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\utils.py", line 79, in __str__
+    return self.as_widget()
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\boundfield.py", line 95, in as_widget
+    attrs = self.build_widget_attrs(attrs, widget)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\boundfield.py", line 270, in build_widget_attrs
+    widget.use_required_attribute(self.initial)
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\widgets.py", line 851, in use_required_attribute
+    first_choice = next(iter(self.choices), None)
+                             ^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django_countries\widgets.py", line 29, in get_choices
+    self._choices: ChoiceList = list(self._choices)
+                                ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\utils\functional.py", line 188, in __wrapper__
+    return getattr(result, __method_name)(*args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BlankChoiceIterator' object has no attribute '__len__'. Did you mean: '__le__'?
+"GET /admin/profiles/userprofile/1/change/ HTTP/1.1" 500 587289
+"GET /admin/profiles/userprofile/ HTTP/1.1" 200 17324
+Internal Server Error: /admin/profiles/userprofile/2/change/
+Traceback (most recent call last):
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1081, in render
+    return render_value_in_context(output, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1058, in render_value_in_context
+    value = str(value)
+            ^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\utils.py", line 79, in __str__
+    return self.as_widget()
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\boundfield.py", line 95, in as_widget
+    attrs = self.build_widget_attrs(attrs, widget)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\boundfield.py", line 270, in build_widget_attrs
+    widget.use_required_attribute(self.initial)
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\widgets.py", line 851, in use_required_attribute
+    first_choice = next(iter(self.choices), None)
+                             ^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django_countries\widgets.py", line 29, in get_choices
+    self._choices: ChoiceList = list(self._choices)
+                                ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\utils\functional.py", line 188, in __wrapper__
+    return getattr(result, __method_name)(*args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BlankChoiceIterator' object has no attribute '__len__'. Did you mean: '__le__'?
+- Broken pipe from ('127.0.0.1', 61360)
+Internal Server Error: /admin/profiles/userprofile/2/change/
+Traceback (most recent call last):
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1081, in render
+    return render_value_in_context(output, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1058, in render_value_in_context
+    value = str(value)
+            ^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\utils.py", line 79, in __str__
+    return self.as_widget()
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\boundfield.py", line 95, in as_widget
+    attrs = self.build_widget_attrs(attrs, widget)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\boundfield.py", line 270, in build_widget_attrs
+    widget.use_required_attribute(self.initial)
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\widgets.py", line 851, in use_required_attribute
+    first_choice = next(iter(self.choices), None)
+                             ^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django_countries\widgets.py", line 29, in get_choices
+    self._choices: ChoiceList = list(self._choices)
+                                ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\utils\functional.py", line 188, in __wrapper__
+    return getattr(result, __method_name)(*args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BlankChoiceIterator' object has no attribute '__len__'. Did you mean: '__le__'?
+- Broken pipe from ('127.0.0.1', 61649)
+Internal Server Error: /admin/profiles/userprofile/2/change/
+Traceback (most recent call last):
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1081, in render
+    return render_value_in_context(output, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1058, in render_value_in_context
+    value = str(value)
+            ^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\utils.py", line 79, in __str__
+    return self.as_widget()
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\boundfield.py", line 95, in as_widget
+    attrs = self.build_widget_attrs(attrs, widget)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\boundfield.py", line 270, in build_widget_attrs
+    widget.use_required_attribute(self.initial)
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\widgets.py", line 851, in use_required_attribute
+    first_choice = next(iter(self.choices), None)
+                             ^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django_countries\widgets.py", line 29, in get_choices
+    self._choices: ChoiceList = list(self._choices)
+                                ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\utils\functional.py", line 188, in __wrapper__
+    return getattr(result, __method_name)(*args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BlankChoiceIterator' object has no attribute '__len__'. Did you mean: '__le__'?
+- Broken pipe from ('127.0.0.1', 61656)
+Internal Server Error: /admin/profiles/userprofile/2/change/
+Traceback (most recent call last):
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1081, in render
+    return render_value_in_context(output, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1058, in render_value_in_context
+    value = str(value)
+            ^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\utils.py", line 79, in __str__
+    return self.as_widget()
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\boundfield.py", line 95, in as_widget
+    attrs = self.build_widget_attrs(attrs, widget)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\boundfield.py", line 270, in build_widget_attrs
+    widget.use_required_attribute(self.initial)
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\widgets.py", line 851, in use_required_attribute
+    first_choice = next(iter(self.choices), None)
+                             ^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django_countries\widgets.py", line 29, in get_choices
+    self._choices: ChoiceList = list(self._choices)
+                                ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\utils\functional.py", line 188, in __wrapper__
+    return getattr(result, __method_name)(*args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BlankChoiceIterator' object has no attribute '__len__'. Did you mean: '__le__'?
+"GET /admin/profiles/userprofile/2/change/ HTTP/1.1" 500 587289
+"GET /admin/profiles/userprofile/ HTTP/1.1" 200 17324
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\profiles\admin.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\profiles\admin.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /admin/profiles/userprofile/ HTTP/1.1" 200 17995
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+Internal Server Error: /admin/profiles/userprofile/1/change/
+Traceback (most recent call last):
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1081, in render
+    return render_value_in_context(output, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1058, in render_value_in_context
+    value = str(value)
+            ^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\utils.py", line 79, in __str__
+    return self.as_widget()
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\boundfield.py", line 95, in as_widget
+    attrs = self.build_widget_attrs(attrs, widget)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\boundfield.py", line 270, in build_widget_attrs
+    widget.use_required_attribute(self.initial)
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\forms\widgets.py", line 851, in use_required_attribute
+    first_choice = next(iter(self.choices), None)
+                             ^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django_countries\widgets.py", line 29, in get_choices
+    self._choices: ChoiceList = list(self._choices)
+                                ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\utils\functional.py", line 188, in __wrapper__
+    return getattr(result, __method_name)(*args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BlankChoiceIterator' object has no attribute '__len__'. Did you mean: '__le__'?
+"GET /admin/profiles/userprofile/1/change/ HTTP/1.1" 500 586968
+"GET /admin/profiles/userprofile/ HTTP/1.1" 200 17995
+"GET /admin/auth/group/ HTTP/1.1" 200 15429
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/auth/user/ HTTP/1.1" 200 20469
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/auth/user/1/change/ HTTP/1.1" 200 33320
+"GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+"GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15709
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+"GET /admin/auth/user/ HTTP/1.1" 200 20469
+"GET /admin/auth/user/3/change/ HTTP/1.1" 200 33422
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/socialaccount/socialaccount/ HTTP/1.1" 200 16064
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/socialaccount/socialaccount/add/ HTTP/1.1" 200 18085
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/about/post/ HTTP/1.1" 200 18174
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/about/post/add/ HTTP/1.1" 200 20588
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/about/post/add/ HTTP/1.1" 200 20984
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/about/post/add/ HTTP/1.1" 200 22178
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/auth/user/?_to_field=id&_popup=1 HTTP/1.1" 200 8452
+"POST /admin/about/post/add/ HTTP/1.1" 302 0
+"GET /admin/about/post/ HTTP/1.1" 200 21281
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET / HTTP/1.1" 200 27701
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /about/blog/ HTTP/1.1" 200 17040
+"GET /about/blog/2025/5/21/how/ HTTP/1.1" 200 17866
+"GET /about/blog/ HTTP/1.1" 200 17040
+"GET /about/blog/ HTTP/1.1" 200 18344
+"GET /static/css/base.css HTTP/1.1" 200 48348
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 29005
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET / HTTP/1.1" 200 30772
+"GET /static/css/base.css HTTP/1.1" 200 48348
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 20151
+"GET /static/css/base.css HTTP/1.1" 200 48348
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 30772
+"GET /static/css/base.css HTTP/1.1" 200 48348
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 29043
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /static/css/base.css HTTP/1.1" 200 48348
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 29043
+"GET /static/css/base.css HTTP/1.1" 200 48348
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /support/contact/ HTTP/1.1" 200 19989
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 48348
+"GET /support/contact/ HTTP/1.1" 200 14797
+"GET /static/css/base.css HTTP/1.1" 200 48348
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /support/contact/ HTTP/1.1" 200 14625
+"GET /static/css/base.css HTTP/1.1" 200 48348
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /support/contact/ HTTP/1.1" 200 14784
+"GET /static/css/base.css HTTP/1.1" 200 48348
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 23838
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET / HTTP/1.1" 200 25511
+"GET /static/css/base.css HTTP/1.1" 200 48348
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /products/?category=for_home HTTP/1.1" 200 23879
+"GET /static/css/base.css HTTP/1.1" 200 48348
+"GET /media/strawberry_waxmelt.png HTTP/1.1" 200 870850
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/Coconut_roomspray.png HTTP/1.1" 200 325659
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/heavenly_cloud-vaxmelt.png HTTP/1.1" 200 1981393
+Internal Server Error: /products/
+Traceback (most recent call last):
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\engine.py", line 214, in select_template
+    raise TemplateDoesNotExist(", ".join(not_found))
+django.template.exceptions.TemplateDoesNotExist: includes/desktop_header.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\products\views.py", line 63, in all_products
+    return render(request, 'products/products.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: includes/desktop_header.html
+"GET /products/?category=for_home HTTP/1.1" 500 164520
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+Internal Server Error: /products/
+Traceback (most recent call last):
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\engine.py", line 214, in select_template
+    raise TemplateDoesNotExist(", ".join(not_found))
+django.template.exceptions.TemplateDoesNotExist: includes/desktop-header.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\products\views.py", line 63, in all_products
+    return render(request, 'products/products.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: includes/desktop-header.html
+"GET /products/?category=for_home HTTP/1.1" 500 164106
+Watching for file changes with StatReloader
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\engine.py", line 214, in select_template
+    raise TemplateDoesNotExist(", ".join(not_found))
+django.template.exceptions.TemplateDoesNotExist: includes/desktop-header.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\home\views.py", line 25, in home_view
+    return render(request, 'home/index.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: includes/desktop-header.html
+"GET / HTTP/1.1" 500 158932
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\engine.py", line 214, in select_template
+    raise TemplateDoesNotExist(", ".join(not_found))
+django.template.exceptions.TemplateDoesNotExist: includes/desktop-header.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\home\views.py", line 25, in home_view
+    return render(request, 'home/index.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: includes/desktop-header.html
+"GET / HTTP/1.1" 500 159197
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 28305
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /support/contact/ HTTP/1.1" 200 19251
+"GET /about/our_story/ HTTP/1.1" 200 17315
+"GET /about/blog/ HTTP/1.1" 200 17644
+"GET /products/ HTTP/1.1" 200 46181
+"GET /profile/ HTTP/1.1" 200 79529
+"GET /static/profiles/css/profile.css HTTP/1.1" 304 0
+"GET /accounts/email/ HTTP/1.1" 200 19761
+"GET /bag/ HTTP/1.1" 200 29294
+"GET /static/css/bag.css HTTP/1.1" 304 0
+"GET /bag/ HTTP/1.1" 200 29337
+"GET / HTTP/1.1" 200 28348
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /profile/ HTTP/1.1" 200 79572
+"GET /profile/ HTTP/1.1" 200 79572
+Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'else'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\profiles\views.py", line 69, in profile
+    return render(request, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\engine.py", line 208, in select_template
+    return self.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 577, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 29: 'else'. Did you forget to register or load this tag?
+"GET /profile/ HTTP/1.1" 500 385285
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /profile/ HTTP/1.1" 200 79711
+"GET /profile/ HTTP/1.1" 200 79706
+"GET /static/profiles/css/profile.css HTTP/1.1" 200 1720
+"GET /static/css/base.css HTTP/1.1" 200 48348
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /products/ HTTP/1.1" 200 46358
+"GET /support/contact/ HTTP/1.1" 200 19428
+"GET /accounts/email/ HTTP/1.1" 200 19938
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /products/ HTTP/1.1" 200 46358
+"GET /static/css/base.css HTTP/1.1" 200 48348
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/macrame_candle.jpg HTTP/1.1" 200 371979
+"GET /media/Gold%20Bee.jpg HTTP/1.1" 200 223941
+"GET /media/strawberry_waxmelt.png HTTP/1.1" 200 870850
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+"GET /media/Coconut_roomspray.png HTTP/1.1" 200 325659
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/Simple%20Truth.jpg HTTP/1.1" 200 145915
+"GET /media/Floral%20Flow1.jpg HTTP/1.1" 200 143623
+"GET /media/giftset_large.jpg HTTP/1.1" 200 2657401
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/flower_rose_jasmin.jpg HTTP/1.1" 200 1456108
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+"GET /media/heavenly_cloud-vaxmelt.png HTTP/1.1" 200 1981393
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
