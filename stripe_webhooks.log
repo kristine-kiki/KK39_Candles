@@ -4060,3 +4060,429 @@ Not Found: /.well-known/appspecific/com.chrome.devtools.json
 "GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
 "GET /media/heavenly_cloud-vaxmelt.png HTTP/1.1" 200 1981393
 "GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET / HTTP/1.1" 200 28482
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /about/our_story/ HTTP/1.1" 200 17492
+"GET /about/our_story/ HTTP/1.1" 200 17492
+"GET /static/css/base.css HTTP/1.1" 200 48570
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 28482
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /about/our_story/ HTTP/1.1" 200 17492
+"GET /products/ HTTP/1.1" 200 46358
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 28482
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 28482
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /static/css/base.css HTTP/1.1" 200 48661
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /products/?category=for_home HTTP/1.1" 200 26850
+"GET /static/css/base.css HTTP/1.1" 200 48661
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/strawberry_waxmelt.png HTTP/1.1" 200 870850
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+"GET /media/Coconut_roomspray.png HTTP/1.1" 200 325659
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/heavenly_cloud-vaxmelt.png HTTP/1.1" 200 1981393
+"GET /support/contact/ HTTP/1.1" 200 19428
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /support/contact/ HTTP/1.1" 200 19428
+"GET /static/css/base.css HTTP/1.1" 200 48661
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"POST /support/contact/ HTTP/1.1" 302 0
+"GET /support/contact/ HTTP/1.1" 200 19902
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /profile/ HTTP/1.1" 200 79784
+"GET /static/css/base.css HTTP/1.1" 200 48661
+"GET /static/profiles/css/profile.css HTTP/1.1" 200 1720
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /profile/ HTTP/1.1" 200 79829
+"GET /static/css/base.css HTTP/1.1" 200 48661
+"GET /static/profiles/css/profile.css HTTP/1.1" 200 1720
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /profile/ HTTP/1.1" 200 79706
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 48661
+"GET /static/profiles/css/profile.css HTTP/1.1" 200 1720
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /profile/ HTTP/1.1" 200 79706
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 48661
+"GET /static/profiles/css/profile.css HTTP/1.1" 200 1720
+"GET /profile/ HTTP/1.1" 200 79878
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/base.css HTTP/1.1" 200 48661
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/profiles/css/profile.css HTTP/1.1" 200 1720
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /profile/ HTTP/1.1" 200 80274
+"GET /static/css/base.css HTTP/1.1" 200 48661
+"GET /static/profiles/css/profile.css HTTP/1.1" 200 1720
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /profile/ HTTP/1.1" 200 78953
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 48661
+"GET /static/profiles/css/profile.css HTTP/1.1" 200 1720
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 27729
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /static/css/base.css HTTP/1.1" 200 48661
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+"GET / HTTP/1.1" 200 27768
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/base.css HTTP/1.1" 200 48661
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 27768
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/base.css HTTP/1.1" 200 48661
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+"GET / HTTP/1.1" 200 27768
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /static/css/base.css HTTP/1.1" 200 48661
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 27768
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /static/css/base.css HTTP/1.1" 200 48661
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+"GET / HTTP/1.1" 200 27768
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 48735
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /products/add/ HTTP/1.1" 200 25699
+"GET /static/css/base.css HTTP/1.1" 200 48735
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /products/add/ HTTP/1.1" 200 25870
+"GET /static/css/base.css HTTP/1.1" 200 48735
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 27939
+"GET /static/css/base.css HTTP/1.1" 200 48735
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+"GET /products/add/ HTTP/1.1" 200 25870
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/base.css HTTP/1.1" 200 48735
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /products/ HTTP/1.1" 200 45815
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /static/css/base.css HTTP/1.1" 200 48735
+"GET /media/macrame_candle.jpg HTTP/1.1" 200 371979
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/Gold%20Bee.jpg HTTP/1.1" 200 223941
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/Simple%20Truth.jpg HTTP/1.1" 200 145915
+"GET /media/Coconut_roomspray.png HTTP/1.1" 200 325659
+"GET /media/Floral%20Flow1.jpg HTTP/1.1" 200 143623
+"GET /media/strawberry_waxmelt.png HTTP/1.1" 200 870850
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/heavenly_cloud-vaxmelt.png HTTP/1.1" 200 1981393
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/flower_rose_jasmin.jpg HTTP/1.1" 200 1456108
+"GET /media/giftset_large.jpg HTTP/1.1" 200 2657401
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /products/ HTTP/1.1" 200 45815
+"GET /static/css/base.css HTTP/1.1" 200 48735
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/macrame_candle.jpg HTTP/1.1" 200 371979
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/Gold%20Bee.jpg HTTP/1.1" 200 223941
+"GET /media/strawberry_waxmelt.png HTTP/1.1" 200 870850
+"GET /media/Coconut_roomspray.png HTTP/1.1" 200 325659
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/Floral%20Flow1.jpg HTTP/1.1" 200 143623
+"GET /media/Simple%20Truth.jpg HTTP/1.1" 200 145915
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/flower_rose_jasmin.jpg HTTP/1.1" 200 1456108
+"GET /media/heavenly_cloud-vaxmelt.png HTTP/1.1" 200 1981393
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+"GET /media/giftset_large.jpg HTTP/1.1" 200 2657401
+"GET /products/ HTTP/1.1" 200 45815
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 48735
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/macrame_candle.jpg HTTP/1.1" 200 371979
+"GET /media/Gold%20Bee.jpg HTTP/1.1" 200 223941
+"GET /media/strawberry_waxmelt.png HTTP/1.1" 200 870850
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/Coconut_roomspray.png HTTP/1.1" 200 325659
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+"GET /media/Floral%20Flow1.jpg HTTP/1.1" 200 143623
+"GET /media/Simple%20Truth.jpg HTTP/1.1" 200 145915
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/flower_rose_jasmin.jpg HTTP/1.1" 200 1456108
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/heavenly_cloud-vaxmelt.png HTTP/1.1" 200 1981393
+"GET /media/giftset_large.jpg HTTP/1.1" 200 2657401
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /products/?category=for_home HTTP/1.1" 200 26268
+"GET /static/css/base.css HTTP/1.1" 200 48735
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /media/strawberry_waxmelt.png HTTP/1.1" 200 870850
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+"GET /media/Coconut_roomspray.png HTTP/1.1" 200 325659
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/heavenly_cloud-vaxmelt.png HTTP/1.1" 200 1981393
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+"GET /products/16/ HTTP/1.1" 200 26653
+"GET /static/css/base.css HTTP/1.1" 200 48735
+"GET /static/css/products_detail.css HTTP/1.1" 200 6396
+"GET /static/css/bag.css HTTP/1.1" 200 14477
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /products/edit/16/ HTTP/1.1" 200 27683
+"GET /static/css/base.css HTTP/1.1" 200 48735
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /products/16/ HTTP/1.1" 200 26653
+"GET /static/css/products_detail.css HTTP/1.1" 200 6396
+"GET /static/css/bag.css HTTP/1.1" 200 14477
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+"GET /static/css/base.css HTTP/1.1" 200 48871
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /products/16/ HTTP/1.1" 200 26653
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 48969
+"GET /static/css/products_detail.css HTTP/1.1" 200 6396
+"GET /static/css/bag.css HTTP/1.1" 200 14477
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /products/16/ HTTP/1.1" 200 26653
+"GET /static/css/products_detail.css HTTP/1.1" 200 6396
+"GET /static/css/base.css HTTP/1.1" 200 48958
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/bag.css HTTP/1.1" 200 14477
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /products/16/ HTTP/1.1" 200 26658
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 48958
+"GET /static/css/bag.css HTTP/1.1" 200 14477
+"GET /static/css/products_detail.css HTTP/1.1" 200 6396
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /products/16/ HTTP/1.1" 200 26670
+"GET /static/css/bag.css HTTP/1.1" 200 14477
+"GET /static/css/products_detail.css HTTP/1.1" 200 6396
+"GET /static/css/base.css HTTP/1.1" 200 49016
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /products/16/ HTTP/1.1" 200 26670
+"GET /static/css/products_detail.css HTTP/1.1" 200 6396
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/base.css HTTP/1.1" 200 49076
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/bag.css HTTP/1.1" 200 14477
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /products/16/ HTTP/1.1" 200 26670
+"GET /static/css/bag.css HTTP/1.1" 200 14477
+"GET /static/css/products_detail.css HTTP/1.1" 200 6396
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+"GET /static/css/base.css HTTP/1.1" 200 49080
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"POST /bag/add/16/ HTTP/1.1" 302 0
+"GET /products/16/ HTTP/1.1" 200 27325
+"GET /static/css/products_detail.css HTTP/1.1" 200 6396
+"GET /static/css/bag.css HTTP/1.1" 200 14477
+"GET /static/css/base.css HTTP/1.1" 200 49080
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /bag/ HTTP/1.1" 200 34085
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/bag.css HTTP/1.1" 200 14477
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 49080
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 28101
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /summer
+"GET /summer HTTP/1.1" 404 3668
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /summer
+"GET /summer HTTP/1.1" 404 17284
+"GET / HTTP/1.1" 200 28101
+Not Found: /static/media/cherryblossom_hero.jpg
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 17284
+"GET /about/our_story/ HTTP/1.1" 200 17111
+Not Found: /static/css/base.css
+"GET /static/css/base.css HTTP/1.1" 404 17284
+"GET /about/our_story/ HTTP/1.1" 200 17111
+Not Found: /static/css/base.css
+"GET /static/css/base.css HTTP/1.1" 404 17284
+"GET /about/ingredients/ HTTP/1.1" 200 18268
+Not Found: /static/css/base.css
+"GET /static/css/base.css HTTP/1.1" 404 17284
+"GET /about/blog/ HTTP/1.1" 200 17440
+Not Found: /static/css/base.css
+"GET /static/css/base.css HTTP/1.1" 404 17284
+"GET /products/?category=for_home HTTP/1.1" 200 26469
+Not Found: /static/css/base.css
+"GET /static/css/base.css HTTP/1.1" 404 17284
+"GET / HTTP/1.1" 200 28101
+Not Found: /static/css/base.css
+"GET /static/css/base.css HTTP/1.1" 404 17284
+Not Found: /static/media/cherryblossom_hero.jpg
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 17284
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 28101
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /static/css/base.css HTTP/1.1" 200 49080
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /about/our_story/ HTTP/1.1" 200 17111
+Not Found: /summer
+"GET /summer HTTP/1.1" 404 3668
+Not Found: /summer
+"GET /summer HTTP/1.1" 404 3668
+Not Found: /summer
+"GET /summer HTTP/1.1" 404 3668
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /summer
+"GET /summer HTTP/1.1" 404 17681
+Not Found: /static/css/base.css
+"GET /static/css/base.css HTTP/1.1" 404 17681
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
+Watching for file changes with StatReloader

@@ -88,7 +88,7 @@
                         {% endif %}
                         {# Optional: Add a link/button to edit rating here if you implement that functionality #}
                     {% else %}
-                        <h4 class="mb-3">Rate this Product:</h4>
+                        <h4 class="mb-3 mt-5 text-rating">Rate this Product:</h4>
                         <form method="POST" action="{% url 'product_detail' product.id %}" class="rating-form">
                             {% csrf_token %}
                             

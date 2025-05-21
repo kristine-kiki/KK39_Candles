@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load i18n %} 
+
+{% block title %}
+    {% trans "Page Not Found" %} - KK39 Candles 
+{% endblock title %}
+
+{% block content %}
+    {# Using common section padding for consistent vertical spacing #}
+    <div class="section-padding"> 
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6 text-center"> 
+                    
+                    <div class="logo-container text-center py-3 mb-4"> 
+                        <a href="{% url 'home' %}" class="logo logo-desktop d-inline-block">
+                            <span class="logo-text-line logo-text-upper">KK39</span>
+                            <span class="logo-text-line logo-text-lower">Candles</span>
+                        </a>
+                    </div>
+                    <h1 class="section-title mb-3">{% trans "Page Not Found" %}</h1> 
+                    
+                    <p class="lead mb-4"> 
+                        {% trans "We're sorry, the page you requested could not be found." %} 
+                    </p>
+                    <p class="mb-4">{% trans "It might have been moved, deleted, or perhaps you mistyped the address." %}</p>
+
+                    <div class="mt-5"> 
+                        <a href="{% url 'home' %}" class="btn btn-primary btn-lg rounded-0 text-uppercase py-3"> 
+                            {% trans "Go to Homepage" %}
+                        </a>
+                        <a href="{% url 'products' %}" class="btn btn-outline-secondary btn-lg rounded-0 text-uppercase py-3 ml-sm-3 mt-2 mt-sm-0"> 
+                            {% trans "Visit the Shop" %} 
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
