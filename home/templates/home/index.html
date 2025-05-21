@@ -22,7 +22,7 @@
         <div class="container about-container">
             <div class="about-image">
                 {# Note: /media/ paths assume MEDIA_URL is configured correctly #}
-                <img src="{% static 'media/cherryblossom_hero.jpg' %}" alt="Natural candle ingredients">
+                <img src="{{ MEDIA_URL }}wooden_brick_wall.jpg" alt="Natural candles in wavy tray">
             </div>
             <div class="about-text">
                 <h2 class="section-title--left">Our Story</h2>
@@ -38,7 +38,7 @@
         <div class="container">
             <h2 class="section-title text-center mb-5">Our Bestsellers</h2>
             {% if bestseller_products %}
-                <div class="product-grid"> {# Ensure this class matches your main products page grid #}
+                <div class="product-grid"> 
                     {% for product in bestseller_products %}
                     {# --- Start: Replicated Product Card Structure (from products.html) --- #}
                     <div class="product-card">
@@ -70,7 +70,7 @@
                         <p class="price">£{{ product.price|floatformat:2 }}</p>
     
                         {# This spacer div helps push the button to the bottom consistently #}
-                        <div class="product-card-content-spacer"></div>
+                        <!--div class="product-card-content-spacer"></div-->
     
                         <div class="rating-and-button-wrapper">
                             {% if product.rating %}

@@ -28,18 +28,16 @@
                             <img src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
                         {% else %}
-                            {# You might want a default placeholder image in your static files #}
                             <a href="{% url 'product_detail' product.id %}">
                                 <img src="{{ MEDIA_URL }}no_image.png" alt="{{ product.name }}">
                             </a>
-                            {# <img src="https://via.placeholder.com/300x300.png?text={{ product.name|urlencode }}" alt="{{ product.name }}"> #}
                         {% endif %}
                     </div>  
                     <h3>{{ product.name }}</h3>
 
                     {% if product.category.exists %}
-                        <p class="small mt-1 mb-0 category-link-wrapper"> {# Added wrapper class #}
-                            {# Loop through all associated categories and create a link for each one #}
+                        <p class="small mt-1 mb-0 category-link-wrapper"> 
+                            <!--Loop through all associated categories and create a link for each one -->
                             {% for category in product.category.all %}
                                 <a class="text-muted" href="{% url 'products' %}?category={{ category.name }}">
                                     <i class="fas fa-tag mr-1"></i>{{ category.friendly_name|default:category.name }}
@@ -48,7 +46,6 @@
                         </p>
                     {% endif %}
 
-                    {# Format the price - assumes 'price' is a DecimalField or similar #}
                     <p class="price">£{{ product.price|floatformat:2 }}</p>
 
                     <div class="rating-and-button-wrapper">
@@ -64,7 +61,7 @@
                 </div>
             {% empty %}
                 {# Display a message if no products are found #}
-                <div class="col-12"> {# Use col-12 to span the grid width if using Bootstrap rows/cols conceptually #}
+                <div class="col-12"> 
                     <p class="text-center lead my-5">Sorry, there are currently no products available.</p>
                 </div>
             {% endfor %}
@@ -123,17 +120,6 @@
 {% endblock content %}
 
 {% block extra_css %}
-<style>
-    
-    .product-card .text-muted {
-        margin-right: 10px;
-        vertical-align: middle;
-    }
-
-    .product-card .btn-tertiary {
-        vertical-align: middle;
-    }
-</style>
 {% endblock extra_css %}
 
 {% block extra_js %}

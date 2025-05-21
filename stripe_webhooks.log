@@ -4638,3 +4638,437 @@ Watching for file changes with StatReloader
 "GET /about/blog/ HTTP/1.1" 200 16933
 "GET /about/blog/2025/5/21/how/ HTTP/1.1" 200 17759
 "GET /products/ HTTP/1.1" 200 45470
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 27594
+Not Found: /static/media/cherryblossom_hero.jpg
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 17174
+"GET /profile/ HTTP/1.1" 200 77458
+"GET /products/ HTTP/1.1" 200 45470
+Not Found: /summer
+"GET /summer HTTP/1.1" 404 17174
+"GET /bag/ HTTP/1.1" 200 28583
+Not Found: /static/css/bag.css
+"GET /static/css/bag.css HTTP/1.1" 404 17174
+"GET /products/ HTTP/1.1" 200 45470
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 17174
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /products/ HTTP/1.1" 200 45470
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/macrame_candle.jpg HTTP/1.1" 200 371979
+"GET /media/Gold%20Bee.jpg HTTP/1.1" 200 223941
+"GET /media/strawberry_waxmelt.png HTTP/1.1" 200 870850
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+"GET /static/css/base.css HTTP/1.1" 200 49271
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/Coconut_roomspray.png HTTP/1.1" 200 325659
+"GET /media/Simple%20Truth.jpg HTTP/1.1" 200 145915
+"GET /media/giftset_large.jpg HTTP/1.1" 200 2657401
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/Floral%20Flow1.jpg HTTP/1.1" 200 143623
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/flower_rose_jasmin.jpg HTTP/1.1" 200 1456108
+"GET /media/heavenly_cloud-vaxmelt.png HTTP/1.1" 200 1981393
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /products/ HTTP/1.1" 200 45470
+"GET /static/css/base.css HTTP/1.1" 200 49271
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/macrame_candle.jpg HTTP/1.1" 200 371979
+"GET /media/Gold%20Bee.jpg HTTP/1.1" 200 223941
+"GET /media/strawberry_waxmelt.png HTTP/1.1" 200 870850
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+"GET /media/Coconut_roomspray.png HTTP/1.1" 200 325659
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/Simple%20Truth.jpg HTTP/1.1" 200 145915
+"GET /media/Floral%20Flow1.jpg HTTP/1.1" 200 143623
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/flower_rose_jasmin.jpg HTTP/1.1" 200 1456108
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+"GET /media/heavenly_cloud-vaxmelt.png HTTP/1.1" 200 1981393
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/giftset_large.jpg HTTP/1.1" 200 2657401
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /products/ HTTP/1.1" 200 45277
+"GET /static/css/base.css HTTP/1.1" 200 49271
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/macrame_candle.jpg HTTP/1.1" 200 371979
+"GET /media/Gold%20Bee.jpg HTTP/1.1" 200 223941
+"GET /media/strawberry_waxmelt.png HTTP/1.1" 200 870850
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+"GET /media/Coconut_roomspray.png HTTP/1.1" 200 325659
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/Simple%20Truth.jpg HTTP/1.1" 200 145915
+"GET /media/Floral%20Flow1.jpg HTTP/1.1" 200 143623
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/flower_rose_jasmin.jpg HTTP/1.1" 200 1456108
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+"GET /media/heavenly_cloud-vaxmelt.png HTTP/1.1" 200 1981393
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/giftset_large.jpg HTTP/1.1" 200 2657401
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /products/ HTTP/1.1" 200 45277
+"GET /static/css/base.css HTTP/1.1" 200 49165
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/macrame_candle.jpg HTTP/1.1" 200 371979
+"GET /media/Gold%20Bee.jpg HTTP/1.1" 200 223941
+"GET /media/strawberry_waxmelt.png HTTP/1.1" 200 870850
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+"GET /media/Coconut_roomspray.png HTTP/1.1" 200 325659
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/Simple%20Truth.jpg HTTP/1.1" 200 145915
+"GET /media/giftset_large.jpg HTTP/1.1" 200 2657401
+"GET /media/Floral%20Flow1.jpg HTTP/1.1" 200 143623
+"GET /media/heavenly_cloud-vaxmelt.png HTTP/1.1" 200 1981393
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+"GET /media/flower_rose_jasmin.jpg HTTP/1.1" 200 1456108
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /products/ HTTP/1.1" 200 46285
+"GET /static/css/base.css HTTP/1.1" 200 49165
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/macrame_candle.jpg HTTP/1.1" 200 371979
+"GET /media/Gold%20Bee.jpg HTTP/1.1" 200 223941
+"GET /media/strawberry_waxmelt.png HTTP/1.1" 200 870850
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+"GET /media/Coconut_roomspray.png HTTP/1.1" 200 325659
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/Simple%20Truth.jpg HTTP/1.1" 200 145915
+"GET /media/Floral%20Flow1.jpg HTTP/1.1" 200 143623
+"GET /media/giftset_large.jpg HTTP/1.1" 200 2657401
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/flower_rose_jasmin.jpg HTTP/1.1" 200 1456108
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+"GET /media/heavenly_cloud-vaxmelt.png HTTP/1.1" 200 1981393
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /products/ HTTP/1.1" 200 46285
+"GET /static/css/base.css HTTP/1.1" 200 48348
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /products/ HTTP/1.1" 200 46285
+"GET /static/css/base.css HTTP/1.1" 200 48172
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+"GET /media/macrame_candle.jpg HTTP/1.1" 200 371979
+"GET /media/Gold%20Bee.jpg HTTP/1.1" 200 223941
+"GET /media/strawberry_waxmelt.png HTTP/1.1" 200 870850
+"GET /media/reed_diffuser.png HTTP/1.1" 200 1188856
+"GET /media/Coconut_roomspray.png HTTP/1.1" 200 325659
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/Simple%20Truth.jpg HTTP/1.1" 200 145915
+"GET /media/giftset_large.jpg HTTP/1.1" 200 2657401
+"GET /media/Floral%20Flow1.jpg HTTP/1.1" 200 143623
+"GET /media/heavenly_cloud-vaxmelt.png HTTP/1.1" 200 1981393
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+"GET /media/flower_rose_jasmin.jpg HTTP/1.1" 200 1456108
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/handpaint_gold_rim.jpg HTTP/1.1" 200 1828712
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 27614
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\home\views.py", line 25, in home_view
+    return render(request, 'home/index.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'media/wooden_brick_wall.jpg' not found. 'media/wooden_brick_wall.jpg' is not a valid view function or pattern name.
+"GET / HTTP/1.1" 500 174253
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 27608
+"GET /static/css/base.css HTTP/1.1" 200 48172
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/wooden_brick_wall.jpg HTTP/1.1" 200 967734
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 27608
+"GET /static/css/base.css HTTP/1.1" 200 48275
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/wooden_brick_wall.jpg HTTP/1.1" 200 967734
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+Not Found: /media/hero_candles_overlay.png
+"GET /media/hero_candles_overlay.png HTTP/1.1" 404 3995
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 27608
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/wooden_brick_wall.jpg HTTP/1.1" 200 967734
+"GET /static/css/base.css HTTP/1.1" 200 48265
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /static/css/%7B%7BMEDIA%7D%7Dhero_pic.png HTTP/1.1" 404 1897
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 27608
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/wooden_brick_wall.jpg HTTP/1.1" 200 967734
+"GET /static/css/base.css HTTP/1.1" 200 48262
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+Not Found: /media/hero_pic.png
+"GET /media/hero_pic.png HTTP/1.1" 404 3947
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 27608
+"GET /static/css/base.css HTTP/1.1" 200 48260
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/wooden_brick_wall.jpg HTTP/1.1" 200 967734
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+Not Found: /media/hero_pic.png
+"GET /media/hero_pic.png HTTP/1.1" 404 3947
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 27608
+"GET /static/css/base.css HTTP/1.1" 200 48260
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/wooden_brick_wall.jpg HTTP/1.1" 200 967734
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+Not Found: /media/hero_pic.png
+"GET /media/hero_pic.png HTTP/1.1" 404 3947
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 27608
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/wooden_brick_wall.jpg HTTP/1.1" 200 967734
+"GET /static/css/base.css HTTP/1.1" 200 48262
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+Not Found: /media/hero_pic.png
+"GET /media/hero_pic.png HTTP/1.1" 404 3947
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+Not Found: /media/hero_pic.png
+"GET /media/hero_pic.png HTTP/1.1" 404 3947
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+Not Found: /media/hero_pic.png
+"GET /media/hero_pic.png HTTP/1.1" 404 3947
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/hero_pic.jpg HTTP/1.1" 200 2026179
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 27608
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 48263
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/wooden_brick_wall.jpg HTTP/1.1" 200 967734
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/cherryblossom_hero.jpg HTTP/1.1" 200 1683574
+"GET /media/hero_pic.jpg HTTP/1.1" 200 2026179
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 27608
+"GET /static/css/base.css HTTP/1.1" 200 48162
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/wooden_brick_wall.jpg HTTP/1.1" 200 967734
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/hero_pic.jpg HTTP/1.1" 200 2026179
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 27608
+"GET /static/css/base.css HTTP/1.1" 200 48162
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/wooden_brick_wall.jpg HTTP/1.1" 200 967734
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/hero_pic.jpg HTTP/1.1" 200 2026179
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 27608
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /static/css/base.css HTTP/1.1" 200 48162
+"GET /media/wooden_brick_wall.jpg HTTP/1.1" 200 967734
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/hero_pic.jpg HTTP/1.1" 200 2026179
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET / HTTP/1.1" 200 27608
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/wooden_brick_wall.jpg HTTP/1.1" 200 967734
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /static/css/base.css HTTP/1.1" 200 48162
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/hero_pic.jpg HTTP/1.1" 200 2026179
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET / HTTP/1.1" 200 27608
+"GET /static/css/base.css HTTP/1.1" 200 48166
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/wooden_brick_wall.jpg HTTP/1.1" 200 967734
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /media/hero_pic.jpg HTTP/1.1" 200 2026179
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3683
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/wooden_brick_wall.jpg HTTP/1.1" 200 967734
+"GET /products/?category=candles HTTP/1.1" 200 36487
+"GET /static/css/base.css HTTP/1.1" 200 48166
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/Love1.jpg HTTP/1.1" 200 139944
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/macrame_candle.jpg HTTP/1.1" 200 371979
+"GET /media/Gold%20Bee.jpg HTTP/1.1" 200 223941
+"GET /media/Godess1.jpg HTTP/1.1" 200 93957
+"GET /media/Simple%20Truth.jpg HTTP/1.1" 200 145915
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/giftset_large.jpg HTTP/1.1" 200 2657401
+"GET /media/Floral%20Flow1.jpg HTTP/1.1" 200 143623
+"GET /media/flower_rose_jasmin.jpg HTTP/1.1" 200 1456108
