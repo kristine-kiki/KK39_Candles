@@ -4486,3 +4486,155 @@ Not Found: /static/css/base.css
 "GET /static/css/base.css HTTP/1.1" 404 17681
 C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
 Watching for file changes with StatReloader
+Not Found: /summer
+"GET /summer HTTP/1.1" 404 3668
+"GET / HTTP/1.1" 200 28101
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /static/css/base.css HTTP/1.1" 200 49080
+"GET /about/our_story/ HTTP/1.1" 200 17111
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 28101
+Not Found: /static/media/cherryblossom_hero.jpg
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 17681
+"GET /about/our_story/ HTTP/1.1" 200 17111
+"GET /products/ HTTP/1.1" 200 45977
+"GET / HTTP/1.1" 200 28101
+Not Found: /static/media/cherryblossom_hero.jpg
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 17681
+"GET /bag/ HTTP/1.1" 200 34085
+Not Found: /static/css/bag.css
+"GET /static/css/bag.css HTTP/1.1" 404 17681
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /checkout/ HTTP/1.1" 200 102286
+Not Found: /static/checkout/css/checkout.css
+"GET /static/checkout/css/checkout.css HTTP/1.1" 404 17681
+Not Found: /static/checkout/css/checkout.css
+"GET /static/checkout/css/checkout.css HTTP/1.1" 404 17681
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 17681
+"GET /bag/ HTTP/1.1" 200 34085
+Not Found: /static/css/base.css
+Not Found: /static/css/bag.css
+"GET /static/css/bag.css HTTP/1.1" 404 17681
+"GET /static/css/base.css HTTP/1.1" 404 17681
+Not Found: /media/refreshing_pine_roomspray.png
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 404 17681
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 17681
+"GET / HTTP/1.1" 200 28101
+Not Found: /static/media/cherryblossom_hero.jpg
+Not Found: /static/css/base.css
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 17681
+"GET /static/css/base.css HTTP/1.1" 404 17681
+- Broken pipe from ('127.0.0.1', 54591)
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 28101
+Not Found: /static/css/base.css
+"GET /static/css/base.css HTTP/1.1" 404 15902
+Not Found: /static/media/cherryblossom_hero.jpg
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 15902
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 15902
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 26322
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /static/css/base.css HTTP/1.1" 200 49080
+"GET /bag/ HTTP/1.1" 200 27311
+"GET /static/css/bag.css HTTP/1.1" 200 14477
+"GET /support/contact/ HTTP/1.1" 200 17268
+"GET /products/?category=for_home HTTP/1.1" 200 24690
+"GET /media/refreshing_pine_roomspray.png HTTP/1.1" 200 285351
+"GET / HTTP/1.1" 200 26322
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /accounts/login/ HTTP/1.1" 200 16909
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/base.css HTTP/1.1" 200 49080
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /support/contact/ HTTP/1.1" 200 17268
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3794
+"GET /static/css/base.css HTTP/1.1" 200 49080
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 26322
+Not Found: /static/css/base.css
+Not Found: /static/media/cherryblossom_hero.jpg
+"GET /static/css/base.css HTTP/1.1" 404 15902
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 15902
+Not Found: /static/css/base.css
+"GET /static/css/base.css HTTP/1.1" 404 15902
+Not Found: /static/css/base.css
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/base.css HTTP/1.1" 404 15902
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 15902
+"GET / HTTP/1.1" 200 26322
+Not Found: /static/css/base.css
+"GET /static/css/base.css HTTP/1.1" 404 15902
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 15902
+Not Found: /static/media/cherryblossom_hero.jpg
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 15902
+Not Found: /media/Godess.jpg
+"GET /media/Godess.jpg HTTP/1.1" 404 15902
+Not Found: /media/persian_star_macrame.png
+"GET /media/persian_star_macrame.png HTTP/1.1" 404 15902
+Not Found: /media/spring_bloom_diffuser.jpg
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 404 15902
+Not Found: /media/Gift Set.jpg
+"GET /media/Gift%20Set.jpg HTTP/1.1" 404 15902
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 26322
+Not Found: /static/media/cherryblossom_hero.jpg
+Not Found: /static/css/base.css
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 15902
+"GET /static/css/base.css HTTP/1.1" 404 15902
+Not Found: /media/Godess.jpg
+Not Found: /media/persian_star_macrame.png
+"GET /media/Godess.jpg HTTP/1.1" 404 15902
+"GET /media/persian_star_macrame.png HTTP/1.1" 404 15902
+Not Found: /media/spring_bloom_diffuser.jpg
+Not Found: /media/Gift Set.jpg
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 404 15902
+"GET /media/Gift%20Set.jpg HTTP/1.1" 404 15902
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 26322
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /static/css/base.css HTTP/1.1" 200 49080
+"GET /media/Godess.jpg HTTP/1.1" 200 91568
+"GET /media/persian_star_macrame.png HTTP/1.1" 200 530882
+"GET /media/Gift%20Set.jpg HTTP/1.1" 200 178088
+"GET /media/spring_bloom_diffuser.jpg HTTP/1.1" 200 1408694
+"GET /support/contact/ HTTP/1.1" 200 17268
+"GET /accounts/login/ HTTP/1.1" 200 16909
+"POST /accounts/login/ HTTP/1.1" 200 16942
+"POST /accounts/login/ HTTP/1.1" 200 16922
+"GET /accounts/password/reset/ HTTP/1.1" 200 15693
+"POST /accounts/password/reset/ HTTP/1.1" 302 0
+"GET /accounts/password/reset/done/ HTTP/1.1" 200 15574
+"GET /accounts/password/reset/key/1-cq691o-ba10a5023c38932e150caa1cba2310c7/ HTTP/1.1" 302 0
+"GET /accounts/password/reset/key/1-set-password/ HTTP/1.1" 200 16402
+"POST /accounts/password/change/ HTTP/1.1" 302 0
+"GET /accounts/login/?next=/accounts/password/change/ HTTP/1.1" 200 17017
+"POST /accounts/login/ HTTP/1.1" 200 17030
+"POST /accounts/login/ HTTP/1.1" 200 17050
+"POST /accounts/login/ HTTP/1.1" 200 17049
+"POST /accounts/login/ HTTP/1.1" 200 17049
+"GET /accounts/signup/ HTTP/1.1" 200 17074
+"GET /accounts/login/ HTTP/1.1" 200 16909
+"POST /accounts/login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 28061
+"GET /static/media/cherryblossom_hero.jpg HTTP/1.1" 404 1898
+"GET /profile/ HTTP/1.1" 200 77458
+"GET /accounts/email/ HTTP/1.1" 200 19048
+"GET /about/blog/ HTTP/1.1" 200 16933
+"GET /about/blog/2025/5/21/how/ HTTP/1.1" 200 17759
+"GET /products/ HTTP/1.1" 200 45470
