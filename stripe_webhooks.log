@@ -5656,3 +5656,22 @@ Not Found: /favicon.ico
 "GET / HTTP/1.1" 200 29173
 Not Found: /favicon.ico
 "GET /favicon.ico HTTP/1.1" 404 18498
+"POST /checkout/wh/ HTTP/1.1" 200 50
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\home\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 29167
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\home\urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /newsletter/thanks HTTP/1.1" 200 18149
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 18498
+"GET / HTTP/1.1" 200 29173
+"GET / HTTP/1.1" 200 29161
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 18486
+"GET /newsletter/thanks HTTP/1.1" 200 17676
