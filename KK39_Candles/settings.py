@@ -36,7 +36,6 @@ ALLOWED_HOSTS = [
     'kk39-candles-24591ccdc142.herokuapp.com'
 ]
 
-
 # Application definition
 
 INSTALLED_APPS = [

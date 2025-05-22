@@ -11,7 +11,12 @@
             <a class="nav-link dropdown-toggle" href="#" id="utilityUserDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-user"></i> 
             </a>
+
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="utilityUserDropdown">
+                <span class="dropdown-item-text">
+                Hi, {% if user.first_name %}{{ user.first_name }}{% else %}{{ user.username }}{% endif %}!
+                </span>
+                <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{% url 'profile' %}"><i class="fas fa-history fa-fw mr-2"></i>My Profile / Orders</a>
                 <a class="dropdown-item" href="{% url 'account_email' %}"><i class="fas fa-envelope fa-fw mr-2"></i>Manage Email</a>
                 {% if user.is_superuser %}

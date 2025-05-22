@@ -5675,3 +5675,39 @@ Not Found: /favicon.ico
 Not Found: /favicon.ico
 "GET /favicon.ico HTTP/1.1" 404 18486
 "GET /newsletter/thanks HTTP/1.1" 200 17676
+"GET / HTTP/1.1" 200 29161
+"GET / HTTP/1.1" 200 29280
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 18605
+"GET / HTTP/1.1" 200 29334
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 18659
+"GET /bag/ HTTP/1.1" 200 35140
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 18659
+"POST /bag/adjust/15/ HTTP/1.1" 302 0
+"GET /bag/ HTTP/1.1" 200 35140
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 18659
+"POST /bag/adjust/15/ HTTP/1.1" 302 0
+"GET /bag/ HTTP/1.1" 200 35140
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 18659
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 29334
+"GET /bag/ HTTP/1.1" 200 35140
+"GET /bag/ HTTP/1.1" 200 35140
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 18659
+"POST /bag/adjust/15/ HTTP/1.1" 302 0
+"GET /bag/ HTTP/1.1" 200 35140
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 29334
+"GET /bag/ HTTP/1.1" 200 35140
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 18659
+"POST /bag/adjust/15/ HTTP/1.1" 302 0
+"GET /bag/ HTTP/1.1" 200 35140
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 18659
