@@ -707,7 +707,6 @@ button {
 
 }
 
-
 /* --- Hero Section --- */
 .hero {
     height: 75vh; /* Taller hero */
@@ -722,10 +721,10 @@ button {
     top: -10px; left: -10px; bottom: -10px;
     width: calc(75% + 10px);
     background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.05)),
-                      url("{{ MEDIA_URL }}hero_pic.jpg");
+                      url(https://kk39-candles.s3.eu-north-1.amazonaws.com/media/hero_pic.jpg);
     background-size: cover;
     background-position: center left;
-    filter: blur(2px);
+    filter: blur(3px);
     z-index: 0; /* Push behind content */
 }
 

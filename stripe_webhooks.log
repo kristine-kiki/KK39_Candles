@@ -5337,3 +5337,79 @@ Not Found: /favicon.ico
 C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
 Watching for file changes with StatReloader
 "GET / HTTP/1.1" 200 27896
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 27896
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 17222
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 27896
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\env.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 27896
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 27896
+"GET / HTTP/1.1" 200 27896
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 17222
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 27896
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 17222
+"GET / HTTP/1.1" 200 27896
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 17222
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 17222
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 17222
+"GET / HTTP/1.1" 200 27896
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 17222
+"GET / HTTP/1.1" 200 27896
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 17222
+"GET / HTTP/1.1" 200 27896
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 17222
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 17222
+"GET / HTTP/1.1" 200 27896
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 17222
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 17222
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 27896
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 17222
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 27896
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 17222
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 17222
+"GET / HTTP/1.1" 200 27896
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 17222
+"GET / HTTP/1.1" 200 27896
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 17222
+"GET / HTTP/1.1" 200 27896
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 17222
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 27896
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3625
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 27896
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3625
+"GET / HTTP/1.1" 200 27896
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3625
+Not Found: /favicon.ico
