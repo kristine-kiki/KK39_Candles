@@ -125,11 +125,31 @@
                     <a href="https://uk.pinterest.com/" aria-label="Pinterest" target='_blank'><i class="fab fa-pinterest-p"></i></a>
                 </div>
                 <h4>Newsletter</h4>
-                {# Consider using a Django form for the newsletter #}
-                <form class="newsletter-form">
+                <form class="newsletter-form"
+                    action="https://gmail.us11.list-manage.com/subscribe/post?u=761f0b90922c4e17de362202b&id=5ed6cff68c&f_id=0056abe0f0"
+                    method="post"
+                    name="mc-embedded-subscribe-form" {# Added from Mailchimp form for completeness #}
+                    target="_self" {# Mailchimp uses _blank, but _self is fine if you prefer #}
+                    novalidate>
+
+                    <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Enter your email" required value=""> {# Added classes and id from Mailchimp for potential JS hooks if they have any, value="" is good practice #}
+
+                    <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                        <input type="text" name="b_761f0b90922c4e17de362202b_5ed6cff68c" tabindex="-1" value="">
+                    </div>
+
+                    <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-newsletter">Subscribe</button> {# Added id from Mailchimp button #}
+                    
+                    <div id="mce-responses" class="clear foot" style="display:none;">
+                        <div class="response" id="mce-error-response" style="display: none;"></div>
+                        <div class="response" id="mce-success-response" style="display: none;"></div>
+                    </div>
+                </form>
+
+                <!--form class="newsletter-form">
                     <input type="email" placeholder="Enter your email" required>
                     <button type="submit" class="btn btn-newsletter">Subscribe</button>
-                </form>
+                </form-->
             </div>
         </div>
         <div class="footer-bottom">

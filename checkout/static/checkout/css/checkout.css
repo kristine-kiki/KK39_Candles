@@ -5,7 +5,7 @@
 
 .checkout-section-title {
     font-size: 1.5rem; /* Adjust as needed */
-    /* font-family: 'Your Logo Font', sans-serif; */ /* Example font */
+    font-family: 'Playfair Display', serif;
     margin-bottom: 1.25rem;
     color: #333333; /* Dark text */
 }
@@ -21,9 +21,10 @@ hr {
     border: 1px solid #C8B8AB; /* Theme border color - ADJUST */
     border-radius: 0; /* Square corners */
     padding: 0.5rem 0.75rem;
-    height: calc(1.5em + 1rem + 2px); /* Match Bootstrap default height */
+    /*height: calc(1.5em + 1rem + 2px); /* Match Bootstrap default height */
     box-shadow: none;
     color: #333333;
+    margin-bottom: 1rem;
 }
 #payment-form .form-control:focus,
 #payment-form .django-countries-countryselect:focus {

@@ -5574,3 +5574,85 @@ Not Found: /.well-known/appspecific/com.chrome.devtools.json
 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 17102
 Not Found: /favicon.ico
 "GET /favicon.ico HTTP/1.1" 404 17102
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 27777
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 17102
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"POST /checkout/wh/ HTTP/1.1" 200 50
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 27777
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 17102
+"GET /bag/ HTTP/1.1" 200 28559
+"GET /products/?category=home_diffuser HTTP/1.1" 200 19593
+"GET /products/15/ HTTP/1.1" 200 26177
+"POST /bag/add/15/ HTTP/1.1" 302 0
+"GET /products/15/ HTTP/1.1" 200 26827
+"GET /bag/ HTTP/1.1" 200 33784
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /checkout/ HTTP/1.1" 200 40084
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /checkout/ HTTP/1.1" 200 90847
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 17303
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /checkout/ HTTP/1.1" 200 90814
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 17303
+"GET /checkout/ HTTP/1.1" 200 90820
+"POST /checkout/wh/ HTTP/1.1" 200 50
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 17303
+"GET /checkout/ HTTP/1.1" 200 90821
+"POST /checkout/wh/ HTTP/1.1" 200 50
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 17303
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /checkout/ HTTP/1.1" 200 90816
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 17303
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /checkout/ HTTP/1.1" 200 90812
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 17303
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /checkout/ HTTP/1.1" 200 90805
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 17303
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 27978
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 17303
+"GET /bag/ HTTP/1.1" 200 33784
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /checkout/ HTTP/1.1" 200 90760
+"GET /checkout/ HTTP/1.1" 200 90766
+"POST /checkout/wh/ HTTP/1.1" 200 50
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 17303
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /checkout/ HTTP/1.1" 200 90762
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 17303
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 17303
+"GET /products/?category=for_home HTTP/1.1" 200 26522
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 17303
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 27978
+"GET /support/contact/ HTTP/1.1" 200 18669
+"GET / HTTP/1.1" 200 27978
+"GET / HTTP/1.1" 200 28440
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 17765
+"GET / HTTP/1.1" 200 29173
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 18498

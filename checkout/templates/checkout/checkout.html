@@ -34,14 +34,14 @@
             <p class="text-muted">Please fill in your details below.</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
-                <fieldset class="rounded px-3 mb-3 pb-2">
-                    <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
+                <fieldset class="rounded px-3 mb-3">
+                    <legend class="form-label small">Details</legend>
                     {{ order_form.full_name|as_crispy_field }}
                     {{ order_form.email|as_crispy_field }}
                     {{ order_form.phone_number|as_crispy_field }}
                 </fieldset>
-                <fieldset class="rounded px-3 mb-3 pb-2">
-                    <legend class="fieldset-label small text-black px-2 w-auto">Shipping Address</legend>
+                <fieldset class="rounded px-3 mb-3">
+                    <legend class="form-label small">Shipping Address</legend>
                     {{ order_form.street_address1|as_crispy_field }}
                     {{ order_form.street_address2|as_crispy_field }}
                     {{ order_form.town_or_city|as_crispy_field }}
@@ -50,17 +50,19 @@
                     
                     <!-- Country Field with Manual Rendering -->
                     <div class="mb-3">
-                        <label for="{{ order_form.country.id_for_label }}" class="form-label">Country*</label>
-                        <select name="{{ order_form.country.name }}" id="{{ order_form.country.id_for_label }}" 
-                                class="form-select {% if order_form.country.errors %}is-invalid{% endif %}"
-                                required>
-                            {% for code, name in order_form.fields.country.choices %}
-                                {% if code %}
-                                    <option value="{{ code }}" {% if order_form.country.value == code %}selected{% endif %}>
-                                        {{ name }}
-                                    </option>
-                                {% endif %}
-                            {% endfor %}
+                        <label for="id_default_country" class="form-label small {% if form.default_country.field.required %}requiredField{% endif %}">
+                            Country{% if form.default_country.field.required %}<span class="asteriskField">*</span>{% endif %}
+                        </label>
+                        
+                        <select name="{{ order_form.country.html_name }}"
+                                id="{{ order_form.country.id_for_label }}" {# Use standard ID #}
+                                class="form-control {% if order_form.country.errors %}is-invalid{% endif %}">
+                                {% if order_form.country.field.required %}required{% endif %}
+                                    {% for value, display_text in order_form.country.field.choices %}
+                                        <option value="{{ value }}" {% if order_form.country.value|stringformat:"s" == value|stringformat:"s" %}selected{% endif %}>
+                                            {{ display_text }}
+                                        </option>
+                                    {% endfor %}
                         </select>
                         {% if order_form.country.errors %}
                             <div class="invalid-feedback">
@@ -87,7 +89,7 @@
 
                 <!-- Payment Section -->
                 <fieldset class="px-3">
-                    <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+                    <legend class="form-label small">Payment</legend>
 
                     <div id="payment-request-button" class="mb-3">
 
