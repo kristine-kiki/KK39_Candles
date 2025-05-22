@@ -722,10 +722,10 @@ button {
     top: -10px; left: -10px; bottom: -10px;
     width: calc(75% + 10px);
     background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.05)),
-    url('/media/cherryblossom_hero.jpg');
+    url('/media/hero_pic.jpg');
     background-size: cover;
     background-position: center left;
-    filter: blur(4px);
+    filter: blur(2px);
     z-index: 0; /* Push behind content */
 }
 
@@ -794,7 +794,7 @@ button {
     letter-spacing: 1.5px;
     text-transform: uppercase;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2.5px 4.5px rgba(0,0,0,0.17);
 }
 
 .btn-hero:hover {
@@ -819,105 +819,87 @@ button {
 .shop-section { background-color: var(--bg-accent); } /* Contrast background */
 
 .product-grid {
-    display: grid;
-    /* Adjust columns based on your design, e.g., for 4 columns: */
+    display: grid; /* You're using CSS Grid, so 'grid' not 'flex' */
+    align-items: stretch; 
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns */
     gap: 20px; /* Space between cards */
-    /* align-items: stretch; /* Default, makes cards in a row the same height if their content allows */
 }
 
 .product-card {
-    display: flex; /* Use flexbox for internal layout */
-    flex-direction: column; /* Stack items vertically */
-    border: 1px solid #EAE0D5; /* Your existing border or similar */
-    background-color: #FAF8F1; /* Your card background or similar */
-    padding: 15px;
-    text-align: center; /* If you want most text centered */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Subtle shadow for depth */
-    height: 100%; /* Make card take full height of its grid cell if align-items: stretch is used on parent */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #EAE0D5;
+    background-color: #FAF8F1;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    /* height: 100%; */ /* With display: grid on parent, items should stretch to fill cell.
+                           This can be useful, or sometimes you might let content define height if
+                           align-items on grid is set to stretch. Let's keep it for now as it's not harmful. */
 }
 
 .product-card .product-image-container {
     width: 100%;
-    /* Option 1: Fixed Aspect Ratio (e.g., square, or 4:3, 3:4) - Recommended! */
-    aspect-ratio: 1 / 1; /* For square images. Adjust (e.g., 4/3 for landscape-ish) */
-    overflow: hidden; /* Crucial to contain the image within the aspect ratio box */
-    margin-bottom: 15px; /* Space below the image container */
-}
-
-.product-card .product-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Scales image to cover the container, cropping if necessary.
-                          Use 'contain' if you want to see the whole image, possibly with letterboxing. */
-    display: block; /* Removes extra space below image */
-}
-
-/* If you don't want aspect-ratio and prefer a fixed height (less flexible for different image shapes): */
-
-.product-card .product-image-container {
-    width: 100%;
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 3 / 4; /* This aspect-ratio is good for image consistency */
     overflow: hidden;
-    margin-bottom: 15px;
+    margin-bottom: 15px; 
 }
+
 .product-card .product-image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
-} 
+    display: block; 
+}
 
-
-.product-card h3 { /* Product Name */
+.product-card h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.4rem; /* Or your chosen size */
+    font-size: 1.4rem;
     color: #333;
-    margin-top: 0; 
-    margin-bottom: 4px; 
+    margin-top: 0;
+    margin-bottom: 4px; /* Keep consistent bottom margins */
+    /* Consider a min-height if title length varies significantly and you want more consistent starting points for content below */
+    /* min-height: 2.8em; /* approx 2 lines, adjust line-height if needed */
 }
 
 .product-card .category-link-wrapper {
-    font-size: 0.95rem; 
+    font-size: 0.95rem;
     color: #555;
-    margin-bottom: 6px; 
+    margin-bottom: 6px; /* Consistent bottom margin */
 }
 
 .product-card .price {
     font-family: 'Lato', sans-serif;
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
     font-weight: bold;
     color: #E57373;
-    margin-bottom: 3px; 
+    margin-bottom: 10px;
 }
 
-.product-card-content-spacer {
-    flex-grow: 0.5; 
-}
 
 .product-card .rating-and-button-wrapper {
-    margin-top: 8px;
-    margin-bottom: 8px; 
+    display: flex;                 
+    flex-direction: column;
+    align-items: center;           
+    margin-top: auto;
+    padding-top: 10px;  
+    width: 100%;       
 }
 
 .product-card .product-rating-display {
-    display: inline-block; 
-    margin-right: 10px; /* Space between rating and button */
-    vertical-align: middle;
     font-size: 0.9rem;
     color: #555;
-}
-.product-card .product-rating-display .fa-star {
-    color: #FFD700; /* Gold star */
-    /* margin-right: 5px; // Using Bootstrap mr-2/mr-3 on the icon itself is fine */
+    margin-bottom: 9px;
 }
 
-.product-card .btn-tertiary { /* View Product Button */
-    display: inline-block; /* Or block if you want it full width */
-    vertical-align: middle;
-    /* Your existing button styles for .btn-tertiary or .btn */
-    padding: 8px 15px; /* Example padding */
-    
+.product-card .product-rating-display .fa-star {
+    color: #FFD700;
+    margin-right: 0.25em;
+}
+
+.product-card .btn-tertiary {
+    padding: 8px 15px;
+    white-space: nowrap; /* Ensure "View Product" stays on one line */
 }
 
 .view-all-link { text-align: center; margin-top: 50px; }
