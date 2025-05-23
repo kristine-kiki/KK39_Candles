@@ -1032,6 +1032,28 @@ button {
     opacity: 0.7;
 }
 
+/* Our Story page */
+
+#our-story-content .col-lg-8.offset-lg-2 h2,
+#our-story-content .col-lg-8.offset-lg-2 .lead {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+}
+
+#our-story-content .col-lg-8.offset-lg-2 p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
+
+#our-story-content .col-lg-8.offset-lg-2 p em,
+#our-story-content .col-lg-8.offset-lg-2 em {
+}
+
+#our-story-content .col-lg-8.offset-lg-2 p:last-of-type {
+    margin-bottom: 0;
+}
+
+
 /* === Login Page Specific Styles === */
 
 .login-page-container {
@@ -1457,6 +1479,10 @@ button {
     div.admin-actions {
         text-align: center;
     }
+    #our-story-content .col-lg-8.offset-lg-2 h2,
+    #our-story-content .col-lg-8.offset-lg-2 .lead {
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1497,6 +1523,10 @@ button {
 
     form.rating-form, div.admin-actions, div.text-center {
         text-align: center;
+    }
+    #our-story-content .col-lg-8.offset-lg-2 h2,
+    #our-story-content .col-lg-8.offset-lg-2 .lead {
+        font-size: 1.35rem;
     }
 }
 

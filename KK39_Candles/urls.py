@@ -29,6 +29,7 @@ urlpatterns = [
     path('profile/', include('profiles.urls')),
     path('about/', include('about.urls', namespace='about')),
     path('support/', include('contact.urls', namespace='contact')),
+    path('summernote/', include('django_summernote.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = 'KK39_Candles.views.handler404'

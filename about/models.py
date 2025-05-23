@@ -3,6 +3,7 @@ from django.contrib.auth.models import User # To link posts to an author
 from django.urls import reverse
 from django.utils.text import slugify # To generate URL-friendly slugs
 from django.utils import timezone 
+from django_summernote.fields import SummernoteTextField
 
 class Post(models.Model):
     """
@@ -16,7 +17,7 @@ class Post(models.Model):
     title = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250, unique_for_date='publish_date', blank=True) # unique_for_date helps ensure unique URLs if titles are similar on different dates
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='about_blog_posts')
-    content = models.TextField()
+    content = SummernoteTextField()
     publish_date = models.DateTimeField(default=timezone.now) # When the post should be considered published
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
