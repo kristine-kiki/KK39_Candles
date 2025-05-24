@@ -1520,6 +1520,18 @@ button {
     #our-story-content .col-lg-8.offset-lg-2 .lead {
         font-size: 1.35rem;
     }
+    .search-form .form-control,
+    .search-form .input-group-append .btn {
+        font-size: 0.85rem; 
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        height: calc(1.5em + 0.5rem + 2px);
+    }
+
+    .search-form .btn {
+        padding-left: 0.5rem; 
+        padding-right: 0.5rem;
+    }
 }
 
 @media (max-width: 375px) { 
