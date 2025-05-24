@@ -210,7 +210,6 @@ This project is configured for deployment to <strong>Heroku</strong> with static
 ---
 
 ## Key Funcionality Overview 
-
 ### User Facing
 *   **Homepage:** Features hero section, bestsellers, "Our Story" teaser, newsletter signup.
 *   **Products Page & Search:** Lists all products, allows filtering by category. A dedicated search page (`/search/`) allows users to find products based on keywords in product names, descriptions, and categories. <!-- <<< MODIFIED/ADDED DETAIL -->
@@ -223,7 +222,6 @@ This project is configured for deployment to <strong>Heroku</strong> with static
 *   **Contact Section:** "Contact Us" form, "FAQ", "Shipping & Returns", "Terms of Service".
 
 ### Admin Facing (`/admin/`)
-
 *   **Product Management:** Add, edit, delete products, including details, images, pricing, stock, categories, bestseller status.
 *   **Category Management:** Manage product categories.
 *   **Order Management:** View and update order details and statuses.

@@ -7439,3 +7439,15 @@ Watching for file changes with StatReloader
 "GET /search/ HTTP/1.1" 200 19147
 "GET /search/?q=pillar HTTP/1.1" 200 29267
 "GET / HTTP/1.1" 200 30907
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 30907
+"GET /admin HTTP/1.1" 301 0
+"GET /admin/ HTTP/1.1" 200 21145
+"GET /admin/auth/user/ HTTP/1.1" 200 22475
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/profiles/userprofile/ HTTP/1.1" 200 19761
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/profiles/userprofile/1/change/ HTTP/1.1" 200 33113
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET / HTTP/1.1" 200 30907
+"GET /profile/ HTTP/1.1" 200 82821
