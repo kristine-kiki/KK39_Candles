@@ -262,55 +262,47 @@ button {
     display: flex;
     align-items: center;
     gap: 35px;
-}
+} */
 
-.search-form { display: flex; align-items: center; }
-.search-input {
-    border: none;
-    border-bottom: 1px solid var(--border-color);
-    padding: 5px 0;
-    font-size: 0.9rem;
-    color: var(--text-color);
-    width: 0; /* Hidden initially *
-    opacity: 0;
-    transition: all 0.4s ease;
-    background-color: transparent;
-}
-.search-input::placeholder {
-    color: var(--text-color);
-    opacity: 0.6;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-}
-.search-button { /* Position search icon, clicking it reveals input *
-    background: none;
-    border: none;
-    color: var(--text-color);
-    font-size: 1.1rem;
-    cursor: pointer;
-    padding: 5px;
-    order: 1; /* Icon appears first *
-}
-.search-button:hover + .search-input,
-.search-input:focus { /* Show input on hover/focus of button/input *
-    width: 150px;
-    opacity: 1;
-    margin-left: -5px; /* Adjust position slightly 
-}
-.search-button:hover { color: var(--text-heading); opacity: 1; }
-
-.header-icon {
-    color: var(--text-color);
-    font-size: 1rem;
-    display: flex;
+.search-form .input-group {
+    display: flex; 
     align-items: center;
-    gap: 6px;
+    flex-wrap: nowrap; 
 }
-.header-icon i { font-size: 1.3rem; }
-.header-icon:hover { opacity: 0.7; }
-.login-link { font-size: 0.85rem; font-weight: 400; text-transform: uppercase; letter-spacing: 1px;}/
+.search-form form-control,
+.search-form .btn {
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+    font-size: 1rem;    /* Ensure same font size */
+    line-height: 1.5;
+    height: calc(1.5em + 0.75rem + 2px); 
+    border-radius: 0;
+    box-sizing: border-box;
+}
+.search-form .input-group-append .btn {
+    display: inline-flex; /* Allows align-items to work on button content */
+    align-items: center;
+    justify-content: center;
+}
+.search-form .btn .fas.fa-search {
+    margin-right: 0.35rem;
+}
 
-/* Assuming you have a class on your <nav> element, e.g., .main-navbar */
+.search-page-divider {
+    width: 60%; 
+    margin-top: 1.5rem;    
+    margin-bottom: 1.5rem; 
+    margin-left: auto;     
+    margin-right: auto;
+    
+    /* Style the line itself */
+    border: 0; /* Reset default browser HR border */
+    height: 1px; /* Define thickness */
+    background-color: #ddd;
+}
+
+.search-button:hover { color: var(--text-heading); opacity: 1; 
+}
 
 /* --- Base Navbar Styling --- */
 .main-navbar { /* The main <nav> element */

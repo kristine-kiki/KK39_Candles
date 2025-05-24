@@ -226,7 +226,7 @@ def product_search(request):
             results = Product.objects.annotate(
                 search=vector,  # Annotate the queryset with the search vector, aliased as 'search'
                 rank=SearchRank(vector, search_query_obj)
-            ).filter(search=search_query_obj, rank__gte=0.01).order_by('-rank').distinct()
+            ).filter(search=search_query_obj, rank__gte=0.01).order_by('id','-rank').distinct('id')
 
             if not results.exists():
                 messages.info(request, f"No products found matching '{query_text}'.")

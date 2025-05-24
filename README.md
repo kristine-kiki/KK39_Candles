@@ -46,6 +46,7 @@ A live version of this project is deployed on Heroku and can be accessed here:
 
 *   **User Authentication:** Full registration, login, logout, password reset functionality (via `django-allauth`).
 *   **Product Browsing:** View all products, filter by category, view individual product details.
+*   **Product Search:** Users can search for products by name, description, and category.
 *   **Shopping Bag:** Add, view, update quantities, and remove items from the shopping bag.
 *   **Secure Checkout:** Multi-step checkout process with Stripe and PayPal integration for payments.
 *   **User Profiles:** Registered users can view their order history and save delivery information.
@@ -195,7 +196,7 @@ python manage.py runserver
 ## Deployment
 This project is configured for deployment to <strong>Heroku</strong> with static and media files served from <strong>AWS S3.</strong>
 <ol>
-<li><strong>Heroku:</strong></li>
+<li><strong>Heroku: </strong></li>
 <ul>Ensure a Procfile is present (e.g., web: gunicorn KK39_Candles.wsgi:application).</ul>
 <ul>Set up Heroku Add-ons (e.g., Heroku Postgres).</ul>
 <ul>Configure all necessary Config Vars on Heroku corresponding to the variables in env.py (DATABASE_URL will be set by Heroku Postgres, Stripe keys, AWS keys, Mailchimp keys, SECRET_KEY, etc.).</ul>
@@ -211,22 +212,23 @@ This project is configured for deployment to <strong>Heroku</strong> with static
 ## Key Funcionality Overview 
 
 ### User Facing
-<li><strong>Homepage: </strong>Features hero section, bestsellers, "Our Story" teaser, newsletter signup.</li>
-<li><strong>Products Page: </strong>Lists all products, allows filtering by category.</li>
-<li><strong>Product Detail Page: </strong>Shows product images, description, price, reviews, quantity selector, and "Add to Cart" button. Users can submit reviews here.</li>
-<li><strong>Shopping Bag Page: </strong> Displays items in the bag, allows quantity updates and item removal. Shows subtotal, delivery cost, and grand total.</li>
-<li><strong>Checkout Page: </strong>Secure form for shipping, contact, and payment details (Stripe card element, PayPal option, Apple/Google Pay via Stripe Payment Request Button).</li>
-<li><strong>User Profile Page: </strong>Authenticated users can view past order history and update default delivery information.</li>
-<li><strong>Authentification Pages: </strong> Login, Signup, Logout, Password Reset, Email Management (via django-allauth).</li>
-<li><strong>About Section: </strong>"Our Story", "Ingredients", "Blog List", "Blog Post Detail" pages.</li>
-<li><strong>Contact Section: </strong>"Contact Us" form, "FAQ", "Shipping & Returns", "Terms of Service".</li>
+*   **Homepage:** Features hero section, bestsellers, "Our Story" teaser, newsletter signup.
+*   **Products Page & Search:** Lists all products, allows filtering by category. A dedicated search page (`/search/`) allows users to find products based on keywords in product names, descriptions, and categories. <!-- <<< MODIFIED/ADDED DETAIL -->
+*   **Product Detail Page:** Shows product images, description, price, reviews, quantity selector, and "Add to Cart" button. Users can submit reviews here.
+*   **Shopping Bag Page:** Displays items in the bag, allows quantity updates and item removal. Shows subtotal, delivery cost, and grand total.
+*   **Secure Checkout Page:** Secure form for shipping, contact, and payment details (Stripe card element, PayPal option, Apple/Google Pay via Stripe Payment Request Button).
+*   **User Profile Page:** Authenticated users can view past order history and update default delivery information.
+*   **Authentication Pages:** Login, Signup, Logout, Password Reset, Email Management (via `django-allauth`).
+*   **About Section:** "Our Story", "Ingredients", "Blog List", "Blog Post Detail" pages.
+*   **Contact Section:** "Contact Us" form, "FAQ", "Shipping & Returns", "Terms of Service".
 
-### Admin Facing
-<li><strong>Product Management: </strong>Add, edit, delete products, including     details, images, pricing, stock, categories, bestseller status.</li>
-<li><strong>Category Management: </strong> Manage product categories.</li>
-<li><strong>Order Management: </strong>View and update order details and statuses.</li>
-<li><strong>User Management: </strong> View and manage registered users.</li>
-<li><strong>Blog Post Management: </strong>Create, edit, and publish blog posts using the Summernote WYSIWYG editor.</li>
+### Admin Facing (`/admin/`)
+
+*   **Product Management:** Add, edit, delete products, including details, images, pricing, stock, categories, bestseller status.
+*   **Category Management:** Manage product categories.
+*   **Order Management:** View and update order details and statuses.
+*   **User Management:** View and manage registered users.
+*   **Blog Post Management:** Create, edit, and publish blog posts using the Summernote WYSIWYG editor.
 
 ---
 
