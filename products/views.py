@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
 from django.db.models.functions import Lower
 from django.db.models import Q
 from .models import Product, Category, Rating
@@ -204,3 +205,38 @@ def add_rating(request, product_id):
     }
 
     return render(request, 'products/add_rating.html', context)
+
+def product_search(request):
+    query_text = None
+    results = []
+    search_performed = False
+
+    if 'q' in request.GET:
+        search_performed = True
+        query_text = request.GET.get('q').strip()
+        
+        if query_text: 
+            vector = SearchVector('name', weight='A') + \
+                     SearchVector('description', weight='B') + \
+                     SearchVector('category__name', weight='C') + \
+                     SearchVector('category__friendly_name', weight='C')
+            
+            search_query_obj = SearchQuery(query_text, search_type='websearch')
+            
+            results = Product.objects.annotate(
+                search=vector,  # Annotate the queryset with the search vector, aliased as 'search'
+                rank=SearchRank(vector, search_query_obj)
+            ).filter(search=search_query_obj, rank__gte=0.01).order_by('-rank').distinct()
+
+            if not results.exists():
+                messages.info(request, f"No products found matching '{query_text}'.")
+        
+        else:
+            messages.error(request, "Please enter a search term.")
+            
+    context = {
+        'query': query_text,
+        'results': results,
+        'search_performed': search_performed
+    }
+    return render(request, 'products/search_results.html', context)

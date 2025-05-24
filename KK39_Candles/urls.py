@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from products import views as product_views 
 from .views import handler404
 
 urlpatterns = [
@@ -29,6 +30,7 @@ urlpatterns = [
     path('profile/', include('profiles.urls')),
     path('about/', include('about.urls', namespace='about')),
     path('support/', include('contact.urls', namespace='contact')),
+    path('search/', product_views.product_search, name='search_results'),
     path('summernote/', include('django_summernote.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

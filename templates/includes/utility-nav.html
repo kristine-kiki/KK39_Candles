@@ -2,10 +2,20 @@
 {% load bag_tools %}
 
 
-<ul class="navbar-nav utility-links"> 
+<ul class="navbar-nav utility-links align-items-center"> 
     <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fas fa-search"></i></a> 
+        <form method="GET" action="{% url 'search_results' %}" class="form-inline my-2 my-lg-0" id="utility-search-form">
+            <div class="input-group input-group-sm"> {# Using input-group for better cohesion #}
+                <input class="form-control" type="search" name="q" placeholder="Search..." aria-label="Search" value="{{ request.GET.q }}">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="submit" aria-label="Submit search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
     </li>
+
     {% if user.is_authenticated %}
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="utilityUserDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

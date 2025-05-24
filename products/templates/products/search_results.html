@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    {% if query %}
+        Search Results for "{{ query }}"
+    {% else %}
+        Search Products
+    {% endif %}
+     - KK39 Candles
+{% endblock %}
+
+{% block content %}
+<div class="container my-5 content-container">
+    <div class="row">
+        <div class="col text-center">
+            <h1 class="logo-font page-title">Search Results</h1>
+            <hr class="w-50 mb-4">
+        </div>
+    </div>
+
+    {# Search form again for convenience #}
+    <div class="row mb-4">
+        <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+            <form method="GET" action="{% url 'search_results' %}" class="search-form">
+                <div class="input-group">
+                    <input class="form-control" type="search" name="q" placeholder="Search products..." aria-label="Search" value="{{ query|default_if_none:'' }}">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit" aria-label="Submit search">
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+    {% if query %}
+        {# A search query was provided #}
+        <div class="row mb-3">
+            <div class="col">
+                {% if results %}
+                    {# Query provided, and results were found #}
+                    <p class="text-muted search-query-display">Showing results for: <strong>"{{ query }}"</strong> ({{ results|length }} found)</p>
+                {% else %}
+                    {# Query provided, but no results found #}
+                    {# The Django message from views.py for "no results" will also show up via base.html #}
+                    <p class="text-center lead">We couldn't find any products matching your search for "<strong>{{ query }}</strong>". Please try a different term.</p>
+                {% endif %}
+            </div>
+        </div>
+    {% elif request.GET.q == "" %}  
+        <div class="col-12 text-center"><p class="lead">Please enter a search term to find products.</p></div>
+    {% else %}
+        
+        <div class="col-12 text-center"><p class="lead">Use the search box above to find your favorite candles!</p></div>
+    {% endif %}
+    
+
+    <div class="product-grid">
+        {% if results %}
+            {% for product in results %}
+                <div class="product-card">
+                    <div class="product-image-container">
+                        {% if product.image %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                        {% else %}
+                            <a href="{% url 'product_detail' product.id %}">
+                                <img src="{{ MEDIA_URL }}no_image.png" alt="{{ product.name }}">
+                            </a>
+                        {% endif %}
+                    </div>
+                    <h3>{{ product.name }}</h3>
+                    {% if product.category.exists %}
+                        <p class="small mt-1 mb-0 category-link-wrapper">
+                            {% for category in product.category.all %}
+                                <a class="text-muted" href="{% url 'products' %}?category={{ category.name }}">
+                                    <i class="fas fa-tag mr-1"></i>{{ category.friendly_name|default:category.name }}
+                                </a>{% if not forloop.last %}, {% endif %}
+                            {% endfor %}
+                        </p>
+                    {% endif %}
+                    <p class="price">£{{ product.price|floatformat:2 }}</p>
+                    <div class="rating-and-button-wrapper">
+                        {% if product.rating %}
+                            <small class="text-muted product-rating-display"><i class="fas fa-star mr-2"></i>{{ product.rating }} / 5</small>
+                        {% else %}
+                            <small class="text-muted product-rating-display">No Rating</small>
+                        {% endif %}
+                        <a href="{% url 'product_detail' product.id %}" class="btn btn-tertiary">View Product</a>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
