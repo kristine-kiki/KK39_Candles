@@ -7,6 +7,9 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="{% block meta_description %}Discover beautiful, handcrafted 
+        eco-friendly and organic candles from KK39 Candles. Made with natural waxes for a clean, 
+        non-toxic burn. Shop our sustainable collection!{% endblock meta_description %}">
     {% endblock meta %}
 
     {% block corecss %}
@@ -64,7 +67,7 @@
             <li><a href="https://uk.pinterest.com/" aria-label="Pinterest" target='_blank'><i class="fab fa-pinterest-p"></i></a></li>
         </ul>
     </aside>
-    
+
     {% if messages %}
         <div class="container message-container my-3"> {# my-3 adds margin top and bottom #}
             {% for message in messages %}
