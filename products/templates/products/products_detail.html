@@ -32,6 +32,17 @@
                      <span class="price-value">£{{ product.price|floatformat:2 }}</span>
                 </div>
 
+                {% if user.is_authenticated %}
+                    {% if is_in_wishlist %}
+                        <a href="{% url 'remove_from_wishlist' product.id %}" class="btn btn-outline-danger btn-sm mt-1" title="Remove from Wishlist">
+                            <i class="fas fa-heart"></i> Added to Wishlist
+                        </a>
+                    {% else %}
+                        <a href="{% url 'add_to_wishlist' product.id %}" class="btn btn-outline-secondary btn-sm mt-1" title="Add to Wishlist">
+                            <i class="far fa-heart"></i> Add to Wishlist
+                        </a>
+                    {% endif %}
+                {% endif %}
                 <!-- Display Average Rating -->
                 <div class="average-rating-section mb-3">
                     <strong class="average-rating-label">Average Rating:</strong>

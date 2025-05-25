@@ -6,6 +6,7 @@ from django.db.models.functions import Lower
 from django.db.models import Q
 from .models import Product, Category, Rating
 from .forms import ProductForm, RatingForm
+from profiles.models import WishlistItem
 
 # Create your views here.
 
@@ -54,11 +55,16 @@ def all_products(request):
 
     current_sorting = f'{sort}_{direction}'
 
+    wishlist_product_ids = []
+    if request.user.is_authenticated:
+        wishlist_product_ids = list(WishlistItem.objects.filter(user=request.user).values_list('product_id', flat=True))
+
     context = {
         'products': products,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'wishlist_product_ids': wishlist_product_ids,
     }
 
     return render(request, 'products/products.html', context)
@@ -77,8 +83,11 @@ def product_detail(request, product_id):
     ratings = Rating.objects.filter(product=product).order_by('-created_at') # Get existing ratings
     
     existing_rating_by_user = None
+    is_in_wishlist = False # Default to False
     if request.user.is_authenticated:
         existing_rating_by_user = Rating.objects.filter(product=product, user=request.user).first()
+        if WishlistItem.objects.filter(user=request.user, product=product).exists():
+            is_in_wishlist = True
 
     if request.method == 'POST':
         # Ensure user is authenticated before processing the form
@@ -113,6 +122,7 @@ def product_detail(request, product_id):
         'ratings': ratings, # All ratings for this product
         'rating_form': rating_form,
         'existing_rating_by_user': existing_rating_by_user,
+        'is_in_wishlist': is_in_wishlist,
     }
     return render(request, 'products/products_detail.html', context)
 
@@ -211,6 +221,10 @@ def product_search(request):
     results = []
     search_performed = False
 
+    wishlist_product_ids = []
+    if request.user.is_authenticated:
+        wishlist_product_ids = list(WishlistItem.objects.filter(user=request.user).values_list('product_id', flat=True))
+
     if 'q' in request.GET:
         search_performed = True
         query_text = request.GET.get('q').strip()
@@ -237,6 +251,7 @@ def product_search(request):
     context = {
         'query': query_text,
         'results': results,
-        'search_performed': search_performed
+        'search_performed': search_performed,
+        'wishlist_product_ids': wishlist_product_ids,
     }
     return render(request, 'products/search_results.html', context)

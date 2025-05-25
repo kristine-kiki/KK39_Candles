@@ -15,7 +15,7 @@ body {
     font-size: 16px; /* Slightly larger base font */
     line-height: 1.7;
     position: relative;
-    padding-left: 60px; /* Space for social sidebar */
+    /*padding-left: 60px; /* Space for social sidebar */
     overflow-x: hidden; /* Prevent horizontal scroll */
 }
 

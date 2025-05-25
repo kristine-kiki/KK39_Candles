@@ -40,13 +40,30 @@
 
 /* --- Social Sidebar --- */
 .social-sidebar {
+    display: none;
     position: fixed;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 20px; /* More padding */
+    top: 300px;
+    width: 60px;
+    height: auto;
+    background-color: var(--bg-light);
     z-index: 999;
 }
-.social-sidebar ul { display: flex; flex-direction: column; gap: 30px; }
-.social-sidebar a { font-size: 1.1rem; color: var(--text-color); }
-.social-sidebar a:hover { color: var(--primary-color); opacity: 1; }
+.social-sidebar ul { 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.social-sidebar li {
+    padding: 10px 0; /* Spacing between social icons */
+}
+.social-sidebar a { 
+    font-size: 1.5rem; 
+    color: var(--text-color); 
+    display: block;
+}
+.social-sidebar a:hover { 
+    color: var(--primary-color); 
+    opacity: 1; 
+}

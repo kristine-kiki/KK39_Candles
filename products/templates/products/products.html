@@ -61,6 +61,11 @@
                         {% endif %}
                         <a href="{% url 'product_detail' product.id %}" class="btn btn-tertiary">View Product</a>
                     </div>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'add_to_wishlist' product.id %}" class="btn btn-outline-secondary btn-sm mt-1" title="Add to Wishlist">
+                            <i class="far fa-heart"></i>
+                        </a>
+                    {% endif %}
                     {# Alternatively, if your Product model has a get_absolute_url method: #}
                     {# <a href="{{ product.get_absolute_url }}" class="btn btn-tertiary">View Product</a> #}
                 </div>

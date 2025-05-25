@@ -13,6 +13,7 @@
         <h2 class="section-title text-center">{% trans "Sign In" %}</h2>
         <p class="login-subtitle text-center">Please login to your KK39 Candles account.</p>
 
+        {# Display Django messages (e.g., from redirects, other app actions) #}
         {% if messages %}
             <div class="messages-container mb-3">
                 {% for message in messages %}
@@ -27,28 +28,42 @@
         {% endif %}
 
         {% if not SOCIALACCOUNT_ONLY %}
-            <form method="POST" action="{% url 'account_login' %}" class="login-form">
+            <form method="POST" action="{% url 'account_login' %}" class="login login-form"> {# Added 'login' class from allauth #}
                 {% csrf_token %}
+
+                {# --- DISPLAY NON-FIELD ERRORS FROM ALLAUTH (e.g., "Incorrect username or password.") --- #}
+                {% if form.non_field_errors %}
+                    <div class="alert alert-danger mb-3" role="alert">
+                        {% for error in form.non_field_errors %}
+                            <p class="mb-0">{{ error }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                {# --- END NON-FIELD ERRORS --- #}
+
 
                 {% for field in form %}
                     {% if field.widget_type == 'checkbox' %}
                         <div class="form-group form-check custom-checkbox-group">
-                            {{ field }}
+                            {{ field }} {# Allauth's field rendering will include the input #}
                             <label class="form-check-label" for="{{ field.id_for_label }}">
-                                {{ field.label }}
+                                {{ field.label_tag }} {# Use field.label_tag to get the label with its <label> tags #}
                             </label>
                         </div>
                     {% else %}
                         <div class="form-group">
-                            <label for="{{ field.id_for_label }}">{{ field.label }}:</label>
-                            {{ field }} {# Allauth's field rendering, we'll style the input directly #}
+                            {{ field.label_tag }} {# Renders <label for="...">Label text:</label> #}
+                            {{ field }}       {# Renders the input widget itself #}
                         </div>
                     {% endif %}
+                    
+                    {# Display field-specific errors (e.g., "This field is required" if empty and HTML5 validation is off) #}
                     {% for error in field.errors %}
-                        <div class="alert alert-danger p-1 mt-1">{{ error }}</div>
+                        <div class="alert alert-danger p-1 mt-1 small">{{ error }}</div>
                     {% endfor %}
+                    
                     {% if field.help_text %}
-                        <small class="form-text text-muted mb-2 d-block">{{ field.help_text }}</small>
+                        <small class="form-text text-muted mb-2 d-block">{{ field.help_text|safe }}</small> {# Added |safe if help_text can contain HTML #}
                     {% endif %}
                 {% endfor %}
 
@@ -56,7 +71,7 @@
                     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
 
-                <button type="submit" class="btn btn-primary btn-block btn-login-submit">{% trans "Sign In" %}</button>
+                <button type="submit" class="btn btn-primary btn-block btn-login-submit mt-3">{% trans "Sign In" %}</button>
 
                 <div class="login-links">
                     <a href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>

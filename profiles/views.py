@@ -1,10 +1,12 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, reverse, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import UserProfile
 from checkout.models import Order
 from django_countries.fields import CountryField
 from .forms import UserProfileForm
+from .models import WishlistItem
+from products.models import Product
 
 
 @login_required
@@ -92,3 +94,40 @@ def order_history(request, order_number):
 
     return render(request, template, context)
 
+@login_required
+def view_wishlist(request):
+    """ A view to display the user's wishlist """
+    wishlist_items = WishlistItem.objects.filter(user=request.user)
+    context = {
+        'wishlist_items': wishlist_items
+    }
+    return render(request, 'profiles/wishlist.html', context)
+
+@login_required
+def add_to_wishlist(request, product_id):
+    """ Add a product to the user's wishlist """
+    product = get_object_or_404(Product, id=product_id)
+    # Check if item already in wishlist
+    if WishlistItem.objects.filter(user=request.user, product=product).exists():
+        messages.info(request, f"{product.name} is already in your wishlist!")
+    else:
+        WishlistItem.objects.create(user=request.user, product=product)
+        messages.success(request, f"Added {product.name} to your wishlist.")
+    
+    # Redirect back to the previous page or product detail page
+    return redirect(request.META.get('HTTP_REFERER', reverse('product_detail', args=[product.id])))
+
+@login_required
+def remove_from_wishlist(request, product_id):
+    """ Remove a product from the user's wishlist """
+    product = get_object_or_404(Product, id=product_id)
+    wishlist_item = WishlistItem.objects.filter(user=request.user, product=product)
+    
+    if wishlist_item.exists():
+        wishlist_item.delete()
+        messages.success(request, f"Removed {product.name} from your wishlist.")
+    else:
+        messages.info(request, f"{product.name} was not in your wishlist.")
+        
+    # Redirect back to the wishlist page or previous page
+    return redirect(request.META.get('HTTP_REFERER', reverse('view_wishlist')))

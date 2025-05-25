@@ -337,3 +337,27 @@
     border-left: 0.3em solid transparent;
 
 }
+.utility-links .nav-item .utility-icon-link {
+    padding-top: 0.5rem;    /* Adjust padding to vertically align with other nav items if needed */
+    padding-bottom: 0.5rem;
+    padding-left: 0.6rem;   /* Adjust horizontal padding */
+    padding-right: 0.6rem;
+    display: inline-flex;   /* Helps with alignment */
+    align-items: center;
+}
+
+.utility-links .nav-item .utility-icon-link .utility-icon,
+.utility-links .nav-item .utility-icon-link .fas, /* Target FontAwesome specifically */
+.utility-links .nav-item .utility-icon-link .far {
+    font-size: 1.1rem; /* Adjust icon size if needed */
+    color: var(--text-color); /* Or your desired icon color */
+    line-height: 1; /* Ensure consistent line height */
+    /* Remove text-decoration if any underline appears on the icon itself */
+    text-decoration: none;
+}
+
+.utility-links .nav-item .utility-icon-link:hover .utility-icon,
+.utility-links .nav-item .utility-icon-link:focus .utility-icon {
+    color: var(--primary-color); /* Change color on hover/focus, use your theme's accent */
+    opacity: 0.8; /* Or any other hover effect */
+}

@@ -47,4 +47,7 @@
             {% endwith %}
         </a>
     </li>
+    {% if user.is_authenticated %}
+        <a class="dropdown-item" href="{% url 'view_wishlist' %}"><i class="fas fa-heart fa-fw mr-2"></i></a>
+    {% endif %}
 </ul>

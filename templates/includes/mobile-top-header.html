@@ -25,6 +25,7 @@
                         {% if user.is_superuser %}
                             <a class="dropdown-item" href="{% url 'add_product' %}"><i class="fas fa-plus-circle fa-fw mr-2"></i>Add Product</a>
                         {% endif %}
+                        <a class="dropdown-item" href="{% url 'view_wishlist' %}"><i class="fas fa-heart fa-fw mr-2"></i>My Wishlist</a>
                         <a class="dropdown-item" href="{% url 'account_logout' %}"><i class="fas fa-sign-out-alt fa-fw mr-2"></i>Logout</a>
                     </div>
                 </div>

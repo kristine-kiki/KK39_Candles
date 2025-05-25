@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Your Wishlist - KK39 Candles{% endblock %}
+
+{% block content %}
+<div class="container my-5 content-container">
+    <div class="row">
+        <div class="col text-center">
+            <h1 class="logo-font page-title">Your Wishlist</h1>
+            <hr class="w-50 mb-4">
+        </div>
+    </div>
+
+    {% if wishlist_items %}
+        <div class="product-grid">  {# This is your CSS Grid container #}
+            {% for item in wishlist_items %}
+                {% with product=item.product %}
+                    <div class="product-card"> {# Each product card is a direct child of .product-grid #}
+                        <div class="product-image-container">
+                            {% if product.image %}
+                            <a href="{% url 'product_detail' product.id %}">
+                                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                            </a>
+                            {% else %}
+                                <a href="{% url 'product_detail' product.id %}">
+                                    <img src="{{ MEDIA_URL }}no_image.png" alt="{{ product.name }}">
+                                </a>
+                            {% endif %}
+                        </div>
+                        <h3>{{ product.name }}</h3>
+                        {% if product.category.exists %}
+                            <p class="small mt-1 mb-0 category-link-wrapper">
+                                {% for category in product.category.all %}
+                                    <a class="text-muted" href="{% url 'products' %}?category={{ category.name }}">
+                                        <i class="fas fa-tag mr-1"></i>{{ category.friendly_name|default:category.name }}
+                                    </a>{% if not forloop.last %}, {% endif %}
+                                {% endfor %}
+                            </p>
+                        {% endif %}
+                        <p class="price">£{{ product.price|floatformat:2 }}</p>
+                        <div class="rating-and-button-wrapper">
+                            {% if product.rating %}
+                                <small class="text-muted product-rating-display"><i class="fas fa-star mr-2"></i>{{ product.rating }} / 5</small>
+                            {% else %}
+                                <small class="text-muted product-rating-display">No Rating</small>
+                            {% endif %}
+                        </div>
+                        <div class="text-center mt-2 wishlist-actions">
+                            <a href="{% url 'remove_from_wishlist' product.id %}" class="btn btn-outline-danger btn-sm mb-2 wishlist-remove-btn">
+                                <i class="fas fa-heart-broken"></i> Remove
+                            </a>
+                            <form action="{% url 'add_to_bag' product.id %}" method="POST" class="d-inline">
+                                {% csrf_token %}
+                                <input type="hidden" name="quantity" value="1">
+                                <button type="submit" class="btn btn-primary btn-sm wishlist-add-to-bag-btn">
+                                    <i class="fas fa-shopping-bag"></i> Add to Bag
+                                </button>
+                            </form>
+                        </div>
+                    </div> {# End of .product-card #}
+                {% endwith %}
+            {% endfor %}
+        </div> {# End of .product-grid #}
+    {% else %}
+        <div class="row">
+            <div class="col text-center">
+                <p class="lead">Your wishlist is currently empty.</p>
+                <a href="{% url 'products' %}" class="btn btn-primary">Discover Products</a>
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
