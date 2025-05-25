@@ -7461,3 +7461,6 @@ Not Found: /.well-known/appspecific/com.chrome.devtools.json
 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 19439
 "GET /search/ HTTP/1.1" 200 19140
 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 19439
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 19439
