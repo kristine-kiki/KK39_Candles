@@ -1,0 +1,67 @@
+/* --- Mobile Top Header Bar (when .container class is applied to it) --- */
+.mobile-header-bar {
+    height: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.mobile-header-bar .mobile-header-left {
+    /* Intentionally empty for now, relies on parent flex */
+    flex-shrink: 0;
+    min-width: 0;
+}
+
+.mobile-header-bar .navbar-toggler {
+    padding: .25rem .4rem;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    margin-right: 5px;
+    flex-shrink: 0;
+}
+
+.mobile-header-bar .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.mobile-header-bar .mobile-logo-link {
+    text-decoration: none;
+}
+
+.mobile-header-bar .mobile-logo-text {
+    font-weight: bold;
+    color: #333333;
+    font-family: 'Playfair Display', serif;
+    text-decoration: none;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    line-height: 1;
+    display: inline-block;
+    letter-spacing: normal;
+}
+.mobile-header-bar .mobile-logo:hover {
+    color: #555555;
+}
+
+.mobile-header-bar .mobile-utility-icons {
+    /* Intentionally empty, relies on parent flex (justify-content-between) */
+    margin-left: auto;
+}
+
+.mobile-header-bar .mobile-utility-icons .mobile-bag-icon {
+    padding: 0.5rem 0.1rem;
+    font-size: 1.2rem;
+    color: #333333;
+    line-height: 1;
+}
+.mobile-header-bar .mobile-utility-icons .mobile-bag-icon:hover {
+    color: #555555;
+}
+
+.mobile-header-bar .mobile-utility-icons .utility-bag-indicator {
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    font-size: 0.6em;
+    padding: .15em .35em;
+}

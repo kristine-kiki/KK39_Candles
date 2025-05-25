@@ -1,0 +1,172 @@
+.container {
+    width: 90%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.section-padding { padding: var(--section-padding); }
+.section-padding-narrow { padding: var(--section-padding-narrow); }
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px; /* More space below title */
+}
+.section-title--left {
+    text-align: left;
+    margin-bottom: 30px; /* Less space for inline titles */
+}
+.shop-section { background-color: var(--bg-accent); } /* Contrast background */
+
+.product-grid {
+    display: grid; /* You're using CSS Grid, so 'grid' not 'flex' */
+    align-items: stretch; 
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between cards */
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #EAE0D5;
+    background-color: #FAF8F1;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    /* height: 100%; */ /* With display: grid on parent, items should stretch to fill cell.
+                           This can be useful, or sometimes you might let content define height if
+                           align-items on grid is set to stretch. Let's keep it for now as it's not harmful. */
+}
+
+.product-card .product-image-container {
+    width: 100%;
+    aspect-ratio: 3 / 4; /* This aspect-ratio is good for image consistency */
+    overflow: hidden;
+    margin-bottom: 15px; 
+}
+
+.product-card .product-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; 
+}
+
+.product-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 4px; /* Keep consistent bottom margins */
+    /* Consider a min-height if title length varies significantly and you want more consistent starting points for content below */
+    /* min-height: 2.8em; /* approx 2 lines, adjust line-height if needed */
+}
+
+.product-card .category-link-wrapper {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 6px; /* Consistent bottom margin */
+}
+
+.product-card .price {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #E57373;
+    margin-bottom: 10px;
+}
+
+
+.product-card .rating-and-button-wrapper {
+    display: flex;                 
+    flex-direction: column;
+    align-items: center;           
+    margin-top: auto;
+    padding-top: 10px;  
+    width: 100%;       
+}
+
+.product-card .product-rating-display {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 9px;
+}
+
+.product-card .product-rating-display .fa-star {
+    color: #FFD700;
+    margin-right: 0.25em;
+}
+
+.product-card .btn-tertiary {
+    padding: 8px 15px;
+    white-space: nowrap; /* Ensure "View Product" stays on one line */
+}
+
+.view-all-link { text-align: center; margin-top: 50px; }
+
+/* --- Testimonial Section --- */
+.testimonial-section {
+    background-color: var(--primary-color); /* Muted Green */
+    color: var(--bg-light);
+    text-align: center;
+}
+.testimonial-section blockquote {
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 1.5rem; /* Slightly smaller quote */
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.6;
+    border: none;
+    padding: 0;
+    color: var(--bg-light);
+}
+.testimonial-section cite {
+    display: block;
+    margin-top: 25px;
+    font-size: 0.9rem;
+    font-family: var(--font-body);
+    font-style: normal;
+    opacity: 0.8;
+}
+/* --- Gallery Section --- */
+.gallery-section { background-color: var(--bg-accent); } /* Contrast background */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--grid-gap);
+}
+.gallery-grid img {
+    width: 100%;
+    /* height: 250px; /* Adjust height */
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.gallery-grid a:hover img {
+    transform: scale(1.03);
+    opacity: 0.8;
+}
+
+/* --- Contact Section --- */
+.contact-section { background-color: var(--bg-light); }
+.contact-container { text-align: center; max-width: 700px; }
+.contact-subtitle { margin-bottom: 40px; font-size: 1.1rem; }
+.contact-info p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+.contact-info i {
+    color: var(--primary-color); /* Muted Green icons */
+    margin-right: 15px;
+    width: 20px;
+    text-align: center;
+}
+.contact-info a:hover { color: var(--primary-color); opacity: 1; }
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--grid-gap);
+    margin-bottom: 60px;
+}

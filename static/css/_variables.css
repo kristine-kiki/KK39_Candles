@@ -1,0 +1,27 @@
+:root {
+    --bg-light: #FBF9F6;          /* Off-white/Cream main background */
+    --bg-accent: #F6F2EC;        /* Slightly darker cream for contrast areas */
+    --text-color: #4F4A45;        /* Dark Brown/Charcoal for text */
+    --text-heading: #33312e;      /* Slightly darker for main headings */
+    --text-light: #FFFFFF;        /* White */
+    --primary-color: #9D9C75;     /* Muted Green (Testimonial BG, accents) */
+    --secondary-color: #D3C4B1;   /* Tan/Beige (Buttons) */
+    --accent-color: #E7A385;      /* Muted Pink/Coral (Price) - adjust if needed */
+    --gold-color: #CCA86F;        /* Gold for Subscribe button */
+    --border-color: #D1C9BF;      /* Light border color */
+    --footer-bg: #33312e;         /* Dark footer background */
+    --footer-text: #d3cec7;       /* Light text on footer */
+
+    /* Hero specific - using KK39 palette */
+    --hero-overlay-bg: var(--secondary-color); /* Tan/Beige for the solid block */
+    
+    /* Fonts */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Lato', sans-serif;
+
+    /* Spacing */
+    --section-padding: 100px 0;   /* Generous vertical padding for sections */
+    --section-padding-narrow: 60px 0; /* Less padding for banners like testimonial */
+    --container-width: 1140px;
+    --grid-gap: 30px;             /* Gap for grids */
+}

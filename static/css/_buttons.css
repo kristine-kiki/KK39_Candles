@@ -1,0 +1,72 @@
+.btn {
+    display: inline-block;
+    padding: 12px 35px; /* More padding */
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary { /* Hero Button */
+    background-color: var(--bg-light); /* White/Cream */
+    color: var(--text-color);
+    border-color: var(--text-color); /* Dark border */
+}
+.btn-primary:hover {
+    background-color: var(--text-color);
+    color: var(--bg-light);
+    border-color: var(--text-color);
+}
+
+.btn-secondary { /* Learn More, View All */
+    background-color: transparent;
+    color: var(--text-color);
+    border-color: var(--text-color);
+}
+.btn-secondary:hover {
+    background-color: var(--text-color);
+    color: var(--bg-light);
+}
+
+.btn-tertiary { /* View Product */
+    background-color: var(--secondary-color); /* Tan/Beige */
+    color: var(--text-heading);
+    border-color: var(--secondary-color);
+    font-weight: 400;
+    padding: 10px 25px;
+}
+.btn-tertiary:hover {
+    background-color: transparent;
+    border-color: var(--secondary-color);
+    color: var(--text-heading);
+}
+
+.btn-newsletter {
+    background-color: var(--gold-color);
+    color: var(--text-light);
+    border-color: var(--gold-color);
+    padding: 10px 20px; /* Adjust padding for footer */
+    font-size: 0.85rem;
+}
+.btn-newsletter:hover {
+    background-color: #b38f56; /* Darker Gold */
+    border-color: #b38f56;
+}
+.btn-secondary {
+    background-color: transparent !important;
+    border: 1px solid #C8B8AB !important; /* Your primary border color */
+    color: #333333 !important;           /* Your primary text color */
+    border-radius: 0 !important; /* Square corners */
+}
+
+.btn-secondary:hover {
+    background-color: #f8f9fa !important; /* Light hover background */
+    border-color: #C8B8AB !important;
+    color: #333333 !important;
+}

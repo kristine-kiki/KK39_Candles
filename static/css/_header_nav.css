@@ -1,0 +1,339 @@
+/* --- Top Banner --- */
+.top-banner {
+    background-color: var(--primary-color); /* Muted Green */
+    color: var(--bg-light);
+    text-align: center;
+    padding: 10px 10px;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* --- Main Header --- */
+.main-header {
+    background-color: var(--bg-light);
+    padding: 25px 0 15px 0;
+    position: sticky; /* Make header sticky */
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03); /* Subtle shadow */
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Logo */
+.logo-container { margin-bottom: 25px; }
+.logo {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 400; /* Lighter weight per image */
+    color: var(--text-heading);
+    border: 1px solid var(--text-heading);
+    padding: 10px 40px;
+    white-space: nowrap;
+    white-space: nowrap;
+    letter-spacing: 3px;
+}
+.logo:hover { 
+    opacity: 1;
+    background-color:var(--hero-overlay-bg); /* Your very light beige from disabled buttons, good for hover */
+    color: var(--text-heading);
+} 
+
+.mobile-brand-text {
+    font-family: 'Playfair Display', serif;
+}
+
+
+/* Navigation */
+.main-nav ul { display: flex; gap: 40px; }
+.main-nav a {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding-bottom: 8px;
+    position: relative;
+}
+.main-nav a::after { /* Underline hover effect */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--text-color);
+    text-decoration: underline;
+    transition: width 0.3s ease;
+}
+.main-nav a:hover::after { width: 100%; }
+.main-nav a:hover { opacity: 1; } /* Override general link hover */
+
+.main-navbar { /* The main <nav> element */
+    /* background-color: #f8f9fa; /* Example: if you want a distinct background for the nav bar */
+    /* border-bottom: 1px solid #e7e7e7; /* Example bottom border */
+    padding-top: 0.5rem; /* Adjust vertical padding of the entire navbar */
+    padding-bottom: 0.5rem;
+}
+
+/* The collapsible container within the navbar */
+.main-navbar .navbar-collapse {
+    /* Bootstrap handles display:flex and flex-wrap:wrap.
+       We use mx-auto on .main-links-group and ml-auto on .site-utility-nav for positioning. */
+}
+
+/* --- Main Navigation Links (Shop All, Candles, etc.) --- */
+.main-navbar .main-links-group .nav-item .nav-link {
+    color: var(--brand-text-dark, #555555); 
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 0.8rem; /* Consistent padding */
+    font-weight: normal; 
+}
+.main-navbar .main-links-group .nav-item .nav-link:hover,
+.main-navbar .main-links-group .nav-item .nav-link:focus,
+.main-navbar .main-links-group .nav-item.active .nav-link { /* Style for active link */
+    color: var(--brand-beige-secondary, #333333);
+    text-decoration: underline;
+}
+
+/* --- Dropdown Menus for Main Links --- */
+.main-navbar .main-links-group .dropdown-menu {
+    background-color: #fdfdfd; 
+    border: 1px solid #eeeeee; 
+    border-radius: 0; 
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07); 
+    margin-top: 0.125rem !important; /* Standard Bootstrap spacing */
+}
+.main-navbar .main-links-group .dropdown-menu .dropdown-item {
+    color: var(--brand-text-dark, #333333); 
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+}
+.main-navbar .main-links-group .dropdown-menu .dropdown-item:hover,
+.main-navbar .main-links-group .dropdown-menu .dropdown-item:focus {
+    background-color: var(--brand-beige-light, #e9e5e2); 
+    color: var(--brand-text-dark, #333333);
+}
+.main-navbar .main-links-group .dropdown-menu .dropdown-header {
+    font-size: 0.75rem;
+    color: #777777; 
+    padding: 0.5rem 1rem 0.25rem;
+}
+.main-navbar .main-links-group .dropdown-menu .dropdown-divider {
+    border-top: 1px solid #f0f0f0; 
+}
+
+
+/* --- Site Utility Navigation (Search, User, Bag Icons) --- */
+.main-navbar .site-utility-nav {
+    /* This group uses .ml-auto in HTML to be pushed to the right */
+    /* align-items: center; /* Already on the div in HTML */
+}
+.main-navbar .site-utility-nav .nav-link {
+    color: var(--brand-text-dark, #555555);
+    padding: 0.25rem 0.6rem; /* Adjust padding for utility links */
+    display: inline-flex; /* Helps align icon and text if present */
+    align-items: center;
+    white-space: nowrap;
+    text-decoration: none;
+}
+.main-navbar .site-utility-nav .nav-link:hover,
+.main-navbar .site-utility-nav .nav-link:focus {
+    color: var(--brand-beige-secondary, #333333);
+}
+
+/* Specific Utility Items */
+.main-navbar .site-utility-nav .utility-search-text {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #777777; 
+    margin-right: 0.25rem; /* Space before the icon if both shown */
+}
+.main-navbar .site-utility-nav .utility-search-text:hover {
+    color: var(--brand-text-dark, #333333);
+}
+
+.main-navbar .site-utility-nav .utility-icon { /* For the <i> tags */
+    font-size: 1.1rem; /* Adjusted size */
+    color: var(--brand-text-dark, #333333);
+}
+.main-navbar .site-utility-nav .utility-icon .fas, /* Target FontAwesome icons directly */
+.main-navbar .site-utility-nav .utility-icon .far {
+    vertical-align: middle;
+}
+/* Make sure icons are not overly padded if they are inside a .nav-link */
+.main-navbar .site-utility-nav .nav-link > .utility-icon {
+    padding-left: 0.2rem !important;
+    padding-right: 0.2rem !important;
+}
+
+
+/* --- User Dropdown in Utility Nav --- */
+.main-navbar .utility-user-dropdown .dropdown-toggle.utility-icon {
+    /* Styles primarily from .utility-icon */
+}
+.main-navbar .utility-user-dropdown .dropdown-toggle.utility-icon::after {
+    display: none; /* Hide Bootstrap's default arrow if it's just an icon toggle */
+}
+
+.main-navbar .utility-user-dropdown .utility-user-dropdown-menu { /* Be specific */
+    background-color: #fdfdfd; 
+    border: 1px solid #eeeeee; 
+    border-radius: 0; 
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+    margin-top: 0.5rem !important; /* More space from toggle */
+    min-width: 230px; /* Good width */
+    padding: 0.5rem 0;
+}
+.main-navbar .utility-user-dropdown .user-greeting {
+    display: block;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    color: #555555; 
+    border-bottom: 1px solid #f0f0f0; 
+    margin-bottom: 0.25rem;
+}
+.main-navbar .utility-user-dropdown .dropdown-item {
+    color: var(--brand-text-dark, #333333); 
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem; 
+}
+.main-navbar .utility-user-dropdown .dropdown-item:hover,
+.main-navbar .utility-user-dropdown .dropdown-item:focus {
+    background-color: var(--brand-beige-light, #e9e5e2); 
+    color: var(--brand-text-dark, #333333);
+}
+.main-navbar .utility-user-dropdown .dropdown-item .fas,
+.main-navbar .utility-user-dropdown .dropdown-item .far {
+    margin-right: 0.7em; 
+    width: 1.2em;
+    text-align: center;
+    color: #777777; 
+}
+.main-navbar .utility-user-dropdown .dropdown-divider {
+    border-top: 1px solid #f0f0f0;
+    margin: 0.4rem 0;
+}
+
+/* --- Bag Indicator in Utility Nav --- */
+.main-navbar .utility-bag-indicator {
+    background-color: var(--brand-beige-primary, #D8CABB) !important; 
+    color: var(--brand-text-on-beige, #333333) !important;            
+    font-size: 0.6rem;
+    font-weight: bold; 
+    padding: 0.2em 0.45em; /* Fine-tuned padding */
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;     /* Adjust for best position on bag icon */
+    right: 0px;  /* Adjust for best position on bag icon */
+    line-height: 1;
+    min-width: 16px; /* Ensure a good circular shape */
+    text-align: center;
+    /* border: 1px solid #fff; /* Optional white border to separate from icon */
+}
+/* --- Bootstrap Dropdown Menu Styling --- */
+
+.dropdown-menu {
+    /* Basic structure & appearance */
+    background-color: white; /* Or match your header background if different */
+    border: 1px solid var(--border-color, #dee2e6); /* Use variable or fallback */
+    border-radius: 4px; /* Or adjust to match site style */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 10px 0; /* Vertical padding for the menu container */
+    min-width: 200px; /* Adjust as needed */
+    z-index: 1000; /* Ensure it's above other content */
+    /* Let Bootstrap JS handle display/position */
+}
+
+.dropdown-item {
+    /* Inherit text styles from main nav */
+    font-size: 0.9rem;                 /* Match main-nav a */
+    font-weight: 400;                  /* Match main-nav a */
+    color: var(--text-color, #333);    /* Match main-nav a (add fallback) */
+    text-transform: uppercase;         /* Match main-nav a */
+    letter-spacing: 1.5px;             /* Match main-nav a */
+
+    /* Standard dropdown item behavior */
+    display: block;
+    width: 100%;
+    padding: 8px 20px; /* Adjust padding (Top/Bottom, Left/Right) */
+    clear: both;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    text-decoration: none; /* Remove default underline */
+    transition: background-color 0.2s ease, color 0.2s ease; /* Smooth hover */
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    /* Define hover/focus style - background is common */
+    color: var(--text-heading, #000); /* Optional: Darker text on hover */
+    background-color: #f8f9fa; /* Light grey background, adjust as needed */
+    text-decoration: none; /* Ensure no underline on hover */
+    /* Remove the main-nav ::after underline effect here */
+}
+
+/* Style for dividers if you use them */
+.dropdown-divider {
+    height: 1px;
+    margin: 0.5rem 0;
+    overflow: hidden;
+    background-color: var(--border-color, #e9ecef); /* Match border color */
+}
+
+/* Style for headers if you use them */
+.dropdown-header {
+    display: block;
+    padding: 0.5rem 1.5rem; /* Bootstrap default is 20px LR = 1.25rem, adjust if needed */
+    margin-bottom: 0;
+    font-size: 0.8rem; /* Slightly smaller */
+    font-weight: 700; /* Often bolder */
+    color: #6c757d; /* Muted color */
+    text-transform: uppercase; /* Keep consistent */
+    letter-spacing: 1px; /* Slightly less spacing maybe */
+    white-space: nowrap;
+}
+
+/* Ensure dropdown toggle doesn't keep underline always */
+.main-nav .dropdown-toggle::after {
+     /* Bootstrap adds its own caret via ::after,
+        so we remove the custom underline from the toggles */
+    display: none;
+}
+.main-nav .nav-link.dropdown-toggle {
+     /* Remove padding specifically for the underline if needed */
+     padding-bottom: 0; /* Adjust if this messes up vertical alignment */
+}
+/* OR Specificity if needed: */
+.navbar-nav .nav-item.dropdown > .nav-link.dropdown-toggle {
+    padding-bottom: 0; /* Reset padding needed for underline */
+}
+.navbar-nav .nav-item.dropdown > .nav-link.dropdown-toggle::after {
+    display: inline-block; /* Let Bootstrap's caret show */
+    /* Reset properties from main-nav a::after */
+    content: ""; /* Ensure Bootstrap's content can take over */
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    transition: none;
+    /* Add Bootstrap's caret styles */
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+
+}

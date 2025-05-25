@@ -7464,3 +7464,78 @@ Not Found: /.well-known/appspecific/com.chrome.devtools.json
 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 19439
 Not Found: /favicon.ico
 "GET /favicon.ico HTTP/1.1" 404 19439
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 30907
+"GET / HTTP/1.1" 200 30907
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 19439
+"GET / HTTP/1.1" 200 30907
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 19439
+"GET / HTTP/1.1" 200 30907
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 19439
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 30907
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4228
+"GET /support/contact/ HTTP/1.1" 200 20805
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4228
+"GET /support/contact/ HTTP/1.1" 200 20805
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4228
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4117
+"GET /support/contact/ HTTP/1.1" 200 20805
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4117
+"GET /support/contact/ HTTP/1.1" 200 20823
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4117
+"GET /support/contact/ HTTP/1.1" 200 20823
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4117
+"GET /products/?category=for_home HTTP/1.1" 200 29037
+"GET /support/contact/ HTTP/1.1" 200 20823
+"GET /products/ HTTP/1.1" 200 50453
+"GET /bag/ HTTP/1.1" 200 36001
+"GET /checkout/ HTTP/1.1" 200 92907
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /checkout/ HTTP/1.1" 200 92907
+"POST /checkout/wh/ HTTP/1.1" 200 50
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4117
+"GET /products/ HTTP/1.1" 200 50453
+"GET / HTTP/1.1" 200 30907
+"GET / HTTP/1.1" 200 30907
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4117
+"GET /products/?category=candles HTTP/1.1" 200 40019
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4228
+"GET /products/2/ HTTP/1.1" 200 30280
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4228
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4228
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4228
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 30907
+"GET /products/?category=candles HTTP/1.1" 200 40019
+"GET /about/ingredients/ HTTP/1.1" 200 23026
+"GET /support/contact/ HTTP/1.1" 200 20823
+"GET / HTTP/1.1" 200 30907
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 30907
+"GET /products/ HTTP/1.1" 200 50453
+"GET / HTTP/1.1" 200 30907
+"GET /bag/ HTTP/1.1" 200 36001
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 30907
+"GET /support/contact/ HTTP/1.1" 200 20823
+"GET /products/?category=candles HTTP/1.1" 200 40019

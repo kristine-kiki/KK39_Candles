@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Sitemap: https://kk39-candles-24591ccdc142.herokuapp.com/sitemap.xml

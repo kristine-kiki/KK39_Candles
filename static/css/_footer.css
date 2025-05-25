@@ -1,0 +1,60 @@
+/* --- Footer --- */
+#main-footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 80px 0 30px 0; /* More top padding */
+}
+
+.footer-column h4 {
+    color: var(--bg-light); /* White headings */
+    margin-bottom: 25px;
+}
+.footer-column ul li { margin-bottom: 12px; }
+.footer-column ul li a {
+    color: var(--footer-text);
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+.footer-column ul li a:hover { color: var(--bg-light); opacity: 1; }
+
+.social-links { margin-bottom: 30px; } /* Space below icons */
+.social-links a {
+    color: var(--footer-text);
+    font-size: 1.2rem;
+    margin-right: 18px;
+}
+.social-links a:hover { color: var(--bg-light); opacity: 1; }
+
+.newsletter-form { display: flex; }
+.newsletter-form input[type="email"] {
+    padding: 10px 15px;
+    border: 1px solid var(--footer-text);
+    background-color: transparent;
+    color: var(--footer-text);
+    border-radius: 4px 0 0 4px;
+    flex-grow: 1; /* Take available space */
+    font-size: 0.9rem;
+}
+.newsletter-form input[type="email"]::placeholder {
+    color: var(--footer-text);
+    opacity: 0.7;
+}
+.newsletter-form button {
+    border-radius: 0 4px 4px 0;
+    flex-shrink: 0; /* Prevent shrinking */
+    margin-left: -1px; /* Overlap border */
+}
+.newsletter-form input:focus {
+    outline: none;
+    border-color: var(--gold-color);
+    background-color: rgba(255,255,255,0.05);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid rgba(211, 201, 191, 0.2); /* Faint border */
+    font-size: 0.85rem;
+    color: var(--footer-text);
+    opacity: 0.7;
+}

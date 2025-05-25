@@ -1,0 +1,31 @@
+/* --- About Section --- */
+.about-section { background-color: var(--bg-light); }
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 60px; /* More gap */
+}
+.about-image { flex: 1; max-width: 50%; }
+.about-text { flex: 1; max-width: 50%; padding-left: 30px; }
+.about-text .btn-secondary { margin-top: 20px; } /* Space above button */
+
+/* Our Story page */
+
+#our-story-content .col-lg-8.offset-lg-2 h2,
+#our-story-content .col-lg-8.offset-lg-2 .lead {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+}
+
+#our-story-content .col-lg-8.offset-lg-2 p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
+
+#our-story-content .col-lg-8.offset-lg-2 p em,
+#our-story-content .col-lg-8.offset-lg-2 em {
+}
+
+#our-story-content .col-lg-8.offset-lg-2 p:last-of-type {
+    margin-bottom: 0;
+}

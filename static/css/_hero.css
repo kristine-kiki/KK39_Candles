@@ -1,0 +1,96 @@
+/* --- Hero Section --- */
+.hero {
+    height: 75vh; /* Taller hero */
+    min-height: 600px;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--bg-light);
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: -10px; left: -10px; bottom: -10px;
+    width: calc(75% + 10px);
+    background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.05)),
+                      url(https://kk39-candles.s3.eu-north-1.amazonaws.com/media/hero_pic.jpg);
+    background-size: cover;
+    background-position: center left;
+    filter: blur(3px);
+    z-index: 0; /* Push behind content */
+}
+
+
+/*Add the overlay pseudo-element*/
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* Width of the overlay (100% - desired image width) */
+    width: 25%; /* Approx 1/3rd */
+    background-color: var(--hero-overlay-bg); /* Match page background */
+    z-index: 1; /* Sit above the background image */
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    /* Position from the left edge of the hero section */
+    right: 5%; /* Start near the middle/right of the image area */
+    width: 40%; /* Adjust width of the text block */
+    max-width: 550px; /* Max width for text */
+    transform: translateY(-50%); /* Vertically center */
+    padding: 15px;
+    z-index: 2; /* Place above the ::after overlay */
+    text-align: center; /* Align text left */
+}
+.hero-content h1 {
+    font-family: var(--font-heading); 
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 2px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: var(--bg-light);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+.hero-content h1 span {
+    display: inline-block;
+}
+
+.hero-content p {
+    font-family: var(--font-body); 
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    color: var(--bg-light); /* Light text */
+    opacity: 0.9;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+.btn-hero {
+    display: inline-block;
+    background-color: var(--hero-overlay-bg); /* White background */
+    color: var(--text-heading); /* Dark text */
+    border: 2px solid var(--hero-overlay-bg); /* Dark border */
+    border-radius: 2px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 2.5px 4.5px rgba(0,0,0,0.17);
+}
+
+.btn-hero:hover {
+    background-color: rgba(211, 196, 177, 0.8); /* Slightly transparent Tan */
+    border-color: rgba(211, 196, 177, 0.8);
+    color: var(--text-heading);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
