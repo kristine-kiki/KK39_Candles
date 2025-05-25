@@ -85,28 +85,6 @@
         opacity: 1; /* Ensure full opacity on hover */
     }
 
-    /* Adjust spacing for individual utility items if needed *
-    .site-utility-nav .nav-link,
-    .site-utility-nav .dropdown { /* Target the dropdown container *
-        margin-left: 0.5rem; /* Add some space to the left of each utility item *
-    }
-    .site-utility-nav .nav-link:first-child,
-    .site-utility-nav .dropdown:first-child {
-        margin-left: 0; /* No margin for the very first utility item *
-    }
-
-    /* Ensure your existing styles for .utility-icon, .utility-search-text, etc. 
-       give them appropriate padding and font sizes. *
-    .utility-icon {
-        font-size: 1.2rem;
-        padding: 0.25rem 0.5rem;
-    }
-     .site-utility-nav .nav-link { /* General style for LOGIN/SIGNUP text links 
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        padding: 0.25rem 0.5rem;*
-    }*/
-
     .bag-summary {
         position: -webkit-sticky; /* Safari */
         position: sticky;
@@ -115,6 +93,7 @@
     .bag-item-details .quantity-selector.input-group {
         max-width: 150px;
     }
+    
 }
 
 @media (max-width: 991.98px) {

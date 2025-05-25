@@ -74,3 +74,10 @@ def terms_service(request):
     """
     context = {}
     return render(request, 'contact/terms_service.html', context)
+
+def privacypolicy(request):
+    """
+    Renders the 'Terms of Service' page.
+    """
+    context = {}
+    return render(request, 'contact/privacypolicy.html', context)
