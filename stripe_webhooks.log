@@ -7542,3 +7542,25 @@ Watching for file changes with StatReloader
 "GET /products/?category=candles HTTP/1.1" 200 40019
 "GET /products/?category=for_home HTTP/1.1" 200 29037
 "GET /products/?category=candles HTTP/1.1" 200 40019
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"POST /checkout/wh/ HTTP/1.1" 200 44
+"POST /checkout/wh/ HTTP/1.1" 200 88
+"POST /checkout/wh/ HTTP/1.1" 200 42
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 30907
+"GET /products/?category=candles HTTP/1.1" 200 40019
+"GET /products/2/ HTTP/1.1" 200 30280
+"GET /bag/ HTTP/1.1" 200 36001
+"GET /bag/ HTTP/1.1" 200 36001
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 19457
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 30907
+"GET /bag/ HTTP/1.1" 200 36001
+"GET /products/?category=candles HTTP/1.1" 200 40019
+"GET /products/2/ HTTP/1.1" 200 30280
+"GET /products/ HTTP/1.1" 200 50453
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\profiles\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\profiles\admin.py changed, reloading.
+Watching for file changes with StatReloader

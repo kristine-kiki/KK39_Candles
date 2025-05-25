@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django_countries.fields import CountryField
+from products.models import Product
 
 # Create your models here.
 
@@ -47,4 +48,15 @@ class UserProfile(models.Model):
                 UserProfile.objects.create(user=instance)
             except AttributeError:
                 UserProfile.objects.create(user=instance)
-        
+
+class WishlistItem(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='wishlist_items')
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    added_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ('user', 'product') # Ensures a user can only add a product once to their wishlist
+        ordering = ['-added_on']
+
+    def __str__(self):
+        return f"{self.product.name} in {self.user.username}'s wishlist"        

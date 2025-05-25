@@ -1,7 +1,8 @@
 from django.contrib import admin
 from django.forms import Select                                      
 from profiles.models import UserProfile
-from django_countries.fields import CountryField                     
+from django_countries.fields import CountryField
+from .models import WishlistItem                     
 
 # Create a custom ModelAdmin for UserProfile
 class UserProfileAdmin(admin.ModelAdmin):
@@ -16,5 +17,11 @@ class UserProfileAdmin(admin.ModelAdmin):
         admin.site.unregister(UserProfile)
     except admin.sites.NotRegistered:
         pass
+
+@admin.register(WishlistItem)
+class WishlistItemAdmin(admin.ModelAdmin):
+    list_display = ('user', 'product', 'added_on')
+    list_filter = ('user', 'added_on')
+    search_fields = ('user__username', 'product__name')
 
 admin.site.register(UserProfile, UserProfileAdmin)
