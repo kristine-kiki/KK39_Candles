@@ -7539,3 +7539,6 @@ Watching for file changes with StatReloader
 "GET / HTTP/1.1" 200 30907
 "GET /support/contact/ HTTP/1.1" 200 20823
 "GET /products/?category=candles HTTP/1.1" 200 40019
+"GET /products/?category=candles HTTP/1.1" 200 40019
+"GET /products/?category=for_home HTTP/1.1" 200 29037
+"GET /products/?category=candles HTTP/1.1" 200 40019
