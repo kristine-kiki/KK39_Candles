@@ -168,8 +168,8 @@
     /* Dropdowns within the collapsed mobile menu */
     .main-header .navbar-collapse#mainNavbarContent .dropdown-menu {
         background-color: #f8f9fa; 
-        border: none; !important
-        box-shadow: none; !important
+        border: none !important;
+        box-shadow: none !important;
         padding-left: 1.5rem; /* Indent dropdown items more */
         position: static !important; 
         float: none !important;
