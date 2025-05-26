@@ -5,15 +5,19 @@
 2.  [Live Demo](#live-demo)
 3.  [Features](#features)
 4.  [User Walkthrough](#user-walkthrough)
-4.  [User Stories](#user-stories)
-4.  [UX/UI Design](#uxui-design) 
+5.  [User Stories](#user-stories)
+6.  [UX/UI Design](#uxui-design) 
     *   [Responsive Design](#responsive-design)
     *   [Color Scheme](#color-scheme)
     *   [Typography](#typography) 
-5.  [Wireframes](#wireframes)
-5.  [Tech Stack](#tech-stack)
-6.  [Prerequisites](#prerequisites)
-7.  [Installation & Setup](#installation--setup)
+7.  [Wireframes](#wireframes)
+8.  [Tech Stack](#tech-stack)
+9.  [SEO & Keyword Research Strategy](#seo--keyword-research-strategy)
+    *   [Keyword Research Process](#keyword-research-process)
+    *   [On-Page SEO Implementation](#on-page-seo-implementation)
+    *   [Technical SEO Basics](#technical-seo-basics)
+10. [Prerequisites](#prerequisites)
+11. [Installation & Setup](#installation--setup)
     *   [Cloning the Repository](#cloning-the-repository)
     *   [Setting up the Virtual Environment](#setting-up-the-virtual-environment)
     *   [Installing Dependencies](#installing-dependencies)
@@ -23,9 +27,9 @@
     *   [Running Migrations](#running-migrations)
     *   [Creating a Superuser](#creating-a-superuser)
     *   [Compiling Static Files](#compiling-static-files)
-8.  [Running the Project Locally](#running-the-project-locally)
-9.  [Deployment](#deployment)
-10. [Key Functionality Overview](#key-functionality-overview)
+12. [Running the Project Locally](#running-the-project-locally)
+13. [Deployment](#deployment)
+14. [Key Functionality Overview](#key-functionality-overview)
     *   [User Facing](#user-facing)
     *   [Admin Facing](#admin-facing)
     *   [Authentication & User Management](#authentication--user-management)
@@ -33,10 +37,11 @@
     *   [Manual Testing](#manual-testing)
     *   [HTML & CSS Validation](#html--css-validation)
     *   [Automated Testing (Django's Test Framework)](#automated-testing-djangos-test-framework)
-11. [Known Issues](#known-issues)
-12. [Future Development](#future-development)
-13. [Credits & Acknowledgements](#credits--acknowledgements)
-14. [License](#license)
+16. [Marketing & Growth Strategies](#marketing--growth-strategies)
+17. [Known Issues](#known-issues)
+18. [Future Development](#future-development)
+19. [Credits & Acknowledgements](#credits--acknowledgements)
+20. [License](#license)
 
 ---
 
@@ -337,6 +342,49 @@ Below are descriptions of the wireframes for the primary pages. The actual sketc
 *   **Payment Integration:** Stripe, PayPal
 *   **Email Marketing:** Mailchimp
 *   **Deployment:** Heroku, AWS S3
+
+---
+
+## SEO & Keyword Research Strategy
+
+A key focus for KK39 Candles is organic visibility through search engines. The following outlines the approach to keyword research and Search Engine Optimization (SEO):
+
+### Keyword Research Process:
+
+1.  **Initial Brainstorming:**
+    *   Started with core terms like "eco candles," "organic candles," "handmade candles."
+    *   Expanded by considering customer needs and questions (e.g., "pet-friendly candles," "non-toxic candles").
+2.  **Identifying Keyword Types:**
+    *   **Head/Core Keywords:** Broad terms for general visibility (e.g., "soy wax candles").
+    *   **Body/Modifier Keywords:** More specific phrases (e.g., "handmade scented soy candles," "eco-friendly pillar candles").
+    *   **Long-Tail Keywords:** Highly specific, intent-driven phrases (e.g., "buy unscented organic hemp wick candles online," "best natural candles for home decor").
+    *   **LSI (Latent Semantic Indexing) Keywords:** Semantically related terms to provide context (e.g., "clean burn," "sustainable living," "natural home fragrance").
+3.  **Tools & Techniques Used:**
+    *   **Google Search:** Utilized Google Autocomplete, "People Also Ask" boxes, and "Related searches" to uncover user queries.
+    *   **Google Keyword Planner:** Leveraged for search volume estimates and discovering new keyword ideas.
+    *   **Competitor Analysis (Manual):** Reviewed keywords used by similar successful eco-candle businesses.
+    *   **Customer Language:** Paid attention to terms customers might use when describing their needs or searching for products.
+4.  **Keyword Mapping:**
+    *   Assigned primary and secondary keywords to specific pages (Homepage, Category Pages, Product Detail Pages, Blog Posts) to ensure targeted content.
+
+### On-Page SEO Implementation:
+
+*   **Meta Tags:** Unique and keyword-optimized `<title>` tags and `meta description` tags for all important pages. 
+*   **Content Optimization:**
+    *   Natural integration of keywords within product descriptions, blog posts, "About Us," and "Ingredients" pages.
+    *   Focus on high-quality, informative, and valuable content that addresses user intent.
+*   **Header Tags (H1-H6):** Structured use of header tags to establish content hierarchy and incorporate keywords.
+*   **Image Alt Text:** Descriptive alt text for all images, including relevant keywords.
+*   **Internal Linking:** Building a strong internal linking structure with keyword-rich anchor text to distribute link equity and help search engines understand site structure.
+*   **URL Structure:** Creating clean, readable, and keyword-friendly URLs.
+
+### Technical SEO Basics:
+
+*   **Mobile-Friendliness:** Ensuring a fully responsive design.
+*   **Site Speed:** Ongoing efforts to optimize image sizes and code for faster load times.
+*   **Sitemap:** Submission of an XML sitemap to search engines.
+*   **`robots.txt`:** Configured to guide search engine crawlers.
+*   **Custom 404 Page:** Implemented to improve user experience for broken links.
 
 ---
 
@@ -682,6 +730,52 @@ Automated tests were written using Django's built-in testing framework to cover 
 ## Known Issues
 
 ---
+
+## Marketing & Growth Strategies
+
+To build brand awareness, attract customers, and foster a community around KK39 Candles, the following marketing strategies are planned or in progress:
+
+1.  **Content Marketing (Blog):**
+    *   Regularly publish high-quality blog posts focused on keywords identified during research (e.g., benefits of eco-candles, ingredient spotlights, home decor tips, candle care).
+    *   Aim to provide value, answer customer questions, and establish KK39 Candles as a knowledgeable source in the eco-friendly home fragrance niche.
+    *   Promote blog content through social media and the newsletter.
+
+2.  **Social Media Marketing:**
+    *   Maintain an active presence on relevant platforms (e.g., Instagram, Pinterest, Facebook).
+    *   Share high-quality product images, behind-the-scenes content, user-generated content (if available), and links to blog posts.
+    *   Engage with followers, run polls, and participate in relevant conversations.
+    *   Utilize platform-specific features like Instagram Stories/Reels and Pinterest Idea Pins.
+    *   *(Consider mentioning specific campaign ideas if you have them, e.g., "Run a seasonal photo contest.")*
+
+3.  **Email Marketing (Newsletter via Mailchimp):**
+    *   Grow the email list through the on-site newsletter signup form.
+    *   Send regular newsletters featuring new products, special offers, blog highlights, and candle care tips.
+    *   Implement automated emails (e.g., welcome series for new subscribers, abandoned cart reminders - *future development*).
+
+4.  **Search Engine Optimization (SEO):**
+    *   Continuous on-page optimization based on keyword research and performance data.
+    *   Focus on building site authority through quality content.
+    *   *(Future) Off-Page SEO: Seek opportunities for features on relevant blogs, collaborations with influencers, or listings in eco-friendly directories to build backlinks.*
+
+5.  **Customer Relationship Management & Reviews:**
+    *   Encourage customers to leave product reviews after purchase to build social proof and generate user-generated content.
+    *   Provide excellent customer service to foster loyalty and positive word-of-mouth.
+    *   Respond to reviews and comments promptly.
+
+6.  **Promotions & Offers:**
+    *   Run occasional promotions (e.g., free shipping offers, seasonal discounts, bundle deals) to incentivize purchases and attract new customers.
+    *   Promote these offers through the website banner, social media, and email newsletter.
+
+7.  **(Optional) Potential Future Strategies:**
+    *   Influencer collaborations.
+    *   Partnerships with complementary local businesses or online eco-stores.
+    *   Participation in local craft fairs or markets (if applicable).
+    *   Consideration of targeted paid advertising (e.g., Google Ads, Social Media Ads) once organic efforts are established.
+
+This multi-faceted approach aims to build a strong online presence, drive traffic, and convert visitors into loyal customers for KK39 Candles.
+
+---
+
 
 ## Future Development
 
