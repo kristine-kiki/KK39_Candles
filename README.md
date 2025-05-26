@@ -200,23 +200,7 @@ The KK39 Candles project was designed with a focus on a clean, elegant, and user
 The website is fully responsive and designed to provide an optimal viewing and interaction experience across a wide range of devices, from mobile phones and tablets to desktops. Bootstrap 4.6.2 is utilized as the primary framework for the responsive grid system and components. Custom CSS media queries are employed to fine-tune layouts, typography, and navigation for different screen sizes, ensuring usability and aesthetic consistency. ![KK39 Candles on Multiple Devices](./static/images/readme/amiresponsive.png)
 ### Color Scheme
 The color palette is designed to be warm, natural, and inviting, reflecting the qualities of handmade eco-candles.
-
-| Color Swatch & Hex Code             | Variable Name          | Description                                       | Usage Example              |
-|---------------------------------------|------------------------|---------------------------------------------------|----------------------------|
-| <span style="background-color:#FBF9F6; color:#000000; padding: 2px 8px; border-radius: 4px; font-family: monospace; border: 1px solid #ccc;">#FBF9F6</span> | `--bg-light` | Off-white/Cream | Main page background |
-| <span style="background-color:#F6F2EC; color:#000000; padding: 2px 8px; border-radius: 4px; font-family: monospace; border: 1px solid #ccc;">#F6F2EC</span> | `--bg-accent` | Slightly darker cream | Contrast areas, subtle BGs |
-| <span style="background-color:#4F4A45; color:#FFFFFF; padding: 2px 8px; border-radius: 4px; font-family: monospace; border: 1px solid #ccc;">#4F4A45</span> | `--text-color` | Dark Brown/Charcoal (slightly warm) | Main body text, default links |
-| <span style="background-color:#33312e; color:#FFFFFF; padding: 2px 8px; border-radius: 4px; font-family: monospace; border: 1px solid #ccc;">#33312e</span> | `--text-heading` | Very Dark Brown/Near Black | Primary headings (H1, H2) |
-| <span style="background-color:#FFFFFF; color:#000000; padding: 2px 8px; border-radius: 4px; font-family: monospace; border: 1px solid #ccc;">#FFFFFF</span> | `--text-light` | White | Text on dark backgrounds |
-| <span style="background-color:#9D9C75; color:#FFFFFF; padding: 2px 8px; border-radius: 4px; font-family: monospace; border: 1px solid #ccc;">#9D9C75</span> | `--primary-color` | Muted Olive/Sage Green | Accents, top banner BG |
-| <span style="background-color:#D3C4B1; color:#000000; padding: 2px 8px; border-radius: 4px; font-family: monospace; border: 1px solid #ccc;">#D3C4B1</span> | `--secondary-color` | Tan/Light Beige | Buttons (`btn-tertiary`), Hero overlay |
-| <span style="background-color:#E7A385; color:#000000; padding: 2px 8px; border-radius: 4px; font-family: monospace; border: 1px solid #ccc;">#E7A385</span> | `--accent-color` | Muted Pink/Coral | Price text |
-| <span style="background-color:#CCA86F; color:#000000; padding: 2px 8px; border-radius: 4px; font-family: monospace; border: 1px solid #ccc;">#CCA86F</span> | `--gold-color` | Warm Gold | Newsletter subscribe button |
-| <span style="background-color:#D1C9BF; color:#000000; padding: 2px 8px; border-radius: 4px; font-family: monospace; border: 1px solid #ccc;">#D1C9BF</span> | `--border-color` | Light Beige/Grey border | General borders |
-| <span style="background-color:#33312e; color:#FFFFFF; padding: 2px 8px; border-radius: 4px; font-family: monospace; border: 1px solid #ccc;">#33312e</span> | `--footer-bg` | Dark Brown/Near Black (same as `--text-heading`) | Footer background |
-| <span style="background-color:#d3cec7; color:#000000; padding: 2px 8px; border-radius: 4px; font-family: monospace; border: 1px solid #ccc;">#d3cec7</span> | `--footer-text` | Light Grey/Beige text | Text in the dark footer |
-
-*Note: `--hero-overlay-bg` uses the same color as `var(--secondary-color)`.*
+![KK39 Candles on Multiple Devices](./static/images/readme/color_scheme.png)
 
 ### Typography
 *   **Headings:** Playfair Display (serif, elegant)
