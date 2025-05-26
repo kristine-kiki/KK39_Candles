@@ -222,7 +222,7 @@
         width: 80%; 
         left: 50%; 
         right: auto;
-        transform: translate(-50%, -50%); / Proper centering /
+        transform: translate(-50%, -50%);
         text-align: center;
     }
     .hero-content h1 {
