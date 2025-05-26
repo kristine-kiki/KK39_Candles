@@ -13031,3 +13031,11 @@ Watching for file changes with StatReloader
 "GET / HTTP/1.1" 200 31411
 Not Found: /.well-known/appspecific/com.chrome.devtools.json
 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 19572
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 31503
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 19572
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 31503
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 19572

@@ -35,9 +35,10 @@
     *   [Authentication & User Management](#authentication--user-management)
 15. [Testing](#testing)
     *   [Manual Testing](#manual-testing)
-    *   [HTML & CSS Validation](#html--css-validation)
+    *   [Validation & Performance](#validation--performance)
     *   [Automated Testing (Django's Test Framework)](#automated-testing-djangos-test-framework)
 16. [Marketing & Growth Strategies](#marketing--growth-strategies)
+17. [Challanges & Solutions](#challanges--solutions)
 17. [Known Issues](#known-issues)
 18. [Future Development](#future-development)
 19. [Credits & Acknowledgements](#credits--acknowledgements)
@@ -709,7 +710,55 @@ Extensive manual testing was performed to cover key user stories and critical pa
 *   **Accessibility (Basic Checks):**
     *   Ensuring semantic HTML, appropriate ARIA labels (where implemented), and keyboard navigability for core features.
 
-### HTML & CSS Validation
+### Validation & Performance
+Ensuring code quality, accessibility, and good performance are key objectives for the KK39 Candles project. The following validation checks and performance audits have been conducted:
+
+### HTML Validation
+
+All key HTML templates have been validated using the [W3C Nu HTML Checker](https://validator.w3.org/nu/) to ensure they adhere to web standards and are free of critical errors. This helps in maintaining cross-browser compatibility and accessibility.
+
+**HTML Validation Result (Homepage):**
+![HTML Validation Screenshot - Homepage](./static/images/readme/w3html.png)
+
+### CSS Validation
+
+The project's stylesheets (`base.css`, `checkout.css`, etc.) have been validated using the [W3C CSS Validation Service (Jigsaw)](https://jigsaw.w3.org/css-validator/) to check for syntax errors and ensure CSS specifications are correctly followed.
+
+**CSS Validation Result (`base.css`):**
+![CSS Validation Screenshot - base.css](./static/images/readme/w3c_css.png)
+
+### Performance & Accessibility (Lighthouse Audit)
+
+Google Lighthouse audits were performed on key pages (such as the Homepage, Product Listing, and Product Detail pages) to assess performance, accessibility, best practices, and SEO. Efforts were made to optimize images, leverage browser caching (for static assets served via S3), and ensure semantic HTML for improved accessibility.
+
+**Lighthouse Audit Summary (Homepage):**
+![Lighthouse Audit Screenshot - Homepage](./static/images/readme/lighthouse_destop.png)
+**Analysis of Homepage Scores (Example based on your screenshot):**
+*   **Performance:** 68
+*   **Accessibility:** 90
+*   **Best Practices:** 78
+*   **SEO:** 91
+
+While the scores for Accessibility, Best Practices, and SEO are good, the **Performance score (68) indicates areas for improvement.** The **Largest Contentful Paint (LCP) of 7.1 seconds** is a primary contributor to this score and is higher than ideal.
+
+**Planned Performance Optimizations:**
+*   **Image Optimization:** The high LCP is often related to large, unoptimized images. Future work will focus on:
+    *   Resizing images to appropriate dimensions for their display containers.
+    *   Compressing images using tools like TinyPNG or image optimization libraries to reduce file sizes without significant quality loss.
+    *   Implementing modern image formats like WebP where supported, for better compression and quality.
+    *   Leveraging responsive images (`<picture>` element or `srcset` attribute) to serve appropriately sized images for different screen resolutions.
+*   **Code Minification & Cleaning:** Reviewing CSS and JavaScript for opportunities to minify files and remove unused code, which can help reduce blocking time and improve load speed.
+*   **Defer Offscreen Images/Lazy Loading:** Implementing lazy loading for images that are not immediately visible in the viewport.
+*   **Server Response Time:** While not solely a frontend issue, ensuring efficient database queries and view logic to minimize server response time will also be considered.
+*   **Leverage Browser Caching:** Double-checking caching headers for static assets served from S3 to ensure optimal browser caching.
+
+Continuous monitoring and refinement of these aspects will be undertaken to further enhance the overall site performance.
+
+**Lighthouse Audit Summary (All Products Page):**
+![Lighthouse Audit Screenshot - All Products](./static/images/readme/lighthouse_products.png)
+
+**Lighthouse Audit (Product Detail Page):**
+![Lighthouse Audit Screenshot - Product Detail](./static/images/readme/lighthouse_individual.png)
 
 ### Automated Testing (Django's Test Framework)
 
@@ -729,6 +778,21 @@ Automated tests were written using Django's built-in testing framework to cover 
 
 ## Known Issues
 
+*   **Homepage Performance (Lighthouse Score):**
+    *   **Issue:** The current Lighthouse performance score for the homepage is approximately 68, with a Largest Contentful Paint (LCP) around 7.1 seconds. This indicates that the page takes longer to load its main content than ideal for optimal user experience and SEO.
+    *   **Cause:** Primarily attributed to unoptimized (large dimension or file size) images, particularly the main hero image and potentially other product images loaded on the page.
+    *   **Planned Fix:**
+        *   Implement comprehensive image optimization: resize images to appropriate display dimensions, compress images (e.g., using TinyPNG or similar tools), and convert to modern formats like WebP.
+        *   Implement lazy loading for offscreen images.
+        *   Review and optimize CSS/JS to reduce render-blocking resources.
+    *   **Status:** Actively being addressed to significantly improve load times and the overall performance score.
+
+*    **Browser Caching Vigor:**
+    *   **Issue:** During development, aggressive browser caching sometimes required repeated hard refreshes or clearing of site data to see the latest CSS and JavaScript changes, especially when switching between DEBUG = True (local static serving) and DEBUG = False (S3 static serving) for testing.
+    *   **Status:** Mitigated through development practices, but a reminder for users testing or contributing to be mindful of cache.
+*   **Perfection of Long Text Wrapping in Specific Components (e.g., Product Card Titles)**
+    *   **Issue:** While product cards are designed for equal height, extremely long product names or category lists could potentially cause minor visual inconsistencies in text wrapping if not handled by explicit truncation or character limits (which are not currently implemented for maximum flexibility).
+    *   **Status:** Generally handles well, but edge cases with very long, unbroken text strings could be tested further.
 ---
 
 ## Marketing & Growth Strategies
@@ -745,7 +809,6 @@ To build brand awareness, attract customers, and foster a community around KK39 
     *   Share high-quality product images, behind-the-scenes content, user-generated content (if available), and links to blog posts.
     *   Engage with followers, run polls, and participate in relevant conversations.
     *   Utilize platform-specific features like Instagram Stories/Reels and Pinterest Idea Pins.
-    *   *(Consider mentioning specific campaign ideas if you have them, e.g., "Run a seasonal photo contest.")*
 
 3.  **Email Marketing (Newsletter via Mailchimp):**
     *   Grow the email list through the on-site newsletter signup form.
@@ -776,20 +839,125 @@ This multi-faceted approach aims to build a strong online presence, drive traffi
 
 ---
 
+## Key Challenges & Solutions
+
+Throughout the development of KK39 Candles, several technical challenges were encountered and resolved. This section highlights some of the key issues and the approaches taken to address them:
+
+1.  **Static & Media Files in Production (AWS S3 & `DEBUG=False`):**
+    *   **Challenge:** Static files (CSS, JS) and media files (user-uploaded product images) not loading correctly when `DEBUG` was set to `False`, particularly after deployment to Heroku or when testing S3 locally. This manifested as 404 errors for CSS files or broken images.
+    *   **Solution:**
+        *   Ensured correct configuration of `django-storages` and `boto3` for AWS S3.
+        *   Verified and corrected `AWS_STORAGE_BUCKET_NAME`, `AWS_S3_REGION_NAME`, and crucially, the `AWS_S3_CUSTOM_DOMAIN` to use the region-specific S3 endpoint (e.g., `your-bucket.s3.your-region.amazonaws.com`).
+        *   Systematically used `python manage.py collectstatic --noinput --clear` to ensure static files were properly uploaded to S3.
+        *   Managed environment variables for AWS credentials (`AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`) correctly for both local S3 testing (via `env.py`) and production (via Heroku Config Vars), resolving `NoCredentialsError` during `collectstatic`.
+        *   Addressed browser caching issues by implementing aggressive cache clearing techniques during testing.
+        *   Used CSS Custom Properties (Variables) set via inline styles in Django templates to dynamically inject `MEDIA_URL` or `STATIC_URL` into external CSS files for background images, ensuring correct paths in both development and production.
+
+2.  **CSS Styling and Layout Inconsistencies:**
+    *   **Challenge:** Various CSS issues, including elements not aligning as expected (e.g., search bar input/button, product card content), styles not applying on mobile, or page content overflowing.
+    *   **Solution:**
+        *   Utilized browser developer tools extensively to inspect computed styles, identify conflicting CSS rules, and debug specificity issues.
+        *   Refactored `base.css` by breaking it into modular, component-based CSS files (`_variables.css`, `_layout.css`, `_buttons.css`, `_header_nav.css`, etc.) imported into a main file, improving maintainability and organization.
+        *   Applied Flexbox and CSS Grid properties systematically for layout control (e.g., `align-items: center` for vertical alignment, `gap` for spacing, `margin-top: auto` for pushing elements to the bottom of flex columns in product cards).
+        *   Implemented a mobile-first approach for responsive design, particularly for elements like the social sidebar and body padding, ensuring global styles didn't negatively impact smaller screens.
+        *   Corrected CSS syntax errors (e.g., incorrect placement of `!important`).
+
+3.  **Django Third-Party Package Compatibility Issues:**
+    *   **Challenge:** Encountered `TypeError` exceptions in the Django admin when using `django-summernote` (for blog content) and `django-countries` (for user profile country field) with a newer Django version (Django 5.2). Specifically, `TypeError: clean() got an unexpected keyword argument 'styles'` for Summernote and `AttributeError: 'BlankChoiceIterator' object has no attribute '__len__'` for CountryField.
+    *   **Solution:**
+        *   Investigated GitHub issues for the respective packages.
+        *   For `django-summernote`, the issue was traced to an incompatibility with newer versions of its dependency, `bleach`. Resolved by downgrading and pinning `bleach==4.1.0` in `requirements.txt`.
+        *   For `django-countries`, the installed version (7.2.1) was outdated for Django 5.2. Resolved by upgrading `django-countries` to a newer version (e.g., 7.6.x or later) that included explicit Django 5.0+ support.
+
+4.  **Template Structure & Rendering:**
+    *   **Challenge:** `TemplateDoesNotExist` errors due to incorrect paths in `render()` calls. Visual inconsistencies where duplicate content appeared (e.g., duplicate navigation bars) or expected content was missing (e.g., Django messages).
+    *   **Solution:**
+        *   Corrected template paths in views to match the actual file locations within app-specific `templates` directories (e.g., `'profiles/wishlist.html'` instead of `'wishlist/wishlist.html'`).
+        *   Identified and removed redundant `{% include %}` tags that were causing duplicate rendering of navigation elements and leading to HTML validation errors for duplicate IDs.
+        *   Ensured Django's messaging framework was correctly implemented in `base.html` and messages were being added in views for user feedback.
+
+5.  **HTML Validation Errors:**
+    *   **Challenge:** HTML validator reported issues like duplicate IDs, sections lacking headings, and CSS parse errors in inline styles.
+    *   **Solution:**
+        *   Refactored templates to ensure unique IDs for elements, especially where desktop and mobile navigations were both present in the DOM.
+        *   Added semantic headings (`<h2>`-`<h6>`) to `<section>` elements or changed sections to `<div>` where appropriate. Corrected inline style syntax.
+
+Addressing these challenges involved systematic debugging, careful review of documentation, understanding the interplay between Django settings, static/media file handling, third-party packages, and frontend technologies (HTML, CSS, browser caching).
+
+---
 
 ## Future Development
+KK39 Candles is envisioned as an evolving platform. Potential future enhancements and features include:
+
+1.  **Customer Loyalty Program:**
+    *   **Points Rewarding Scheme:** Implement a system where customers earn points for purchases, reviews, or other engagement activities. These points could then be redeemed for discounts, exclusive products, or special offers.
+    *   **Tiered Rewards / Surprise Gifts:** Explore concepts like a tiered loyalty system based on customer spending or order frequency, or a "surprise gift" feature (e.g., a complimentary wax melt or small candle) for every 5th order or on customer anniversaries to enhance delight and appreciation.
+
+2.  **Wishlist Enhancements:**
+    *   Allow users to make their wishlists public or shareable.
+    *   "Notify me when back in stock" feature for items on a wishlist.
+    *   Ability to directly move all wishlist items to the shopping bag.
+
+3.  **Enhanced Blog Functionality:**
+    *   Implement categories and tags for blog posts for better organization and discovery.
+    *   Add a comments section to blog posts for user engagement.
+    *   Feature related blog posts on product pages.
+
+4.  **Improved AJAX Interactions:**
+    *   Implement AJAX for adding items to the bag and updating quantities directly from product/bag pages without full page reloads, providing smoother on-page feedback.
+    *   Enhance the Mailchimp newsletter subscription to use AJAX for on-page success/error messages.
+
+5.  **Performance Optimizations (Ongoing):**
+    *   Continuously work on image optimization (resizing, compression, modern formats like WebP).
+    *   Implement lazy loading for images and potentially other offscreen content.
+    *   Further minify CSS and JavaScript files and remove unused code.
+
+6.  **User Profile Expansion:**
+    *   Allow users to save multiple shipping addresses.
+    *   Option to save payment methods securely (if compliant with PCI DSS and using appropriate tokenization).
+
+7.  **Internationalization & Localization (i18n & l10n):**
+    *   If expanding to different markets, add support for multiple languages and currencies.
+
+8.  **Gift Card Functionality:**
+    *   Allow customers to purchase and redeem digital gift cards.
 
 ---
 
 ## Credits & Aknowledgments
-Django Allauth: For comprehensive authentication.
-Crispy Forms: For styling Django forms.
-Django Countries: For the country selection field.
-Django Storages & Boto3: For AWS S3 integration.
-Pillow: For image handling.
-Stripe & PayPal: For payment processing.
-Summernote & django-summernote: For the rich text editor.
-Bootstrap 4.6.2: For frontend styling.
-Font Awesome: For icons.
-My mentor Spencer Barriball
-Code Institute for walkthrough project Boutique Ado, SheCode 
+This project leverages several fantastic open-source libraries, frameworks, and services. Gratitude is also extended to individuals and resources that provided guidance and inspiration.
+
+### Core Technologies & Libraries:
+
+*   **Django:** The primary web framework used to build the application.
+*   **Python:** The programming language powering the backend.
+*   **Bootstrap 4.6.2:** For frontend styling, responsive design, and UI components.
+*   **HTML5, CSS3, JavaScript:** Standard web technologies for structure, style, and interactivity.
+
+### Key Django Packages:
+
+*   **Django Allauth:** For comprehensive user authentication (registration, login, password management, etc.).
+*   **Crispy Forms** (with `crispy-bootstrap4` theme): For elegantly rendering Django forms with Bootstrap styling.
+*   **Django Countries:** For providing a country selection field in forms.
+*   **Django Storages** & **Boto3:** For seamless integration with AWS S3 for static and media file storage.
+*   **Pillow:** For image processing capabilities within Django.
+*   **Gunicorn:** As the WSGI HTTP server for production deployment on Heroku.
+*   **Psycopg2-binary:** PostgreSQL adapter for database connectivity in production.
+*   **dj_database_url:** For parsing database URLs, especially in the Heroku environment.
+*   **Django Summernote** (with `bleach==4.1.0`): For the WYSIWYG rich text editor used for blog content.
+
+### Services & Integrations:
+
+*   **Stripe:** For secure credit/debit card payment processing, including Apple Pay and Google Pay.
+*   **PayPal:** As an alternative payment gateway.
+*   **AWS S3:** For hosting static and media files in a scalable way.
+*   **Heroku:** For application deployment and hosting.
+*   **Mailchimp:** For newsletter subscription management.
+*   **Font Awesome:** For scalable vector icons used throughout the site.
+*   **Google Fonts:** For web fonts (Lato and Playfair Display).
+
+### Guidance & Inspiration:
+
+*   **My Mentor:** Spencer Barriball - For invaluable guidance, support, and feedback throughout the project.
+*   **Code Institute:** For the "Boutique Ado" walkthrough project, which provided a foundational learning experience and inspiration for various e-commerce features.
+*   **SheCodes:** For community.
