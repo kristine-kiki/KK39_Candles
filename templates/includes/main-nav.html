@@ -3,10 +3,10 @@
 
 <ul class="navbar-nav"> 
     <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="{% url 'products' %}" id="shopAllNav" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="{% url 'products' %}" id="desktop-shopAllNav" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             SHOP ALL
         </a>
-        <div class="dropdown-menu" aria-labelledby="shopAllNav">
+        <div class="dropdown-menu" aria-labelledby="desktop-shopAllNav">
             <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
             <div class="dropdown-divider"></div>
             <h6 class="dropdown-header">Filter by Category</h6>
@@ -20,10 +20,10 @@
         </div>
     </li>
     <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="{% url 'products' %}?category=candles" id="candlesNav" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="{% url 'products' %}?category=candles" id="desktop-candlesNav" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             CANDLES
         </a>
-        <div class="dropdown-menu" aria-labelledby="candlesNav">
+        <div class="dropdown-menu" aria-labelledby="desktop-candlesNav">
             <a class="dropdown-item" href="{% url 'products' %}?category=candles">All Candles</a>
             <a class="dropdown-item" href="{% url 'products' %}?category=scented">Scented</a>
             <a class="dropdown-item" href="{% url 'products' %}?category=unscented_candles">Unscented</a>
@@ -31,10 +31,10 @@
         </div>
     </li>
     <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="{% url 'products' %}?category=for_home" id="forHomeNav" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="{% url 'products' %}?category=for_home" id="desktop-forHomeNav" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             FOR HOME
         </a>
-        <div class="dropdown-menu" aria-labelledby="forHomeNav">
+        <div class="dropdown-menu" aria-labelledby="desktop-forHomeNav">
             <a class="dropdown-item" href="{% url 'products' %}?category=for_home">All For Home</a>
             <a class="dropdown-item" href="{% url 'products' %}?category=home_diffuser">Diffusers</a>
             <a class="dropdown-item" href="{% url 'products' %}?category=room_spray">Room Sprays</a>
@@ -42,10 +42,10 @@
         </div>
     </li>
     <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="aboutNav" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="desktop-aboutNav" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             ABOUT
         </a>
-        <div class="dropdown-menu" aria-labelledby="aboutNav">
+        <div class="dropdown-menu" aria-labelledby="desktop-aboutNav">
             <a class="dropdown-item" href="{% url 'about:our_story' %}">Our Story</a>
             <a class="dropdown-item" href="{% url 'about:ingredients' %}">Ingredients</a>
             <a class="dropdown-item" href="{% url 'about:blog_list' %}">Blog</a>

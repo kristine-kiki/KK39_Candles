@@ -9628,3 +9628,157 @@ Not Found: /.well-known/appspecific/com.chrome.devtools.json
 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 19495
 C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 30949
+"GET /about/our_story/ HTTP/1.1" 200 22389
+"GET /about/blog/ HTTP/1.1" 200 21288
+"GET /about/blog/2025/5/25/breathe-easy-the-top-5-health-environmental-benefits-of-choosing-eco-friendly-candles/ HTTP/1.1" 200 25884
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 31334
+"GET /about/ingredients/ HTTP/1.1" 200 23064
+Not Found: /about/ingredients/sea
+"GET /about/ingredients/sea HTTP/1.1" 404 19495
+"GET /products/ HTTP/1.1" 200 55144
+"GET /admin/login/?next=/accounts/login HTTP/1.1" 200 4068
+"POST /admin/login/?next=/accounts/login HTTP/1.1" 200 4235
+"POST /admin/login/?next=/accounts/login HTTP/1.1" 302 0
+"GET /accounts/login HTTP/1.1" 301 0
+"GET /accounts/login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 31420
+"GET /admin/login/?next=/accounts/login HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 21884
+"GET /admin/auth/user/ HTTP/1.1" 200 23446
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/auth/user/3/change/ HTTP/1.1" 200 36605
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/profiles/userprofile/ HTTP/1.1" 200 20583
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/profiles/userprofile/3/change/ HTTP/1.1" 200 33660
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/profiles/wishlistitem/ HTTP/1.1" 200 22879
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/profiles/wishlistitem/2/change/ HTTP/1.1" 200 23161
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/checkout/order/ HTTP/1.1" 200 22977
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/checkout/order/1/change/ HTTP/1.1" 200 59824
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/products/product/ HTTP/1.1" 200 30521
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/products/product/add/ HTTP/1.1" 200 24414
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/products/product/add/ HTTP/1.1" 302 0
+"GET /admin/products/product/ HTTP/1.1" 200 31391
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET / HTTP/1.1" 200 31420
+"GET /products/?category=unscented_candles HTTP/1.1" 200 25390
+"GET /products/19/ HTTP/1.1" 200 31042
+"GET /products/ HTTP/1.1" 200 57436
+"GET /products/1/ HTTP/1.1" 200 30776
+"POST /checkout/wh/ HTTP/1.1" 200 50
+- Broken pipe from ('127.0.0.1', 62055)
+"GET / HTTP/1.1" 200 31420
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 19581
+"GET /accounts/logout/ HTTP/1.1" 200 18784
+"POST /accounts/logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 29893
+"GET /accounts/login/ HTTP/1.1" 200 18932
+"POST /accounts/login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 31874
+"GET /products/?category=candles HTTP/1.1" 200 45451
+"GET /profile/wishlist/add/4/ HTTP/1.1" 302 0
+"GET /products/?category=candles HTTP/1.1" 200 45954
+"GET /profile/wishlist/ HTTP/1.1" 200 31577
+"GET /profile/wishlist/remove/2/ HTTP/1.1" 302 0
+"GET /profile/wishlist/ HTTP/1.1" 200 29241
+"POST /bag/add/7/ HTTP/1.1" 302 0
+"GET /profile/wishlist/ HTTP/1.1" 200 29432
+"GET /profile/wishlist/remove/7/ HTTP/1.1" 302 0
+"GET /profile/wishlist/ HTTP/1.1" 200 26862
+"GET / HTTP/1.1" 200 31621
+"GET /products/ HTTP/1.1" 200 57637
+"GET /products/4/ HTTP/1.1" 200 32158
+"POST /bag/add/4/ HTTP/1.1" 302 0
+"GET /products/4/ HTTP/1.1" 200 32655
+"GET /bag/ HTTP/1.1" 200 39771
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"GET /checkout/ HTTP/1.1" 200 94028
+"POST /checkout/wh/ HTTP/1.1" 200 50
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 19782
+"GET /profile/ HTTP/1.1" 200 83164
+"GET /products/add/ HTTP/1.1" 200 28133
+"GET /search/ HTTP/1.1" 200 19483
+"GET /search/?q=lava HTTP/1.1" 200 20161
+"GET /search/?q=lavendar HTTP/1.1" 200 20177
+"GET /search/?q=lavandar HTTP/1.1" 200 20177
+"GET /search/?q=lavander HTTP/1.1" 200 20177
+"GET /search/?q=lavendar HTTP/1.1" 200 20177
+"GET /search/?q=lavender HTTP/1.1" 200 24411
+"GET /products/ HTTP/1.1" 200 57637
+"GET /accounts/logout/ HTTP/1.1" 200 18994
+"POST /accounts/logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 29893
+"GET /products/?category=candles HTTP/1.1" 200 40393
+"GET /products/4/ HTTP/1.1" 200 26987
+"POST /bag/add/4/ HTTP/1.1" 302 0
+"GET /products/4/ HTTP/1.1" 200 27685
+"GET /bag/ HTTP/1.1" 200 34399
+"GET /checkout/ HTTP/1.1" 200 91326
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"POST /checkout/wh/ HTTP/1.1" 200 44
+"POST /checkout/ HTTP/1.1" 302 0
+"GET /checkout/checkout_success/E613F5CB4E5A4660B6A9A92006882788/ HTTP/1.1" 200 19925
+"POST /checkout/wh/ HTTP/1.1" 200 88
+"POST /checkout/wh/ HTTP/1.1" 200 42
+"GET /accounts/login/ HTTP/1.1" 200 18932
+"POST /accounts/login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 31874
+"GET /products/?category=gifts HTTP/1.1" 200 22713
+"GET /products/4/ HTTP/1.1" 200 31957
+"POST /bag/add/4/ HTTP/1.1" 302 0
+"GET /products/4/ HTTP/1.1" 200 32655
+"GET /bag/ HTTP/1.1" 200 36369
+"GET /checkout/ HTTP/1.1" 200 93262
+"POST /checkout/wh/ HTTP/1.1" 200 50
+"POST /checkout/wh/ HTTP/1.1" 200 44
+"POST /checkout/ HTTP/1.1" 302 0
+"GET /checkout/checkout_success/C72D08A8F6B04F089D43F60E68DF53A0/ HTTP/1.1" 200 22207
+"POST /checkout/wh/ HTTP/1.1" 200 88
+"POST /checkout/wh/ HTTP/1.1" 200 42
+"GET /profile/ HTTP/1.1" 200 84686
+"GET /profile/order_history/C72D08A8F6B04F089D43F60E68DF53A0/ HTTP/1.1" 200 22184
+"GET /admin/login/?next=/accounts/login HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 21871
+"GET /admin/auth/user/ HTTP/1.1" 200 23446
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/auth/user/1/change/ HTTP/1.1" 200 36503
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+C:\Users\marko\OneDrive\Documents\VScode-projects\KK39_Candles\KK39_Candles\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 31420
+"GET / HTTP/1.1" 200 31113
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4117
+"GET / HTTP/1.1" 200 31145
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4117
+"GET /support/contact/ HTTP/1.1" 200 20672
+"GET /products/ HTTP/1.1" 200 57161
+"GET /products/ HTTP/1.1" 200 57160
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4117
+"GET /products/1/ HTTP/1.1" 200 30500
+"GET /profile/wishlist/remove/1/ HTTP/1.1" 302 0
+"GET /products/1/ HTTP/1.1" 200 30987
+"POST /bag/add/1/ HTTP/1.1" 302 0
+"GET /products/1/ HTTP/1.1" 200 31178
+"GET /products/ HTTP/1.1" 200 57339
+"GET /products/ HTTP/1.1" 200 57435
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4117
+"GET /about/our_story/ HTTP/1.1" 200 22474
+"GET /products/?category=for_home HTTP/1.1" 200 30711
+"GET /products/?category=candles HTTP/1.1" 200 45450
